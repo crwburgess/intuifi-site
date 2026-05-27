@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)https://intuifi.io/sample_report -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="icon" type="image/png" href="https://intuifi.io/assets/intuifi-icon.png">
+  
+  <title>Sample Strategic Insights Report | Intuifi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root { --w: 980px; }
+
+    body {
+      margin: 0;
+      padding: 24px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #111827;
+      background: #f9fafb;
+      max-width: var(--w);
+      margin-inline: auto;
+    }
+
+    header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin: 0;
+      color: #1f2937;
+    }
+
+    .sample-note {
+      font-size: 13px;
+      color: #6b7280;
+      margin: 0 0 16px;
+    }
+
+    .meta {
+      font-size: 13px;
+      color: #4b5563;
+      margin: 4px 0 16px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 16px 18px;
+      box-shadow: 0 8px 24px rgba(15,23,42,0.06);
+      border: 1px solid #e5e7eb;
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-weight: 700;
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: #111827;
+    }
+
+    .unclassified-note {
+      margin-top: 16px;
+      padding-top: 12px;
+      border-top: 1px solid #e5e7eb;
+      font-size: 13px;
+      color: #4b5563;
+    }
+
+    .executive-card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 18px 20px;
+      box-shadow: 0 10px 28px rgba(15,23,42,0.07);
+      border: 1px solid #e5e7eb;
+    }
+
+    .executive-header {
+      font-weight: 700;
+      font-size: 18px;
+      color: #111827;
+      margin-bottom: 14px;
+    }
+
+    .executive-summary {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .tldr-box {
+      background: #eef6f5;
+      border: 1px solid #d7ebe8;
+      border-radius: 14px;
+      padding: 14px 16px;
+    }
+
+    .tldr-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: #0f625c;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    .tldr-text {
+      font-size: 15px;
+      line-height: 1.55;
+      color: #1f2937;
+    }
+
+    .executive-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .executive-panel {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 14px 16px;
+    }
+
+    .executive-panel-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 10px;
+    }
+
+    .executive-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .executive-list li {
+      position: relative;
+      padding-left: 26px;
+      margin: 0 0 10px 0;
+      font-size: 14px;
+      line-height: 1.5;
+      color: #374151;
+      font-weight: 600;
+    }
+
+    .executive-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    .executive-list--takeaways li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #6b7280;
+      font-weight: 700;
+    }
+
+    .executive-list--tensions li::before {
+      content: "⚠";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #6b7280;
+      font-weight: 700;
+    }
+
+    .insight-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .insight-card {
+      background: #e8edf2;
+      border-radius: 20px;
+      border: 1px solid #dbe2e8;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .insight-card summary {
+      list-style: none;
+      cursor: pointer;
+    }
+
+    .insight-card summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .insight-card__summary {
+      position: relative;
+      padding: 22px 96px 22px 22px;
+    }
+
+    .insight-card__summary-content {
+      min-width: 0;
+      max-width: none;
+    }
+
+    .insight-card__summary::after {
+      content: "▾";
+      position: absolute;
+      right: 22px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      background: #ffffff;
+      border: 1px solid #dde3ea;
+      color: #6b7280;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1;
+      transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+    }
+
+    .insight-card__summary:hover::after {
+      background: #f8fafc;
+      border-color: #cfd8e3;
+      color: #4b5563;
+    }
+
+    .insight-card[open] .insight-card__summary::after {
+      content: "▴";
+    }
+
+    .insight-card__details {
+      padding: 0 22px 22px 22px;
+    }
+
+    .insight-card__title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #111827;
+      line-height: 1.35;
+      margin-bottom: 10px;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+
+    .insight-card__description {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #374151;
+      margin-bottom: 10px;
+      max-width: none;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+
+    .meta-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      font-size: 12px;
+      min-width: 0;
+    }
+
+    .pill {
+      border: 1px solid #d8dee5;
+      border-radius: 999px;
+      padding: 4px 10px;
+      background: #f5f7fa;
+      color: #4b5563;
+      max-width: 100%;
+      min-width: 0;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      white-space: normal;
+    }
+
+    .insight-sections {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 4px;
+    }
+
+    .section-card {
+      background: #ffffff;
+      border: 1px solid #dde3ea;
+      border-radius: 14px;
+      padding: 16px;
+      min-width: 0;
+    }
+
+    .section-card__title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 10px;
+    }
+
+    .section-card-content {
+      font-size: 14px;
+      line-height: 1.55;
+      color: #374151;
+      max-width: none;
+    }
+
+    .section-card-content ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .section-card-content li {
+      margin: 6px 0;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+
+    .cta-card {
+      margin-top: 24px;
+      text-align: center;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 24px 20px;
+      box-shadow: 0 8px 24px rgba(15,23,42,0.06);
+    }
+
+    .cta-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 8px;
+    }
+
+    .cta-copy {
+      font-size: 14px;
+      color: #4b5563;
+      margin-bottom: 16px;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: #2563eb;
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    @media (max-width: 980px) {
+      .insight-sections {
+        grid-template-columns: 1fr;
+      }
+
+      .insight-card__summary {
+        padding-right: 72px;
+      }
+
+      .insight-card__summary::after {
+        width: 42px;
+        height: 42px;
+        right: 18px;
+        font-size: 22px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .executive-columns {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+<a href="https://intuifi.io/" style="display:inline-block;margin-bottom:16px;">← Back</a>
+<header>
+  <div>
+    <h1>Sample Strategic Insights Report</h1>
+  </div>
+</header>
+
+<div class="sample-note">This is a sample report generated from the data I collected during interviews with 27 professionals.</div>
+
+<div id="metaLine" class="meta">Records: 27</div>
+
+<div class="card executive-card">
+  <div class="executive-header">🧠 Executive Summary</div>
+  <div id="report" class="executive-summary">
+    <div class="tldr-box">
+      <div class="tldr-label">💡 TLDR</div>
+      <div class="tldr-text">Product managers and customer-facing roles across company stages share a consistent pattern of fragmented, informal feedback practices that limit their ability to convert raw customer input into reliable product decisions.</div>
+    </div>
+
+    <div class="executive-columns">
+      <div class="executive-panel">
+        <div class="executive-panel-title">Main Takeaways</div>
+        <ul class="executive-list executive-list--takeaways">
+          <li>Reliance on anecdotal and second-hand sources is consistent across company sizes and roles, indicating this is a structural norm rather than a resourcing gap.</li>
+          <li>Feedback is captured across multiple disconnected channels and tools, and the absence of a single consolidated view is associated with difficulty identifying patterns and prioritising action.</li>
+          <li>The inability to close the loop with customers after feedback is given is linked to internal process gaps rather than intent, as teams acknowledge its importance but lack the mechanisms to act on it systematically.</li>
+          <li>Where leadership or organisational process does not formalise feedback handling, individuals default to ad hoc methods, which compounds inconsistency across teams and markets.</li>
+        </ul>
+      </div>
+
+      <div class="executive-panel">
+        <div class="executive-panel-title">Tensions to be aware of</div>
+        <ul class="executive-list executive-list--tensions">
+          <li>Direct customer conversations are widely valued as the richest source of insight, yet the informal and unstructured nature of those conversations makes it difficult to aggregate or act on what is learned at scale.</li>
+          <li>Teams recognise the need for systematic feedback processes but continue operating ad hoc, suggesting awareness of the problem is not sufficient to change behaviour without structural or tooling support.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="section-title">🌟 Key themes across the data</div>
+  <div id="themes" class="insight-layout">
+
+    <details class="insight-card">
+      <summary class="insight-card__summary">
+        <div class="insight-card__summary-content">
+          <div class="insight-card__title">Fragmented and Siloed Feedback Sources</div>
+          <div class="insight-card__description">Feedback arrives through multiple disconnected channels across teams, making it difficult to form a unified view of customer needs and priorities.</div>
+          <div class="meta-row">
+            <div class="pill">5 signals</div>
+            <div class="pill">18.5% of feedback</div>
+            <div class="pill">3 companies</div>
+          </div>
+        </div>
+      </summary>
+      <div class="insight-card__details">
+        <div class="insight-sections">
+          <div class="section-card">
+            <div class="section-card__title">🔎 Supporting evidence</div>
+            <div class="section-card-content">
+              <ul>
+                <li>One company describes inbound feedback coming through a self-service portal, while other feedback arrives through separate channels, with no indication these are consolidated.</li>
+                <li>Multiple feedback sources are described including direct customer conversations, product launch engagements, and stage-dependent inputs, with no single system unifying them.</li>
+                <li>A respondent notes the need to read between the lines of customer feedback, suggesting that even when feedback is gathered, it requires significant interpretation before it is usable.</li>
+                <li>Engineers are noted as not regularly speaking to customers in some organisations, creating a disconnect between those building the product and those hearing customer needs.</li>
+                <li>The coexistence of public voting portals, direct conversations, and CRM data without integration means different teams may be acting on different and potentially conflicting signals.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="section-card">
+            <div class="section-card__title">💡 What this suggests</div>
+            <div class="section-card-content">
+              <div>Siloed feedback channels mean that no single team or individual holds a complete picture of customer sentiment, increasing the risk of misaligned product decisions.</div>
+            </div>
+          </div>
+
+          <div class="section-card">
+            <div class="section-card__title">📈 Signals to monitor</div>
+            <div class="section-card-content">
+              <ul>
+                <li>Number of distinct feedback channels currently in use across the organisation</li>
+                <li>Percentage of feedback items that are visible to more than one team or function</li>
+                <li>Frequency with which feedback from different sources is reviewed together in a single session</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <details class="insight-card">
+      <summary class="insight-card__summary">
+        <div class="insight-card__summary-content">
+          <div class="insight-card__title">Over-Reliance on Second-Hand and Anecdotal Feedback</div>
+          <div class="insight-card__description">Product managers rely primarily on anecdotal and sales-mediated feedback, which limits the reliability of customer insight reaching product decisions.</div>
+          <div class="meta-row">
+            <div class="pill">5 signals</div>
+            <div class="pill">18.5% of feedback</div>
+            <div class="pill">2 companies</div>
+          </div>
+        </div>
+      </summary>
+      <div class="insight-card__details">
+        <div class="insight-sections">
+          <div class="section-card">
+            <div class="section-card__title">🔎 Supporting evidence</div>
+            <div class="section-card-content">
+              <ul>
+                <li>A product manager describes their primary feedback method as anecdotal, with most input arriving via the sales team rather than directly from customers.</li>
+                <li>In established markets, direct customer conversations were replaced over time by indirect channels, suggesting a drift away from primary sources.</li>
+                <li>One respondent acknowledges the absence of a formal feedback process, relying instead on ad hoc questions to customers about purchasing behaviour rather than structured collection.</li>
+                <li>Feedback sources are described as variable, with no consistent or standardised method for capturing customer input across touchpoints.</li>
+                <li>The dependence on sales as an intermediary introduces a layer of interpretation before feedback reaches product teams, increasing the risk of signal distortion.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="section-card">
+            <div class="section-card__title">💡 What this suggests</div>
+            <div class="section-card-content">
+              <div>Product decisions may be shaped by filtered or incomplete customer signals, reducing confidence in the accuracy of perceived customer needs.</div>
+            </div>
+          </div>
+
+          <div class="section-card">
+            <div class="section-card__title">📈 Signals to monitor</div>
+            <div class="section-card-content">
+              <ul>
+                <li>Proportion of feedback sourced directly from customers versus via intermediaries such as sales</li>
+                <li>Number of direct customer touchpoints per product manager per quarter</li>
+                <li>Ratio of structured feedback collection methods to informal or anecdotal methods</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <details class="insight-card">
+      <summary class="insight-card__summary">
+        <div class="insight-card__summary-content">
+          <div class="insight-card__title">Difficulty Extracting Actionable Insight from Customer Conversations</div>
+          <div class="insight-card__description">Product and business development professionals struggle to convert raw customer conversations into clear, actionable product direction, reducing the value of gathered feedback.</div>
+          <div class="meta-row">
+            <div class="pill">4 signals</div>
+            <div class="pill">14.8% of feedback</div>
+            <div class="pill">3 companies</div>
+          </div>
+        </div>
+      </summary>
+      <div class="insight-card__details">
+        <div class="insight-sections">
+          <div class="section-card">
+            <div class="section-card__title">🔎 Supporting evidence</div>
+            <div class="section-card-content">
+              <ul>
+                <li>Engineers are noted as the primary capturers of feedback because they can engage with technical detail, but this creates inconsistency in what is recorded and how.</li>
+                <li>One respondent describes evaluating feedback against whether it solves a customer need and whether customers would pay for it, indicating the challenge of moving from stated need to validated insight.</li>
+                <li>A small company leader combining business development and product roles notes that significant time was historically spent on customer conversations without a clear method for translating them into product decisions.</li>
+                <li>Feedback is described as going into tools like Confluence, but the process of distilling it into actionable insight is not clearly defined.</li>
+                <li>The gap between capturing what customers say and understanding what they actually need is a recurring tension across respondents in startup and scaleup contexts.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="section-card">
+            <div class="section-card__title">💡 What this suggests</div>
+            <div class="section-card-content">
+              <div>Time invested in customer conversations may not translate proportionally into product clarity if no consistent method exists for interpreting and applying what is heard.</div>
+            </div>
+          </div>
+
+          <div class="section-card">
+            <div class="section-card__title">📈 Signals to monitor</div>
+            <div class="section-card-content">
+              <ul>
+                <li>Percentage of customer feedback items that result in a documented product insight or decision</li>
+                <li>Average time between feedback capture and documented interpretation</li>
+                <li>Number of feedback items that remain unprocessed or unclassified after a defined period</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <details class="insight-card">
+      <summary class="insight-card__summary">
+        <div class="insight-card__summary-content">
+          <div class="insight-card__title">Lack of Leadership Buy-In and Organisational Process for Feedback</div>
+          <div class="insight-card__description">Feedback collection and use lacks consistent organisational support and defined process, leaving individual contributors to manage it without structural backing.</div>
+          <div class="meta-row">
+            <div class="pill">3 signals</div>
+            <div class="pill">11.1% of feedback</div>
+            <div class="pill">3 companies</div>
+          </div>
+        </div>
+      </summary>
+      <div class="insight-card__details">
+        <div class="insight-sections">
+          <div class="section-card">
+            <div class="section-card__title">🔎 Supporting evidence</div>
+            <div class="section-card-content">
+              <ul>
+                <li>A sales-led organisation describes narrowing industry targeting based on customer interviews, but the process appears to have been driven by individuals rather than an established organisational framework.</li>
+                <li>One respondent describes feedback processes varying by stage of the sales cycle, suggesting that no overarching organisational policy governs how feedback is collected or used.</li>
+                <li>A large organisation with a call centre and monitoring tools describes feedback flowing through multiple systems, but the connection between this data and product or leadership decisions is not clearly defined.</li>
+                <li>Across consultant, established, and scaleup contexts, feedback processes appear to be individually owned rather than institutionally mandated.</li>
+                <li>The absence of leadership-defined feedback processes means that the depth and consistency of customer insight varies significantly depending on who is responsible for gathering it.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="section-card">
+            <div class="section-card__title">💡 What this suggests</div>
+            <div class="section-card-content">
+              <div>When feedback processes depend on individual initiative rather than organisational mandate, the consistency and completeness of customer insight is subject to personnel and role changes.</div>
+            </div>
+          </div>
+
+          <div class="section-card">
+            <div class="section-card__title">📈 Signals to monitor</div>
+            <div class="section-card-content">
+              <ul>
+                <li>Existence and adoption rate of a documented organisational feedback process</li>
+                <li>Percentage of teams with a defined owner responsible for feedback collection and synthesis</li>
+                <li>Frequency with which customer feedback is formally reviewed at a leadership or cross-functional level</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <details class="insight-card">
+      <summary class="insight-card__summary">
+        <div class="insight-card__summary-content">
+          <div class="insight-card__title">Inability to Identify Trends Across Feedback</div>
+          <div class="insight-card__description">Product teams lack systematic approaches to aggregating feedback over time, making it difficult to detect recurring patterns that could inform strategic decisions.</div>
+          <div class="meta-row">
+            <div class="pill">3 signals</div>
+            <div class="pill">11.1% of feedback</div>
+            <div class="pill">2 companies</div>
+          </div>
+        </div>
+      </summary>
+      <div class="insight-card__details">
+        <div class="insight-sections">
+          <div class="section-card">
+            <div class="section-card__title">🔎 Supporting evidence</div>
+            <div class="section-card-content">
+              <ul>
+                <li>A product designer new to their role describes going directly to customers to understand operations, indicating reliance on individual conversations rather than aggregated trend data.</li>
+                <li>One team uses online surveys and CRM data but describes their reporting process as periodic rather than continuous, limiting real-time trend visibility.</li>
+                <li>A respondent describes their feedback process as ad hoc, with no set process, and notes a preference for qualitative insights while acknowledging that quantitative data is harder to act on.</li>
+                <li>The absence of a structured aggregation method means individual data points are treated in isolation rather than as part of a broader pattern.</li>
+                <li>Across established and scaleup companies, feedback collection appears event-driven rather than continuous, reducing the ability to track shifts in customer sentiment over time.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="section-card">
+            <div class="section-card__title">💡 What this suggests</div>
+            <div class="section-card-content">
+              <div>Without trend visibility, product teams may respond to the loudest or most recent feedback rather than the most prevalent or strategically significant signals.</div>
+            </div>
+          </div>
+
+          <div class="section-card">
+            <div class="section-card__title">📈 Signals to monitor</div>
+            <div class="section-card-content">
+              <ul>
+                <li>Frequency of feedback review cycles across the product team</li>
+                <li>Number of recurring themes identified across feedback collected over a rolling period</li>
+                <li>Proportion of feedback items tagged or categorised in a way that enables trend analysis</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <details class="insight-card">
+      <summary class="insight-card__summary">
+        <div class="insight-card__summary-content">
+          <div class="insight-card__title">Prioritisation Difficulty Across Competing Feedback</div>
+          <div class="insight-card__description">Product and customer-facing teams face ongoing difficulty deciding which feedback to act on when volume and variety of input exceed their capacity to evaluate it systematically.</div>
+          <div class="meta-row">
+            <div class="pill">3 signals</div>
+            <div class="pill">11.1% of feedback</div>
+            <div class="pill">2 companies</div>
+          </div>
+        </div>
+      </summary>
+      <div class="insight-card__details">
+        <div class="insight-sections">
+          <div class="section-card">
+            <div class="section-card__title">🔎 Supporting evidence</div>
+            <div class="section-card-content">
+              <ul>
+                <li>A respondent describes relying on memory during face-to-face customer interactions rather than capturing feedback in the moment, introducing recall bias into the prioritisation process.</li>
+                <li>In startup environments, feedback arrives simultaneously through multiple channels including customer support and direct requests, and the process of deciding what to act on is described as a recurring challenge.</li>
+                <li>One respondent describes their role as triaging feedback to the right people, indicating that routing rather than evaluating is the primary prioritisation mechanism.</li>
+                <li>The filtering of feedback is described as dependent on context and individual judgement rather than a shared framework, leading to inconsistent prioritisation outcomes.</li>
+                <li>Niche use cases are mentioned as a specific challenge, where it is unclear whether edge-case feedback should influence the product roadmap or be deprioritised.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="section-card">
+            <div class="section-card__title">💡 What this suggests</div>
+            <div class="section-card-content">
+              <div>Without a shared prioritisation framework, feedback routing and decision-making depend heavily on individual judgement, which may introduce inconsistency across the product team.</div>
+            </div>
+          </div>
+
+          <div class="section-card">
+            <div class="section-card__title">📈 Signals to monitor</div>
+            <div class="section-card-content">
+              <ul>
+                <li>Percentage of feedback items that are formally evaluated against a consistent set of criteria</li>
+                <li>Number of feedback items that remain unrouted or unassigned after initial capture</li>
+                <li>Frequency of disagreement between teams on the priority of the same feedback item</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <details class="insight-card">
+      <summary class="insight-card__summary">
+        <div class="insight-card__summary-content">
+          <div class="insight-card__title">Feedback Not Closed-Loop: Customers Not Informed of Outcomes</div>
+          <div class="insight-card__description">Customers who provide feedback are rarely informed of what happened as a result, undermining trust and reducing the perceived value of participating in feedback processes.</div>
+          <div class="meta-row">
+            <div class="pill">2 signals</div>
+            <div class="pill">7.4% of feedback</div>
+            <div class="pill">2 companies</div>
+          </div>
+        </div>
+      </summary>
+      <div class="insight-card__details">
+        <div class="insight-sections">
+          <div class="section-card">
+            <div class="section-card__title">🔎 Supporting evidence</div>
+            <div class="section-card-content">
+              <ul>
+                <li>A 17-person company uses Intercom for support tickets but does not describe any mechanism for communicating back to customers about how their feedback influenced product decisions.</li>
+                <li>A service company acknowledges being ineffective at gathering customer feedback and notes that internal processes contradict the value they place on customer input, suggesting a structural gap in closing the loop.</li>
+                <li>Feedback capture is described as occurring in software tools, but no corresponding process for communicating outcomes back to customers is mentioned.</li>
+                <li>The absence of a closed-loop process means customers have no visibility into whether their input has been heard or acted upon, which may reduce future engagement.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="section-card">
+            <div class="section-card__title">💡 What this suggests</div>
+            <div class="section-card-content">
+              <div>The absence of feedback closure may reduce customer willingness to engage in future feedback processes, limiting the quality and volume of input available to product teams over time.</div>
+            </div>
+          </div>
+
+          <div class="section-card">
+            <div class="section-card__title">📈 Signals to monitor</div>
+            <div class="section-card-content">
+              <ul>
+                <li>Percentage of feedback items for which the customer received a follow-up communication</li>
+                <li>Rate of repeat feedback participation among customers who have previously submitted input</li>
+                <li>Number of feedback items marked as resolved or actioned with a corresponding customer notification</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <details class="insight-card">
+      <summary class="insight-card__summary">
+        <div class="insight-card__summary-content">
+          <div class="insight-card__title">Demand for a Centralised Feedback Repository with AI Analysis</div>
+          <div class="insight-card__description">Product professionals express a need for a single, intelligent system to consolidate and analyse feedback, reflecting the limitations of current fragmented and manual approaches.</div>
+          <div class="meta-row">
+            <div class="pill">2 signals</div>
+            <div class="pill">7.4% of feedback</div>
+            <div class="pill">1 companies</div>
+          </div>
+        </div>
+      </summary>
+      <div class="insight-card__details">
+        <div class="insight-sections">
+          <div class="section-card">
+            <div class="section-card__title">🔎 Supporting evidence</div>
+            <div class="section-card-content">
+              <ul>
+                <li>A respondent describes their feedback collection as thorough when onsite but acknowledges the lack of a centralised system to store and analyse what is gathered across interactions.</li>
+                <li>A company acknowledges collecting feedback badly despite recognising its value, and describes having a customer portal without a formal process to connect portal input to product decisions.</li>
+                <li>The gap between recognising the importance of feedback and having the infrastructure to manage it systematically is a consistent tension among startup respondents.</li>
+                <li>Regular sessions with customers are described as occurring, but without a repository to capture and cross-reference outputs, the value of these sessions is not fully retained.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="section-card">
+            <div class="section-card__title">💡 What this suggests</div>
+            <div class="section-card-content">
+              <div>The expressed need for centralised and analytically capable feedback infrastructure reflects a recognised gap between current capability and the level of insight product teams believe is possible.</div>
+            </div>
+          </div>
+
+          <div class="section-card">
+            <div class="section-card__title">📈 Signals to monitor</div>
+            <div class="section-card-content">
+              <ul>
+                <li>Number of separate tools or locations currently used to store customer feedback</li>
+                <li>Percentage of feedback items accessible to all relevant team members from a single source</li>
+                <li>Proportion of feedback analysis tasks currently performed manually versus through automated or AI-assisted methods</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </details>
+
+  </div>
+  <div id="unclassifiedNote" class="unclassified-note" style="display:none;"></div>
+</div>
+
+<div class="cta-card">
+  <div class="cta-title">Want this for your own data?</div>
+  <div class="cta-copy">Upload your notes, feedback, or transcripts and get a structured, decision-ready report in minutes.</div>
+  <a class="cta-btn" href="https://intuifi.io/#early-access">Try Intuifi</a>
+</div>
+<script data-goatcounter="https://intuifi.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<noscript><img src="https://intuifi.goatcounter.com/count?p=/sample_report.html" alt="" referrerpolicy="no-referrer-when-downgrade"></noscript>
+
+<div class="calendly-lifecycle-optibutton_singleton"><template shadowrootmode="closed"><div class="calendly-opti-root"></div></template></div><div class="calendly-frame-tag" manager_id="710a096c-034a-47e8-b884-d710fb73533a" id="710a096c-034a-47e8-b884-d710fb73533a" style="height: 0px; width: 0px; visibility: hidden;"></div></body></html>
