@@ -66,15 +66,36 @@
     .comparison-col-head{text-align:center;margin-bottom:24px;min-height:80px;display:flex;flex-direction:column;align-items:center;justify-content:center;}
     .comparison-image{display:block;margin:0 auto 8px;width:auto;object-fit:contain;height:48px;}
     .column-head{font-size:18px;font-weight:700;margin:0;}
-    .faq-accordion{display:grid;gap:var(--space-2)}
-    .faq-accordion details{background:#f6f8f9;border:1px solid var(--border);border-radius:16px;padding:0}
-    .faq-accordion summary{list-style:none;cursor:pointer;padding:16px 52px 16px 16px;font-weight:700;position:relative;outline:none}
+    .faq-accordion{display:block;}
+    .faq-accordion details{background:none;border:none;border-bottom:1px solid var(--border);padding:0;}
+    .faq-accordion details:first-child{border-top:1px solid var(--border);}
+    .faq-accordion summary{list-style:none;cursor:pointer;padding:20px 40px 20px 0;font-weight:600;font-size:15px;position:relative;outline:none;color:var(--text);}
     .faq-accordion summary::-webkit-details-marker{display:none}
-    .faq-accordion details[open]{background:#fff;box-shadow:0 8px 24px rgba(0,0,0,.06)}
-    .faq-accordion details[open] summary{border-bottom:1px solid var(--border)}
-    .faq-accordion .chev{position:absolute;right:14px;top:50%;transform:translateY(-50%) rotate(0);width:28px;height:28px;border-radius:999px;background:#e9eff1;display:grid;place-items:center;transition:transform .2s ease}
-    .faq-accordion details[open] .chev{transform:translateY(-50%) rotate(180deg)}
-    .faq-accordion .panel{padding:14px 16px 18px;color:var(--muted)}
+    .faq-accordion details[open]{background:none;box-shadow:none;}
+    .faq-accordion details[open] summary{border-bottom:none;}
+    .faq-accordion .chev{position:absolute;right:0;top:50%;transform:translateY(-50%) rotate(0);width:20px;height:20px;display:grid;place-items:center;transition:transform .2s ease;background:none;}
+    .faq-accordion details[open] .chev{transform:translateY(-50%) rotate(180deg);}
+    .faq-accordion .panel{padding:0 0 20px 0;color:var(--muted);font-size:15px;line-height:1.6;}
+    .faq-accordion .panel p:first-child{margin-top:0;}
+
+    /* FAQ header */
+    .faq-header{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:24px;}
+    .faq-header h2{margin:0;text-align:left;font-size:28px;}
+    .faq-search{display:flex;align-items:center;gap:8px;border:1px solid var(--border);border-radius:999px;padding:8px 14px;background:#fff;}
+    .faq-search input{border:none;outline:none;font-size:14px;color:var(--text);background:transparent;font-family:Roboto,system-ui,-apple-system,Segoe UI,Arial,sans-serif;width:160px;}
+    .faq-search input::placeholder{color:var(--muted);}
+    .faq-search svg{color:var(--muted);flex-shrink:0;}
+    .faq-no-results{display:none;color:var(--muted);font-size:15px;padding:20px 0;}
+
+    /* FAQ tabs */
+    .faq-tabs{display:flex;gap:0;border-bottom:2px solid var(--border);margin-bottom:24px;}
+    .faq-tab{background:none;border:none;padding:12px 20px 12px 0;font-size:15px;font-weight:600;color:var(--muted);cursor:pointer;position:relative;transition:color .15s ease;}
+    .faq-tab:hover{color:var(--text);}
+    .faq-tab.active{color:var(--brand);}
+    .faq-tab.active::after{content:"";position:absolute;bottom:-2px;left:0;right:0;height:2px;background:var(--brand);}
+    .faq-panel{display:none;}
+    .faq-panel.active{display:block;}
+
     footer{border-top:1px solid var(--border);margin-top:var(--space-8)}
     .footer-inner{display:grid;grid-template-columns:1fr;gap:var(--space-6);padding:var(--space-6) 0 var(--space-8);font-size:14px;color:var(--muted);text-align:center;justify-items:center}
     .footer-title{font-weight:700;display:block;margin-bottom:4px}
@@ -112,50 +133,6 @@
       .cta-band{padding:32px 20px;}
       .cta-meta-grid{grid-template-columns:1fr;gap:14px;}
     }
-    @media(max-width:680px){
-      .steps-grid{grid-template-columns:1fr !important;}
-      .steps-arrow{display:none;}
-      .steps-grid .benefit-title{white-space:normal !important;}
-    }
-    .roadmap-section{max-width:1100px;margin:0 auto;padding:40px 0;overflow-x:hidden;}
-    .roadmap-section,.roadmap-grid,.roadmap-stage{min-width:0;}
-    .roadmap-stage-cards{min-width:0;width:100%;}
-    .roadmap-header{text-align:center;margin-bottom:28px;}
-    .roadmap-eyebrow{color:var(--brand);text-transform:uppercase;font-weight:700;font-size:13px;letter-spacing:1.5px;margin-bottom:12px;}
-    .roadmap-title{font-size:36px;margin:0 0 16px;font-weight:700;letter-spacing:-0.02em;}
-    .roadmap-intro{color:var(--muted);max-width:720px;margin:0 auto;font-size:18px;line-height:1.6;}
-    .roadmap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:start;}
-    .roadmap-stage{display:flex;flex-direction:column;}
-    .roadmap-stage-head{text-align:center;margin-bottom:18px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;}
-    .roadmap-stage-label{font-size:26px;font-weight:700;margin:0 0 12px;color:var(--text);line-height:1;display:block;}
-    .roadmap-stage-line{height:4px;width:60px;background:var(--border);border-radius:99px;}
-    .roadmap-stage-line--current{background:var(--brand);}
-    .roadmap-card{background:#fff;border:1px solid var(--border);border-radius:24px;padding:32px;box-shadow:0 4px 20px rgba(0,0,0,0.04);display:flex;flex-direction:column;}
-    .roadmap-card--hero{border-top:6px solid var(--brand);text-align:center;align-items:center;}
-    .roadmap-icon-wrap{width:52px;height:52px;background:var(--brand-light);color:var(--brand);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;flex-shrink:0;}
-    .roadmap-icon-wrap svg{width:24px;height:24px;display:block;}
-    .roadmap-card h3{margin:0 0 8px;font-size:18px;font-weight:700;line-height:1.2;}
-    .roadmap-card p{color:var(--muted);margin:0;font-size:14px;line-height:1.5;}
-    .roadmap-stage--later .roadmap-card:first-child{margin-top:6px;}
-    .roadmap-stage--later .roadmap-card{box-shadow:none;padding:20px 18px;text-align:center;align-items:center;margin-bottom:16px;}
-    .roadmap-stage--later .roadmap-icon-wrap{width:44px;height:44px;margin:0 auto 14px;background:var(--brand-light);border:none;border-radius:10px;}
-    .roadmap-stage-cards{display:flex;flex-direction:column;gap:16px;}
-    @media(max-width:900px){
-      .roadmap-grid{display:flex;flex-direction:column;gap:32px;}
-      .roadmap-stage{min-width:0;}
-      .roadmap-stage-head{text-align:left;align-items:flex-start;margin-bottom:14px;}
-      .roadmap-stage-label{font-size:22px;}
-      .roadmap-title{font-size:32px;}
-      .roadmap-stage-cards{min-width:0;width:100%;}
-      .roadmap-stage--now .roadmap-stage-cards{display:block;overflow:visible;}
-      .roadmap-stage--next .roadmap-stage-cards,.roadmap-stage--later .roadmap-stage-cards{display:flex;gap:14px;overflow-x:auto;overflow-y:hidden;width:calc(100vw - 40px);max-width:100%;padding:0 20px 8px 0;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
-      .roadmap-stage--next .roadmap-stage-cards::-webkit-scrollbar,.roadmap-stage--later .roadmap-stage-cards::-webkit-scrollbar{display:none;}
-      .roadmap-stage--next .roadmap-card,.roadmap-stage--later .roadmap-card{flex:0 0 74%;min-width:74%;scroll-snap-align:start;margin-bottom:0 !important;}
-      .roadmap-card,.roadmap-stage--later .roadmap-card{padding:24px 20px;}
-      .roadmap-stage--later .roadmap-card:first-child{margin-top:0;}
-      .roadmap-stage--next .roadmap-stage-cards,.roadmap-stage--later .roadmap-stage-cards{position:relative;}
-      .roadmap-stage--next .roadmap-stage-cards::after,.roadmap-stage--later .roadmap-stage-cards::after{content:"";position:sticky;right:0;width:28px;flex:0 0 28px;pointer-events:none;background:linear-gradient(to right,rgba(255,255,255,0),#fff 85%);}
-    }
     .faq-roadmap{margin-top:20px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
     .faq-roadmap-stage{background:#f6f8f9;border:1px solid var(--border);border-radius:14px;padding:16px;}
     .faq-roadmap-stage--now{border-top:3px solid var(--brand);}
@@ -192,7 +169,7 @@
           <div class="list">
             <article class="benefit-card">
               <div class="icon-wrap" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#a2c4c9" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-stack-icon lucide-file-stack"><path d="M11 21a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1"></path><path d="M16 16a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1"></path><path d="M21 6a2 2 0 0 0-.586-1.414l-2-2A2 2 0 0 0 17 2h-3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1z"></path></svg></div>
-              <div><p class="benefit-title">Customer insights are siloed and patchy. Getting the full picture takes time & effort.</p></div>
+              <div><p class="benefit-title">Customer insights are siloed and patchy. Getting the full picture takes time and effort.</p></div>
             </article>
             <article class="benefit-card">
               <div class="icon-wrap" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#a2c4c9" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rotate-cw-square-icon lucide-rotate-cw-square"><path d="M12 5H6a2 2 0 0 0-2 2v3"></path><path d="m9 8 3-3-3-3"></path><path d="M4 14v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"></path></svg></div>
@@ -261,75 +238,94 @@
     <div class="section-divider" aria-hidden="true"></div>
 
     <section class="section" id="faq">
-      <h2>Before you decide</h2>
-      <div class="faq-accordion" role="list">
-        <details>
-          <summary>How does it actually work?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary>
-          <div class="panel">Upload CSVs from the tools your team already uses. Intuifi analyses everything across all your files, identifies the recurring themes, patterns and tensions, and produces a structured report. You start with a high level summary and can drill down into the evidence behind any finding whenever you need to.</div>
-        </details>
-        <details>
-          <summary>What effort is involved and how much of my time does this take?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary>
-          <div class="panel">Simply ask your team to export the data from the tools they are using. Then upload those files in a few clicks and sit back while the analysis happens. There is nothing to configure and no prompting required. Around five minutes later you will get back a structured report with an executive summary, the key themes across your data, and the evidence behind each one. From there you can share it with your team, use it to prepare for a planning session, or just keep it as a reference point.</div>
-        </details>
-        <details>
-          <summary>What results can I expect?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary>
-          <div class="panel">The report opens with an executive summary of the key themes and tensions across your data. Each theme comes with supporting evidence, an implication for your business, and signals to track. Everything links back to the source so you can verify what matters. To see exactly what you get, take a look at a <a href="https://intuifi.io/sample_report" target="_blank" rel="noopener">this sample report</a>.</div>
-        </details>
-        <details>
-          <summary>This looks like a manual process. Why?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary>
-          <div class="panel">
-            <p>This is an MVP and the decision to keep it manual is deliberate. I am looking to build trust, and the way I am approaching that is to reduce any concerns you might have about your data, by enabling you to edit or sanitise anything you want to upload before it reaches Intuifi. Automation is coming, but only once I am confident you are getting the insight you need.</p>
-            <p>Here is where Intuifi is heading:</p>
-            <div class="faq-roadmap">
-              <div class="faq-roadmap-stage faq-roadmap-stage--now">
-                <p class="faq-roadmap-label">Now</p>
-                <div class="faq-roadmap-item">On-demand reports<p>Upload your data, get back a structured report with themes, priorities and evidence.</p></div>
-              </div>
-              <div class="faq-roadmap-stage">
-                <p class="faq-roadmap-label faq-roadmap-label--future">Next</p>
-                <div class="faq-roadmap-item">Automated data ingestion<p>Connect directly to the tools your team already uses.</p></div>
-                <div class="faq-roadmap-item">Pattern memory<p>Track how customer themes change across reports over time.</p></div>
-                <div class="faq-roadmap-item">Continuous monitoring<p>Alert your team when new trends emerge.</p></div>
-              </div>
-              <div class="faq-roadmap-stage">
-                <p class="faq-roadmap-label faq-roadmap-label--future">Later</p>
-                <div class="faq-roadmap-item">Interactive discovery<p>Ask follow-up questions and let Intuifi investigate for you.</p></div>
-                <div class="faq-roadmap-item">Contextual input<p>See how market needs align with your business goals.</p></div>
-                <div class="faq-roadmap-item">Strategic simulation<p>Explore how market headwinds could reshape your priorities.</p></div>
+      <div class="faq-header">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          <input type="text" id="faq-search-input" placeholder="Looking for something" aria-label="Search questions">
+        </div>
+      </div>
+      <div class="faq-no-results" id="faq-no-results">No questions found. Try a different search term.</div>
+
+      <div class="faq-tabs" role="tablist">
+        <button class="faq-tab active" role="tab" aria-selected="true" aria-controls="tab-getting-started" id="btn-getting-started">Getting started</button>
+        <button class="faq-tab" role="tab" aria-selected="false" aria-controls="tab-trust" id="btn-trust">Trusting the output</button>
+      </div>
+
+      <div id="tab-getting-started" class="faq-panel active" role="tabpanel" aria-labelledby="btn-getting-started">
+        <div class="faq-accordion">
+          <details>
+            <summary>How does it actually work?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary>
+            <div class="panel">Upload CSVs from the tools your team already uses. Intuifi analyses everything across all your files, identifies the recurring themes, patterns and tensions, and produces a structured report. You start with a high level summary and can drill down into the evidence behind any finding whenever you need to.</div>
+          </details>
+          <details>
+            <summary>What effort is involved and how much of my time does this take?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary>
+            <div class="panel">Simply ask your team to export the data from the tools they are using. Then upload those files in a few clicks and sit back while the analysis happens. There is nothing to configure and no prompting required. Around five minutes later you will get back a structured report with an executive summary, the key themes across your data, and the evidence behind each one. From there you can share it with your team, use it to prepare for a planning session, or just keep it as a reference point.</div>
+          </details>
+          <details>
+            <summary>What results can I expect?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary>
+            <div class="panel">The report opens with an executive summary of the key themes and tensions across your data. Each theme comes with supporting evidence, an implication for your business, and signals to track. Everything links back to the source so you can verify what matters. To see exactly what you get, take a look at <a href="https://intuifi.io/sample_report" target="_blank" rel="noopener">this sample report</a>.</div>
+          </details>
+          <details>
+            <summary>This looks like a manual process. Why?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary>
+            <div class="panel">
+              <p>This is an MVP and the decision to keep it manual is deliberate. I am looking to build trust, and the way I am approaching that is to reduce any concerns you might have about your data, by enabling you to edit or sanitise anything you want to upload before it reaches Intuifi. Automation is coming, but only once I am confident you are getting the insight you need.</p>
+              <p>Here is where Intuifi is heading:</p>
+              <div class="faq-roadmap">
+                <div class="faq-roadmap-stage faq-roadmap-stage--now">
+                  <p class="faq-roadmap-label">Now</p>
+                  <div class="faq-roadmap-item">On-demand reports<p>Upload your data, get back a structured report with themes, priorities and evidence.</p></div>
+                </div>
+                <div class="faq-roadmap-stage">
+                  <p class="faq-roadmap-label faq-roadmap-label--future">Next</p>
+                  <div class="faq-roadmap-item">Automated data ingestion<p>Connect directly to the tools your team already uses.</p></div>
+                  <div class="faq-roadmap-item">Pattern memory<p>Track how customer themes change across reports over time.</p></div>
+                  <div class="faq-roadmap-item">Continuous monitoring<p>Alert your team when new trends emerge.</p></div>
+                </div>
+                <div class="faq-roadmap-stage">
+                  <p class="faq-roadmap-label faq-roadmap-label--future">Later</p>
+                  <div class="faq-roadmap-item">Interactive discovery<p>Ask follow-up questions and let Intuifi investigate for you.</p></div>
+                  <div class="faq-roadmap-item">Contextual input<p>See how market needs align with your business goals.</p></div>
+                  <div class="faq-roadmap-item">Strategic simulation<p>Explore how market headwinds could reshape your priorities.</p></div>
+                </div>
               </div>
             </div>
-          </div>
-        </details>
-        <details>
-          <summary>How is my data handled?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary>
-          <div class="panel">
-            Intuifi only analyses the files you choose to upload. They are processed using Anthropic models through MindStudio. If you upload your files yourself, I have no visibility of your data or your report at any point. You stay in control of what is included.<br><br>
-            Intuifi does not train on your data. Every theme is identified by analysing patterns in what your customers actually said across your uploaded files, not inferred from external sources or prior datasets.<br><br>
-            For more information:<br>
-            <a href="https://www.anthropic.com/safety-and-privacy/data-usage" target="_blank" rel="noopener">Anthropic data usage</a><br>
-            <a href="https://studio.mindstudio.ai/privacy" target="_blank" rel="noopener">MindStudio privacy policy</a>
-          </div>
-        </details>
-        <details>
-          <summary>How accurate is the output?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary>
-          <div class="panel">That depends on the quality of the data you upload. Intuifi analyses what is there and surfaces the patterns it finds across it. It will not always get every theme right, and some findings may reflect noise rather than signal. That is why every finding links back to the source data, so you can check what looks right, discard what does not, and act with confidence on what remains. The analysis is a starting point, not a verdict.</div>
-        </details>
-        <details>
-          <summary>How is this different from a typical dashboard?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary>
-          <div class="panel">This is not another dashboard. Dashboards usually present quantitative data and leave the interpretation to you. Intuifi works differently. It takes qualitative feedback like interviews, support tickets, survey responses, and call notes, then turns it into a structured report with clear themes, suggested actions, and the evidence behind each one. You are not exploring charts. You are seeing what customers need, and why it matters.</div>
-        </details>
-        <details>
-          <summary>Why would I not just use ChatGPT or Claude?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary>
-          <div class="panel">LLMs give you good answers when you ask the right questions. But as a leader, you should not have to become a prompt engineer to understand your customers. You still have to prepare your data, structure your questions, interpret the output, and turn it into something another person can review and trust. Intuifi removes that work. Upload your files as they are and get back a structured report with themes, priorities, and the evidence behind every finding.</div>
-        </details>
-        <details>
-          <summary>Could I not just build a tool like this myself?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary>
-          <div class="panel">Vibe coding tools make it easier than ever to build something that generates an output. The harder part is making it consistent and trustworthy enough to share with your team and act on. Intuifi is designed around that standard, so you spend less time maintaining workflows and more time understanding what matters.</div>
-        </details>
-        <details>
-          <summary>Won't this become obsolete as AI improves?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary>
-          <div class="panel">The opposite. As AI becomes more capable, so does Intuifi. The methodology that structures your data, preserves the evidence, and produces something your team can trust is built on top of AI, not instead of it. A more powerful engine makes the output better, not unnecessary. What stays constant is the structure that makes the insight trustworthy and actionable.</div>
-        </details>
+          </details>
+        </div>
+      </div>
+
+      <div id="tab-trust" class="faq-panel" role="tabpanel" aria-labelledby="btn-trust">
+        <div class="faq-accordion">
+          <details>
+            <summary>How is my data handled?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary>
+            <div class="panel">
+              The files you upload are processed to generate your report and then deleted. Nothing is stored, nothing is retained, and I never see your data at any point. Intuifi does not train on your data.<br><br>
+              For more information:<br>
+              <a href="https://www.anthropic.com/safety-and-privacy/data-usage" target="_blank" rel="noopener">Anthropic data usage</a><br>
+              <a href="https://studio.mindstudio.ai/privacy" target="_blank" rel="noopener">MindStudio privacy policy</a>
+            </div>
+          </details>
+          <details>
+            <summary>How accurate is the output?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary>
+            <div class="panel">That depends on the quality of the data you upload. Intuifi analyses what is there and surfaces the patterns it finds across it. It will not always get every theme right, and some findings may reflect noise rather than signal. That is why every finding links back to the source data, so you can check what looks right, discard what does not, and act with confidence on what remains. The analysis is a starting point, not a verdict.</div>
+          </details>
+          <details>
+            <summary>How is this different from a typical dashboard?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary>
+            <div class="panel">This is not another dashboard. Dashboards usually present quantitative data and leave the interpretation to you. Intuifi works differently. It takes qualitative feedback like interviews, support tickets, survey responses, and call notes, then turns it into a structured report with clear themes, suggested actions, and the evidence behind each one. You are not exploring charts. You are seeing what customers need, and why it matters.</div>
+          </details>
+          <details>
+            <summary>Why would I not just use ChatGPT or Claude?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary>
+            <div class="panel">LLMs give you good answers when you ask the right questions. But as a leader, you should not have to become a prompt engineer to understand your customers. You still have to prepare your data, structure your questions, interpret the output, and turn it into something another person can review and trust. Intuifi removes that work. Upload your files as they are and get back a structured report with themes, priorities, and the evidence behind every finding.</div>
+          </details>
+          <details>
+            <summary>Could I not just build a tool like this myself?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary>
+            <div class="panel">Vibe coding tools make it easier than ever to build something that generates an output. The harder part is making it consistent and trustworthy enough to share with your team and act on. Intuifi is designed around that standard, so you spend less time maintaining workflows and more time understanding what matters.</div>
+          </details>
+          <details>
+            <summary>Won't this become obsolete as AI improves?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary>
+            <div class="panel">The opposite. As AI becomes more capable, so does Intuifi. The methodology that structures your data, preserves the evidence, and produces something your team can trust is built on top of AI, not instead of it. A more powerful engine makes the output better, not unnecessary. What stays constant is the structure that makes the insight trustworthy and actionable.</div>
+          </details>
+        </div>
       </div>
     </section>
 
@@ -388,6 +384,48 @@
           }
         });
       }
+
+      // FAQ search
+      const searchInput = document.getElementById("faq-search-input");
+      const noResults = document.getElementById("faq-no-results");
+      if(searchInput){
+        searchInput.addEventListener("input", function(){
+          const q = this.value.trim().toLowerCase();
+          if(!q){
+            // restore tab view
+            document.querySelector(".faq-tabs").style.display = "";
+            panels.forEach(function(p){ p.classList.remove("active"); });
+            document.querySelector(".faq-panel").classList.add("active");
+            tabs.forEach(function(t,i){ t.classList.toggle("active", i===0); t.setAttribute("aria-selected", i===0 ? "true" : "false"); });
+            noResults.style.display = "none";
+            return;
+          }
+          // hide tabs, search across all details
+          document.querySelector(".faq-tabs").style.display = "none";
+          panels.forEach(function(p){ p.classList.add("active"); });
+          let found = 0;
+          document.querySelectorAll(".faq-accordion details").forEach(function(d){
+            const text = d.textContent.toLowerCase();
+            const match = text.includes(q);
+            d.style.display = match ? "" : "none";
+            if(match) found++;
+          });
+          noResults.style.display = found === 0 ? "block" : "none";
+        });
+      }
+
+      // FAQ tabs
+      const tabs = document.querySelectorAll('.faq-tab');
+      const panels = document.querySelectorAll('.faq-panel');
+      tabs.forEach(function(tab){
+        tab.addEventListener('click',function(){
+          tabs.forEach(function(t){ t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
+          panels.forEach(function(p){ p.classList.remove('active'); });
+          tab.classList.add('active');
+          tab.setAttribute('aria-selected','true');
+          document.getElementById(tab.getAttribute('aria-controls')).classList.add('active');
+        });
+      });
     });
   </script>
 
