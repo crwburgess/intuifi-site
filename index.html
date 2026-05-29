@@ -130,14 +130,15 @@
     @media(max-width:600px){.faq-roadmap{grid-template-columns:1fr;}}
 
     /* BIO - two column */
-    .bio-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
+    .bio-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:32px;align-items:start;}
     @media(max-width:720px){
       .bio-grid{grid-template-columns:1fr;}
       .bio-photo-col{order:-1;}
+      .bio-buttons-col{order:1;}
     }
     .bio-title{font-size:22px;font-weight:700;color:var(--text);margin:0 0 16px;}
     .bio-text{font-size:15px;color:var(--muted);line-height:1.7;margin:0 0 24px;}
-    .bio-photo{width:100%;max-width:240px;max-height:240px;object-fit:cover;object-position:top;border-radius:16px;display:block;background:var(--bg-grey);}
+    .bio-photo{width:100%;border-radius:16px;display:block;background:var(--bg-grey);}
     .bio-buttons{display:flex;flex-direction:column;gap:10px;margin-top:16px;}
     .bio-btn{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:#fff;text-decoration:none;color:var(--muted);font-size:13px;font-weight:600;font-family:Roboto,system-ui,-apple-system,Segoe UI,Arial,sans-serif;transition:border-color .15s ease,color .15s ease;}
     .bio-btn:hover{border-color:var(--brand);color:var(--brand);}
@@ -266,6 +267,8 @@
         </div>
         <div class="bio-photo-col">
           <img class="bio-photo" src="./assets/chris-burgess.png" alt="Chris Burgess">
+        </div>
+        <div class="bio-buttons-col">
           <div class="bio-buttons">
             <a class="bio-btn" href="https://crwburgess.com/" target="_blank" rel="noopener">
               <span>Learn more about me</span>
