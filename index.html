@@ -26,140 +26,141 @@
       --text:#111111;
       --muted:#5a5f66;
       --border:#e7eaee;
-      --card-radius:18px;
+      --bg-grey:#f6f8f9;
       --container:1000px;
       --space-2:8px; --space-3:12px; --space-4:16px; --space-5:20px;
       --space-6:24px; --space-7:28px; --space-8:32px;
     }
     *{box-sizing:border-box}
-    html,body{height:100%}
-    html{scroll-behaviour:smooth}
-    body{margin:0;font-family:Roboto,system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:var(--text);background:#fff;line-height:1.5;overflow-x:hidden;}
-    .wrapper{max-width:var(--container);margin:0 auto;padding:var(--space-8) var(--space-5);overflow-x:hidden;}
-    .hero{text-align:center;padding:var(--space-8) 0 var(--space-4)}
-    h1{font-size:clamp(40px,5vw,56px);line-height:1.1;margin:0 0 var(--space-4);letter-spacing:-0.2px}
-    h1 .line{display:block}
-    .subhead{font-size:clamp(18px,2.2vw,20px);color:var(--muted);margin:0 auto 20px;max-width:760px;}
-    .section-divider{border-top:1px solid var(--border);margin:18px 0;}
-    .section{padding:24px 0;}
-    .subhead .line{display:block}
-    .btn{display:inline-block;background:var(--brand);color:#fff;border:none;border-radius:24px;padding:14px 22px;font-weight:600;text-decoration:none;box-shadow:0 0 0 rgba(0,0,0,0);transition:transform .15s ease, box-shadow .15s ease}
-    .btn:focus{outline:2px solid #0a423e;outline-offset:2px}
-    .btn:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(15,98,92,.18)}
-    .btn-center{display:block;width:fit-content;margin:0 auto}
-    .section h2{font-size:28px;margin:0 0 var(--space-5);text-align:center}
-    .twocol{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-6);align-items:start}
-    .list{display:grid;gap:var(--space-4);}
-    .benefit-card{display:grid;grid-template-columns:44px 1fr;gap:var(--space-4);align-items:center;min-height:120px;background:#fff;border:1px solid var(--border);border-radius:24px;padding:18px 20px;box-shadow:0 6px 20px rgba(0,0,0,.06);}
-    .icon-wrap{width:44px;height:44px;display:flex;align-items:center;justify-content:center;}
-    .benefit-title{margin:0;font-weight:700;min-height:auto;}
-    .benefit-body{margin:4px 0 0;color:var(--muted)}
-    @media(max-width:980px){
-      .twocol{grid-template-columns:1fr}
-      .benefit-card{min-height:auto}
-      .comparison-col-wrap:last-child{margin-top:40px}
-      .steps-grid{grid-template-columns:1fr !important}
-      .steps-arrow{justify-content:center;padding:0 !important}
-      .steps-arrow svg{transform:rotate(90deg)}
-      .steps-grid .benefit-title{white-space:normal !important}
-    }
+    html,body{margin:0;padding:0;font-family:Roboto,system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:var(--text);background:#fff;line-height:1.5;overflow-x:hidden;}
+
+    .inner{max-width:var(--container);margin:0 auto;padding:0 20px;}
+
+    /* GREEN HEADER */
+    .site-header{background:var(--brand);padding:56px 20px;text-align:center;}
+    .site-header .inner{display:flex;flex-direction:column;align-items:center;}
+    .logo{display:block;margin:0 auto 28px;width:160px;height:auto;}
+    .site-header h1{font-size:clamp(32px,4.5vw,52px);line-height:1.15;margin:0;letter-spacing:-0.2px;color:#fff;max-width:760px;}
+
+    /* WHITE HERO BELOW HEADER */
+    .hero-sub{background:#fff;padding:40px 20px;text-align:center;}
+    .subhead{font-size:clamp(17px,2vw,20px);color:var(--muted);margin:0 auto 24px;max-width:680px;line-height:1.6;}
+
+    .btn{display:inline-block;background:var(--brand);color:#fff;border:none;border-radius:24px;padding:14px 22px;font-weight:600;text-decoration:none;transition:transform .15s ease, box-shadow .15s ease;}
+    .btn:focus{outline:2px solid #0a423e;outline-offset:2px;}
+    .btn:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(15,98,92,.18);}
+
+    /* SECTION BACKGROUNDS */
+    .section-grey{background:var(--bg-grey);padding:56px 20px;}
+    .section-white{background:#fff;padding:56px 20px;}
+
+    /* TWO COL */
+    .twocol{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;}
+    @media(max-width:720px){.twocol{grid-template-columns:1fr;}.comparison-col-wrap+.comparison-col-wrap{margin-top:32px;}}
+    .list{display:grid;gap:16px;}
     .comparison-col-head{text-align:center;margin-bottom:24px;min-height:80px;display:flex;flex-direction:column;align-items:center;justify-content:center;}
     .comparison-image{display:block;margin:0 auto 8px;width:auto;object-fit:contain;height:48px;}
     .column-head{font-size:18px;font-weight:700;margin:0;}
-    .faq-accordion{display:block;}
-    .faq-accordion details{background:none;border:none;border-bottom:1px solid var(--border);padding:0;}
-    .faq-accordion details:first-child{border-top:1px solid var(--border);}
-    .faq-accordion summary{list-style:none;cursor:pointer;padding:20px 40px 20px 0;font-weight:600;font-size:15px;position:relative;outline:none;color:var(--text);}
-    .faq-accordion summary::-webkit-details-marker{display:none}
-    .faq-accordion details[open]{background:none;box-shadow:none;}
-    .faq-accordion details[open] summary{border-bottom:none;}
-    .faq-accordion .chev{position:absolute;right:0;top:50%;transform:translateY(-50%) rotate(0);width:20px;height:20px;display:grid;place-items:center;transition:transform .2s ease;background:none;}
-    .faq-accordion details[open] .chev{transform:translateY(-50%) rotate(180deg);}
-    .faq-accordion .panel{padding:0 0 20px 0;color:var(--muted);font-size:15px;line-height:1.6;}
-    .faq-accordion .panel p:first-child{margin-top:0;}
 
-    /* FAQ header */
-    .faq-header{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:24px;}
-    .faq-header h2{margin:0;text-align:left;font-size:28px;}
+    .benefit-card{display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:center;min-height:120px;background:#fff;border:1px solid var(--border);border-radius:24px;padding:18px 20px;box-shadow:0 4px 16px rgba(0,0,0,.05);}
+    @media(max-width:720px){.benefit-card{min-height:auto;}}
+    .icon-wrap{width:44px;height:44px;display:flex;align-items:center;justify-content:center;}
+    .benefit-title{margin:0;font-weight:700;}
+    .benefit-card--positive{border:1px solid var(--border);border-left:4px solid var(--brand);border-radius:24px;}
+
+    /* CTA BAND */
+    .cta-band{background:var(--brand);border-radius:24px;padding:40px 32px;text-align:center;}
+    .cta-band h2{color:#fff;font-size:26px;margin:0 0 12px;}
+    .cta-band p.sub{color:rgba(255,255,255,0.82);max-width:600px;margin:0 auto 24px;font-size:16px;}
+    .cta-band .email-form{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:24px;}
+    .cta-band .email-input{min-width:280px;max-width:380px;width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--border);font:16px Roboto,system-ui,sans-serif;}
+    .cta-band .btn{background:#fff;color:var(--brand);}
+    .cta-meta-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;max-width:700px;margin:0 auto;}
+    @media(max-width:600px){.cta-meta-grid{grid-template-columns:1fr;}}
+    .cta-meta-item{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:20px 16px;text-align:center;}
+    .cta-meta-label{display:inline-flex;align-items:center;justify-content:center;gap:8px;color:rgba(255,255,255,0.72);font-size:0.9rem;font-weight:600;margin-bottom:8px;}
+    .cta-meta-icon{width:16px;height:16px;flex-shrink:0;}
+    .cta-meta-item p{margin:0;color:#fff;font-size:0.95rem;line-height:1.4;}
+    .cta-band a.sample-link{color:#fff;font-weight:700;text-decoration:none;}
+    .cta-band a.sample-link:hover{color:rgba(255,255,255,0.82);}
+
+    /* FAQ */
+    .faq-header{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:28px;}
+    .faq-header h2{margin:0;font-size:28px;font-weight:700;}
     .faq-search{display:flex;align-items:center;gap:8px;border:1px solid var(--border);border-radius:999px;padding:8px 14px;background:#fff;}
     .faq-search input{border:none;outline:none;font-size:14px;color:var(--text);background:transparent;font-family:Roboto,system-ui,-apple-system,Segoe UI,Arial,sans-serif;width:160px;}
     .faq-search input::placeholder{color:var(--muted);}
     .faq-search svg{color:var(--muted);flex-shrink:0;}
     .faq-no-results{display:none;color:var(--muted);font-size:15px;padding:20px 0;}
 
-    /* FAQ tabs */
-    .faq-tabs{display:flex;gap:0;border-bottom:2px solid var(--border);margin-bottom:24px;}
-    .faq-tab{background:none;border:none;padding:12px 20px 12px 0;font-size:15px;font-weight:600;color:var(--muted);cursor:pointer;position:relative;transition:color .15s ease;}
+    .faq-tabs{display:flex;border-bottom:2px solid var(--border);margin-bottom:24px;}
+    .faq-tab{background:none;border:none;padding:12px 20px 12px 0;font-size:15px;font-weight:600;color:var(--muted);cursor:pointer;position:relative;transition:color .15s ease;font-family:Roboto,system-ui,-apple-system,Segoe UI,Arial,sans-serif;}
     .faq-tab:hover{color:var(--text);}
     .faq-tab.active{color:var(--brand);}
     .faq-tab.active::after{content:"";position:absolute;bottom:-2px;left:0;right:0;height:2px;background:var(--brand);}
     .faq-panel{display:none;}
     .faq-panel.active{display:block;}
 
-    footer{border-top:1px solid var(--border);margin-top:var(--space-8)}
-    .footer-inner{display:grid;grid-template-columns:1fr;gap:var(--space-6);padding:var(--space-6) 0 var(--space-8);font-size:14px;color:var(--muted);text-align:center;justify-items:center}
-    .footer-title{font-weight:700;display:block;margin-bottom:4px}
-    .footer-links{margin-top:8px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-    .icon-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--border);border-radius:999px;color:var(--brand);text-decoration:none;font-weight:500;background:#fff;transition:transform .15s ease, box-shadow .15s ease;}
-    .icon-btn:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(0,0,0,.06);}
-    .icon-btn svg{width:18px;height:18px;display:block;flex-shrink:0;}
-    .logo{display:block;margin:0 auto var(--space-4);width:160px;max-width:160px;height:auto}
-    .email-form{display:flex;gap:12px;justify-content:center;align-items:center;margin-top:16px;flex-wrap:wrap;}
-    .email-input{min-width:280px;padding:12px 14px;border-radius:12px;border:1px solid var(--border);font:16px Roboto,system-ui,sans-serif;}
-    .sample-link-wrap{text-align:center;margin-top:12px;}
-    .sample-link{color:var(--brand);font-weight:600;text-decoration:none;}
-    .sample-link:hover{text-decoration:underline;}
-    .hp{position:absolute;left:-9999px;opacity:0}
-    .sr-only{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
-    .workflows-line{margin:0;text-align:center;color:var(--text);}
-    .pattern-head{font-size:28px;margin:0 0 var(--space-3);text-align:center}
-    .pattern-head .line{display:block}
-    .mid-cta-body{text-align:center;color:var(--muted);max-width:560px;margin:0 auto 16px;font-size:17px;}
-    .benefit-card--positive{border:1px solid var(--border);border-left:4px solid var(--brand);border-radius:24px;}
-    .cta-band{background:var(--brand);border-radius:24px;padding:40px 32px;text-align:center;margin:8px 0;}
-    .cta-band .pattern-head{color:#fff;margin-bottom:12px;}
-    .cta-band .mid-cta-body{color:rgba(255,255,255,0.82);max-width:720px;margin:0 auto 24px;}
-    .cta-band .email-form{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-bottom:28px;}
-    .cta-band .email-input{min-width:320px;max-width:420px;width:100%;}
-    .cta-band .btn{background:#fff;color:var(--brand);}
-    .cta-meta-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;max-width:980px;margin:0 auto;}
-    .cta-meta-item{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:20px;padding:24px 20px;text-align:center;}
-    .cta-meta-label{display:inline-flex;align-items:center;justify-content:center;gap:10px;color:rgba(255,255,255,0.72);font-size:0.95rem;font-weight:600;margin-bottom:10px;}
-    .cta-meta-icon{width:18px;height:18px;flex-shrink:0;}
-    .cta-meta-item p{margin:0;color:#fff;font-size:1rem;line-height:1.45;}
-    .cta-band .sample-link{display:inline-block;color:#fff;font-size:1rem;font-weight:700;text-decoration:none;line-height:1.2;}
-    .cta-band .sample-link:hover{color:rgba(255,255,255,0.82);}
-    @media(max-width:720px){
-      .cta-band{padding:32px 20px;}
-      .cta-meta-grid{grid-template-columns:1fr;gap:14px;}
-    }
+    .faq-accordion details{background:none;border:none;border-bottom:1px solid var(--border);padding:0;}
+    .faq-accordion details:first-child{border-top:1px solid var(--border);}
+    .faq-accordion summary{list-style:none;cursor:pointer;padding:20px 40px 20px 0;font-weight:600;font-size:15px;position:relative;outline:none;color:var(--text);}
+    .faq-accordion summary::-webkit-details-marker{display:none;}
+    .faq-accordion details[open] summary{border-bottom:none;}
+    .faq-accordion .chev{position:absolute;right:0;top:50%;transform:translateY(-50%);width:20px;height:20px;display:grid;place-items:center;transition:transform .2s ease;background:none;}
+    .faq-accordion details[open] .chev{transform:translateY(-50%) rotate(180deg);}
+    .faq-accordion .panel{padding:0 0 20px;color:var(--muted);font-size:15px;line-height:1.6;}
+    .faq-accordion .panel p:first-child{margin-top:0;}
+
     .faq-roadmap{margin-top:20px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
-    .faq-roadmap-stage{background:#f6f8f9;border:1px solid var(--border);border-radius:14px;padding:16px;}
+    .faq-roadmap-stage{background:#fff;border:1px solid var(--border);border-radius:14px;padding:16px;}
     .faq-roadmap-stage--now{border-top:3px solid var(--brand);}
     .faq-roadmap-label{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--brand);margin:0 0 10px;}
     .faq-roadmap-label--future{color:var(--muted);}
     .faq-roadmap-item{font-size:13px;color:var(--text);font-weight:600;padding:6px 0;border-bottom:1px solid var(--border);line-height:1.3;}
     .faq-roadmap-item:last-child{border-bottom:none;padding-bottom:0;}
     .faq-roadmap-item p{margin:2px 0 0;font-size:12px;font-weight:400;color:var(--muted);}
-    @media(max-width:600px){.faq-roadmap{grid-template-columns:1fr}}
+    @media(max-width:600px){.faq-roadmap{grid-template-columns:1fr;}}
+
+    /* BIO */
+    .bio{font-size:15px;color:var(--muted);max-width:680px;}
+    .bio-title{font-size:20px;font-weight:700;color:var(--text);margin:0 0 12px;}
+    .footer-links{margin-top:16px;display:flex;gap:12px;flex-wrap:wrap;}
+    .icon-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--border);border-radius:999px;color:var(--brand);text-decoration:none;font-weight:500;background:#fff;font-size:14px;transition:transform .15s ease, box-shadow .15s ease;}
+    .icon-btn:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,.08);}
+    .icon-btn svg{width:16px;height:16px;display:block;flex-shrink:0;}
+
+    /* FOOTER */
+    .site-footer{background:var(--brand);padding:20px;text-align:center;}
+    .site-footer p{margin:0;font-size:13px;color:rgba(255,255,255,0.7);}
+    .site-footer a{color:rgba(255,255,255,0.85);text-decoration:none;}
+    .site-footer a:hover{color:#fff;}
+
+    /* FORMS */
+    .hp{position:absolute;left:-9999px;opacity:0;}
+    .sr-only{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;}
   </style>
 </head>
 <body>
-  <main class="wrapper" id="top">
-    <section class="hero" aria-labelledby="hero-title">
+
+  <!-- GREEN HEADER -->
+  <header class="site-header">
+    <div class="inner">
       <img class="logo" src="./assets/logo.png" alt="Intuifi logo">
-      <h1 id="hero-title">
-        <span class="line">As a company scales, customer needs become harder to pin down.</span>
-      </h1>
-      <p class="subhead">
-        <span class="line">Intuifi shows you what your customers are telling you, so you can decide what's next.</span>
-      </p>
-      <a href="https://intuifi.io/#early-access" class="btn" style="margin-top:8px;">Request your first free report</a>
-    </section>
+      <h1>As a company scales, customer needs become harder to pin down.</h1>
+    </div>
+  </header>
 
-    <div class="section-divider" aria-hidden="true"></div>
+  <!-- WHITE SUBHEADLINE + CTA -->
+  <div class="hero-sub">
+    <div class="inner">
+      <p class="subhead">Intuifi shows you what your customers are telling you, so you can decide what's next.</p>
+      <a href="#early-access" class="btn">Request your first free report</a>
+    </div>
+  </div>
 
-    <section class="section" id="what-changes">
+  <!-- GREY: PROBLEMS / SOLUTIONS -->
+  <div class="section-grey">
+    <div class="inner">
       <div class="twocol">
         <div class="comparison-col-wrap">
           <div class="comparison-col-head">
@@ -168,15 +169,15 @@
           </div>
           <div class="list">
             <article class="benefit-card">
-              <div class="icon-wrap" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#a2c4c9" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-stack-icon lucide-file-stack"><path d="M11 21a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1"></path><path d="M16 16a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1"></path><path d="M21 6a2 2 0 0 0-.586-1.414l-2-2A2 2 0 0 0 17 2h-3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1z"></path></svg></div>
+              <div class="icon-wrap" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#a2c4c9" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"><path d="M11 21a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1"></path><path d="M16 16a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1"></path><path d="M21 6a2 2 0 0 0-.586-1.414l-2-2A2 2 0 0 0 17 2h-3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1z"></path></svg></div>
               <div><p class="benefit-title">Customer insights are siloed and patchy. Getting the full picture takes time and effort.</p></div>
             </article>
             <article class="benefit-card">
-              <div class="icon-wrap" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#a2c4c9" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rotate-cw-square-icon lucide-rotate-cw-square"><path d="M12 5H6a2 2 0 0 0-2 2v3"></path><path d="m9 8 3-3-3-3"></path><path d="M4 14v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"></path></svg></div>
+              <div class="icon-wrap" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#a2c4c9" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5H6a2 2 0 0 0-2 2v3"></path><path d="m9 8 3-3-3-3"></path><path d="M4 14v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"></path></svg></div>
               <div><p class="benefit-title">By the time you make a data-driven decision, the data is already out of date.</p></div>
             </article>
             <article class="benefit-card">
-              <div class="icon-wrap" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#a2c4c9" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-question-mark-icon lucide-shield-question-mark"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="M9.1 9a3 3 0 0 1 5.82 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></div>
+              <div class="icon-wrap" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#a2c4c9" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="M9.1 9a3 3 0 0 1 5.82 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></div>
               <div><p class="benefit-title">Using AI saves you time, but without the evidence it is hard to trust the output.</p></div>
             </article>
           </div>
@@ -188,28 +189,29 @@
           </div>
           <div class="list">
             <article class="benefit-card benefit-card--positive">
-              <div class="icon-wrap" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-git-merge-icon lucide-git-merge"><circle cx="18" cy="18" r="3"></circle><circle cx="6" cy="6" r="3"></circle><path d="M6 21V9a9 9 0 0 0 9 9"></path></svg></div>
+              <div class="icon-wrap" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"></circle><circle cx="6" cy="6" r="3"></circle><path d="M6 21V9a9 9 0 0 0 9 9"></path></svg></div>
               <div><p class="benefit-title">See a consolidated view of what customers are saying across all your sources.</p></div>
             </article>
             <article class="benefit-card benefit-card--positive">
-              <div class="icon-wrap" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wand-sparkles-icon lucide-wand-sparkles"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72"></path><path d="m14 7 3 3"></path><path d="M5 6v4"></path><path d="M19 14v4"></path><path d="M10 2v2"></path><path d="M7 8H3"></path><path d="M21 16h-4"></path><path d="M11 3H9"></path></svg></div>
+              <div class="icon-wrap" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72"></path><path d="m14 7 3 3"></path><path d="M5 6v4"></path><path d="M19 14v4"></path><path d="M10 2v2"></path><path d="M7 8H3"></path><path d="M21 16h-4"></path><path d="M11 3H9"></path></svg></div>
               <div><p class="benefit-title">Get the latest on what customers need before you run new strategic planning sessions.</p></div>
             </article>
             <article class="benefit-card benefit-card--positive">
-              <div class="icon-wrap" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-check-icon lucide-file-check"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="m9 15 2 2 4-4"></path></svg></div>
+              <div class="icon-wrap" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="m9 15 2 2 4-4"></path></svg></div>
               <div><p class="benefit-title">Every finding links back to the source, so you can verify whatever you need to.</p></div>
             </article>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
 
-    <div class="section-divider" aria-hidden="true"></div>
-
-    <section class="section">
+  <!-- WHITE: CTA BAND -->
+  <div class="section-white">
+    <div class="inner">
       <div class="cta-band">
-        <h2 class="pattern-head">Get to the insight that drives the right decisions</h2>
-        <p class="mid-cta-body">For executives and leaders who want strategy grounded in real customer needs.</p>
+        <h2>Get to the insight that drives the right decisions</h2>
+        <p class="sub">For executives and leaders who want strategy grounded in real customer needs.</p>
         <form id="early-access" class="email-form" onsubmit="return submitEmail(event)">
           <label for="email" class="sr-only">Work email</label>
           <input id="email" type="email" name="email" inputmode="email" autocomplete="email" placeholder="Enter your email" required class="email-input">
@@ -219,25 +221,44 @@
         <div class="cta-meta-grid">
           <div class="cta-meta-item">
             <div class="cta-meta-label">
-              <svg class="cta-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 10 10 20l-7-7L13 3h5a2 2 0 0 1 2 2v5Z"></path><circle cx="16" cy="8" r="1"></circle></svg>
+              <svg class="cta-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10 10 20l-7-7L13 3h5a2 2 0 0 1 2 2v5Z"></path><circle cx="16" cy="8" r="1"></circle></svg>
               <span>No subscription required.</span>
             </div>
             <p>Your first report is free. £29 per report after that.</p>
           </div>
           <div class="cta-meta-item">
             <div class="cta-meta-label">
-              <svg class="cta-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 1.8-2.5 2.3-2.5 4"></path><circle cx="12" cy="17" r="1"></circle></svg>
+              <svg class="cta-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 1.8-2.5 2.3-2.5 4"></path><circle cx="12" cy="17" r="1"></circle></svg>
               <span>Want to see what you get?</span>
             </div>
             <p><a class="sample-link" href="https://intuifi.io/sample_report" id="sample-report-link">View a sample report →</a></p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
 
-    <div class="section-divider" aria-hidden="true"></div>
+  <!-- GREY: BIO -->
+  <div class="section-grey">
+    <div class="inner">
+      <p class="bio-title">The person behind this 💡</p>
+      <p class="bio">I am Chris Burgess, a product leader with 15 years of experience across startups, scale-ups, and a Fortune 100 company. I built Intuifi because I kept seeing how hard it was to connect customer feedback to real strategic decisions. Insights were scattered, summaries lost context, and teams were left debating what customers actually needed. Too often, decisions were made on assumptions instead. I wanted to fix that.</p>
+      <div class="footer-links">
+        <a class="icon-btn" href="https://linkedin.com/in/crwburgess" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8.25h5V23H0V8.25zM8 8.25h4.8v2.01h.07c.67-1.27 2.3-2.61 4.74-2.61 5.07 0 6 3.34 6 7.68V23h-5v-6.49c0-1.55-.03-3.55-2.17-3.55-2.17 0-2.5 1.69-2.5 3.44V23H8V8.25z"></path></svg>
+          LinkedIn
+        </a>
+        <a class="icon-btn" href="https://crwburgess.com/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a15.3 15.3 0 010 18M12 3a15.3 15.3 0 000 18"></path></svg>
+          crwburgess.com
+        </a>
+      </div>
+    </div>
+  </div>
 
-    <section class="section" id="faq">
+  <!-- WHITE: FAQ -->
+  <div class="section-white" id="faq">
+    <div class="inner">
       <div class="faq-header">
         <h2>Frequently asked questions</h2>
         <div class="faq-search">
@@ -246,12 +267,10 @@
         </div>
       </div>
       <div class="faq-no-results" id="faq-no-results">No questions found. Try a different search term.</div>
-
       <div class="faq-tabs" role="tablist">
         <button class="faq-tab active" role="tab" aria-selected="true" aria-controls="tab-getting-started" id="btn-getting-started">Getting started</button>
         <button class="faq-tab" role="tab" aria-selected="false" aria-controls="tab-trust" id="btn-trust">Trusting the output</button>
       </div>
-
       <div id="tab-getting-started" class="faq-panel active" role="tabpanel" aria-labelledby="btn-getting-started">
         <div class="faq-accordion">
           <details>
@@ -293,7 +312,6 @@
           </details>
         </div>
       </div>
-
       <div id="tab-trust" class="faq-panel" role="tabpanel" aria-labelledby="btn-trust">
         <div class="faq-accordion">
           <details>
@@ -327,27 +345,13 @@
           </details>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
 
-    <footer>
-      <div class="footer-inner">
-        <div>
-          <span class="footer-title">The person behind this 💡</span>
-          I am Chris Burgess, a product leader with 15 years of experience across startups, scale-ups, and a Fortune 100 company. I built Intuifi because I kept seeing how hard it was to connect customer feedback to real strategic decisions. Insights were scattered, summaries lost context, and teams were left debating what customers actually needed. Too often, decisions were made on assumptions instead. I wanted to fix that.
-          <div class="footer-links">
-            <a class="icon-btn" href="https://linkedin.com/in/crwburgess" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8.25h5V23H0V8.25zM8 8.25h4.8v2.01h.07c.67-1.27 2.3-2.61 4.74-2.61 5.07 0 6 3.34 6 7.68V23h-5v-6.49c0-1.55-.03-3.55-2.17-3.55-2.17 0-2.5 1.69-2.5 3.44V23H8V8.25z"></path></svg>
-              LinkedIn
-            </a>
-            <a class="icon-btn" href="https://crwburgess.com/" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a15.3 15.3 0 010 18M12 3a15.3 15.3 0 000 18"></path></svg>
-              crwburgess.com
-            </a>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </main>
+  <!-- GREEN FOOTER -->
+  <footer class="site-footer">
+    <p>© 2026 Intuifi</p>
+  </footer>
 
   <script>
     const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxnV5Hm28fhpJlWedXuU7JdXDsrI4wLOC1zkXOI3Tj0o3s-bkkKR1tgPuwbfGPPNF92ww/exec';
@@ -384,43 +388,39 @@
           }
         });
       }
-
       // FAQ search
       const searchInput = document.getElementById("faq-search-input");
       const noResults = document.getElementById("faq-no-results");
-      if(searchInput){
-        searchInput.addEventListener("input", function(){
-          const q = this.value.trim().toLowerCase();
-          if(!q){
-            // restore tab view
-            document.querySelector(".faq-tabs").style.display = "";
-            panels.forEach(function(p){ p.classList.remove("active"); });
-            document.querySelector(".faq-panel").classList.add("active");
-            tabs.forEach(function(t,i){ t.classList.toggle("active", i===0); t.setAttribute("aria-selected", i===0 ? "true" : "false"); });
-            noResults.style.display = "none";
-            return;
-          }
-          // hide tabs, search across all details
-          document.querySelector(".faq-tabs").style.display = "none";
-          panels.forEach(function(p){ p.classList.add("active"); });
-          let found = 0;
-          document.querySelectorAll(".faq-accordion details").forEach(function(d){
-            const text = d.textContent.toLowerCase();
-            const match = text.includes(q);
-            d.style.display = match ? "" : "none";
-            if(match) found++;
-          });
-          noResults.style.display = found === 0 ? "block" : "none";
-        });
-      }
-
-      // FAQ tabs
       const tabs = document.querySelectorAll('.faq-tab');
       const panels = document.querySelectorAll('.faq-panel');
+      if(searchInput){
+        searchInput.addEventListener("input",function(){
+          const q = this.value.trim().toLowerCase();
+          if(!q){
+            document.querySelector(".faq-tabs").style.display="";
+            panels.forEach(function(p){p.classList.remove("active");});
+            panels[0].classList.add("active");
+            tabs.forEach(function(t,i){t.classList.toggle("active",i===0);t.setAttribute("aria-selected",i===0?"true":"false");});
+            document.querySelectorAll(".faq-accordion details").forEach(function(d){d.style.display="";});
+            noResults.style.display="none";
+            return;
+          }
+          document.querySelector(".faq-tabs").style.display="none";
+          panels.forEach(function(p){p.classList.add("active");});
+          let found=0;
+          document.querySelectorAll(".faq-accordion details").forEach(function(d){
+            const match=d.textContent.toLowerCase().includes(q);
+            d.style.display=match?"":"none";
+            if(match)found++;
+          });
+          noResults.style.display=found===0?"block":"none";
+        });
+      }
+      // FAQ tabs
       tabs.forEach(function(tab){
         tab.addEventListener('click',function(){
-          tabs.forEach(function(t){ t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
-          panels.forEach(function(p){ p.classList.remove('active'); });
+          tabs.forEach(function(t){t.classList.remove('active');t.setAttribute('aria-selected','false');});
+          panels.forEach(function(p){p.classList.remove('active');});
           tab.classList.add('active');
           tab.setAttribute('aria-selected','true');
           document.getElementById(tab.getAttribute('aria-controls')).classList.add('active');
