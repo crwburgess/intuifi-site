@@ -136,7 +136,7 @@
     /* BIO */
     .bio-card{display:flex;gap:32px;align-items:stretch;background:transparent;padding:0;}
     .bio-card-left{flex:3;display:flex;flex-direction:column;}
-    .bio-card-right{flex:2;display:flex;flex-direction:column;min-height:0;}
+    .bio-card-right{flex:2;display:flex;flex-direction:column;}
     .bio-buttons{display:flex;flex-direction:column;gap:10px;margin-top:12px;}
     @media(max-width:720px){
       .bio-grid{grid-template-columns:1fr;}
@@ -145,7 +145,7 @@
     }
     .bio-title{font-size:22px;font-weight:700;color:var(--text);margin:0 0 16px;}
     .bio-text{font-size:15px;color:var(--muted);line-height:1.7;margin:0;}
-    .bio-photo{width:100%;flex:1;min-height:0;object-fit:cover;object-position:top center;border-radius:12px;display:block;}
+    .bio-photo{width:100%;height:100%;flex:1;object-fit:cover;object-position:top center;border-radius:12px;display:block;min-height:0;}
     .bio-buttons{display:flex;flex-direction:column;gap:10px;}
     .bio-btn{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:#fff;text-decoration:none;color:var(--muted);font-size:13px;font-weight:600;font-family:Roboto,system-ui,-apple-system,Segoe UI,Arial,sans-serif;transition:border-color .15s ease,color .15s ease;white-space:nowrap;}
     .bio-btn:hover{border-color:var(--brand);color:var(--brand);}
