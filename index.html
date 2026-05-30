@@ -134,9 +134,10 @@
     @media(max-width:600px){.faq-roadmap{grid-template-columns:1fr;}}
 
     /* BIO */
-    .bio-box{display:flex;flex-direction:column;}
-    .bio-right{display:flex;flex-direction:column;gap:12px;}
-    .bio-grid{display:grid;grid-template-columns:3fr 2fr;gap:24px;align-items:start;}
+    .bio-card{display:flex;gap:32px;align-items:stretch;background:transparent;padding:0;}
+    .bio-card-left{flex:3;display:flex;flex-direction:column;}
+    .bio-card-right{flex:2;display:flex;flex-direction:column;min-height:0;}
+    .bio-buttons{display:flex;flex-direction:column;gap:10px;margin-top:12px;}
     @media(max-width:720px){
       .bio-grid{grid-template-columns:1fr;}
       .bio-photo-col{order:-1;}
@@ -144,7 +145,7 @@
     }
     .bio-title{font-size:22px;font-weight:700;color:var(--text);margin:0 0 16px;}
     .bio-text{font-size:15px;color:var(--muted);line-height:1.7;margin:0;}
-    .bio-photo{width:100%;border-radius:16px;display:block;}
+    .bio-photo{width:100%;flex:1;min-height:0;object-fit:cover;object-position:top center;border-radius:12px;display:block;}
     .bio-buttons{display:flex;flex-direction:column;gap:10px;}
     .bio-btn{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:#fff;text-decoration:none;color:var(--muted);font-size:13px;font-weight:600;font-family:Roboto,system-ui,-apple-system,Segoe UI,Arial,sans-serif;transition:border-color .15s ease,color .15s ease;white-space:nowrap;}
     .bio-btn:hover{border-color:var(--brand);color:var(--brand);}
@@ -266,21 +267,23 @@
   <!-- GREY: BIO -->
   <div class="section-grey">
     <div class="inner">
-      <div class="bio-grid">
-        <div class="bio-box">
+      <div class="bio-card">
+        <div class="bio-card-left">
           <p class="bio-title">The person behind this 💡</p>
           <p class="bio-text">I am Chris Burgess, a product leader with 15 years of experience across startups, scale-ups, and a Fortune 100 company. I built Intuifi because I kept seeing how hard it was to connect customer feedback to real strategic decisions. Insights were scattered, summaries lost context, and teams were left debating what customers actually needed. Too often, decisions were made on assumptions instead. I wanted to fix that.</p>
         </div>
-        <div class="bio-right">
+        <div class="bio-card-right">
           <img class="bio-photo" src="./assets/chris-burgess.png" alt="Chris Burgess">
-          <a class="bio-btn" href="https://crwburgess.com/" target="_blank" rel="noopener">
-            <span>Learn more about me</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-          </a>
-          <a class="bio-btn" href="https://linkedin.com/in/crwburgess" target="_blank" rel="noopener">
-            <span>Connect with me on LinkedIn</span>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8.25h5V23H0V8.25zM8 8.25h4.8v2.01h.07c.67-1.27 2.3-2.61 4.74-2.61 5.07 0 6 3.34 6 7.68V23h-5v-6.49c0-1.55-.03-3.55-2.17-3.55-2.17 0-2.5 1.69-2.5 3.44V23H8V8.25z"/></svg>
-          </a>
+          <div class="bio-buttons">
+            <a class="bio-btn" href="https://crwburgess.com/" target="_blank" rel="noopener">
+              <span>Learn more about me</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+            </a>
+            <a class="bio-btn" href="https://linkedin.com/in/crwburgess" target="_blank" rel="noopener">
+              <span>Connect with me on LinkedIn</span>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8.25h5V23H0V8.25zM8 8.25h4.8v2.01h.07c.67-1.27 2.3-2.61 4.74-2.61 5.07 0 6 3.34 6 7.68V23h-5v-6.49c0-1.55-.03-3.55-2.17-3.55-2.17 0-2.5 1.69-2.5 3.44V23H8V8.25z"/></svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
