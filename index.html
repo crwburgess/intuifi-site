@@ -134,9 +134,9 @@
     @media(max-width:600px){.faq-roadmap{grid-template-columns:1fr;}}
 
     /* BIO */
-    .bio-card{display:flex;gap:32px;align-items:stretch;background:transparent;padding:0;}
-    .bio-card-left{flex:3;display:flex;flex-direction:column;}
-    .bio-card-right{flex:2;display:flex;flex-direction:column;}
+    .bio-card{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;background:transparent;padding:0;}
+    .bio-card-left{display:flex;flex-direction:column;gap:16px;}
+    .bio-card-right{display:flex;flex-direction:column;justify-content:space-between;}
     .bio-buttons{display:flex;flex-direction:column;gap:10px;margin-top:12px;}
     @media(max-width:720px){
       .bio-grid{grid-template-columns:1fr;}
@@ -145,7 +145,7 @@
     }
     .bio-title{font-size:22px;font-weight:700;color:var(--text);margin:0 0 16px;}
     .bio-text{font-size:15px;color:var(--muted);line-height:1.7;margin:0;}
-    .bio-photo{width:100%;height:100%;flex:1;object-fit:cover;object-position:top center;border-radius:12px;display:block;min-height:0;}
+    .bio-photo{width:100%;border-radius:12px;display:block;}
     .bio-buttons{display:flex;flex-direction:column;gap:10px;}
     .bio-btn{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:#fff;text-decoration:none;color:var(--muted);font-size:13px;font-weight:600;font-family:Roboto,system-ui,-apple-system,Segoe UI,Arial,sans-serif;transition:border-color .15s ease,color .15s ease;white-space:nowrap;}
     .bio-btn:hover{border-color:var(--brand);color:var(--brand);}
@@ -269,11 +269,11 @@
     <div class="inner">
       <div class="bio-card">
         <div class="bio-card-left">
-          <p class="bio-title">The person behind this 💡</p>
-          <p class="bio-text">I am Chris Burgess, a product leader with 15 years of experience across startups, scale-ups, and a Fortune 100 company. I built Intuifi because I kept seeing how hard it was to connect customer feedback to real strategic decisions. Insights were scattered, summaries lost context, and teams were left debating what customers actually needed. Too often, decisions were made on assumptions instead. I wanted to fix that.</p>
+          <p class="bio-title">The person behind this</p>
+          <img class="bio-photo" src="./assets/chris-burgess.png" alt="Chris Burgess">
         </div>
         <div class="bio-card-right">
-          <img class="bio-photo" src="./assets/chris-burgess.png" alt="Chris Burgess">
+          <p class="bio-text">I am Chris Burgess, a product leader with 15 years of experience across startups, scale-ups, and a Fortune 100 company. I built Intuifi because I kept seeing how hard it was to connect customer feedback to real strategic decisions. Insights were scattered, summaries lost context, and teams were left debating what customers actually needed. Too often, decisions were made on assumptions instead. I wanted to fix that.</p>
           <div class="bio-buttons">
             <a class="bio-btn" href="https://crwburgess.com/" target="_blank" rel="noopener">
               <span>Learn more about me</span>
