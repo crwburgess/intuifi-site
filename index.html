@@ -86,7 +86,7 @@
     .cta-band .email-form{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:24px;}
     .cta-band .email-input{min-width:280px;max-width:380px;width:100%;padding:12px 14px;border-radius:12px;border:none;font:16px Roboto,system-ui,sans-serif;}
     .cta-band .btn{background:#fff;color:var(--brand);}
-    .cta-meta-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;max-width:860px;margin:0 auto;}
+    .cta-meta-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;max-width:860px;margin:0 auto;}
     @media(max-width:600px){.cta-meta-grid{grid-template-columns:1fr;}}
     .cta-meta-item{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:20px 16px;text-align:center;}
     .cta-meta-label{display:inline-flex;align-items:center;justify-content:center;gap:8px;color:rgba(255,255,255,0.72);font-size:0.9rem;font-weight:600;margin-bottom:8px;}
@@ -245,21 +245,28 @@
           <input type="text" name="company" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
         </form>
         <div class="cta-meta-grid">
-          <div class="cta-meta-item">
-            <div class="cta-meta-label">
-              <svg class="cta-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              <span>No commitment required.</span>
-            </div>
-            <p>Files are deleted as soon as the report is generated.</p>
-          </div>
-          <div class="cta-meta-item">
-            <div class="cta-meta-label">
-              <svg class="cta-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 1.8-2.5 2.3-2.5 4"></path><circle cx="12" cy="17" r="1"></circle></svg>
-              <span>Want to see what you get?</span>
-            </div>
-            <p><a class="white-link" href="https://intuifi.io/sample_report" id="sample-report-link">Check out this anonymised example →</a></p>
-          </div>
-        </div>
+  <div class="cta-meta-item">
+    <div class="cta-meta-label">
+      <svg class="cta-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"></path><circle cx="12" cy="12" r="9"></circle></svg>
+      <span>No commitment required</span>
+    </div>
+    <p>No credit card, no contract, just upload and see your report.</p>
+  </div>
+  <div class="cta-meta-item">
+    <div class="cta-meta-label">
+      <svg class="cta-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+      <span>Your data stays yours</span>
+    </div>
+    <p>Uploads are deleted as soon as the report is generated.</p>
+  </div>
+  <div class="cta-meta-item">
+    <div class="cta-meta-label">
+      <svg class="cta-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 1.8-2.5 2.3-2.5 4"></path><circle cx="12" cy="17" r="1"></circle></svg>
+      <span>Want to see what you get?</span>
+    </div>
+    <p><a class="white-link" href="https://intuifi.io/sample_report" id="sample-report-link">Check out this anonymised example →</a></p>
+  </div>
+</div>
       </div>
     </div>
   </div>
