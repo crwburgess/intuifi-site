@@ -139,10 +139,9 @@
     .bio-card-right{display:flex;flex-direction:column;justify-content:space-between;}
     .bio-buttons{display:flex;flex-direction:column;gap:10px;margin-top:12px;align-self:flex-start;width:100%;max-width:320px;}
     @media(max-width:720px){
-      .bio-grid{grid-template-columns:1fr;}
-      .bio-photo-col{order:-1;}
-      .bio-buttons-col{order:1;}
-    }
+  .bio-card{grid-template-columns:1fr;}
+  .bio-card-left{display:none;}
+}
     .bio-title{font-size:22px;font-weight:700;color:var(--text);margin:0;}
     .bio-text{font-size:15px;color:var(--muted);line-height:1.7;margin:0 0 16px;}
     .bio-photo{width:100%;max-width:300px;border-radius:12px;display:block;}
@@ -196,7 +195,7 @@
           <div class="list">
             <article class="benefit-card">
               <div class="icon-wrap" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#a2c4c9" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"><path d="M11 21a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1"></path><path d="M16 16a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1"></path><path d="M21 6a2 2 0 0 0-.586-1.414l-2-2A2 2 0 0 0 17 2h-3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1z"></path></svg></div>
-              <div><p class="benefit-title">Customer insights are scattered. Getting the full picture requires effort</p></div>
+              <div><p class="benefit-title">Customer insights are scattered, so getting the full picture takes real effort</p></div>
             </article>
             <article class="benefit-card">
               <div class="icon-wrap" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#a2c4c9" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg></div>
@@ -216,7 +215,7 @@
           <div class="list">
             <article class="benefit-card benefit-card--positive">
               <div class="icon-wrap" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"></circle><circle cx="6" cy="6" r="3"></circle><path d="M6 21V9a9 9 0 0 0 9 9"></path></svg></div>
-              <div><p class="benefit-title">See a unified view of customer notes, pulled from every tool your teams use</p></div>
+              <div><p class="benefit-title">See a unified view of customer notes, pulled from all the tools your teams use</p></div>
             </article>
             <article class="benefit-card benefit-card--positive">
               <div class="icon-wrap" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72"></path><path d="m14 7 3 3"></path><path d="M5 6v4"></path><path d="M19 14v4"></path><path d="M10 2v2"></path><path d="M7 8H3"></path><path d="M21 16h-4"></path><path d="M11 3H9"></path></svg></div>
@@ -224,7 +223,7 @@
             </article>
             <article class="benefit-card benefit-card--positive">
               <div class="icon-wrap" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="m9 15 2 2 4-4"></path></svg></div>
-              <div><p class="benefit-title">Every finding links back to the source, so you can verify whatever you need to</p></div>
+              <div><p class="benefit-title">Each finding links back to the source, so you can verify whatever you need to</p></div>
             </article>
           </div>
         </div>
