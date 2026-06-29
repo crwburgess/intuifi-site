@@ -232,43 +232,50 @@
   </div>
 
   <!-- WHITE: CTA BAND -->
-  <div class="section-white">
-    <div class="inner">
-      <div class="cta-band">
-        <h2>See what's actually happening across every team, <br>not just the version that reached you.</br></h2>
-        <p class="sub">Built for leaders who make the strategic calls and need the full picture, not just one department's read.</p>
-        <form id="early-access" class="email-form" onsubmit="return submitEmail(event)">
-          <label for="email" class="sr-only">Work email</label>
-          <input id="email" type="email" name="email" inputmode="email" autocomplete="email" placeholder="Enter your email" required class="email-input">
-          <button type="submit" class="btn">Request your first free report</button>
-          <input type="text" name="company" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-        </form>
-        <div class="cta-meta-grid">
-  <div class="cta-meta-item">
-    <div class="cta-meta-label">
-      <svg class="cta-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"></path><circle cx="12" cy="12" r="9"></circle></svg>
-      <span>Free during early access</span>
-    </div>
-    <p>No credit card, no contract, in exchange for your feedback.</p>
-  </div>
-  <div class="cta-meta-item">
-    <div class="cta-meta-label">
-      <svg class="cta-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-      <span>Your data stays yours</span>
-    </div>
-    <p>Uploads are deleted as soon as the report is generated.</p>
-  </div>
-  <div class="cta-meta-item">
-    <div class="cta-meta-label">
-      <svg class="cta-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 1.8-2.5 2.3-2.5 4"></path><circle cx="12" cy="17" r="1"></circle></svg>
-      <span>Want to see what you get?</span>
-    </div>
-    <p><a class="white-link" href="https://intuifi.io/sample_report" id="sample-report-link">Check out this anonymised example →</a></p>
-  </div>
-</div>
+ <div class="section-white">
+  <div class="inner">
+    <div class="cta-band">
+      <h2>See what's actually happening across every team, <br>not just the version that reached you.</br></h2>
+      <p class="sub">Built for leaders who make the strategic calls and need the full picture, not just one department's read.</p>
+
+      <a href="https://intuifi.io/sample_report" class="btn" id="sample-report-link">See an example report</a>
+
+      <form id="early-access" class="email-form" onsubmit="return submitEmail(event)" style="margin-top:16px;">
+        <label for="email" class="sr-only">Work email</label>
+        <input id="email" type="email" name="email" inputmode="email" autocomplete="email" placeholder="Enter your email" required class="email-input">
+        <button type="submit" class="btn btn-secondary">Request your free report</button>
+        <input type="text" name="company" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      </form>
+
+      <p style="font-size:14px; opacity:0.85; margin-top:12px; text-align:center;">Enter your email and we'll send everything your team needs to get started. Forward one email and we handle the rest. Your report lands in your inbox.</p>
+
+      <div class="cta-meta-grid">
+        <div class="cta-meta-item">
+          <div class="cta-meta-label">
+            <svg class="cta-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"></path><circle cx="12" cy="12" r="9"></circle></svg>
+            <span>Free during early access</span>
+          </div>
+          <p>No credit card, no contract, in exchange for your feedback.</p>
+        </div>
+        <div class="cta-meta-item">
+          <div class="cta-meta-label">
+            <svg class="cta-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <span>Ready within 48 hours</span>
+          </div>
+          <p>We handle everything once your team sends the data.</p>
+        </div>
+        <div class="cta-meta-item">
+          <div class="cta-meta-label">
+            <svg class="cta-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"></path><circle cx="12" cy="12" r="9"></circle></svg>
+            <span>Your data stays yours</span>
+          </div>
+          <p>Files are deleted as soon as your report is generated.</p>
+        </div>
       </div>
     </div>
   </div>
+</div>
+
 
   <!-- GREY: BIO -->
   <div class="section-grey">
