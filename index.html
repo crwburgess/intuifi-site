@@ -157,6 +157,69 @@
     /* FORMS */
     .hp{position:absolute;left:-9999px;opacity:0;}
     .sr-only{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;}
+
+    .diagram-row {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.diagram-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  flex: 1;
+}
+
+.diagram-box--source {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  color: #1e293b;
+}
+
+.diagram-box--output {
+  background: #f6f8f9;
+  border: 1px solid #e7eaee;
+  border-left: 4px solid #0f625c;
+  color: #111111;
+}
+
+.diagram-connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2px 0;
+}
+
+.diagram-connector__line {
+  width: 1.5px;
+  height: 18px;
+  background: #0f625c;
+}
+
+.diagram-connector__arrow {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #0f625c;
+}
+
+@media (max-width: 640px) {
+  .diagram-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .diagram-box {
+    width: 190px;
+    flex: none;
+    justify-content: center;
+  }
+}
   </style>
 </head>
 <body>
@@ -179,61 +242,67 @@
 <div class="hero-section">
   <div class="inner">
 
-    <div style="margin-bottom:24px; max-width:700px; margin-left:auto; margin-right:auto;">
-      <svg width="100%" viewBox="0 0 700 280" role="img" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
-        <title>Intuifi data flow</title>
-        <desc>Sources including sales calls, support tickets and user interviews feed into Intuifi, which produces a strategic briefing</desc>
+    <div style="margin-bottom:24px;">
+      <div style="background:#f9fafb; border:1px solid #e5e7eb; border-radius:16px; padding:24px 20px;">
 
-        <defs>
-          <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-            <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </marker>
-          <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
-            <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0f625c" flood-opacity="0.06"/>
-          </filter>
-        </defs>
+        <!-- Sources label -->
+        <div style="font-size:10px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#9ca3af; text-align:center; margin-bottom:8px;">Your data sources</div>
 
-        <!-- Left boxes -->
-        <rect x="10" y="50" width="160" height="40" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
-        <svg x="22" y="62" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#334155" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.59 3.47 2 2 0 0 1 3.56 1.29h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.83a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
-        <text x="46" y="70" text-anchor="start" dominant-baseline="central" font-size="12" font-weight="500" fill="#1e293b">Sales calls</text>
+        <!-- Source boxes: row on desktop, col on mobile -->
+        <div class="diagram-row">
+          <div class="diagram-box diagram-box--source">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#334155" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.59 3.47 2 2 0 0 1 3.56 1.29h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.83a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+            Sales calls
+          </div>
+          <div class="diagram-box diagram-box--source">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#334155" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+            Support tickets
+          </div>
+          <div class="diagram-box diagram-box--source">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#334155" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            User interviews
+          </div>
+        </div>
 
-        <rect x="10" y="120" width="160" height="40" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
-        <svg x="22" y="132" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#334155" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
-        <text x="46" y="140" text-anchor="start" dominant-baseline="central" font-size="12" font-weight="500" fill="#1e293b">Support tickets</text>
+        <!-- Connector -->
+        <div class="diagram-connector">
+          <div class="diagram-connector__line"></div>
+          <div class="diagram-connector__arrow"></div>
+        </div>
 
-        <rect x="10" y="190" width="160" height="40" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
-        <svg x="22" y="202" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#334155" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        <text x="46" y="210" text-anchor="start" dominant-baseline="central" font-size="12" font-weight="500" fill="#1e293b">User interviews</text>
+        <!-- Logo card -->
+        <div style="display:flex; justify-content:center;">
+          <div style="background:#ffffff; border:1.5px solid #0f625c; border-radius:12px; padding:14px 28px; display:inline-flex; align-items:center; justify-content:center; box-shadow:0 2px 12px rgba(15,98,92,0.08);">
+            <img src="https://intuifi.io/assets/logo.png" alt="Intuifi" style="height:32px; width:auto; display:block;">
+          </div>
+        </div>
 
-        <!-- Lines to centre -->
-        <line x1="170" y1="70" x2="350" y2="140" stroke="#0f625c" stroke-width="1.2" fill="none"/>
-        <line x1="170" y1="140" x2="350" y2="140" stroke="#0f625c" stroke-width="1.2" fill="none"/>
-        <line x1="170" y1="210" x2="350" y2="140" stroke="#0f625c" stroke-width="1.2" fill="none"/>
+        <!-- Connector -->
+        <div class="diagram-connector">
+          <div class="diagram-connector__line"></div>
+          <div class="diagram-connector__arrow"></div>
+        </div>
 
-        <!-- Lines from centre to right -->
-        <line x1="350" y1="140" x2="528" y2="70" stroke="#0f625c" stroke-width="1.2" marker-end="url(#arrow)" fill="none"/>
-        <line x1="350" y1="140" x2="528" y2="140" stroke="#0f625c" stroke-width="1.2" marker-end="url(#arrow)" fill="none"/>
-        <line x1="350" y1="140" x2="528" y2="210" stroke="#0f625c" stroke-width="1.2" marker-end="url(#arrow)" fill="none"/>
+        <!-- Outputs label -->
+        <div style="font-size:10px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#9ca3af; text-align:center; margin-bottom:8px;">Your report includes</div>
 
-        <!-- Centre card drawn after lines -->
-        <rect x="270" y="90" width="160" height="100" rx="16" fill="#ffffff" stroke="#0f625c" stroke-width="1.5" filter="url(#soft-shadow)"/>
-<image href="https://intuifi.io/assets/logo.png" x="288" y="107" width="124" height="50" preserveAspectRatio="xMidYMid meet"/>
+        <!-- Output boxes: row on desktop, col on mobile -->
+        <div class="diagram-row">
+          <div class="diagram-box diagram-box--output">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            Executive summary
+          </div>
+          <div class="diagram-box diagram-box--output">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            Theme deep-dives
+          </div>
+          <div class="diagram-box diagram-box--output">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            Supporting evidence
+          </div>
+        </div>
 
-        <!-- Right boxes -->
-        <rect x="530" y="50" width="160" height="40" rx="8" fill="#e4f5f3" stroke="#0f625c" stroke-width="0.5"/>
-        <svg x="542" y="62" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-        <text x="566" y="70" text-anchor="start" dominant-baseline="central" font-size="12" font-weight="500" fill="#0a4f4a">Executive summary</text>
-
-        <rect x="530" y="120" width="160" height="40" rx="8" fill="#e4f5f3" stroke="#0f625c" stroke-width="0.5"/>
-        <svg x="542" y="132" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
-        <text x="566" y="140" text-anchor="start" dominant-baseline="central" font-size="12" font-weight="500" fill="#0a4f4a">Theme deep-dives</text>
-
-        <rect x="530" y="190" width="160" height="40" rx="8" fill="#e4f5f3" stroke="#0f625c" stroke-width="0.5"/>
-        <svg x="542" y="202" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-        <text x="566" y="210" text-anchor="start" dominant-baseline="central" font-size="12" font-weight="500" fill="#0a4f4a">Supporting evidence</text>
-
-      </svg>
+      </div>
     </div>
 
     <p class="hero-subhead"><strong>Intuifi is a product intelligence platform <br>for growing B2B SaaS founders.</strong></p>
