@@ -235,23 +235,32 @@
   <div class="inner">
     <div class="cta-band">
 
-      <div class="cta-buttons">
-        <a href="https://intuifi.io/sample_report" class="btn" id="sample-report-link">See an example report</a>
-        <button class="btn" id="reveal-form-btn" onclick="revealForm()">Request your free report</button>
+      <h2>Ready to see what your customers are really saying?</h2>
+      <p class="sub">No uploads, no configuration. Forward one email and your report lands in your inbox.</p>
+
+      <div class="cta-buttons" style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-top:28px;">
+        <a href="https://intuifi.io/sample_report" id="sample-report-link"
+           style="display:inline-flex; align-items:center; gap:8px; padding:14px 28px; border:2px solid rgba(255,255,255,0.5); border-radius:999px; color:#ffffff; font-weight:600; font-size:15px; text-decoration:none;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+          See an example report
+        </a>
+        <button id="reveal-form-btn" onclick="revealForm()"
+           style="display:inline-flex; align-items:center; gap:8px; padding:14px 28px; background:#ffffff; border:none; border-radius:999px; color:#0f625c; font-weight:700; font-size:15px; cursor:pointer;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          Get my free report
+        </button>
       </div>
 
-      <div id="request-form" style="max-height:0; overflow:hidden; transition: max-height 0.4s ease;">
-        <p style="font-size:14px; color:#ffffff; opacity:0.85; margin:24px 0 20px; text-align:center;">
+      <div id="request-form" style="max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
+        <p style="font-size:15px; color:#ffffff; opacity:0.85; margin:28px auto 20px; text-align:center; max-width:480px;">
           Enter your email and we'll send everything your team needs to get started. Forward one email and we handle the rest. Your report lands in your inbox.
         </p>
-
         <form id="early-access" class="email-form" onsubmit="return submitEmail(event)">
           <label for="email" class="sr-only">Work email</label>
           <input id="email" type="email" name="email" inputmode="email" autocomplete="email" placeholder="Enter your email" required class="email-input">
-          <button type="submit" class="btn">Send me the instructions</button>
+          <button type="submit" class="btn">Get my free report</button>
           <input type="text" name="company" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
         </form>
-
         <div class="cta-meta-grid" style="margin-top:20px;">
           <div class="cta-meta-item">
             <div class="cta-meta-label">
