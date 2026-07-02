@@ -65,10 +65,10 @@
     .header {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: center; /* Ensure this says 'center' and not 'flex-start' */
       gap: 32px;
       margin-bottom: 24px;
-      flex-wrap: wrap; /* CRITICAL: This stops the page from widening! */
+      flex-wrap: wrap; 
     }
 
     .header-content {
@@ -84,10 +84,11 @@
     }
 
     .brand-logo {
-      max-height: 90px; /* Increase this number to make it bigger! */
+      max-height: 90px; 
       max-width: 100%; 
       width: auto;
       flex-shrink: 0; 
+      margin: auto 0; /* <-- This is the bulletproof vertical centering trick! */
     }
 
     h1 {
