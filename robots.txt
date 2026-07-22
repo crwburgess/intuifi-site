@@ -1,0 +1,11 @@
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+
+# Block access to specific folders or pages
+Disallow: /admin/
+Disallow: /private/
+Disallow: /checkout/
+
+# Tell bots exactly where the sitemap is
+Sitemap: https://intuifi.io/sitemap.xml
