@@ -2,10 +2,9 @@
 User-agent: *
 Allow: /
 
-# Block access to specific folders or pages
-Disallow: /admin/
-Disallow: /private/
-Disallow: /checkout/
+# Block access to the app page
+Disallow: /app.html
+Disallow: /app
 
 # Tell bots exactly where the sitemap is
 Sitemap: https://intuifi.io/sitemap.xml
