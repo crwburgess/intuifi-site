@@ -77,6 +77,40 @@
     .diagram-box--source{background:#f8fafc;border:1px solid #e2e8f0;color:#1e293b;}
     .diagram-box--output{background:#f6f8f9;border:1px solid #e7eaee;border-left:4px solid var(--brand);color:#111111;}
 
+    /* SOURCE LOGO CARDS */
+    .diagram-box--logo{background:#fff;border:1px solid var(--border);box-shadow:0 2px 10px rgba(0,0,0,.04);padding:12px 14px;white-space:normal;width:110px;}
+    .diagram-logo-badge{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:13px;margin:0 auto 6px;}
+    .diagram-logo-name{display:block;font-size:12px;font-weight:700;color:var(--text);}
+    .diagram-logo-cat{display:block;font-size:10px;color:var(--muted);margin-top:1px;}
+
+    /* MINI REPORT PREVIEW CARDS */
+    .diagram-box--report{background:#fff;border:1px solid var(--border);border-radius:12px;padding:0;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.06);white-space:normal;width:152px;gap:0;}
+    .report-bar{height:5px;background:var(--brand);width:100%;}
+    .report-body{padding:12px;width:100%;}
+    .report-title{font-size:11px;font-weight:700;margin:0 0 8px;color:var(--text);text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+    .report-line{height:5px;background:var(--bg-grey);border-radius:3px;margin-bottom:5px;}
+    .report-line.short{width:55%;}
+    .report-tag{display:inline-block;font-size:9px;font-weight:700;background:var(--brand-light);color:var(--brand);padding:3px 7px;border-radius:6px;margin-top:4px;}
+
+    /* SINGLE UNIFIED REPORT CARD */
+    .diagram-box--report-single{background:#fff;border:1px solid var(--border);border-radius:12px;padding:0;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.06);white-space:normal;width:180px;gap:0;align-items:stretch;}
+    .report-heading{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);margin:0 0 8px;text-align:left;}
+    .report-row{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:600;color:var(--text);padding:6px 0;border-top:1px solid var(--border);white-space:nowrap;}
+    .report-row:first-of-type{border-top:none;}
+    .report-row-dot{width:6px;height:6px;border-radius:50%;background:var(--brand);flex-shrink:0;}
+
+    /* Mobile variants of the above */
+    .diagram-mobile .diagram-box--logo,
+    .diagram-mobile .diagram-box--report,
+    .diagram-mobile .diagram-box--report-single{width:180px;min-width:180px;max-width:180px;flex-direction:row;text-align:left;align-items:center;gap:10px;}
+    .diagram-mobile .diagram-box--logo .diagram-logo-badge{margin:0;}
+    .diagram-mobile .diagram-box--report,
+    .diagram-mobile .diagram-box--report-single{padding:0;}
+    .diagram-mobile .diagram-box--report .report-body,
+    .diagram-mobile .diagram-box--report-single .report-body{padding:10px 12px;}
+    .diagram-mobile .diagram-box--report .report-bar,
+    .diagram-mobile .diagram-box--report-single .report-bar{width:5px;height:auto;align-self:stretch;}
+
     /* Mobile: vertical layout */
     .diagram-mobile{display:none;flex-direction:column;align-items:center;gap:0;}
     .diagram-mobile-boxes{display:flex;flex-direction:column;align-items:center;gap:8px;}
@@ -195,12 +229,14 @@
 
   <div class="hero-banner">
     <div class="inner">
-      <h1>See What's Really Happening, With the Evidence Behind It</h1>
+      <h1>See What's Really Happening Across Your Business</h1>
     </div>
   </div>
 
   <div class="hero-section">
     <div class="inner">
+
+      <p class="hero-subhead" style="margin-top:8px;"><strong>Intuifi is a platform that collates qualitative data scattered across the tools your company uses, and turns it into an unfiltered report you can drill into.</strong></p>
 
       <div class="diagram-wrap">
 
@@ -209,17 +245,20 @@
 
           <!-- Source boxes -->
           <div class="diagram-col" id="desktop-sources">
-            <div class="diagram-box diagram-box--source" id="d-src-1">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#334155" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"></circle><circle cx="6" cy="6" r="3"></circle><path d="M6 21V9a9 9 0 0 0 9 9"></path></svg>
-              <span>CRM records</span>
+            <div class="diagram-box diagram-box--logo" id="d-src-1">
+              <div class="diagram-logo-badge" style="background:#ff7a59;">H</div>
+              <span class="diagram-logo-name">HubSpot</span>
+              <span class="diagram-logo-cat">CRM</span>
             </div>
-            <div class="diagram-box diagram-box--source" id="d-src-2">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#334155" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
-              <span>Support tickets</span>
+            <div class="diagram-box diagram-box--logo" id="d-src-2">
+              <div class="diagram-logo-badge" style="background:#03363d;">Z</div>
+              <span class="diagram-logo-name">Zendesk</span>
+              <span class="diagram-logo-cat">Support</span>
             </div>
-            <div class="diagram-box diagram-box--source" id="d-src-3">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#334155" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-              <span>Product backlogs</span>
+            <div class="diagram-box diagram-box--logo" id="d-src-3">
+              <div class="diagram-logo-badge" style="background:#24292e;">G</div>
+              <span class="diagram-logo-name">GitHub</span>
+              <span class="diagram-logo-cat">Backlog</span>
             </div>
           </div>
 
@@ -252,19 +291,16 @@
             </svg>
           </div>
 
-          <!-- Output boxes -->
+          <!-- Output box: one report, three things inside it -->
           <div class="diagram-col" id="desktop-outputs">
-            <div class="diagram-box diagram-box--output" id="d-out-1">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-              <span>Executive summary</span>
-            </div>
-            <div class="diagram-box diagram-box--output" id="d-out-2">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
-              <span>Theme deep-dives</span>
-            </div>
-            <div class="diagram-box diagram-box--output" id="d-out-3">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-              <span>Supporting evidence</span>
+            <div class="diagram-box diagram-box--report-single" id="d-out-1">
+              <div class="report-bar"></div>
+              <div class="report-body">
+                <p class="report-heading">Your report</p>
+                <div class="report-row"><span class="report-row-dot"></span>What's happening</div>
+                <div class="report-row"><span class="report-row-dot"></span>Why it matters</div>
+                <div class="report-row"><span class="report-row-dot"></span>Evidence behind it</div>
+              </div>
             </div>
           </div>
 
@@ -273,17 +309,17 @@
         <!-- MOBILE: vertical stack -->
         <div class="diagram-mobile">
           <div class="diagram-mobile-boxes">
-            <div class="diagram-box diagram-box--source">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#334155" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"></circle><circle cx="6" cy="6" r="3"></circle><path d="M6 21V9a9 9 0 0 0 9 9"></path></svg>
-              <span>CRM records</span>
+            <div class="diagram-box diagram-box--logo">
+              <div class="diagram-logo-badge" style="background:#ff7a59;">H</div>
+              <span class="diagram-logo-name">HubSpot<span class="diagram-logo-cat" style="display:block;">CRM</span></span>
             </div>
-            <div class="diagram-box diagram-box--source">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#334155" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
-              <span>Support tickets</span>
+            <div class="diagram-box diagram-box--logo">
+              <div class="diagram-logo-badge" style="background:#03363d;">Z</div>
+              <span class="diagram-logo-name">Zendesk<span class="diagram-logo-cat" style="display:block;">Support</span></span>
             </div>
-            <div class="diagram-box diagram-box--source">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#334155" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-              <span>Product backlogs</span>
+            <div class="diagram-box diagram-box--logo">
+              <div class="diagram-logo-badge" style="background:#24292e;">G</div>
+              <span class="diagram-logo-name">GitHub<span class="diagram-logo-cat" style="display:block;">Backlog</span></span>
             </div>
           </div>
 
@@ -296,24 +332,19 @@
           <div class="diagram-mobile-connector"><div class="diagram-mobile-connector__line"></div><div class="diagram-mobile-connector__arrow"></div></div>
 
           <div class="diagram-mobile-boxes">
-            <div class="diagram-box diagram-box--output">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-              <span>Executive summary</span>
-            </div>
-            <div class="diagram-box diagram-box--output">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
-              <span>Theme deep-dives</span>
-            </div>
-            <div class="diagram-box diagram-box--output">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-              <span>Supporting evidence</span>
+            <div class="diagram-box diagram-box--report-single">
+              <div class="report-bar"></div>
+              <div class="report-body">
+                <p class="report-heading">Your report</p>
+                <div class="report-row"><span class="report-row-dot"></span>What's happening</div>
+                <div class="report-row"><span class="report-row-dot"></span>Why it matters</div>
+                <div class="report-row"><span class="report-row-dot"></span>Evidence behind it</div>
+              </div>
             </div>
           </div>
         </div>
 
       </div>
-
-      <p class="hero-subhead" style="margin-bottom:0;"><strong>Intuifi is a platform that collates qualitative data scattered across your company and turns it into an unfiltered picture of what's happening, why it matters, and the evidence behind it.</strong></p>
 
     </div>
   </div>
@@ -321,7 +352,7 @@
   <!-- GREY: PROBLEMS / SOLUTIONS -->
   <div class="section-grey">
     <div class="inner">
-      <p style="text-align:center;font-size:16px;font-weight:600;color:var(--muted);max-width:680px;margin:0 auto 28px;">If your company has reached the point where revenue, product and customer service are run by distinct teams, these will be familiar:</p>
+      <p style="text-align:center;font-size:16px;font-weight:600;color:var(--muted);max-width:680px;margin:0 auto 28px;">If your company has reached the point where revenue, product and customer service are run by distinct teams, you'll recognise these challenges.</p>
       <div class="twocol">
         <div class="outer-card">
           <div class="outer-card-head">
@@ -587,7 +618,7 @@
       if (window.innerWidth <= 640) return;
       var logo = document.getElementById('d-logo');
       var sources = ['d-src-1','d-src-2','d-src-3'].map(function(id){ return document.getElementById(id); });
-      var outputs = ['d-out-1','d-out-2','d-out-3'].map(function(id){ return document.getElementById(id); });
+      var outputs = ['d-out-1'].map(function(id){ return document.getElementById(id); });
       if (!logo || sources.some(function(s){ return !s; }) || outputs.some(function(o){ return !o; })) return;
       var leftContainer = svgLeft.parentElement.getBoundingClientRect();
       var rightContainer = svgRight.parentElement.getBoundingClientRect();
@@ -601,7 +632,7 @@
   line.setAttribute('y1', r.top + r.height / 2 - leftContainer.top);
   line.setAttribute('x2', logoRect.left + logoRect.width / 2 - leftContainer.left);
   line.setAttribute('y2', logoRect.top + logoRect.height / 2 - leftContainer.top);
-  line.setAttribute('stroke', '#0f625c');
+  line.setAttribute('stroke', '#cbd5e1');
   line.setAttribute('stroke-width', '1.2');
   svgLeft.appendChild(line);
 });
