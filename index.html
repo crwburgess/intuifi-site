@@ -168,7 +168,11 @@
     .cta-band .email-form{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:24px;}
     .cta-band .email-input{min-width:280px;max-width:380px;width:100%;padding:12px 14px;border-radius:12px;border:none;font:16px Roboto,system-ui,sans-serif;}
     .cta-band .btn{background:#fff;color:var(--brand);}
-    .cta-meta-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;max-width:860px;margin:0 auto;}
+
+    /* INLINE CONFIRMATION */
+    .confirm-icon{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;}
+    .confirm-note{color:rgba(255,255,255,0.65);font-size:13px;line-height:1.5;margin:0 auto;max-width:380px;}
+    .cta-meta-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;max-width:600px;margin:0 auto;}
     @media(max-width:600px){.cta-meta-grid{grid-template-columns:1fr;}}
     .cta-meta-item{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:20px 16px;text-align:center;}
     .cta-meta-label{display:inline-flex;align-items:center;justify-content:center;gap:8px;color:rgba(255,255,255,0.72);font-size:0.9rem;font-weight:600;margin-bottom:8px;}
@@ -425,8 +429,9 @@
     <div class="inner">
 
       <div class="cta-band">
+        <div id="cta-default">
         <h2>See what Intuifi finds in your own data.</h2>
-        <p class="sub">We handle everything once your team sends the data.</p>
+        <p class="sub">Export your data, then choose how to submit it.</p>
         <div class="cta-buttons" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:28px;">
           <a href="https://intuifi.io/sample_report" id="sample-report-link" style="display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border:2px solid rgba(255,255,255,0.5);border-radius:999px;color:#ffffff;font-weight:600;font-size:15px;text-decoration:none;">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
@@ -454,19 +459,20 @@
             </div>
             <div class="cta-meta-item">
               <div class="cta-meta-label">
-                <svg class="cta-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                <span>Ready within 48 hours</span>
-              </div>
-              <p>We take care of the analysis. No configuration or prompting required.</p>
-            </div>
-            <div class="cta-meta-item">
-              <div class="cta-meta-label">
                 <svg class="cta-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"></path><circle cx="12" cy="12" r="9"></circle></svg>
                 <span>Your data stays yours</span>
               </div>
               <p>Files are deleted as soon as your report is generated.</p>
             </div>
           </div>
+        </div>
+        </div>
+        <div id="cta-confirm" style="display:none;">
+          <div class="confirm-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+          </div>
+          <h2>Thanks, you're in.</h2>
+          <p class="sub" id="cta-confirm-text">Check your email for next steps.</p>
         </div>
       </div>
     </div>
@@ -572,10 +578,10 @@
     if(btn) btn.disabled = true;
     try {
       fetch(SCRIPT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,ref:document.referrer||''})});
-      form.innerHTML = "<p style='text-align:center;margin:0'>Thanks. Check your email for a guide I put together based on research with 27 founders and product leaders. I will be in touch shortly.</p>";
-      window.open('https://intuifi.io/thankyou','_blank');
+      document.getElementById('cta-default').style.display = 'none';
+      document.getElementById('cta-confirm').style.display = 'block';
     } catch(err) {
-      form.innerHTML = "<p style='text-align:center;margin:0'>Something went wrong. Please email info@crwburgess.com.</p>";
+      form.innerHTML = "<p class='confirm-note' style='color:rgba(255,255,255,0.9);font-size:15px;'>Something went wrong. Please email info@crwburgess.com.</p>";
     }
     return false;
   }
