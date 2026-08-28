@@ -86,7 +86,7 @@
     /* MINI REPORT PREVIEW CARDS */
     .diagram-box--report{background:#fff;border:1px solid var(--border);border-radius:12px;padding:0;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.06);white-space:normal;width:152px;gap:0;}
     .report-bar{height:5px;background:var(--brand);width:100%;}
-    .report-body{padding:12px;width:100%;}
+    .report-body{padding:12px;width:100%;text-align:left;}
     .report-title{font-size:11px;font-weight:700;margin:0 0 8px;color:var(--text);text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
     .report-line{height:5px;background:var(--bg-grey);border-radius:3px;margin-bottom:5px;}
     .report-line.short{width:55%;}
@@ -95,9 +95,11 @@
     /* SINGLE UNIFIED REPORT CARD */
     .diagram-box--report-single{background:#fff;border:1px solid var(--border);border-radius:12px;padding:0;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.06);white-space:normal;width:180px;gap:0;align-items:stretch;}
     .report-heading{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);margin:0 0 8px;text-align:left;}
-    .report-row{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:600;color:var(--text);padding:6px 0;border-top:1px solid var(--border);white-space:nowrap;}
+    .report-row{display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-top:1px solid var(--border);}
     .report-row:first-of-type{border-top:none;}
-    .report-row-dot{width:6px;height:6px;border-radius:50%;background:var(--brand);flex-shrink:0;}
+    .report-row-dot{width:6px;height:6px;border-radius:50%;background:var(--brand);flex-shrink:0;margin-top:4px;}
+    .report-row-label{font-size:12px;font-weight:600;color:var(--text);white-space:nowrap;}
+    .report-row-example{font-size:9px;font-weight:400;color:var(--muted);margin-top:2px;white-space:normal;line-height:1.3;}
 
     /* Mobile: sources side by side with converging lines */
     .diagram-mobile-input-wrap{position:relative;width:100%;}
@@ -150,6 +152,17 @@
 
     /* CTA BAND */
     .cta-band{background:var(--brand);border-radius:24px;padding:40px 32px;text-align:center;}
+
+    /* SAMPLE FINDING CARD */
+    .finding-wrap{max-width:420px;margin:0 auto 28px;}
+    .finding-label{font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin:0 0 10px;}
+    .finding-card{background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.06);text-align:left;}
+    .finding-card .bar{height:5px;background:var(--brand);}
+    .finding-card .body{padding:18px;}
+    .finding-tag{display:inline-block;font-size:10px;font-weight:700;background:var(--brand-light);color:var(--brand);padding:3px 8px;border-radius:6px;margin-bottom:10px;text-transform:uppercase;letter-spacing:.4px;}
+    .finding-title{font-size:15px;font-weight:700;margin:0 0 8px;color:var(--text);}
+    .finding-evidence{font-size:13px;color:var(--muted);line-height:1.5;margin:0 0 10px;padding-left:10px;border-left:2px solid var(--border);}
+    .finding-note{font-size:11px;color:var(--muted);}
     .cta-band h2{color:#fff;font-size:26px;margin:0 0 12px;font-weight:700;}
     .cta-band p.sub{color:rgba(255,255,255,0.82);max-width:none;margin:0 auto 24px;font-size:16px;}
     .cta-band .email-form{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:24px;}
@@ -263,7 +276,7 @@
             </div>
             <div class="diagram-box diagram-box--logo" id="d-src-3">
               <div class="diagram-logo-badge" style="background:#24292e;">G</div>
-              <span class="diagram-logo-name">GitHub</span>
+              <span class="diagram-logo-name">GitHub*</span>
               <span class="diagram-logo-cat">Backlog</span>
             </div>
           </div>
@@ -303,9 +316,9 @@
               <div class="report-bar"></div>
               <div class="report-body">
                 <p class="report-heading">Your report</p>
-                <div class="report-row"><span class="report-row-dot"></span>What's happening</div>
-                <div class="report-row"><span class="report-row-dot"></span>Why it matters</div>
-                <div class="report-row"><span class="report-row-dot"></span>Evidence behind it</div>
+                <div class="report-row"><span class="report-row-dot"></span><div><div class="report-row-label">What's happening</div><div class="report-row-example">Renewal risk rising in 3 accounts</div></div></div>
+                <div class="report-row"><span class="report-row-dot"></span><div><div class="report-row-label">Why it matters</div><div class="report-row-example">Fix already logged in the backlog, unprioritised</div></div></div>
+                <div class="report-row"><span class="report-row-dot"></span><div><div class="report-row-label">Evidence behind it</div><div class="report-row-example">9 signals linked</div></div></div>
               </div>
             </div>
           </div>
@@ -326,7 +339,7 @@
               </div>
               <div class="diagram-box diagram-box--logo" id="m-src-3">
                 <div class="diagram-logo-badge" style="background:#24292e;">G</div>
-                <span class="diagram-logo-name">GitHub<span class="diagram-logo-cat" style="display:block;">Backlog</span></span>
+                <span class="diagram-logo-name">GitHub*<span class="diagram-logo-cat" style="display:block;">Backlog</span></span>
               </div>
             </div>
 
@@ -344,9 +357,9 @@
               <div class="report-bar"></div>
               <div class="report-body">
                 <p class="report-heading">Your report</p>
-                <div class="report-row"><span class="report-row-dot"></span>What's happening</div>
-                <div class="report-row"><span class="report-row-dot"></span>Why it matters</div>
-                <div class="report-row"><span class="report-row-dot"></span>Evidence behind it</div>
+                <div class="report-row"><span class="report-row-dot"></span><div><div class="report-row-label">What's happening</div><div class="report-row-example">Renewal risk rising in 3 accounts</div></div></div>
+                <div class="report-row"><span class="report-row-dot"></span><div><div class="report-row-label">Why it matters</div><div class="report-row-example">Fix already logged in the backlog, unprioritised</div></div></div>
+                <div class="report-row"><span class="report-row-dot"></span><div><div class="report-row-label">Evidence behind it</div><div class="report-row-example">9 signals linked</div></div></div>
               </div>
             </div>
           </div>
@@ -354,18 +367,20 @@
 
       </div>
 
+      <p style="text-align:center;font-size:12px;color:var(--muted);max-width:480px;margin:0 auto 8px;">*Examples. Intuifi currently works by analysing data you export from one or more tools like these.</p>
+
     </div>
   </div>
 
   <!-- GREY: PROBLEMS / SOLUTIONS -->
   <div class="section-grey">
     <div class="inner">
-      <p style="text-align:center;font-size:16px;font-weight:600;color:var(--muted);max-width:680px;margin:0 auto 28px;">If your company has reached the point where revenue, product and customer service have each grown into their own teams, you'll recognise these challenges.</p>
+      <p style="text-align:center;font-size:16px;font-weight:600;color:var(--muted);max-width:680px;margin:0 auto 28px;">If your company has grown enough that revenue, product and customer service are each handled by their own team, you'll recognise these challenges.</p>
       <div class="twocol">
         <div class="outer-card">
           <div class="outer-card-head">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#a2c4c9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="comparison-image"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path><path d="M9 13a4.5 4.5 0 0 0 3-4"></path><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path d="M6 18a4 4 0 0 1-1.967-.516"></path><path d="M12 13h4"></path><path d="M12 18h6a2 2 0 0 1 2 2v1"></path><path d="M12 8h8"></path><path d="M16 8V5a2 2 0 0 1 2-2"></path><circle cx="16" cy="13" r=".5"></circle><circle cx="18" cy="3" r=".5"></circle><circle cx="20" cy="21" r=".5"></circle><circle cx="20" cy="8" r=".5"></circle></svg>
-            <div class="column-head">Problems leaders face</div>
+            <div class="column-head">Challenges</div>
           </div>
           <div class="list">
             <article class="benefit-card">
@@ -374,18 +389,18 @@
             </article>
             <article class="benefit-card">
               <div class="icon-wrap" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#a2c4c9" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg></div>
-              <div><p class="benefit-title">It's on you to build the full picture, because no team sees it all</p></div>
+              <div><p class="benefit-title">It's on leaders to build the full picture, because no team sees it all</p></div>
             </article>
             <article class="benefit-card">
               <div class="icon-wrap" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#a2c4c9" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="M9.1 9a3 3 0 0 1 5.82 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></div>
-              <div><p class="benefit-title">Using AI saves you time, but without the evidence it is hard to trust the output</p></div>
+              <div><p class="benefit-title">Using AI saves time, but without the evidence it is hard to trust the output</p></div>
             </article>
           </div>
         </div>
         <div class="outer-card">
           <div class="outer-card-head">
             <img src="./assets/logo.png" alt="Intuifi" class="comparison-image">
-            <div class="column-head">What you get instead</div>
+            <div class="column-head">Outcomes</div>
           </div>
           <div class="list">
             <article class="benefit-card benefit-card--positive">
@@ -408,6 +423,7 @@
 
   <div class="section-white">
     <div class="inner">
+
       <div class="cta-band">
         <h2>See what Intuifi finds in your own data.</h2>
         <p class="sub">We handle everything once your team sends the data.</p>
@@ -475,7 +491,7 @@
           <img class="bio-photo" src="./assets/chris-burgess.png" alt="Chris Burgess">
         </div>
         <div class="bio-card-right">
-          <p class="bio-text">I am Chris Burgess, a product leader with 15 years of experience across startups, scale-ups, and a Fortune 100 company. I built Intuifi because I kept seeing how difficult it was for leaders to get a reliable picture of what was happening across a scaling business. Evidence was scattered across teams and tools, summaries lost context, and decisions were too often made without a clear view of what supported them. I wanted to fix that.</p>
+          <p class="bio-text">I am Chris Burgess, a product leader with 15 years of experience across startups, scale-ups, and a Fortune 100 company. I built Intuifi because I kept seeing how difficult it was for leaders to get a reliable picture of what was happening across a scaling business. Evidence was scattered across teams and tools, summaries lost context, and decisions were too often made without a clear view of what supported them. I am fixing that.</p>
           <div class="bio-buttons">
             <a class="bio-btn" href="https://crwburgess.com/" target="_blank" rel="noopener">
               <span>Learn more about me</span>
@@ -514,7 +530,7 @@
         <div class="faq-accordion">
           <details><summary>How does it actually work?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary><div class="panel">Upload CSVs from the tools your teams already use - such as CRM records, support tickets or product backlogs. Intuifi analyses everything across all your files, identifies the recurring themes, patterns and tensions, and produces a structured report. You start with a high level summary and can drill down into the evidence behind any finding whenever you need to.</div></details>
           <details><summary>What effort is involved and how much of my time does this take?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary><div class="panel">Simply ask your team to export the data from the tools they are using. Then upload those files in a few clicks and sit back while the analysis happens. There is nothing to configure and no prompting required. Around five minutes later you will get back a structured report with an executive summary, the key themes across your data, and the evidence behind each one. From there you can share it with your team, use it to prepare for a planning session, or just keep it as a reference point.</div></details>
-          <details><summary>What results can I expect?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary><div class="panel">The report opens with an executive summary of the key themes and tensions across your data. Each theme comes with supporting evidence, an implication for your business, and signals to track. Everything links back to the source so you can verify what matters. To see exactly what you get, take a look at <a href="https://intuifi.io/sample_report" target="_blank" rel="noopener">this sample report</a>.</div></details>
+          <details><summary>What results can I expect?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary><div class="panel">The report opens with an executive summary of the key themes and tensions across your data. Each theme comes with supporting evidence, an implication for your business, and signals to track. For example, a theme might read "Renewal risk rising in 3 accounts", with the evidence behind it (matching signals from CRM, support tickets and the engineering backlog) linked directly beneath, and an implication such as "the related fix is already logged in the backlog but hasn't been prioritised." Everything links back to the source so you can verify what matters. To see exactly what you get, take a look at <a href="https://intuifi.io/sample_report" target="_blank" rel="noopener">this sample report</a>.</div></details>
           <details><summary>This looks like a manual process. Why?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary>
             <div class="panel">
               <p>This is an MVP and the decision to keep it manual is deliberate. I am looking to build trust, and the way I am approaching that is to reduce any concerns you might have about your data, by enabling you to edit or sanitise anything you want to upload before it reaches Intuifi. Automation is coming, but only once I am confident you are getting the insight you need.</p>
