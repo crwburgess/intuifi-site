@@ -99,7 +99,13 @@
     .report-row:first-of-type{border-top:none;}
     .report-row-dot{width:6px;height:6px;border-radius:50%;background:var(--brand);flex-shrink:0;}
 
-    /* Mobile variants of the above */
+    /* Mobile: sources side by side with converging lines */
+    .diagram-mobile-input-wrap{position:relative;width:100%;}
+    #mobile-sources{display:flex;flex-direction:row;justify-content:center;align-items:stretch;gap:6px;}
+    #mobile-sources .diagram-box--logo{width:104px;min-width:104px;max-width:104px;flex-direction:column;text-align:center;gap:4px;padding:10px 6px;}
+    #mobile-sources .diagram-logo-badge{margin:0 auto;}
+    #mobile-sources .diagram-logo-name{font-size:11px;}
+    #mobile-sources .diagram-logo-cat{font-size:9px;}
     .diagram-mobile .diagram-box--logo,
     .diagram-mobile .diagram-box--report,
     .diagram-mobile .diagram-box--report-single{width:180px;min-width:180px;max-width:180px;flex-direction:row;text-align:left;align-items:center;gap:10px;}
@@ -236,7 +242,7 @@
   <div class="hero-section">
     <div class="inner">
 
-      <p class="hero-subhead" style="margin-top:8px;"><strong>Intuifi is a platform that collates qualitative data scattered across the tools your company uses, and turns it into an unfiltered report you can drill into.</strong></p>
+      <p class="hero-subhead" style="margin-top:8px;"><strong>Intuifi is a platform that brings together qualitative data scattered across your company's tools and turns it into an unfiltered report you can drill into.</strong></p>
 
       <div class="diagram-wrap">
 
@@ -308,25 +314,27 @@
 
         <!-- MOBILE: vertical stack -->
         <div class="diagram-mobile">
-          <div class="diagram-mobile-boxes">
-            <div class="diagram-box diagram-box--logo">
-              <div class="diagram-logo-badge" style="background:#ff7a59;">H</div>
-              <span class="diagram-logo-name">HubSpot<span class="diagram-logo-cat" style="display:block;">CRM</span></span>
+          <div class="diagram-mobile-input-wrap" id="mobile-input-wrap">
+            <div class="diagram-mobile-boxes" id="mobile-sources">
+              <div class="diagram-box diagram-box--logo" id="m-src-1">
+                <div class="diagram-logo-badge" style="background:#ff7a59;">H</div>
+                <span class="diagram-logo-name">HubSpot<span class="diagram-logo-cat" style="display:block;">CRM</span></span>
+              </div>
+              <div class="diagram-box diagram-box--logo" id="m-src-2">
+                <div class="diagram-logo-badge" style="background:#03363d;">Z</div>
+                <span class="diagram-logo-name">Zendesk<span class="diagram-logo-cat" style="display:block;">Support</span></span>
+              </div>
+              <div class="diagram-box diagram-box--logo" id="m-src-3">
+                <div class="diagram-logo-badge" style="background:#24292e;">G</div>
+                <span class="diagram-logo-name">GitHub<span class="diagram-logo-cat" style="display:block;">Backlog</span></span>
+              </div>
             </div>
-            <div class="diagram-box diagram-box--logo">
-              <div class="diagram-logo-badge" style="background:#03363d;">Z</div>
-              <span class="diagram-logo-name">Zendesk<span class="diagram-logo-cat" style="display:block;">Support</span></span>
-            </div>
-            <div class="diagram-box diagram-box--logo">
-              <div class="diagram-logo-badge" style="background:#24292e;">G</div>
-              <span class="diagram-logo-name">GitHub<span class="diagram-logo-cat" style="display:block;">Backlog</span></span>
-            </div>
-          </div>
 
-          <div class="diagram-mobile-connector"><div class="diagram-mobile-connector__line"></div><div class="diagram-mobile-connector__arrow"></div></div>
+            <svg id="svg-mobile-in" style="position:absolute;top:0;left:0;width:100%;height:100%;overflow:visible;pointer-events:none;" aria-hidden="true"></svg>
 
-          <div class="diagram-logo-card" style="margin:0 auto;">
-            <img src="https://intuifi.io/assets/logo.png" alt="Intuifi" style="height:28px;width:auto;display:block;">
+            <div class="diagram-logo-card" id="m-logo" style="margin:28px auto 0;">
+              <img src="https://intuifi.io/assets/logo.png" alt="Intuifi" style="height:28px;width:auto;display:block;">
+            </div>
           </div>
 
           <div class="diagram-mobile-connector"><div class="diagram-mobile-connector__line"></div><div class="diagram-mobile-connector__arrow"></div></div>
@@ -352,7 +360,7 @@
   <!-- GREY: PROBLEMS / SOLUTIONS -->
   <div class="section-grey">
     <div class="inner">
-      <p style="text-align:center;font-size:16px;font-weight:600;color:var(--muted);max-width:680px;margin:0 auto 28px;">If your company has reached the point where revenue, product and customer service have each grown into their own teams, you’ll recognise these challenges.</p>
+      <p style="text-align:center;font-size:16px;font-weight:600;color:var(--muted);max-width:680px;margin:0 auto 28px;">If your company has reached the point where revenue, product and customer service have each grown into their own teams, you'll recognise these challenges.</p>
       <div class="twocol">
         <div class="outer-card">
           <div class="outer-card-head">
@@ -366,7 +374,7 @@
             </article>
             <article class="benefit-card">
               <div class="icon-wrap" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#a2c4c9" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg></div>
-              <div><p class="benefit-title">Each team only knows its area, so it's on you to build the full picture</p></div>
+              <div><p class="benefit-title">It's on you to build the full picture, because no team sees it all</p></div>
             </article>
             <article class="benefit-card">
               <div class="icon-wrap" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#a2c4c9" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="M9.1 9a3 3 0 0 1 5.82 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></div>
@@ -467,7 +475,7 @@
           <img class="bio-photo" src="./assets/chris-burgess.png" alt="Chris Burgess">
         </div>
         <div class="bio-card-right">
-          <p class="bio-text">I am Chris Burgess, a product leader with 15 years of experience across startups, scale-ups, and a Fortune 100 company. I built Intuifi because I kept seeing how difficult it was for leaders to get a reliable picture of what was happening across a scaling business. Evidence was scattered across teams and tools, summaries lost context, and decisions were too often made without a clear view of what supported them. I am fixing that.</p>
+          <p class="bio-text">I am Chris Burgess, a product leader with 15 years of experience across startups, scale-ups, and a Fortune 100 company. I built Intuifi because I kept seeing how difficult it was for leaders to get a reliable picture of what was happening across a scaling business. Evidence was scattered across teams and tools, summaries lost context, and decisions were too often made without a clear view of what supported them. I wanted to fix that.</p>
           <div class="bio-buttons">
             <a class="bio-btn" href="https://crwburgess.com/" target="_blank" rel="noopener">
               <span>Learn more about me</span>
@@ -612,10 +620,13 @@
   function drawLines() {
     clearTimeout(drawTimeout);
     drawTimeout = setTimeout(function() {
+      if (window.innerWidth <= 640) {
+        drawMobileLines();
+        return;
+      }
       var svgLeft = document.getElementById('svg-left');
       var svgRight = document.getElementById('svg-right');
       if (!svgLeft || !svgRight) return;
-      if (window.innerWidth <= 640) return;
       var logo = document.getElementById('d-logo');
       var sources = ['d-src-1','d-src-2','d-src-3'].map(function(id){ return document.getElementById(id); });
       var outputs = ['d-out-1'].map(function(id){ return document.getElementById(id); });
@@ -650,6 +661,28 @@ outputs.forEach(function(out) {
   svgRight.appendChild(line);
 });
     }, 50);
+  }
+
+  function drawMobileLines() {
+    var svg = document.getElementById('svg-mobile-in');
+    var wrap = document.getElementById('mobile-input-wrap');
+    var logo = document.getElementById('m-logo');
+    var sources = ['m-src-1','m-src-2','m-src-3'].map(function(id){ return document.getElementById(id); });
+    if (!svg || !wrap || !logo || sources.some(function(s){ return !s; })) return;
+    var container = wrap.getBoundingClientRect();
+    var logoRect = logo.getBoundingClientRect();
+    svg.querySelectorAll('line').forEach(function(l){ l.remove(); });
+    sources.forEach(function(src) {
+      var r = src.getBoundingClientRect();
+      var line = document.createElementNS('http://www.w3.org/2000/svg','line');
+      line.setAttribute('x1', r.left + r.width / 2 - container.left);
+      line.setAttribute('y1', r.bottom - container.top);
+      line.setAttribute('x2', logoRect.left + logoRect.width / 2 - container.left);
+      line.setAttribute('y2', logoRect.top - container.top);
+      line.setAttribute('stroke', '#cbd5e1');
+      line.setAttribute('stroke-width', '1.2');
+      svg.appendChild(line);
+    });
   }
   window.addEventListener('resize', drawLines);
 </script>
