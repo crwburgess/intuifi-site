@@ -1,6 +1,9 @@
 export default async (req, context) => {
-  const url = new URL(req.url);
-  const email = (url.searchParams.get("email") || "").trim().toLowerCase();
+    let email = "";
+  if (req.method === "POST") {
+    const formData = await req.formData();
+    email = (formData.get("email") || "").toString().trim().toLowerCase();
+  }
 
   const formHtml = `<!DOCTYPE html>
 <html lang="en">
@@ -20,7 +23,7 @@ export default async (req, context) => {
   <div class="box">
     <h1>Strategic Insights Report</h1>
     <p>Enter your email address to view this report.</p>
-    <form action="/reports/test/report-data.html" method="GET">
+    <form action="/reports/test/report-data.html" method="POST">
       <input type="email" name="email" placeholder="you@company.com" required />
       <button type="submit">View report</button>
     </form>
