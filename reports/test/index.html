@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Strategic Insights Report | Intuifi</title>
+  <style>
+    body { font-family: system-ui, sans-serif; background: #f7f8fa; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; }
+    .box { background: #fff; border: 1px solid #e5e7eb; border-radius: 14px; padding: 32px; max-width: 360px; width: 100%; text-align: center; }
+    h1 { font-size: 18px; margin: 0 0 8px; }
+    p { color: #6b7280; font-size: 14px; margin: 0 0 20px; }
+    input { width: 100%; padding: 10px; border: 1px solid #e5e7eb; border-radius: 8px; margin-bottom: 12px; box-sizing: border-box; }
+    button { width: 100%; padding: 10px; background: #0f766e; color: #fff; border: 0; border-radius: 8px; font-weight: 600; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>Strategic Insights Report</h1>
+    <p>Enter your email address to view this report.</p>
+    <form action="/.netlify/functions/check-access" method="GET">
+      <input type="email" name="email" placeholder="you@company.com" required />
+      <button type="submit">View report</button>
+    </form>
+  </div>
+</body>
+</html>
