@@ -1,2 +1,7 @@
 [build]
   publish = "."
+
+[[redirects]]
+  from = "/reports/test/report-data.html"
+  to = "/.netlify/functions/report-data"
+  status = 200
