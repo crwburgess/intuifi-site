@@ -1,0 +1,3120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strategic Insights Report | Intuifi</title>
+
+
+
+
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --card: #ffffff;
+      --ink: #111827;
+      --muted: #6b7280;
+      --text: #374151;
+      --border: #e5e7eb;
+      --soft: #f3f4f6;
+
+
+
+
+      --teal: #0f766e;
+      --teal-soft: #ecfdf5;
+      --teal-border: #ccfbf1;
+
+
+
+
+      --amber: #92400e;
+      --amber-soft: #fffbeb;
+      --amber-border: #fde68a;
+
+
+
+
+      --red: #991b1b;
+      --red-soft: #fef2f2;
+      --red-border: #fecaca;
+
+
+
+
+      --blue: #2563eb;
+
+
+
+
+      --radius: 18px;
+      --shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
+      --max: 1080px;
+    }
+
+
+
+
+    * {
+      box-sizing: border-box;
+    }
+
+
+
+
+    body {
+      margin: 0;
+      padding: 28px 20px 64px;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+    }
+
+
+
+
+    .page {
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+
+
+
+
+    .header {
+      margin-bottom: 14px;
+    }
+
+
+
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+
+
+
+
+    .report-title {
+      margin: 0;
+      min-width: 0;
+      font-size: clamp(28px, 4vw, 38px);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      column-gap: 0.24em;
+      row-gap: 0.08em;
+    }
+
+
+
+
+
+    .brand-logo {
+      display: block;
+      width: clamp(138px, 16vw, 180px);
+      height: auto;
+      flex: 0 0 auto;
+      overflow: visible;
+    }
+
+
+
+
+    .toolbar {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 4px 0 24px;
+    }
+
+
+
+
+    .btn {
+      border: 0;
+      background: var(--teal);
+      color: #fff;
+      padding: 9px 14px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 13.5px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.15s ease;
+      font-family: inherit;
+    }
+
+
+
+
+    .btn:hover {
+      background: #0c5f58;
+    }
+
+
+
+
+    .meta-cluster {
+      display: grid;
+      gap: 10px;
+      margin: 18px 0 24px;
+    }
+
+
+
+
+    .meta-cluster.cols-1 {
+      grid-template-columns: 1fr;
+      max-width: 230px;
+    }
+
+
+
+
+    .meta-cluster.cols-2 {
+      grid-template-columns: 1fr 1fr;
+      max-width: 460px;
+    }
+
+
+
+
+    .meta-cluster.cols-3 {
+      grid-template-columns: 1fr 1fr 1fr;
+      max-width: 780px;
+    }
+
+
+
+
+    .meta-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px 16px;
+      box-shadow: var(--shadow);
+    }
+
+
+
+
+    .meta-card.primary {
+      border-color: var(--teal-border);
+      background: linear-gradient(135deg, var(--teal-soft), #ffffff);
+    }
+
+
+
+
+    .meta-card.warning {
+      border-color: var(--amber-border);
+      background: linear-gradient(135deg, var(--amber-soft), #ffffff);
+    }
+
+
+
+
+    .meta-card-clickable {
+      cursor: pointer;
+      font: inherit;
+      text-align: left;
+      display: block;
+      width: 100%;
+      position: relative;
+      transition: box-shadow 0.15s ease, transform 0.15s ease;
+    }
+
+    .meta-card-clickable:hover {
+      box-shadow: 0 14px 32px rgba(146, 64, 14, 0.16);
+      transform: translateY(-1px);
+    }
+
+    .meta-card-clickable:focus-visible {
+      outline: 2px solid var(--amber);
+      outline-offset: 2px;
+    }
+
+    .meta-card-jump-icon {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      color: var(--amber);
+      opacity: 0.75;
+    }
+
+
+
+
+    .meta-card strong {
+      display: block;
+      font-size: 24px;
+      color: var(--ink);
+      line-height: 1.1;
+    }
+
+
+
+
+    .meta-card span {
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+
+
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 20px;
+      margin-bottom: 18px;
+    }
+
+
+
+
+    .section-title {
+      margin: 34px 0 14px;
+      font-size: 22px;
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+    }
+
+
+
+
+    .eyebrow {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--teal);
+      margin-bottom: 8px;
+    }
+
+    .section-note {
+      margin: -6px 0 16px;
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--muted);
+    }
+
+
+
+
+    .executive-card {
+      padding: 0;
+      overflow: hidden;
+    }
+
+
+
+
+    .executive-header {
+      padding: 18px 20px;
+      border-bottom: 1px solid var(--border);
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+    }
+
+
+
+
+    .executive-body {
+      padding: 20px;
+      display: grid;
+      gap: 16px;
+    }
+
+
+
+
+    .tldr-box {
+      background: var(--teal-soft);
+      border: 1px solid var(--teal-border);
+      border-radius: 15px;
+      padding: 16px;
+    }
+
+
+
+
+    .tldr-label {
+      font-size: 12px;
+      font-weight: 850;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--teal);
+      margin-bottom: 7px;
+    }
+
+
+
+
+    .tldr-text {
+      font-size: 16px;
+      color: #1f2937;
+      line-height: 1.5;
+      font-weight: 650;
+    }
+
+
+
+
+    .executive-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+
+
+
+    .executive-panel {
+      background: #f9fafb;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      padding: 16px;
+    }
+
+
+
+
+    .executive-panel.tension {
+      background: var(--amber-soft);
+      border-color: var(--amber-border);
+    }
+
+
+
+
+    .panel-title {
+      font-size: 14px;
+      font-weight: 850;
+      color: var(--ink);
+      margin-bottom: 14px;
+    }
+
+
+
+
+    .summary-list {
+      display: grid;
+      gap: 14px;
+    }
+
+
+
+
+    .summary-item {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 14px;
+      align-items: start;
+    }
+
+
+
+
+    .summary-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      font-size: 15px;
+      font-weight: 900;
+      line-height: 1;
+      margin-top: 1px;
+    }
+
+
+
+
+    .summary-icon.check {
+      background: var(--teal-soft);
+      color: var(--teal);
+      border: 1px solid var(--teal-border);
+    }
+
+
+
+
+    .summary-icon.warning {
+      background: #fff7ed;
+      color: var(--amber);
+      border: 1px solid var(--amber-border);
+    }
+
+
+
+
+    .summary-headline {
+      font-size: 15px;
+      font-weight: 850;
+      line-height: 1.3;
+      color: var(--ink);
+      margin-bottom: 3px;
+    }
+
+
+
+
+    .summary-detail {
+      font-size: 13.5px;
+      line-height: 1.45;
+      color: var(--muted);
+    }
+
+
+
+
+    .grid {
+      display: grid;
+      gap: 16px;
+    }
+
+
+
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+
+
+
+    .action-card {
+      border-left: 5px solid var(--teal);
+    }
+
+
+
+
+    .risk-card {
+      border-left: 5px solid var(--red);
+      background:
+        radial-gradient(circle at top left, rgba(153, 27, 27, 0.06), transparent 32%),
+        #ffffff;
+    }
+
+
+
+
+    .risk-kicker {
+      color: var(--red);
+      font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin-bottom: 8px;
+    }
+
+
+
+
+    .mini-title {
+      margin: 0 0 8px;
+      font-size: 15px;
+      font-weight: 850;
+      color: var(--ink);
+    }
+
+
+
+
+    .body-copy {
+      margin: 0;
+      color: var(--text);
+      font-size: 14px;
+    }
+
+
+
+
+    .decision-section {
+      margin-bottom: 18px;
+    }
+
+
+
+
+    .decision-section .section-title {
+      margin: 0 0 14px;
+    }
+
+
+
+
+    .decision-flow {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 42px;
+      align-items: stretch;
+    }
+
+
+
+
+    .decision-card {
+      position: relative;
+      min-width: 0;
+      border: 1px solid var(--border);
+      border-top-width: 6px;
+      border-radius: var(--radius);
+      padding: 22px 24px 24px;
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.09);
+    }
+
+
+
+
+    .decision-card:not(:last-child)::after {
+      content: "→";
+      position: absolute;
+      top: 50%;
+      right: -38px;
+      width: 34px;
+      transform: translateY(-50%);
+      color: #64748b;
+      font-size: 36px;
+      font-weight: 900;
+      line-height: 1;
+      text-align: center;
+    }
+
+
+
+
+    .decision-card.context {
+      border-color: var(--teal-border);
+      border-top-color: var(--teal);
+      background:
+        linear-gradient(180deg, rgba(15, 118, 110, 0.10), rgba(255, 255, 255, 0.96) 34%),
+        #ffffff;
+    }
+
+
+
+
+    .decision-card.impact {
+      border-color: var(--amber-border);
+      border-top-color: #d97706;
+      background:
+        linear-gradient(180deg, rgba(217, 119, 6, 0.10), rgba(255, 255, 255, 0.96) 34%),
+        #ffffff;
+    }
+
+
+
+
+    .decision-card.risk {
+      border-color: var(--red-border);
+      border-top-color: #dc2626;
+      background:
+        linear-gradient(180deg, rgba(220, 38, 38, 0.09), rgba(255, 255, 255, 0.96) 34%),
+        #ffffff;
+    }
+
+
+
+
+    .decision-step {
+      margin-bottom: 12px;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #4b5563;
+    }
+
+
+
+
+    .decision-card-title {
+      margin: 0 0 12px;
+      color: var(--ink);
+      font-size: 20px;
+      font-weight: 850;
+      line-height: 1.22;
+      letter-spacing: -0.02em;
+    }
+
+
+
+
+    .decision-card-copy {
+      margin: 0;
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.58;
+    }
+
+
+
+
+    .decision-outcome {
+      margin: 22px 0 18px;
+      padding: 22px 26px;
+      border: 2px solid var(--teal);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(135deg, rgba(15, 118, 110, 0.10), rgba(255, 255, 255, 0.97) 64%),
+        #ffffff;
+      box-shadow: 0 10px 24px rgba(15, 118, 110, 0.10);
+    }
+
+
+
+
+    .decision-outcome-title {
+      margin: 0 0 8px;
+      color: var(--teal);
+      font-size: 20px;
+      font-weight: 900;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+
+
+
+    .decision-outcome-copy {
+      margin: 0;
+      color: #1f2937;
+      font-size: 16px;
+      font-weight: 650;
+      line-height: 1.55;
+    }
+
+
+
+
+    .theme-flow-card {
+      padding: 22px;
+    }
+
+
+    .theme-flow-inline {
+      border-top: 1px solid var(--border);
+      padding: 26px 20px 20px;
+    }
+
+
+
+
+    .flow-intro {
+      margin-bottom: 20px;
+    }
+
+    .flow-section-title {
+      margin: 0 0 8px;
+      color: var(--ink);
+      font-size: 20px;
+      font-weight: 850;
+      line-height: 1.25;
+      letter-spacing: -0.025em;
+    }
+
+
+
+
+    .flow-intro p {
+      margin: 0;
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.55;
+    }
+
+
+
+
+    .tag-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+
+
+
+    .legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 700;
+    }
+
+
+
+
+    .legend-swatch {
+      width: 18px;
+      height: 10px;
+      border-radius: 999px;
+      background: #ffffff;
+      border: 1px solid rgba(17, 24, 39, 0.12);
+    }
+
+
+
+
+    .legend-swatch.inferred {
+      background: rgba(124, 58, 237, 0.1);
+      border: 1.5px dashed rgba(124, 58, 237, 0.55);
+    }
+
+
+
+
+    .theme-flow {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 42px minmax(0, 1fr) 42px minmax(0, 1fr);
+      gap: 12px;
+      align-items: stretch;
+    }
+
+
+
+
+    .flow-column {
+      border-radius: 18px;
+      padding: 18px;
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      align-self: start;
+    }
+
+
+
+
+    .flow-column.root {
+      background:
+        radial-gradient(circle at top left, rgba(153, 27, 27, 0.08), transparent 34%),
+        #fffafa;
+      border-color: var(--red-border);
+    }
+
+
+
+
+    .flow-column.symptom {
+      background:
+        radial-gradient(circle at top left, rgba(146, 64, 14, 0.1), transparent 34%),
+        #fffaf0;
+      border-color: var(--amber-border);
+    }
+
+
+
+
+    .flow-column.consequence {
+      background:
+        radial-gradient(circle at top left, rgba(15, 118, 110, 0.1), transparent 34%),
+        #f0fdfa;
+      border-color: var(--teal-border);
+    }
+
+
+
+
+    .flow-step-label {
+      font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+
+
+
+    .flow-column h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+      color: var(--ink);
+    }
+
+
+
+
+    .flow-column p {
+      margin: 0 0 16px;
+      color: var(--text);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+
+
+
+    .flow-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+
+
+
+    .flow-tags span {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 6px 10px;
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(17, 24, 39, 0.08);
+      color: #374151;
+      font-size: 12px;
+      font-weight: 750;
+    }
+
+
+
+
+    .flow-tags span.inferred {
+      background: rgba(124, 58, 237, 0.08);
+      border: 1.5px dashed rgba(124, 58, 237, 0.5);
+      color: #6d28d9;
+      font-weight: 700;
+      font-style: italic;
+    }
+
+
+
+
+    .flow-arrow {
+      display: grid;
+      place-items: center;
+      color: #9ca3af;
+      font-size: 28px;
+      font-weight: 900;
+    }
+
+
+
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+
+
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 5px 10px;
+      background: var(--soft);
+      border: 1px solid var(--border);
+      color: #4b5563;
+      font-size: 12px;
+      font-weight: 750;
+    }
+
+
+
+
+    .pill.root {
+      background: var(--red-soft);
+      border-color: var(--red-border);
+      color: var(--red);
+    }
+
+
+
+
+    .pill.symptom {
+      background: var(--amber-soft);
+      border-color: var(--amber-border);
+      color: var(--amber);
+    }
+
+
+
+
+    .pill.consequence {
+      background: var(--teal-soft);
+      border-color: var(--teal-border);
+      color: var(--teal);
+    }
+
+
+
+
+    .theme-stack {
+      display: grid;
+      gap: 14px;
+    }
+
+
+
+
+    details.theme {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+
+
+
+    details.theme[open] {
+      border-color: #cbd5e1;
+    }
+
+    details.theme.unclassified-card {
+      border-left: 5px solid var(--amber);
+    }
+
+
+
+
+    summary {
+      cursor: pointer;
+      list-style: none;
+    }
+
+
+
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+
+
+
+    .theme-summary {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      align-items: center;
+      padding: 20px;
+    }
+
+
+
+
+    .theme-title {
+      margin: 0;
+      font-size: 19px;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+
+
+
+
+    .theme-description {
+      margin: 8px 0 0;
+      color: var(--text);
+      font-size: 14px;
+      max-width: 820px;
+    }
+
+
+
+
+    .theme-action {
+      margin-top: 12px;
+      padding: 12px 14px;
+      background: #f9fafb;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      font-size: 14px;
+      color: var(--text);
+    }
+
+
+
+
+    .theme-action strong {
+      color: var(--ink);
+    }
+
+
+
+
+    .expand {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: #f9fafb;
+      border: 1px solid var(--border);
+      display: grid;
+      place-items: center;
+      color: var(--muted);
+      font-size: 22px;
+      font-weight: 850;
+    }
+
+
+
+
+    details[open] .expand::before {
+      content: "−";
+    }
+
+
+
+
+    details:not([open]) .expand::before {
+      content: "+";
+    }
+
+
+
+
+    .theme-body {
+      padding: 0 20px 22px;
+    }
+
+
+
+
+    .insight-detail-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
+      gap: 18px;
+      border-top: 1px solid var(--border);
+      padding-top: 20px;
+    }
+
+    .insight-detail-layout > *,
+    .evidence-panel,
+    .evidence-list,
+    .evidence-item,
+    .evidence-item p {
+      min-width: 0;
+    }
+
+
+
+
+    .panel-kicker {
+      font-size: 11px;
+      font-weight: 850;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+
+
+
+    .evidence-panel {
+      background:
+        radial-gradient(circle at top left, rgba(15, 118, 110, 0.08), transparent 32%),
+        #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 20px;
+      overflow: hidden;
+    }
+
+
+
+
+    .evidence-panel h4,
+    .suggestion-panel h4 {
+      margin: 0 0 14px;
+      font-size: 18px;
+      letter-spacing: -0.025em;
+      color: var(--ink);
+    }
+
+
+
+
+    .evidence-list {
+      display: grid;
+      gap: 12px;
+    }
+
+
+
+
+    .evidence-item {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 12px;
+      padding: 12px;
+      border-radius: 14px;
+      background: #f9fafb;
+      border: 1px solid #edf0f3;
+    }
+
+
+
+
+    .evidence-number {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      background: var(--teal-soft);
+      color: var(--teal);
+      border: 1px solid var(--teal-border);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+
+
+
+    .evidence-item p {
+      margin: 0;
+      color: var(--text);
+      font-size: 14px;
+      line-height: 1.5;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+
+
+
+
+    .insight-side {
+      display: grid;
+      gap: 16px;
+      align-content: start;
+    }
+
+
+
+
+    .suggestion-panel {
+      background:
+        linear-gradient(135deg, rgba(15, 118, 110, 0.12), rgba(255, 255, 255, 0.9)),
+        #ecfdf5;
+      border: 1px solid var(--teal-border);
+      border-radius: 18px;
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+
+
+
+    .suggestion-panel::after {
+      content: "";
+      position: absolute;
+      right: -40px;
+      bottom: -40px;
+      width: 120px;
+      height: 120px;
+      border-radius: 999px;
+      background: rgba(15, 118, 110, 0.08);
+    }
+
+
+
+
+    .suggestion-panel p {
+      position: relative;
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.55;
+      color: #164e63;
+      font-weight: 650;
+    }
+
+
+
+
+    .monitor-panel {
+      background: #111827;
+      border-radius: 18px;
+      padding: 20px;
+      color: white;
+    }
+
+
+
+
+    .monitor-panel .panel-kicker {
+      color: #9ca3af;
+    }
+
+
+
+
+    .metric-list {
+      display: grid;
+      gap: 12px;
+    }
+
+
+
+
+    .metric-item {
+      display: grid;
+      grid-template-columns: 14px 1fr;
+      gap: 10px;
+      align-items: start;
+      color: #e5e7eb;
+      font-size: 13.5px;
+      line-height: 1.45;
+    }
+
+
+
+
+    .metric-dot {
+      width: 8px;
+      height: 8px;
+      margin-top: 7px;
+      border-radius: 999px;
+      background: #5eead4;
+      box-shadow: 0 0 0 4px rgba(94, 234, 212, 0.12);
+    }
+
+
+
+
+
+
+    .report-footer {
+      margin-top: 36px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+
+
+
+    @media (max-width: 1040px) {
+      .meta-cluster.cols-3 {
+        max-width: 100%;
+      }
+    }
+
+
+
+
+    @media (max-width: 920px) {
+      .executive-columns,
+      .grid-3,
+      .theme-flow,
+      .insight-detail-layout,
+      .meta-cluster.cols-2,
+      .meta-cluster.cols-3 {
+        grid-template-columns: 1fr;
+      }
+
+
+
+
+      .meta-cluster {
+        max-width: 100%;
+      }
+
+
+
+
+      .flow-arrow {
+        transform: rotate(90deg);
+        height: 28px;
+      }
+
+
+
+
+      .flow-column {
+        min-height: auto;
+      }
+
+
+
+
+      .theme-summary {
+        grid-template-columns: 1fr;
+      }
+
+
+
+
+      .expand {
+        display: none;
+      }
+
+
+
+
+      .decision-flow {
+        grid-template-columns: 1fr;
+        gap: 42px;
+      }
+
+
+
+
+      .decision-card:not(:last-child)::after {
+        content: "↓";
+        top: auto;
+        right: 50%;
+        bottom: -35px;
+        transform: translateX(50%);
+      }
+
+
+    }
+
+
+
+
+    @media (max-width: 620px) {
+      .header-top {
+        gap: 16px;
+      }
+
+      .brand-logo {
+        width: 118px;
+      }
+
+      .report-title {
+        font-size: 28px;
+      }
+
+      body {
+        padding: 20px 14px 48px;
+      }
+
+
+
+
+      .card,
+      .executive-body,
+      .theme-summary,
+      .theme-body {
+        padding: 16px;
+      }
+
+
+
+
+      .executive-header {
+        padding: 16px;
+      }
+
+
+
+
+      .decision-card,
+      .decision-outcome {
+        padding: 16px;
+      }
+
+
+
+
+      .evidence-item {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+
+
+
+<body>
+  <main class="page">
+    <header class="header card">
+      <div class="header-top">
+        <h1 class="report-title" id="reportTitle">Your Strategic Insights</h1>
+        <svg
+          class="brand-logo"
+          id="intuifiLogo"
+          viewBox="0 0 1288 655"
+          role="img"
+          aria-label="Intuifi"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M1214,405L1014,405L1013,406L1005,406L1004,407L998,408L995,410L991,411L989,413L985,415L975,425L975,426L971,431L969,435L969,437L967,440L966,448L965,449L965,654L1015,654L1015,556L1016,555L1214,555L1214,505L1016,505L1015,504L1015,456L1016,455L1214,455ZM892,405L892,654L941,654L941,405ZM622,405L622,613L623,614L623,617L624,618L624,621L626,624L626,626L629,630L630,633L633,636L633,637L639,643L640,643L643,646L646,647L648,649L652,651L657,652L658,653L661,653L662,654L831,654L832,653L838,652L851,645L861,635L861,634L863,632L868,622L869,616L870,615L870,611L871,610L871,406L870,405L821,405L821,604L820,605L672,605L671,604L671,405ZM348,405L347,406L347,455L446,455L447,456L447,654L497,654L497,456L498,455L597,455L597,406L596,405ZM83,410L78,415L77,418L75,420L74,426L73,427L73,654L123,654L123,493L124,492L279,647L280,647L286,652L290,653L291,654L304,654L305,653L307,653L311,651L318,644L321,638L321,636L322,635L322,405L273,405L273,568L272,569L114,411L107,407L105,407L104,406L99,406L98,405L97,406L92,406L91,407L89,407ZM0,405L0,654L49,654L49,405ZM1238,403L1237,404L1237,652L1287,652L1287,403ZM907,325L909,325L913,323L924,323L925,324L930,325L934,327L942,335L942,336L945,340L945,342L947,346L947,358L946,359L946,361L941,370L937,374L936,374L929,379L926,379L925,380L920,380L919,381L908,379L901,375L895,369L891,362L891,359L890,358L890,353L889,352L890,351L890,345L891,344L891,342L894,336L897,333L897,332L899,331L903,327ZM913,317L912,318L906,319L900,322L898,324L897,324L890,331L888,336L886,338L885,344L884,345L884,359L885,360L886,365L889,371L894,377L895,377L899,381L905,384L907,384L911,386L917,386L919,387L920,386L926,386L927,385L932,384L938,381L942,377L943,377L943,376L947,372L948,369L951,365L951,362L953,358L953,345L952,344L951,339L948,333L945,330L945,329L937,322L931,319L929,319L928,318L924,318L923,317ZM1106,173L1110,173L1111,174L1117,174L1121,176L1124,176L1126,178L1131,180L1135,184L1136,184L1143,192L1147,200L1147,202L1149,206L1149,213L1150,214L1150,216L1149,217L1149,224L1148,225L1147,230L1143,238L1138,243L1138,244L1136,245L1131,250L1123,254L1121,254L1117,256L1110,256L1109,257L1106,257L1105,256L1099,256L1098,255L1092,254L1085,250L1082,247L1081,247L1076,242L1076,241L1073,238L1072,235L1070,233L1069,229L1068,228L1068,226L1067,225L1067,220L1066,219L1066,211L1067,210L1067,205L1068,204L1069,199L1072,193L1075,190L1075,189L1081,183L1082,183L1085,180L1088,179L1090,177L1094,176L1095,175L1098,175L1099,174L1105,174ZM1104,167L1103,168L1098,168L1097,169L1091,170L1081,175L1072,183L1072,184L1067,190L1063,198L1063,200L1061,204L1061,209L1060,210L1060,220L1061,221L1061,226L1062,227L1063,232L1068,242L1075,250L1076,250L1083,256L1089,259L1091,259L1094,261L1110,263L1111,262L1118,262L1119,261L1122,261L1125,259L1127,259L1131,257L1133,255L1137,253L1146,244L1146,243L1150,238L1151,234L1153,231L1154,225L1155,224L1155,216L1156,215L1155,214L1155,205L1154,204L1152,196L1150,192L1148,190L1147,187L1137,177L1136,177L1131,173L1127,171L1125,171L1122,169L1119,169L1118,168L1112,168L1111,167ZM914,19L929,19L930,20L938,21L939,22L944,23L950,26L955,30L956,30L965,38L965,39L969,43L969,44L973,49L976,55L976,57L978,60L979,68L980,69L980,87L979,88L979,92L978,93L978,96L976,99L976,101L973,107L969,112L969,113L957,125L956,125L951,129L943,133L941,133L937,135L934,135L933,136L927,136L926,137L917,137L916,136L910,136L909,135L906,135L905,134L900,133L890,128L887,125L886,125L874,113L874,112L870,107L867,101L867,99L865,96L864,88L863,87L863,68L864,67L864,63L865,62L866,57L873,44L883,33L884,33L887,30L888,30L893,26L899,23L901,23L905,21L908,21L909,20L913,20ZM908,14L907,15L904,15L903,16L898,17L888,22L886,24L882,26L870,38L870,39L867,42L866,45L864,47L864,49L861,54L861,56L859,59L859,62L858,63L858,67L857,68L857,88L858,89L859,97L861,100L861,102L866,112L871,118L871,119L880,128L881,128L884,131L899,139L905,140L906,141L909,141L910,142L918,142L919,143L924,143L925,142L933,142L934,141L937,141L938,140L944,139L947,137L949,137L953,135L955,133L959,131L962,128L963,128L972,119L972,118L975,115L976,112L978,110L982,102L982,100L984,96L984,93L985,92L985,88L986,87L986,69L985,68L985,63L984,62L984,59L982,56L982,54L980,51L980,49L977,45L976,42L973,39L973,38L962,27L961,27L955,22L947,18L945,18L942,16L939,16L938,15L935,15L934,14L929,14L928,13L914,13L913,14ZM911,6L932,6L933,7L938,7L939,8L945,9L948,11L950,11L956,14L958,16L961,17L970,25L971,25L982,38L983,41L985,43L989,51L989,53L991,57L991,60L992,61L992,64L993,65L993,71L994,72L994,82L993,83L993,90L992,91L991,99L989,102L988,107L983,115L983,118L986,121L987,121L1002,133L1006,135L1017,144L1021,146L1036,158L1040,160L1043,163L1044,163L1047,166L1048,166L1051,169L1055,171L1058,174L1059,174L1064,178L1067,178L1072,173L1073,173L1076,170L1077,170L1082,166L1086,164L1094,162L1095,161L1099,161L1100,160L1116,160L1117,161L1121,161L1122,162L1130,164L1134,166L1136,168L1140,170L1144,174L1145,174L1153,183L1160,196L1161,202L1162,203L1162,207L1163,208L1163,222L1162,223L1161,231L1157,239L1157,241L1155,243L1153,247L1149,251L1149,252L1137,262L1127,267L1121,268L1120,269L1116,269L1115,270L1100,270L1099,269L1095,269L1094,268L1092,268L1091,267L1089,267L1088,266L1086,266L1082,264L1080,262L1076,260L1073,257L1072,257L1066,251L1064,251L1062,253L1058,255L1055,258L1054,258L1051,261L1047,263L1044,266L1040,268L1033,274L1032,274L1026,279L1022,281L1015,287L1014,287L1008,292L1004,294L997,300L996,300L990,305L986,307L983,310L979,312L972,318L971,318L965,323L964,323L958,328L957,328L956,330L956,334L958,337L958,339L960,343L961,354L960,355L960,361L959,362L958,367L954,375L950,379L950,380L942,387L937,389L935,391L933,391L929,393L924,393L923,394L913,394L912,393L908,393L907,392L902,391L896,388L892,384L891,384L883,375L882,372L879,368L879,366L877,362L877,357L876,356L876,347L877,346L877,342L878,341L879,335L881,333L883,328L894,317L897,316L899,314L903,312L909,311L910,310L917,310L918,309L920,310L927,310L928,311L936,313L943,318L944,318L948,322L952,323L957,319L958,319L961,316L965,314L968,311L972,309L979,303L983,301L986,298L990,296L997,290L998,290L1004,285L1008,283L1015,277L1016,277L1022,272L1026,270L1033,264L1034,264L1040,259L1044,257L1051,251L1052,251L1058,246L1059,246L1060,244L1060,241L1056,234L1056,232L1054,228L1054,224L1053,223L1053,206L1054,205L1054,202L1055,201L1057,193L1060,188L1060,185L1052,178L1048,176L1037,167L1033,165L1018,153L1014,151L999,139L995,137L992,134L991,134L988,131L987,131L984,128L983,128L979,125L976,125L967,134L966,134L963,137L949,145L947,145L946,146L944,146L940,148L937,148L936,149L931,149L930,150L913,150L912,149L907,149L906,148L899,147L896,145L894,145L884,140L878,135L877,135L864,122L864,121L861,118L860,115L858,113L855,107L855,105L852,99L852,96L851,95L851,92L850,91L850,86L849,85L849,71L850,70L850,64L851,63L851,60L852,59L852,56L854,53L854,51L859,41L861,39L863,35L867,31L867,30L878,20L879,20L882,17L885,16L887,14L893,11L895,11L896,10L898,10L902,8L905,8L906,7L910,7ZM911,0L910,1L905,1L904,2L901,2L900,3L892,5L882,10L880,12L877,13L874,16L873,16L860,29L860,30L857,33L854,39L852,41L852,43L848,50L848,52L846,56L846,59L845,60L845,64L844,65L844,71L843,72L843,84L844,85L844,91L845,92L845,96L846,97L846,100L847,101L848,106L854,118L856,120L858,124L861,127L861,128L871,138L872,138L875,141L876,141L881,145L893,151L895,151L896,152L898,152L902,154L905,154L906,155L912,155L913,156L930,156L931,155L937,155L938,154L941,154L942,153L950,151L962,145L964,143L968,141L971,138L972,138L978,132L979,132L989,140L990,140L993,143L997,145L1000,148L1001,148L1004,151L1005,151L1008,154L1009,154L1012,157L1016,159L1027,168L1031,170L1046,182L1050,184L1053,187L1052,192L1050,195L1050,197L1048,201L1048,206L1047,207L1047,224L1048,225L1048,229L1049,230L1050,235L1053,241L1053,242L1050,245L1049,245L1046,248L1042,250L1035,256L1031,258L1028,261L1024,263L1017,269L1013,271L1010,274L1006,276L1003,279L999,281L992,287L988,289L985,292L981,294L974,300L970,302L967,305L963,307L960,310L959,310L956,313L955,313L951,316L943,310L937,307L932,306L931,305L928,305L927,304L909,304L908,305L905,305L899,308L897,308L890,313L889,313L880,322L880,323L876,328L874,332L874,334L872,337L872,340L871,341L871,346L870,347L870,357L871,358L871,363L872,364L873,369L878,379L886,388L887,388L893,393L901,397L903,397L907,399L911,399L912,400L925,400L926,399L930,399L931,398L936,397L947,391L957,381L957,380L961,375L963,371L964,366L965,365L965,362L966,361L966,355L967,354L967,350L966,349L966,342L965,341L965,339L963,335L963,332L966,329L970,327L977,321L978,321L984,316L988,314L995,308L999,306L1002,303L1006,301L1013,295L1017,293L1020,290L1024,288L1031,282L1035,280L1038,277L1042,275L1049,269L1053,267L1056,264L1057,264L1065,258L1070,263L1071,263L1074,266L1077,267L1079,269L1083,271L1085,271L1088,273L1090,273L1091,274L1094,274L1095,275L1100,275L1101,276L1115,276L1116,275L1121,275L1122,274L1125,274L1126,273L1131,272L1139,268L1145,263L1146,263L1156,253L1156,252L1159,249L1160,246L1162,244L1163,240L1165,237L1167,229L1168,228L1168,223L1169,222L1169,208L1168,207L1168,202L1167,201L1166,195L1164,192L1164,190L1161,184L1159,182L1157,178L1146,167L1145,167L1142,164L1139,163L1137,161L1131,158L1129,158L1125,156L1122,156L1121,155L1116,155L1115,154L1100,154L1099,155L1095,155L1094,156L1091,156L1090,157L1085,158L1071,166L1066,171L1064,171L1057,165L1053,163L1042,154L1038,152L1023,140L1019,138L1008,129L1004,127L1001,124L1000,124L997,121L996,121L993,118L992,118L990,116L990,115L993,110L993,108L995,105L995,103L997,99L997,96L998,95L998,91L999,90L999,82L1000,81L1000,74L999,73L999,65L998,64L998,60L997,59L997,56L996,55L995,50L992,45L991,41L989,39L986,33L983,30L983,29L971,17L970,17L967,14L966,14L961,10L951,5L949,5L948,4L946,4L942,2L939,2L938,1L933,1L932,0Z" fill="#2d615c" fill-rule="evenodd"></path>
+        </svg>
+      </div>
+      <aside class="meta-cluster" id="metaCluster"></aside>
+
+      <div class="toolbar">
+        <a id="downloadAll" class="btn" download="all_signals.csv">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          All Signals CSV
+        </a>
+        <button id="previewPdf" class="btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Save as PDF
+        </button>
+      </div>
+    </header>
+
+
+
+
+    <section class="card" id="execSection">
+      <h2 class="section-title" id="executiveSummaryTitle" style="margin-top:0">Executive summary</h2>
+      <div id="decisionViewSection"></div>
+      <div id="leadershipSection"></div>
+      <div id="risksSection"></div>
+    </section>
+
+
+    <section class="card executive-card">
+      <div class="executive-header">
+        <h2 class="section-title" style="margin:0">At a glance</h2>
+        <p class="section-note" style="margin:4px 0 0;">More detail than the summary above, short of the full evidence below.</p>
+      </div>
+      <div class="executive-body" id="executiveBody"></div>
+      <div id="themeFlowSection"></div>
+    </section>
+
+
+
+
+    <section class="card">
+      <h2 class="section-title" style="margin-top:0">Detailed themes and evidence</h2>
+      <div class="theme-stack" id="themeStack"></div>
+    </section>
+
+
+
+
+
+    <div class="report-footer" id="reportFooter"></div>
+  </main>
+
+
+
+
+<script type="application/json" id="combinedCsvsData">{
+  "all_signals_csv": "Event_Date_ISO,Person_Name,Contact_Role,Company,Source_ID,Notes,Assigned_Theme,Unclassified_Reason\n2025-01-02,Test Reporter,Reporter,-,JIRA-1001,Placeholder issue summary 1 for testing purposes — Placeholder issue description 1 for testing purposes.,Placeholder Testing Data,-\n2025-01-03,Test Reporter,Reporter,-,JIRA-1002,Placeholder issue summary 2 for testing purposes — Placeholder issue description 2 for testing purposes.,Placeholder Testing Data,-\n2025-01-04,Test Reporter,Reporter,-,JIRA-1003,Placeholder issue summary 3 for testing purposes — Placeholder issue description 3 for testing purposes.,Placeholder Testing Data,-\n2025-01-05,Test Reporter,Reporter,-,JIRA-1004,Placeholder issue summary 4 for testing purposes — Placeholder issue description 4 for testing purposes.,Placeholder Testing Data,-\n2025-01-06,Test Reporter,Reporter,-,JIRA-1005,Placeholder issue summary 5 for testing purposes — Placeholder issue description 5 for testing purposes.,Placeholder Testing Data,-\n2025-01-07,Test Reporter,Reporter,-,JIRA-1006,Placeholder issue summary 6 for testing purposes — Placeholder issue description 6 for testing purposes.,Placeholder Testing Data,-\n2025-01-08,Test Reporter,Reporter,-,JIRA-1007,Placeholder issue summary 7 for testing purposes — Placeholder issue description 7 for testing purposes.,Placeholder Testing Data,-\n2025-01-09,Test Reporter,Reporter,-,JIRA-1008,Placeholder issue summary 8 for testing purposes — Placeholder issue description 8 for testing purposes.,Placeholder Testing Data,-\n2025-01-10,Test Reporter,Reporter,-,JIRA-1009,Placeholder issue summary 9 for testing purposes — Placeholder issue description 9 for testing purposes.,Placeholder Testing Data,-\n2025-01-11,Test Reporter,Reporter,-,JIRA-1010,Placeholder issue summary 10 for testing purposes — Placeholder issue description 10 for testing purposes.,Placeholder Testing Data,-\n2025-01-12,Test Reporter,Reporter,-,JIRA-1011,Placeholder issue summary 11 for testing purposes — Placeholder issue description 11 for testing purposes.,Placeholder Testing Data,-\n2025-01-13,Test Reporter,Reporter,-,JIRA-1012,Placeholder issue summary 12 for testing purposes — Placeholder issue description 12 for testing purposes.,Placeholder Testing Data,-\n2025-01-14,Test Reporter,Reporter,-,JIRA-1013,Placeholder issue summary 13 for testing purposes — Placeholder issue description 13 for testing purposes.,Placeholder Testing Data,-\n2025-01-15,Test Reporter,Reporter,-,JIRA-1014,Placeholder issue summary 14 for testing purposes — Placeholder issue description 14 for testing purposes.,Placeholder Testing Data,-\n2025-01-16,Test Reporter,Reporter,-,JIRA-1015,Placeholder issue summary 15 for testing purposes — Placeholder issue description 15 for testing purposes.,Placeholder Testing Data,-\n2025-01-17,Test Reporter,Reporter,-,JIRA-1016,Placeholder issue summary 16 for testing purposes — Placeholder issue description 16 for testing purposes.,Placeholder Testing Data,-\n2025-01-18,Test Reporter,Reporter,-,JIRA-1017,Placeholder issue summary 17 for testing purposes — Placeholder issue description 17 for testing purposes.,Placeholder Testing Data,-\n2025-01-19,Test Reporter,Reporter,-,JIRA-1018,Placeholder issue summary 18 for testing purposes — Placeholder issue description 18 for testing purposes.,Placeholder Testing Data,-\n2025-01-20,Test Reporter,Reporter,-,JIRA-1019,Placeholder issue summary 19 for testing purposes — Placeholder issue description 19 for testing purposes.,Placeholder Testing Data,-\n2025-01-21,Test Reporter,Reporter,-,JIRA-1020,Placeholder issue summary 20 for testing purposes — Placeholder issue description 20 for testing purposes.,Placeholder Testing Data,-\n2025-01-22,Test Reporter,Reporter,-,JIRA-1021,Placeholder issue summary 21 for testing purposes — Placeholder issue description 21 for testing purposes.,Placeholder Testing Data,-\n2025-01-23,Test Reporter,Reporter,-,JIRA-1022,Placeholder issue summary 22 for testing purposes — Placeholder issue description 22 for testing purposes.,Placeholder Testing Data,-\n2025-01-24,Test Reporter,Reporter,-,JIRA-1023,Placeholder issue summary 23 for testing purposes — Placeholder issue description 23 for testing purposes.,Placeholder Testing Data,-\n2025-01-25,Test Reporter,Reporter,-,JIRA-1024,Placeholder issue summary 24 for testing purposes — Placeholder issue description 24 for testing purposes.,Placeholder Testing Data,-\n2025-01-26,Test Reporter,Reporter,-,JIRA-1025,Placeholder issue summary 25 for testing purposes — Placeholder issue description 25 for testing purposes.,Placeholder Testing Data,-\n2025-01-27,Test Reporter,Reporter,-,JIRA-1026,Placeholder issue summary 26 for testing purposes — Placeholder issue description 26 for testing purposes.,Placeholder Testing Data,-\n2025-01-28,Test Reporter,Reporter,-,JIRA-1027,Placeholder issue summary 27 for testing purposes — Placeholder issue description 27 for testing purposes.,Placeholder Testing Data,-\n2025-01-29,Test Reporter,Reporter,-,JIRA-1028,Placeholder issue summary 28 for testing purposes — Placeholder issue description 28 for testing purposes.,Placeholder Testing Data,-\n2025-01-30,Test Reporter,Reporter,-,JIRA-1029,Placeholder issue summary 29 for testing purposes — Placeholder issue description 29 for testing purposes.,Placeholder Testing Data,-\n2025-01-31,Test Reporter,Reporter,-,JIRA-1030,Placeholder issue summary 30 for testing purposes — Placeholder issue description 30 for testing purposes.,Placeholder Testing Data,-\n2025-02-01,Test Reporter,Reporter,-,JIRA-1031,Placeholder issue summary 31 for testing purposes — Placeholder issue description 31 for testing purposes.,Placeholder Testing Data,-\n2025-02-02,Test Reporter,Reporter,-,JIRA-1032,Placeholder issue summary 32 for testing purposes — Placeholder issue description 32 for testing purposes.,Placeholder Testing Data,-\n2025-02-03,Test Reporter,Reporter,-,JIRA-1033,Placeholder issue summary 33 for testing purposes — Placeholder issue description 33 for testing purposes.,Placeholder Testing Data,-\n2025-02-04,Test Reporter,Reporter,-,JIRA-1034,Placeholder issue summary 34 for testing purposes — Placeholder issue description 34 for testing purposes.,Placeholder Testing Data,-\n2025-02-05,Test Reporter,Reporter,-,JIRA-1035,Placeholder issue summary 35 for testing purposes — Placeholder issue description 35 for testing purposes.,Placeholder Testing Data,-\n2025-02-06,Test Reporter,Reporter,-,JIRA-1036,Placeholder issue summary 36 for testing purposes — Placeholder issue description 36 for testing purposes.,Placeholder Testing Data,-\n2025-02-07,Test Reporter,Reporter,-,JIRA-1037,Placeholder issue summary 37 for testing purposes — Placeholder issue description 37 for testing purposes.,Placeholder Testing Data,-\n2025-02-08,Test Reporter,Reporter,-,JIRA-1038,Placeholder issue summary 38 for testing purposes — Placeholder issue description 38 for testing purposes.,Placeholder Testing Data,-\n2025-02-09,Test Reporter,Reporter,-,JIRA-1039,Placeholder issue summary 39 for testing purposes — Placeholder issue description 39 for testing purposes.,Placeholder Testing Data,-\n2025-02-10,Test Reporter,Reporter,-,JIRA-1040,Placeholder issue summary 40 for testing purposes — Placeholder issue description 40 for testing purposes.,Placeholder Testing Data,-\n2025-02-11,Test Reporter,Reporter,-,JIRA-1041,Placeholder issue summary 41 for testing purposes — Placeholder issue description 41 for testing purposes.,Placeholder Testing Data,-\n2025-02-12,Test Reporter,Reporter,-,JIRA-1042,Placeholder issue summary 42 for testing purposes — Placeholder issue description 42 for testing purposes.,Placeholder Testing Data,-\n2025-02-13,Test Reporter,Reporter,-,JIRA-1043,Placeholder issue summary 43 for testing purposes — Placeholder issue description 43 for testing purposes.,Placeholder Testing Data,-\n2025-02-14,Test Reporter,Reporter,-,JIRA-1044,Placeholder issue summary 44 for testing purposes — Placeholder issue description 44 for testing purposes.,Placeholder Testing Data,-\n2025-02-15,Test Reporter,Reporter,-,JIRA-1045,Placeholder issue summary 45 for testing purposes — Placeholder issue description 45 for testing purposes.,Placeholder Testing Data,-\n2025-02-16,Test Reporter,Reporter,-,JIRA-1046,Placeholder issue summary 46 for testing purposes — Placeholder issue description 46 for testing purposes.,Placeholder Testing Data,-\n2025-02-17,Test Reporter,Reporter,-,JIRA-1047,Placeholder issue summary 47 for testing purposes — Placeholder issue description 47 for testing purposes.,Placeholder Testing Data,-\n2025-02-18,Test Reporter,Reporter,-,JIRA-1048,Placeholder issue summary 48 for testing purposes — Placeholder issue description 48 for testing purposes.,Placeholder Testing Data,-\n2025-02-19,Test Reporter,Reporter,-,JIRA-1049,Placeholder issue summary 49 for testing purposes — Placeholder issue description 49 for testing purposes.,Placeholder Testing Data,-\n2025-02-20,Test Reporter,Reporter,-,JIRA-1050,Placeholder issue summary 50 for testing purposes — Placeholder issue description 50 for testing purposes.,Placeholder Testing Data,-\n2025-02-21,Test Reporter,Reporter,-,JIRA-1051,Placeholder issue summary 51 for testing purposes — Placeholder issue description 51 for testing purposes.,Placeholder Testing Data,-\n2025-02-22,Test Reporter,Reporter,-,JIRA-1052,Placeholder issue summary 52 for testing purposes — Placeholder issue description 52 for testing purposes.,Placeholder Testing Data,-\n2025-02-23,Test Reporter,Reporter,-,JIRA-1053,Placeholder issue summary 53 for testing purposes — Placeholder issue description 53 for testing purposes.,Placeholder Testing Data,-\n2025-02-24,Test Reporter,Reporter,-,JIRA-1054,Placeholder issue summary 54 for testing purposes — Placeholder issue description 54 for testing purposes.,Placeholder Testing Data,-\n2025-02-25,Test Reporter,Reporter,-,JIRA-1055,Placeholder issue summary 55 for testing purposes — Placeholder issue description 55 for testing purposes.,Placeholder Testing Data,-\n2025-02-26,Test Reporter,Reporter,-,JIRA-1056,Placeholder issue summary 56 for testing purposes — Placeholder issue description 56 for testing purposes.,Placeholder Testing Data,-\n2025-02-27,Test Reporter,Reporter,-,JIRA-1057,Placeholder issue summary 57 for testing purposes — Placeholder issue description 57 for testing purposes.,Placeholder Testing Data,-\n2025-02-28,Test Reporter,Reporter,-,JIRA-1058,Placeholder issue summary 58 for testing purposes — Placeholder issue description 58 for testing purposes.,Placeholder Testing Data,-\n2025-03-01,Test Reporter,Reporter,-,JIRA-1059,Placeholder issue summary 59 for testing purposes — Placeholder issue description 59 for testing purposes.,Placeholder Testing Data,-\n2025-03-02,Test Reporter,Reporter,-,JIRA-1060,Placeholder issue summary 60 for testing purposes — Placeholder issue description 60 for testing purposes.,Placeholder Testing Data,-\n2025-03-03,Test Reporter,Reporter,-,JIRA-1061,Placeholder issue summary 61 for testing purposes — Placeholder issue description 61 for testing purposes.,Placeholder Testing Data,-\n2025-03-04,Test Reporter,Reporter,-,JIRA-1062,Placeholder issue summary 62 for testing purposes — Placeholder issue description 62 for testing purposes.,Placeholder Testing Data,-\n2025-03-05,Test Reporter,Reporter,-,JIRA-1063,Placeholder issue summary 63 for testing purposes — Placeholder issue description 63 for testing purposes.,Placeholder Testing Data,-\n2025-03-06,Test Reporter,Reporter,-,JIRA-1064,Placeholder issue summary 64 for testing purposes — Placeholder issue description 64 for testing purposes.,Placeholder Testing Data,-\n2025-03-07,Test Reporter,Reporter,-,JIRA-1065,Placeholder issue summary 65 for testing purposes — Placeholder issue description 65 for testing purposes.,Placeholder Testing Data,-\n2025-03-08,Test Reporter,Reporter,-,JIRA-1066,Placeholder issue summary 66 for testing purposes — Placeholder issue description 66 for testing purposes.,Placeholder Testing Data,-\n2025-03-09,Test Reporter,Reporter,-,JIRA-1067,Placeholder issue summary 67 for testing purposes — Placeholder issue description 67 for testing purposes.,Placeholder Testing Data,-\n2025-03-10,Test Reporter,Reporter,-,JIRA-1068,Placeholder issue summary 68 for testing purposes — Placeholder issue description 68 for testing purposes.,Placeholder Testing Data,-\n2025-03-11,Test Reporter,Reporter,-,JIRA-1069,Placeholder issue summary 69 for testing purposes — Placeholder issue description 69 for testing purposes.,Placeholder Testing Data,-\n2025-03-12,Test Reporter,Reporter,-,JIRA-1070,Placeholder issue summary 70 for testing purposes — Placeholder issue description 70 for testing purposes.,Placeholder Testing Data,-\n2025-03-13,Test Reporter,Reporter,-,JIRA-1071,Placeholder issue summary 71 for testing purposes — Placeholder issue description 71 for testing purposes.,Placeholder Testing Data,-\n2025-03-14,Test Reporter,Reporter,-,JIRA-1072,Placeholder issue summary 72 for testing purposes — Placeholder issue description 72 for testing purposes.,Placeholder Testing Data,-\n2025-03-15,Test Reporter,Reporter,-,JIRA-1073,Placeholder issue summary 73 for testing purposes — Placeholder issue description 73 for testing purposes.,Placeholder Testing Data,-\n2025-03-16,Test Reporter,Reporter,-,JIRA-1074,Placeholder issue summary 74 for testing purposes — Placeholder issue description 74 for testing purposes.,Placeholder Testing Data,-\n2025-03-17,Test Reporter,Reporter,-,JIRA-1075,Placeholder issue summary 75 for testing purposes — Placeholder issue description 75 for testing purposes.,Placeholder Testing Data,-\n2025-03-18,Test Reporter,Reporter,-,JIRA-1076,Placeholder issue summary 76 for testing purposes — Placeholder issue description 76 for testing purposes.,Placeholder Testing Data,-\n2025-03-19,Test Reporter,Reporter,-,JIRA-1077,Placeholder issue summary 77 for testing purposes — Placeholder issue description 77 for testing purposes.,Placeholder Testing Data,-\n2025-03-20,Test Reporter,Reporter,-,JIRA-1078,Placeholder issue summary 78 for testing purposes — Placeholder issue description 78 for testing purposes.,Placeholder Testing Data,-\n2025-03-21,Test Reporter,Reporter,-,JIRA-1079,Placeholder issue summary 79 for testing purposes — Placeholder issue description 79 for testing purposes.,Placeholder Testing Data,-\n2025-03-22,Test Reporter,Reporter,-,JIRA-1080,Placeholder issue summary 80 for testing purposes — Placeholder issue description 80 for testing purposes.,Placeholder Testing Data,-\n2025-03-23,Test Reporter,Reporter,-,JIRA-1081,Placeholder issue summary 81 for testing purposes — Placeholder issue description 81 for testing purposes.,Placeholder Testing Data,-\n2025-03-24,Test Reporter,Reporter,-,JIRA-1082,Placeholder issue summary 82 for testing purposes — Placeholder issue description 82 for testing purposes.,Placeholder Testing Data,-\n2025-03-25,Test Reporter,Reporter,-,JIRA-1083,Placeholder issue summary 83 for testing purposes — Placeholder issue description 83 for testing purposes.,Placeholder Testing Data,-\n2025-03-26,Test Reporter,Reporter,-,JIRA-1084,Placeholder issue summary 84 for testing purposes — Placeholder issue description 84 for testing purposes.,Placeholder Testing Data,-\n2025-03-27,Test Reporter,Reporter,-,JIRA-1085,Placeholder issue summary 85 for testing purposes — Placeholder issue description 85 for testing purposes.,Placeholder Testing Data,-\n2025-03-28,Test Reporter,Reporter,-,JIRA-1086,Placeholder issue summary 86 for testing purposes — Placeholder issue description 86 for testing purposes.,Placeholder Testing Data,-\n2025-03-29,Test Reporter,Reporter,-,JIRA-1087,Placeholder issue summary 87 for testing purposes — Placeholder issue description 87 for testing purposes.,Placeholder Testing Data,-\n2025-03-30,Test Reporter,Reporter,-,JIRA-1088,Placeholder issue summary 88 for testing purposes — Placeholder issue description 88 for testing purposes.,Placeholder Testing Data,-\n2025-03-31,Test Reporter,Reporter,-,JIRA-1089,Placeholder issue summary 89 for testing purposes — Placeholder issue description 89 for testing purposes.,Placeholder Testing Data,-\n2025-04-01,Test Reporter,Reporter,-,JIRA-1090,Placeholder issue summary 90 for testing purposes — Placeholder issue description 90 for testing purposes.,Placeholder Testing Data,-\n2025-04-02,Test Reporter,Reporter,-,JIRA-1091,Placeholder issue summary 91 for testing purposes — Placeholder issue description 91 for testing purposes.,Placeholder Testing Data,-\n2025-04-03,Test Reporter,Reporter,-,JIRA-1092,Placeholder issue summary 92 for testing purposes — Placeholder issue description 92 for testing purposes.,Placeholder Testing Data,-\n2025-04-04,Test Reporter,Reporter,-,JIRA-1093,Placeholder issue summary 93 for testing purposes — Placeholder issue description 93 for testing purposes.,Placeholder Testing Data,-\n2025-04-05,Test Reporter,Reporter,-,JIRA-1094,Placeholder issue summary 94 for testing purposes — Placeholder issue description 94 for testing purposes.,Placeholder Testing Data,-\n2025-04-06,Test Reporter,Reporter,-,JIRA-1095,Placeholder issue summary 95 for testing purposes — Placeholder issue description 95 for testing purposes.,Placeholder Testing Data,-\n2025-04-07,Test Reporter,Reporter,-,JIRA-1096,Placeholder issue summary 96 for testing purposes — Placeholder issue description 96 for testing purposes.,Placeholder Testing Data,-\n2025-04-08,Test Reporter,Reporter,-,JIRA-1097,Placeholder issue summary 97 for testing purposes — Placeholder issue description 97 for testing purposes.,Placeholder Testing Data,-\n2025-04-09,Test Reporter,Reporter,-,JIRA-1098,Placeholder issue summary 98 for testing purposes — Placeholder issue description 98 for testing purposes.,Placeholder Testing Data,-\n2025-04-10,Test Reporter,Reporter,-,JIRA-1099,Placeholder issue summary 99 for testing purposes — Placeholder issue description 99 for testing purposes.,Placeholder Testing Data,-\n2025-04-11,Test Reporter,Reporter,-,JIRA-1100,Placeholder issue summary 100 for testing purposes — Placeholder issue description 100 for testing purposes.,Placeholder Testing Data,-\n2025-04-12,Test Reporter,Reporter,-,JIRA-1101,Placeholder issue summary 101 for testing purposes — Placeholder issue description 101 for testing purposes.,Placeholder Testing Data,-\n2025-04-13,Test Reporter,Reporter,-,JIRA-1102,Placeholder issue summary 102 for testing purposes — Placeholder issue description 102 for testing purposes.,Placeholder Testing Data,-\n2025-04-14,Test Reporter,Reporter,-,JIRA-1103,Placeholder issue summary 103 for testing purposes — Placeholder issue description 103 for testing purposes.,Placeholder Testing Data,-\n2025-04-15,Test Reporter,Reporter,-,JIRA-1104,Placeholder issue summary 104 for testing purposes — Placeholder issue description 104 for testing purposes.,Placeholder Testing Data,-\n2025-04-16,Test Reporter,Reporter,-,JIRA-1105,Placeholder issue summary 105 for testing purposes — Placeholder issue description 105 for testing purposes.,Placeholder Testing Data,-\n2025-04-17,Test Reporter,Reporter,-,JIRA-1106,Placeholder issue summary 106 for testing purposes — Placeholder issue description 106 for testing purposes.,Placeholder Testing Data,-\n2025-04-18,Test Reporter,Reporter,-,JIRA-1107,Placeholder issue summary 107 for testing purposes — Placeholder issue description 107 for testing purposes.,Placeholder Testing Data,-\n2025-04-19,Test Reporter,Reporter,-,JIRA-1108,Placeholder issue summary 108 for testing purposes — Placeholder issue description 108 for testing purposes.,Placeholder Testing Data,-\n2025-04-20,Test Reporter,Reporter,-,JIRA-1109,Placeholder issue summary 109 for testing purposes — Placeholder issue description 109 for testing purposes.,Placeholder Testing Data,-\n2025-04-21,Test Reporter,Reporter,-,JIRA-1110,Placeholder issue summary 110 for testing purposes — Placeholder issue description 110 for testing purposes.,Placeholder Testing Data,-\n2025-04-22,Test Reporter,Reporter,-,JIRA-1111,Placeholder issue summary 111 for testing purposes — Placeholder issue description 111 for testing purposes.,Placeholder Testing Data,-\n2025-04-23,Test Reporter,Reporter,-,JIRA-1112,Placeholder issue summary 112 for testing purposes — Placeholder issue description 112 for testing purposes.,Placeholder Testing Data,-\n2025-04-24,Test Reporter,Reporter,-,JIRA-1113,Placeholder issue summary 113 for testing purposes — Placeholder issue description 113 for testing purposes.,Placeholder Testing Data,-\n2025-04-25,Test Reporter,Reporter,-,JIRA-1114,Placeholder issue summary 114 for testing purposes — Placeholder issue description 114 for testing purposes.,Placeholder Testing Data,-\n2025-04-26,Test Reporter,Reporter,-,JIRA-1115,Placeholder issue summary 115 for testing purposes — Placeholder issue description 115 for testing purposes.,Placeholder Testing Data,-\n2025-04-27,Test Reporter,Reporter,-,JIRA-1116,Placeholder issue summary 116 for testing purposes — Placeholder issue description 116 for testing purposes.,Placeholder Testing Data,-\n2025-04-28,Test Reporter,Reporter,-,JIRA-1117,Placeholder issue summary 117 for testing purposes — Placeholder issue description 117 for testing purposes.,Placeholder Testing Data,-\n2025-04-29,Test Reporter,Reporter,-,JIRA-1118,Placeholder issue summary 118 for testing purposes — Placeholder issue description 118 for testing purposes.,Placeholder Testing Data,-\n2025-04-30,Test Reporter,Reporter,-,JIRA-1119,Placeholder issue summary 119 for testing purposes — Placeholder issue description 119 for testing purposes.,Placeholder Testing Data,-\n2025-05-01,Test Reporter,Reporter,-,JIRA-1120,Placeholder issue summary 120 for testing purposes — Placeholder issue description 120 for testing purposes.,Placeholder Testing Data,-\n2025-01-02,testuser,Reporter,-,kobai/backend#2001,Placeholder github issue title 1 for testing purposes — Placeholder github body 1 for testing purposes.,Placeholder Testing Data,-\n2025-01-03,testuser,Reporter,-,kobai/backend#2002,Placeholder github issue title 2 for testing purposes — Placeholder github body 2 for testing purposes.,Placeholder Testing Data,-\n2025-01-04,testuser,Reporter,-,kobai/backend#2003,Placeholder github issue title 3 for testing purposes — Placeholder github body 3 for testing purposes.,Placeholder Testing Data,-\n2025-01-05,testuser,Reporter,-,kobai/backend#2004,Placeholder github issue title 4 for testing purposes — Placeholder github body 4 for testing purposes.,Placeholder Testing Data,-\n2025-01-06,testuser,Reporter,-,kobai/backend#2005,Placeholder github issue title 5 for testing purposes — Placeholder github body 5 for testing purposes.,Placeholder Testing Data,-\n2025-01-07,testuser,Reporter,-,kobai/backend#2006,Placeholder github issue title 6 for testing purposes — Placeholder github body 6 for testing purposes.,Placeholder Testing Data,-\n2025-01-08,testuser,Reporter,-,kobai/backend#2007,Placeholder github issue title 7 for testing purposes — Placeholder github body 7 for testing purposes.,Placeholder Testing Data,-\n2025-01-09,testuser,Reporter,-,kobai/backend#2008,Placeholder github issue title 8 for testing purposes — Placeholder github body 8 for testing purposes.,Placeholder Testing Data,-\n2025-01-10,testuser,Reporter,-,kobai/backend#2009,Placeholder github issue title 9 for testing purposes — Placeholder github body 9 for testing purposes.,Placeholder Testing Data,-\n2025-01-11,testuser,Reporter,-,kobai/backend#2010,Placeholder github issue title 10 for testing purposes — Placeholder github body 10 for testing purposes.,Placeholder Testing Data,-\n2025-01-12,testuser,Reporter,-,kobai/backend#2011,Placeholder github issue title 11 for testing purposes — Placeholder github body 11 for testing purposes.,Placeholder Testing Data,-\n2025-01-13,testuser,Reporter,-,kobai/backend#2012,Placeholder github issue title 12 for testing purposes — Placeholder github body 12 for testing purposes.,Placeholder Testing Data,-\n2025-01-14,testuser,Reporter,-,kobai/backend#2013,Placeholder github issue title 13 for testing purposes — Placeholder github body 13 for testing purposes.,Placeholder Testing Data,-\n2025-01-15,testuser,Reporter,-,kobai/backend#2014,Placeholder github issue title 14 for testing purposes — Placeholder github body 14 for testing purposes.,Placeholder Testing Data,-\n2025-01-16,testuser,Reporter,-,kobai/backend#2015,Placeholder github issue title 15 for testing purposes — Placeholder github body 15 for testing purposes.,Placeholder Testing Data,-\n2025-01-17,testuser,Reporter,-,kobai/backend#2016,Placeholder github issue title 16 for testing purposes — Placeholder github body 16 for testing purposes.,Placeholder Testing Data,-\n2025-01-18,testuser,Reporter,-,kobai/backend#2017,Placeholder github issue title 17 for testing purposes — Placeholder github body 17 for testing purposes.,Placeholder Testing Data,-\n2025-01-19,testuser,Reporter,-,kobai/backend#2018,Placeholder github issue title 18 for testing purposes — Placeholder github body 18 for testing purposes.,Placeholder Testing Data,-\n2025-01-20,testuser,Reporter,-,kobai/backend#2019,Placeholder github issue title 19 for testing purposes — Placeholder github body 19 for testing purposes.,Placeholder Testing Data,-\n2025-01-21,testuser,Reporter,-,kobai/backend#2020,Placeholder github issue title 20 for testing purposes — Placeholder github body 20 for testing purposes.,Placeholder Testing Data,-\n2025-01-22,testuser,Reporter,-,kobai/backend#2021,Placeholder github issue title 21 for testing purposes — Placeholder github body 21 for testing purposes.,Placeholder Testing Data,-\n2025-01-23,testuser,Reporter,-,kobai/backend#2022,Placeholder github issue title 22 for testing purposes — Placeholder github body 22 for testing purposes.,Placeholder Testing Data,-\n2025-01-24,testuser,Reporter,-,kobai/backend#2023,Placeholder github issue title 23 for testing purposes — Placeholder github body 23 for testing purposes.,Placeholder Testing Data,-\n2025-01-25,testuser,Reporter,-,kobai/backend#2024,Placeholder github issue title 24 for testing purposes — Placeholder github body 24 for testing purposes.,Placeholder Testing Data,-\n2025-01-26,testuser,Reporter,-,kobai/backend#2025,Placeholder github issue title 25 for testing purposes — Placeholder github body 25 for testing purposes.,Placeholder Testing Data,-\n2025-01-27,testuser,Reporter,-,kobai/backend#2026,Placeholder github issue title 26 for testing purposes — Placeholder github body 26 for testing purposes.,Placeholder Testing Data,-\n2025-01-28,testuser,Reporter,-,kobai/backend#2027,Placeholder github issue title 27 for testing purposes — Placeholder github body 27 for testing purposes.,Placeholder Testing Data,-\n2025-01-29,testuser,Reporter,-,kobai/backend#2028,Placeholder github issue title 28 for testing purposes — Placeholder github body 28 for testing purposes.,Placeholder Testing Data,-\n2025-01-30,testuser,Reporter,-,kobai/backend#2029,Placeholder github issue title 29 for testing purposes — Placeholder github body 29 for testing purposes.,Placeholder Testing Data,-\n2025-01-31,testuser,Reporter,-,kobai/backend#2030,Placeholder github issue title 30 for testing purposes — Placeholder github body 30 for testing purposes.,Placeholder Testing Data,-\n2025-02-01,testuser,Reporter,-,kobai/backend#2031,Placeholder github issue title 31 for testing purposes — Placeholder github body 31 for testing purposes.,Placeholder Testing Data,-\n2025-02-02,testuser,Reporter,-,kobai/backend#2032,Placeholder github issue title 32 for testing purposes — Placeholder github body 32 for testing purposes.,Placeholder Testing Data,-\n2025-02-03,testuser,Reporter,-,kobai/backend#2033,Placeholder github issue title 33 for testing purposes — Placeholder github body 33 for testing purposes.,Placeholder Testing Data,-\n2025-02-04,testuser,Reporter,-,kobai/backend#2034,Placeholder github issue title 34 for testing purposes — Placeholder github body 34 for testing purposes.,Placeholder Testing Data,-\n2025-02-05,testuser,Reporter,-,kobai/backend#2035,Placeholder github issue title 35 for testing purposes — Placeholder github body 35 for testing purposes.,Placeholder Testing Data,-\n2025-02-06,testuser,Reporter,-,kobai/backend#2036,Placeholder github issue title 36 for testing purposes — Placeholder github body 36 for testing purposes.,Placeholder Testing Data,-\n2025-02-07,testuser,Reporter,-,kobai/backend#2037,Placeholder github issue title 37 for testing purposes — Placeholder github body 37 for testing purposes.,Placeholder Testing Data,-\n2025-02-08,testuser,Reporter,-,kobai/backend#2038,Placeholder github issue title 38 for testing purposes — Placeholder github body 38 for testing purposes.,Placeholder Testing Data,-\n2025-02-09,testuser,Reporter,-,kobai/backend#2039,Placeholder github issue title 39 for testing purposes — Placeholder github body 39 for testing purposes.,Placeholder Testing Data,-\n2025-02-10,testuser,Reporter,-,kobai/backend#2040,Placeholder github issue title 40 for testing purposes — Placeholder github body 40 for testing purposes.,Placeholder Testing Data,-\n2025-02-11,testuser,Reporter,-,kobai/backend#2041,Placeholder github issue title 41 for testing purposes — Placeholder github body 41 for testing purposes.,Placeholder Testing Data,-\n2025-02-12,testuser,Reporter,-,kobai/backend#2042,Placeholder github issue title 42 for testing purposes — Placeholder github body 42 for testing purposes.,Placeholder Testing Data,-\n2025-02-13,testuser,Reporter,-,kobai/backend#2043,Placeholder github issue title 43 for testing purposes — Placeholder github body 43 for testing purposes.,Placeholder Testing Data,-\n2025-02-14,testuser,Reporter,-,kobai/backend#2044,Placeholder github issue title 44 for testing purposes — Placeholder github body 44 for testing purposes.,Placeholder Testing Data,-\n2025-02-15,testuser,Reporter,-,kobai/backend#2045,Placeholder github issue title 45 for testing purposes — Placeholder github body 45 for testing purposes.,Placeholder Testing Data,-\n2025-02-16,testuser,Reporter,-,kobai/backend#2046,Placeholder github issue title 46 for testing purposes — Placeholder github body 46 for testing purposes.,Placeholder Testing Data,-\n2025-02-17,testuser,Reporter,-,kobai/backend#2047,Placeholder github issue title 47 for testing purposes — Placeholder github body 47 for testing purposes.,Placeholder Testing Data,-\n2025-02-18,testuser,Reporter,-,kobai/backend#2048,Placeholder github issue title 48 for testing purposes — Placeholder github body 48 for testing purposes.,Placeholder Testing Data,-\n2025-02-19,testuser,Reporter,-,kobai/backend#2049,Placeholder github issue title 49 for testing purposes — Placeholder github body 49 for testing purposes.,Placeholder Testing Data,-\n2025-02-20,testuser,Reporter,-,kobai/backend#2050,Placeholder github issue title 50 for testing purposes — Placeholder github body 50 for testing purposes.,Placeholder Testing Data,-\n2025-02-21,testuser,Reporter,-,kobai/backend#2051,Placeholder github issue title 51 for testing purposes — Placeholder github body 51 for testing purposes.,Placeholder Testing Data,-\n2025-02-22,testuser,Reporter,-,kobai/backend#2052,Placeholder github issue title 52 for testing purposes — Placeholder github body 52 for testing purposes.,Placeholder Testing Data,-\n2025-02-23,testuser,Reporter,-,kobai/backend#2053,Placeholder github issue title 53 for testing purposes — Placeholder github body 53 for testing purposes.,Placeholder Testing Data,-\n2025-02-24,testuser,Reporter,-,kobai/backend#2054,Placeholder github issue title 54 for testing purposes — Placeholder github body 54 for testing purposes.,Placeholder Testing Data,-\n2025-02-25,testuser,Reporter,-,kobai/backend#2055,Placeholder github issue title 55 for testing purposes — Placeholder github body 55 for testing purposes.,Placeholder Testing Data,-\n2025-02-26,testuser,Reporter,-,kobai/backend#2056,Placeholder github issue title 56 for testing purposes — Placeholder github body 56 for testing purposes.,Placeholder Testing Data,-\n2025-02-27,testuser,Reporter,-,kobai/backend#2057,Placeholder github issue title 57 for testing purposes — Placeholder github body 57 for testing purposes.,Placeholder Testing Data,-\n2025-02-28,testuser,Reporter,-,kobai/backend#2058,Placeholder github issue title 58 for testing purposes — Placeholder github body 58 for testing purposes.,Placeholder Testing Data,-\n2025-03-01,testuser,Reporter,-,kobai/backend#2059,Placeholder github issue title 59 for testing purposes — Placeholder github body 59 for testing purposes.,Placeholder Testing Data,-\n2025-03-02,testuser,Reporter,-,kobai/backend#2060,Placeholder github issue title 60 for testing purposes — Placeholder github body 60 for testing purposes.,Placeholder Testing Data,-\n2025-03-03,testuser,Reporter,-,kobai/backend#2061,Placeholder github issue title 61 for testing purposes — Placeholder github body 61 for testing purposes.,Placeholder Testing Data,-\n2025-03-04,testuser,Reporter,-,kobai/backend#2062,Placeholder github issue title 62 for testing purposes — Placeholder github body 62 for testing purposes.,Placeholder Testing Data,-\n2025-03-05,testuser,Reporter,-,kobai/backend#2063,Placeholder github issue title 63 for testing purposes — Placeholder github body 63 for testing purposes.,Placeholder Testing Data,-\n2025-03-06,testuser,Reporter,-,kobai/backend#2064,Placeholder github issue title 64 for testing purposes — Placeholder github body 64 for testing purposes.,Placeholder Testing Data,-\n2025-03-07,testuser,Reporter,-,kobai/backend#2065,Placeholder github issue title 65 for testing purposes — Placeholder github body 65 for testing purposes.,Placeholder Testing Data,-\n2025-03-08,testuser,Reporter,-,kobai/backend#2066,Placeholder github issue title 66 for testing purposes — Placeholder github body 66 for testing purposes.,Placeholder Testing Data,-\n2025-03-09,testuser,Reporter,-,kobai/backend#2067,Placeholder github issue title 67 for testing purposes — Placeholder github body 67 for testing purposes.,Placeholder Testing Data,-\n2025-03-10,testuser,Reporter,-,kobai/backend#2068,Placeholder github issue title 68 for testing purposes — Placeholder github body 68 for testing purposes.,Placeholder Testing Data,-\n2025-03-11,testuser,Reporter,-,kobai/backend#2069,Placeholder github issue title 69 for testing purposes — Placeholder github body 69 for testing purposes.,Placeholder Testing Data,-\n2025-03-12,testuser,Reporter,-,kobai/backend#2070,Placeholder github issue title 70 for testing purposes — Placeholder github body 70 for testing purposes.,Placeholder Testing Data,-\n2025-03-13,testuser,Reporter,-,kobai/backend#2071,Placeholder github issue title 71 for testing purposes — Placeholder github body 71 for testing purposes.,Placeholder Testing Data,-\n2025-03-14,testuser,Reporter,-,kobai/backend#2072,Placeholder github issue title 72 for testing purposes — Placeholder github body 72 for testing purposes.,Placeholder Testing Data,-\n2025-03-15,testuser,Reporter,-,kobai/backend#2073,Placeholder github issue title 73 for testing purposes — Placeholder github body 73 for testing purposes.,Placeholder Testing Data,-\n2025-03-16,testuser,Reporter,-,kobai/backend#2074,Placeholder github issue title 74 for testing purposes — Placeholder github body 74 for testing purposes.,Placeholder Testing Data,-\n2025-03-17,testuser,Reporter,-,kobai/backend#2075,Placeholder github issue title 75 for testing purposes — Placeholder github body 75 for testing purposes.,Placeholder Testing Data,-\n2025-03-18,testuser,Reporter,-,kobai/backend#2076,Placeholder github issue title 76 for testing purposes — Placeholder github body 76 for testing purposes.,Placeholder Testing Data,-\n2025-03-19,testuser,Reporter,-,kobai/backend#2077,Placeholder github issue title 77 for testing purposes — Placeholder github body 77 for testing purposes.,Placeholder Testing Data,-\n2025-03-20,testuser,Reporter,-,kobai/backend#2078,Placeholder github issue title 78 for testing purposes — Placeholder github body 78 for testing purposes.,Placeholder Testing Data,-\n2025-03-21,testuser,Reporter,-,kobai/backend#2079,Placeholder github issue title 79 for testing purposes — Placeholder github body 79 for testing purposes.,Placeholder Testing Data,-\n2025-03-22,testuser,Reporter,-,kobai/backend#2080,Placeholder github issue title 80 for testing purposes — Placeholder github body 80 for testing purposes.,Placeholder Testing Data,-\n2025-03-23,testuser,Reporter,-,kobai/backend#2081,Placeholder github issue title 81 for testing purposes — Placeholder github body 81 for testing purposes.,Placeholder Testing Data,-\n2025-03-24,testuser,Reporter,-,kobai/backend#2082,Placeholder github issue title 82 for testing purposes — Placeholder github body 82 for testing purposes.,Placeholder Testing Data,-\n2025-03-25,testuser,Reporter,-,kobai/backend#2083,Placeholder github issue title 83 for testing purposes — Placeholder github body 83 for testing purposes.,Placeholder Testing Data,-\n2025-03-26,testuser,Reporter,-,kobai/backend#2084,Placeholder github issue title 84 for testing purposes — Placeholder github body 84 for testing purposes.,Placeholder Testing Data,-\n2025-03-27,testuser,Reporter,-,kobai/backend#2085,Placeholder github issue title 85 for testing purposes — Placeholder github body 85 for testing purposes.,Placeholder Testing Data,-\n2025-03-28,testuser,Reporter,-,kobai/backend#2086,Placeholder github issue title 86 for testing purposes — Placeholder github body 86 for testing purposes.,Placeholder Testing Data,-\n2025-03-29,testuser,Reporter,-,kobai/backend#2087,Placeholder github issue title 87 for testing purposes — Placeholder github body 87 for testing purposes.,Placeholder Testing Data,-\n2025-03-30,testuser,Reporter,-,kobai/backend#2088,Placeholder github issue title 88 for testing purposes — Placeholder github body 88 for testing purposes.,Placeholder Testing Data,-\n2025-03-31,testuser,Reporter,-,kobai/backend#2089,Placeholder github issue title 89 for testing purposes — Placeholder github body 89 for testing purposes.,Placeholder Testing Data,-\n2025-04-01,testuser,Reporter,-,kobai/backend#2090,Placeholder github issue title 90 for testing purposes — Placeholder github body 90 for testing purposes.,Placeholder Testing Data,-\n2025-04-02,testuser,Reporter,-,kobai/backend#2091,Placeholder github issue title 91 for testing purposes — Placeholder github body 91 for testing purposes.,Placeholder Testing Data,-\n2025-04-03,testuser,Reporter,-,kobai/backend#2092,Placeholder github issue title 92 for testing purposes — Placeholder github body 92 for testing purposes.,Placeholder Testing Data,-\n2025-04-04,testuser,Reporter,-,kobai/backend#2093,Placeholder github issue title 93 for testing purposes — Placeholder github body 93 for testing purposes.,Placeholder Testing Data,-\n2025-04-05,testuser,Reporter,-,kobai/backend#2094,Placeholder github issue title 94 for testing purposes — Placeholder github body 94 for testing purposes.,Placeholder Testing Data,-\n2025-04-06,testuser,Reporter,-,kobai/backend#2095,Placeholder github issue title 95 for testing purposes — Placeholder github body 95 for testing purposes.,Placeholder Testing Data,-\n2025-04-07,testuser,Reporter,-,kobai/backend#2096,Placeholder github issue title 96 for testing purposes — Placeholder github body 96 for testing purposes.,Placeholder Testing Data,-\n2025-04-08,testuser,Reporter,-,kobai/backend#2097,Placeholder github issue title 97 for testing purposes — Placeholder github body 97 for testing purposes.,Placeholder Testing Data,-\n2025-04-09,testuser,Reporter,-,kobai/backend#2098,Placeholder github issue title 98 for testing purposes — Placeholder github body 98 for testing purposes.,Placeholder Testing Data,-\n2025-04-10,testuser,Reporter,-,kobai/backend#2099,Placeholder github issue title 99 for testing purposes — Placeholder github body 99 for testing purposes.,Placeholder Testing Data,-\n2025-04-11,testuser,Reporter,-,kobai/backend#2100,Placeholder github issue title 100 for testing purposes — Placeholder github body 100 for testing purposes.,Placeholder Testing Data,-\n2025-04-12,testuser,Reporter,-,kobai/backend#2101,Placeholder github issue title 101 for testing purposes — Placeholder github body 101 for testing purposes.,Placeholder Testing Data,-\n2025-04-13,testuser,Reporter,-,kobai/backend#2102,Placeholder github issue title 102 for testing purposes — Placeholder github body 102 for testing purposes.,Placeholder Testing Data,-\n2025-04-14,testuser,Reporter,-,kobai/backend#2103,Placeholder github issue title 103 for testing purposes — Placeholder github body 103 for testing purposes.,Placeholder Testing Data,-\n2025-04-15,testuser,Reporter,-,kobai/backend#2104,Placeholder github issue title 104 for testing purposes — Placeholder github body 104 for testing purposes.,Placeholder Testing Data,-\n2025-04-16,testuser,Reporter,-,kobai/backend#2105,Placeholder github issue title 105 for testing purposes — Placeholder github body 105 for testing purposes.,Placeholder Testing Data,-\n2025-04-17,testuser,Reporter,-,kobai/backend#2106,Placeholder github issue title 106 for testing purposes — Placeholder github body 106 for testing purposes.,Placeholder Testing Data,-\n2025-04-18,testuser,Reporter,-,kobai/backend#2107,Placeholder github issue title 107 for testing purposes — Placeholder github body 107 for testing purposes.,Placeholder Testing Data,-\n2025-04-19,testuser,Reporter,-,kobai/backend#2108,Placeholder github issue title 108 for testing purposes — Placeholder github body 108 for testing purposes.,Placeholder Testing Data,-\n2025-04-20,testuser,Reporter,-,kobai/backend#2109,Placeholder github issue title 109 for testing purposes — Placeholder github body 109 for testing purposes.,Placeholder Testing Data,-\n2025-04-21,testuser,Reporter,-,kobai/backend#2110,Placeholder github issue title 110 for testing purposes — Placeholder github body 110 for testing purposes.,Placeholder Testing Data,-\n2025-04-22,testuser,Reporter,-,kobai/backend#2111,Placeholder github issue title 111 for testing purposes — Placeholder github body 111 for testing purposes.,Placeholder Testing Data,-\n2025-04-23,testuser,Reporter,-,kobai/backend#2112,Placeholder github issue title 112 for testing purposes — Placeholder github body 112 for testing purposes.,Placeholder Testing Data,-\n2025-04-24,testuser,Reporter,-,kobai/backend#2113,Placeholder github issue title 113 for testing purposes — Placeholder github body 113 for testing purposes.,Placeholder Testing Data,-\n2025-04-25,testuser,Reporter,-,kobai/backend#2114,Placeholder github issue title 114 for testing purposes — Placeholder github body 114 for testing purposes.,Placeholder Testing Data,-\n2025-04-26,testuser,Reporter,-,kobai/backend#2115,Placeholder github issue title 115 for testing purposes — Placeholder github body 115 for testing purposes.,Placeholder Testing Data,-\n2025-04-27,testuser,Reporter,-,kobai/backend#2116,Placeholder github issue title 116 for testing purposes — Placeholder github body 116 for testing purposes.,Placeholder Testing Data,-\n2025-04-28,testuser,Reporter,-,kobai/backend#2117,Placeholder github issue title 117 for testing purposes — Placeholder github body 117 for testing purposes.,Placeholder Testing Data,-\n2025-04-29,testuser,Reporter,-,kobai/backend#2118,Placeholder github issue title 118 for testing purposes — Placeholder github body 118 for testing purposes.,Placeholder Testing Data,-\n2025-04-30,testuser,Reporter,-,kobai/backend#2119,Placeholder github issue title 119 for testing purposes — Placeholder github body 119 for testing purposes.,Placeholder Testing Data,-\n2025-05-01,testuser,Reporter,-,kobai/backend#2120,Placeholder github issue title 120 for testing purposes — Placeholder github body 120 for testing purposes.,Placeholder Testing Data,-",
+  "theme_summary_csv": "Theme,Signals,First_Seen,Last_Seen,Proportion_of_Feedback,Strategic_Takeaway,Implication,Suggested_Metrics\nPlaceholder Testing Data,240,2025-01-02,2025-05-01,100%,\"Test users and internal systems are generating placeholder signals that persist across the full reporting period, obscuring real signal quality.\",The presence of 240 placeholder signals spanning the entire four-month window means the dataset cannot be used to draw reliable conclusions about real product or customer issues.,Volume of signals flagged as placeholder or test data per ingestion run | Proportion of total signals that contain placeholder text across each source system | Date range span of placeholder signals relative to total reporting period"
+}</script>
+<script type="application/json" id="themeDisplayData">{
+  "total_feedback_rows": 240,
+  "has_trend": false,
+  "has_company_data": false,
+  "total_companies": 0,
+  "themes": [
+    {
+      "theme_name": "Placeholder Testing Data",
+      "strategic_takeaway": "Test users and internal systems are generating placeholder signals that persist across the full reporting period, obscuring real signal quality.",
+      "supporting_evidence": [
+        "A placeholder JIRA issue labelled summary 1 with a corresponding placeholder description was logged on the earliest date in the dataset (JIRA-1001, 2025-01-02).",
+        "A placeholder JIRA issue labelled summary 100 with a corresponding placeholder description was logged near the end of the reporting window (JIRA-1100, 2025-04-11).",
+        "A placeholder GitHub issue labelled title 120 with a corresponding placeholder body was filed in the kobai/backend repository close to the dataset end date (kobai/backend#2120, 2025-05-01).",
+        "A placeholder GitHub issue labelled title 1 with a corresponding placeholder body was filed in the kobai/backend repository on the same earliest date as the first JIRA entry (kobai/backend#2001, 2025-01-02)."
+      ],
+      "implication": "The presence of 240 placeholder signals spanning the entire four-month window means the dataset cannot be used to draw reliable conclusions about real product or customer issues.",
+      "suggested_metrics": [
+        "Volume of signals flagged as placeholder or test data per ingestion run",
+        "Proportion of total signals that contain placeholder text across each source system",
+        "Date range span of placeholder signals relative to total reporting period"
+      ],
+      "trend": null,
+      "category_class": "root",
+      "category_label": "Data quality gap",
+      "decision_this_informs": "Whether the signal ingestion pipeline needs a filtering or validation layer before placeholder and test data are included in theme analysis.",
+      "data_by_theme": {
+        "signals": 240,
+        "first_seen": "2025-01-02",
+        "last_seen": "2025-05-01",
+        "proportion_of_feedback": 100
+      }
+    }
+  ]
+}</script>
+<script type="application/json" id="executiveSummaryData">{
+  "system_statement": "A single theme cluster spanning 240 signals across January through May 2025 indicates a sustained and unresolved operational pattern with no evidence of mitigation or resolution over the period observed.",
+  "strategic_implication": "The business is absorbing ongoing operational cost and attention from a persistent issue category without a visible inflection point, constraining capacity to invest in forward-looking priorities.",
+  "tensions": [
+    {
+      "headline": "Volume persists, resolution remains absent",
+      "detail": "The signal count of 240 across a four-month window with no apparent taper suggests the issue category is not being closed out, creating a tension between continued remediation effort and strategic resource allocation."
+    }
+  ],
+  "leadership_actions": [
+    {
+      "title": "Assign a dedicated resolution owner",
+      "body": "Designate a single accountable owner for this issue cluster with a mandate to drive closure, as the sustained signal volume across four months indicates no single team is currently treating this as a primary priority."
+    },
+    {
+      "title": "Set a signal-volume threshold for escalation",
+      "body": "Define a weekly signal-count ceiling for this category that, if breached, triggers automatic executive review, so leadership has a structured mechanism to detect deterioration rather than relying on periodic reporting."
+    },
+    {
+      "title": "Audit open items for duplicate or stale tickets",
+      "body": "Conduct a triage pass across the JIRA and GitHub backlog within this theme to distinguish genuinely unresolved issues from noise accumulation, ensuring remediation effort is directed at real outstanding problems."
+    }
+  ],
+  "risks": [
+    {
+      "kicker": "Roadmap risk",
+      "title": "Backlog growth crowds out new work",
+      "body": "If the 240-signal cluster continues to accumulate without a resolution mechanism, engineering and product capacity will remain disproportionately tied to remediation, delaying planned capability development."
+    },
+    {
+      "kicker": "Alignment risk",
+      "title": "Issue ownership remains structurally unclear",
+      "body": "A four-month signal window spanning both JIRA and GitHub sources with no visible resolution trend suggests cross-team accountability has not been established, increasing the likelihood the problem persists indefinitely."
+    },
+    {
+      "kicker": "Trust risk",
+      "title": "Stakeholders lose confidence in responsiveness",
+      "body": "Sustained unresolved signal volume visible across internal and external tracking systems signals to stakeholders that the organisation lacks the operational discipline to close out known problem categories."
+    }
+  ],
+  "decision_view": {
+    "what_is_happening": "A single issue cluster is generating consistent signal volume across both JIRA and GitHub with no observable reduction across a four-month period, suggesting current resourcing and prioritisation are insufficient to drive closure.",
+    "why_it_matters": "Leadership stands to lose engineering capacity, stakeholder confidence, and scheduling predictability the longer this category remains open without a defined resolution path.",
+    "biggest_risk": "The issue category becomes normalised as background noise, removing urgency from resolution and allowing it to compound indefinitely.",
+    "decision_this_informs": "Whether to formally escalate this theme to a dedicated remediation workstream with ring-fenced capacity, or to accept continued slow-burn resolution as part of regular operations."
+  },
+  "theme_flow": {
+    "intro": "The Placeholder Testing Data theme functions simultaneously as a root cause of backlog inflation, a symptom of unclear ownership, and a consequence of insufficient triage discipline — each layer reinforcing the next across the observed period.",
+    "root_cause": {
+      "label": "Structural gap",
+      "headline": "No resolution mechanism is in place",
+      "description": "The Placeholder Testing Data cluster has generated 240 signals across four months with no evidence of a structured closure process, indicating that the underlying operational or process gap has not been addressed at source.",
+      "inferred_tags": [
+        "Ownership ambiguity",
+        "Triage deficit"
+      ]
+    },
+    "symptom": {
+      "label": "Operational signal",
+      "headline": "Signal volume is flat across the period",
+      "description": "The Placeholder Testing Data theme shows signals distributed continuously from January through May 2025 with no visible taper, indicating that whatever is generating the issues remains active and unmitigated.",
+      "inferred_tags": [
+        "Persistent recurrence"
+      ]
+    },
+    "consequence": {
+      "label": "Capacity consequence",
+      "headline": "Remediation consumes unplanned team bandwidth",
+      "description": "The sustained volume associated with the Placeholder Testing Data theme implies ongoing unplanned engineering and product attention, reducing the effective capacity available for prioritised roadmap work.",
+      "inferred_tags": []
+    }
+  }
+}</script>
+<script type="application/json" id="unclassifiedItemsData">{
+  "items": []
+}</script>
+
+
+
+
+<script>
+(function () {
+
+
+
+
+  function esc(str) {
+    return String(str ?? "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+  }
+
+
+
+
+  function safeParse(raw, fallback) {
+    try {
+      if (!raw || raw === "null" || raw === "undefined") return fallback;
+      return JSON.parse(raw);
+    } catch (e) {
+      return fallback;
+    }
+  }
+
+
+
+
+  function formatMonthYear(dateStr) {
+    if (!dateStr || !/^\d{4}-\d{2}-\d{2}$/.test(dateStr)) return "";
+    var d = new Date(dateStr + "T00:00:00Z");
+    return d.toLocaleString("en-GB", { month: "short", year: "numeric", timeZone: "UTC" });
+  }
+
+
+
+
+  var CATEGORY_DEFAULTS = {
+    root: "Root cause",
+    symptom: "Operational symptom",
+    consequence: "Business consequence"
+  };
+
+
+
+
+  function pillClass(catClass) {
+    return ["root", "symptom", "consequence"].includes(catClass) ? catClass : "";
+  }
+
+
+
+
+  function categoryLabel(theme) {
+    if (theme.category_label) return theme.category_label;
+    return CATEGORY_DEFAULTS[theme.category_class] || "";
+  }
+
+
+
+
+  var csvBundle   = safeParse(document.getElementById("combinedCsvsData")?.textContent, {});
+  var displayData = safeParse(document.getElementById("themeDisplayData")?.textContent,
+                      { total_feedback_rows: 0, has_company_data: false, themes: [] });
+  var execSummary = safeParse(document.getElementById("executiveSummaryData")?.textContent, {});
+  var unclassifiedItems = (safeParse(document.getElementById("unclassifiedItemsData")?.textContent, { items: [] }).items) || [];
+
+
+
+
+  var allThemes     = Array.isArray(displayData.themes) ? displayData.themes : [];
+  var unclassified  = allThemes.find(t => (t?.theme_name || "").trim() === "Other / Unclassified");
+  var visibleThemes = allThemes
+    .filter(t => (t?.theme_name || "").trim() !== "Other / Unclassified")
+    .sort((a, b) => {
+      var diff = (b?.data_by_theme?.signals ?? 0) - (a?.data_by_theme?.signals ?? 0);
+      if (diff !== 0) return diff;
+      diff = (b?.data_by_theme?.companies ?? 0) - (a?.data_by_theme?.companies ?? 0);
+      if (diff !== 0) return diff;
+      return (a.theme_name || "").localeCompare(b.theme_name || "");
+    });
+
+
+
+
+  var totalRows = Number(displayData.total_feedback_rows || 0);
+
+
+
+
+  /* ── report subject / header / meta cluster ─────────────────────────────────── */
+  var reportTitleText = "Your Strategic Insights";
+  document.title = reportTitleText + " | Intuifi";
+
+  (function renderMetaCluster() {
+    var el = document.getElementById("metaCluster");
+    var noThemeCount = Number(unclassified?.data_by_theme?.signals || 0);
+    var cards = [
+      { cls: "primary", value: totalRows, label: "records analysed" },
+      {
+        cls: "primary",
+        value: visibleThemes.length,
+        label: visibleThemes.length === 1 ? "theme identified" : "themes identified"
+      }
+    ];
+
+    if (unclassified) {
+      cards.push({
+        cls: "warning",
+        value: noThemeCount,
+        label: noThemeCount === 1
+          ? "item with no theme assigned"
+          : "items with no theme assigned"
+      });
+    }
+
+    var columnsClass = cards.length === 1 ? "cols-1" : cards.length === 2 ? "cols-2" : "cols-3";
+    el.className = "meta-cluster " + columnsClass;
+    el.innerHTML = cards.map(c => {
+      if (c.cls === "warning") {
+        return `<button type="button" id="unclassifiedJumpCard" class="meta-card warning meta-card-clickable" aria-label="Jump to items with no theme assigned">
+          <svg class="meta-card-jump-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+          <strong>${esc(c.value)}</strong><span>${esc(c.label)}</span>
+        </button>`;
+      }
+      return `<div class="meta-card ${c.cls}"><strong>${esc(c.value)}</strong><span>${esc(c.label)}</span></div>`;
+    }).join("");
+
+    var jumpBtn = document.getElementById("unclassifiedJumpCard");
+    if (jumpBtn) {
+      jumpBtn.addEventListener("click", function () {
+        var target = document.getElementById("unclassifiedItemsCard");
+        if (target) {
+          target.open = true;
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+    }
+  })();
+
+
+
+
+  /* ── at a glance (mid-level detail card) ────────────────────── */
+  (function renderExecutiveSummary() {
+    var el = document.getElementById("executiveBody");
+
+
+
+
+    function summaryItems(items, iconClass, iconGlyph) {
+      var list = (items || []).filter(Boolean);
+      if (!list.length) return "<div class=\"summary-detail\">Nothing to show yet.</div>";
+      return `<div class="summary-list">${list.map(item => {
+        if (typeof item === "string") {
+          return `<div class="summary-item">
+            <div class="summary-icon ${iconClass}">${iconGlyph}</div>
+            <div><div class="summary-headline">${esc(item)}</div></div>
+          </div>`;
+        }
+        return `<div class="summary-item">
+          <div class="summary-icon ${iconClass}">${iconGlyph}</div>
+          <div>
+            <div class="summary-headline">${esc(item.headline || "")}</div>
+            ${item.detail ? `<div class="summary-detail">${esc(item.detail)}</div>` : ""}
+          </div>
+        </div>`;
+      }).join("")}</div>`;
+    }
+
+
+
+
+    function themeIndexItems(themes) {
+      if (!themes.length) return "<div class=\"summary-detail\">No themes to show yet.</div>";
+
+      var TOP_N = 5;
+      var shown = themes.slice(0, TOP_N);
+      var remaining = themes.length - shown.length;
+
+      var itemsHtml = shown.map((t, i) => {
+        var d = t.data_by_theme || {};
+        var stat = [
+          d.signals != null ? d.signals + " signals" : null,
+          d.proportion_of_feedback != null ? d.proportion_of_feedback + "% of feedback" : null
+        ].filter(Boolean).join(" · ");
+        return `<div class="summary-item">
+          <div class="summary-icon check">${i + 1}</div>
+          <div>
+            <div class="summary-headline">${esc(t.theme_name)}</div>
+            ${stat ? `<div class="summary-detail">${esc(stat)}</div>` : ""}
+          </div>
+        </div>`;
+      }).join("");
+
+      var moreHtml = remaining > 0
+        ? `<div class="summary-detail" style="margin-top:10px;">+ ${remaining} more theme${remaining === 1 ? "" : "s"} — see "Detailed themes and evidence" below</div>`
+        : "";
+
+      return `<div class="summary-list">${itemsHtml}</div>${moreHtml}`;
+    }
+
+
+    var implicationHtml = execSummary.strategic_implication
+      ? `<div class="tldr-box">
+           <div class="tldr-label">Strategic implication</div>
+           <div class="tldr-text">${esc(execSummary.strategic_implication)}</div>
+         </div>`
+      : "";
+
+
+
+
+    el.innerHTML = `
+      ${implicationHtml}
+      <div class="executive-columns">
+        <div class="executive-panel">
+          <div class="panel-title">Themes</div>
+          ${themeIndexItems(visibleThemes)}
+        </div>
+        <div class="executive-panel tension">
+          <div class="panel-title">Tensions to be aware of</div>
+          ${summaryItems(execSummary.tensions, "warning", "!")}
+        </div>
+      </div>`;
+  })();
+
+
+
+
+  /* ── recommended actions ───────────────────────────────────── */
+  (function renderLeadershipActions() {
+    var actions = Array.isArray(execSummary.leadership_actions) ? execSummary.leadership_actions.filter(Boolean) : [];
+    var host = document.getElementById("leadershipSection");
+    if (!actions.length) { host.innerHTML = ""; return; }
+
+
+
+
+    host.innerHTML = `
+      <h2 class="section-title">Recommended actions</h2>
+      <p class="section-note">Listed in priority order — most urgent first.</p>
+      <section class="grid grid-3">
+        ${actions.map((a, i) => `
+          <div class="card action-card">
+            <h3 class="mini-title">${i + 1}. ${esc(a.title || "")}</h3>
+            <p class="body-copy">${esc(a.body || "")}</p>
+          </div>`).join("")}
+      </section>`;
+  })();
+
+
+
+
+  /* ── risks ──────────────────────────────────────────────────── */
+  (function renderRisks() {
+    var risks = Array.isArray(execSummary.risks) ? execSummary.risks.filter(Boolean) : [];
+    var host = document.getElementById("risksSection");
+    if (!risks.length) { host.innerHTML = ""; return; }
+
+
+
+
+    host.innerHTML = `
+      <h2 class="section-title">Risks if this remains unresolved</h2>
+      <p class="section-note">Listed independently of the actions above — not in priority order, and not a 1:1 match to any single action.</p>
+      <section class="grid grid-3">
+        ${risks.map(r => `
+          <div class="card risk-card">
+            <div class="risk-kicker">${esc(r.kicker || "Risk")}</div>
+            <h3 class="mini-title">${esc(r.title || "")}</h3>
+            <p class="body-copy">${esc(r.body || "")}</p>
+          </div>`).join("")}
+      </section>`;
+  })();
+
+
+
+
+  /* ── executive summary (decision view, now first) ──────────── */
+  (function renderDecisionView() {
+    var dv = execSummary.decision_view;
+    var host = document.getElementById("decisionViewSection");
+    if (!dv || typeof dv !== "object") { host.innerHTML = ""; return; }
+
+
+
+
+    var narrative = [
+      { step: "1. Situation", title: "What is happening?", body: dv.what_is_happening, className: "context" },
+      { step: "2. Significance", title: "Why it matters", body: dv.why_it_matters, className: "impact" },
+      { step: "3. Exposure", title: "Biggest risk", body: dv.biggest_risk, className: "risk" }
+    ].filter(item => item.body);
+
+
+
+
+    var decision = dv.decision_this_informs;
+
+
+
+
+    if (!narrative.length && !decision) { host.innerHTML = ""; return; }
+
+
+
+
+    host.innerHTML = `
+      <section class="decision-section" aria-labelledby="executiveSummaryTitle">
+        ${narrative.length ? `
+          <div class="decision-flow">
+            ${narrative.map(item => `
+              <article class="decision-card ${item.className}">
+                <div class="decision-step">${esc(item.step)}</div>
+                <h3 class="decision-card-title">${esc(item.title)}</h3>
+                <p class="decision-card-copy">${esc(item.body)}</p>
+              </article>`).join("")}
+          </div>` : ""}
+
+
+
+
+        ${decision ? `
+          <article class="decision-outcome">
+            <h3 class="decision-outcome-title">Decision to be made</h3>
+            <p class="decision-outcome-copy">${esc(decision)}</p>
+          </article>` : ""}
+      </section>`;
+  })();
+
+
+
+
+  /* ── hide the executive summary wrapper if all three sub-parts are empty ── */
+  (function toggleExecSectionVisibility() {
+    var wrap = document.getElementById("execSection");
+    if (!wrap) return;
+    var hasContent = ["decisionViewSection", "leadershipSection", "risksSection"]
+      .some(id => (document.getElementById(id)?.textContent || "").trim().length > 0);
+    if (!hasContent) { wrap.style.display = "none"; }
+  })();
+
+
+
+
+  /* ── how the themes connect ────────────────────────────────── */
+  (function renderThemeFlow() {
+    var flow = execSummary.theme_flow;
+    var host = document.getElementById("themeFlowSection");
+
+
+
+
+    if (!flow || typeof flow !== "object") { host.innerHTML = ""; return; }
+
+
+
+
+    var layers = [
+      { key: "root_cause",  cls: "root",       num: 1, defaultLabel: "Root causes" },
+      { key: "symptom",     cls: "symptom",    num: 2, defaultLabel: "Operational symptoms" },
+      { key: "consequence", cls: "consequence", num: 3, defaultLabel: "Business consequence" }
+    ];
+
+
+
+
+    var hasAnyHeadline = layers.some(l => flow[l.key] && flow[l.key].headline);
+    if (!hasAnyHeadline) { host.innerHTML = ""; return; }
+
+
+
+
+    var hasInferred = layers.some(l => Array.isArray(flow[l.key]?.inferred_tags) && flow[l.key].inferred_tags.length);
+
+
+
+
+    var columnsHtml = layers.map((l, idx) => {
+      var layerData = flow[l.key] || {};
+      var themeTags = visibleThemes
+        .filter(t => pillClass(t.category_class) === l.cls)
+        .map(t => `<span>${esc(t.theme_name)}</span>`);
+      var inferredTags = (Array.isArray(layerData.inferred_tags) ? layerData.inferred_tags : [])
+        .filter(Boolean)
+        .map(t => `<span class="inferred">${esc(t)}</span>`);
+
+
+
+
+      var column = `
+        <div class="flow-column ${l.cls}">
+          <div class="flow-step-label">${l.num}. ${esc(layerData.label || l.defaultLabel)}</div>
+          <h3>${esc(layerData.headline || "")}</h3>
+          <p>${esc(layerData.description || "")}</p>
+          <div class="flow-tags">${themeTags.join("")}${inferredTags.join("")}</div>
+        </div>`;
+
+
+
+
+      return idx < layers.length - 1 ? column + `<div class="flow-arrow">→</div>` : column;
+    }).join("");
+
+
+
+
+    var themeCount = visibleThemes.length;
+    var legendHtml = hasInferred ? `
+      <div class="tag-legend">
+        <span class="legend-item"><span class="legend-swatch"></span>Named theme with evidence below</span>
+        <span class="legend-item"><span class="legend-swatch inferred"></span>Inferred pattern across themes</span>
+      </div>` : "";
+
+
+
+
+    host.innerHTML = `
+      <div class="theme-flow-inline">
+        <div class="flow-intro">
+          <h2 class="section-title" style="margin:0 0 8px">How the themes connect</h2>
+          ${flow.intro ? `<p>${esc(flow.intro)}</p>` : ""}
+          ${legendHtml}
+        </div>
+        <div class="theme-flow">${columnsHtml}</div>
+      </div>`;
+  })();
+
+
+
+
+  /* ── detailed themes and evidence ──────────────────────────── */
+  (function renderThemes() {
+    var host = document.getElementById("themeStack");
+
+
+
+
+    if (!visibleThemes.length) {
+      host.innerHTML = "<p>No themes found.</p>";
+      return;
+    }
+
+
+
+
+    visibleThemes.forEach(function (theme, index) {
+      var d = theme.data_by_theme || {};
+      var firstFmt = formatMonthYear(d.first_seen || "");
+      var lastFmt  = formatMonthYear(d.last_seen  || "");
+
+
+
+
+      var catCls = pillClass(theme.category_class);
+      var catLabel = categoryLabel(theme);
+      var categoryPill = catLabel ? `<span class="pill ${catCls}">${esc(catLabel)}</span>` : "";
+
+
+
+
+      var companiesPill = displayData.has_company_data && d.companies != null
+        ? `<span class="pill">${d.companies} companies</span>` : "";
+
+
+
+
+      var datePills = (firstFmt && lastFmt && firstFmt !== lastFmt)
+        ? `<span class="pill">${esc(firstFmt)}–${esc(lastFmt)}</span>` : "";
+
+
+
+
+      var actionHtml = theme.decision_this_informs
+        ? `<div class="theme-action"><strong>Decision this informs:</strong> ${esc(theme.decision_this_informs)}</div>`
+        : "";
+
+
+
+
+      var evidence = Array.isArray(theme.supporting_evidence) ? theme.supporting_evidence.filter(Boolean) : [];
+      var evidenceHtml = evidence.length
+        ? `<div class="evidence-panel">
+             <div class="panel-kicker">Evidence trail</div>
+             <h4>Why this theme emerged</h4>
+             <div class="evidence-list">
+               ${evidence.map((item, i) => `
+                 <div class="evidence-item">
+                   <span class="evidence-number">${String(i + 1).padStart(2, "0")}</span>
+                   <p>${esc(item)}</p>
+                 </div>`).join("")}
+             </div>
+           </div>`
+        : `<div class="evidence-panel"><div class="panel-kicker">Evidence trail</div><h4>Why this theme emerged</h4><p class="body-copy">No supporting evidence available.</p></div>`;
+
+
+
+
+      var suggestionHtml = theme.implication
+        ? `<div class="suggestion-panel">
+             <div class="panel-kicker">Interpretation</div>
+             <h4>What this suggests</h4>
+             <p>${esc(theme.implication)}</p>
+           </div>`
+        : "";
+
+
+
+
+      var metrics = Array.isArray(theme.suggested_metrics) ? theme.suggested_metrics.filter(Boolean) : [];
+      var monitorHtml = metrics.length
+        ? `<div class="monitor-panel">
+             <div class="panel-kicker">Signals to monitor</div>
+             <div class="metric-list">
+               ${metrics.map(m => `<div class="metric-item"><span class="metric-dot"></span><span>${esc(m)}</span></div>`).join("")}
+             </div>
+           </div>`
+        : "";
+
+
+
+
+      var el = document.createElement("details");
+      el.className = "theme";
+      if (index === 0) el.open = true;
+      el.innerHTML = `
+        <summary class="theme-summary">
+          <div>
+            <h3 class="theme-title">${esc(theme.theme_name)}</h3>
+            <p class="theme-description">${esc(theme.strategic_takeaway || "")}</p>
+            <div class="pill-row">
+              ${categoryPill}
+              <span class="pill">${d.signals ?? "-"} signals</span>
+              <span class="pill">${d.proportion_of_feedback != null ? d.proportion_of_feedback + "% of feedback" : "Feedback share unavailable"}</span>
+              ${companiesPill}${datePills}
+            </div>
+            ${actionHtml}
+          </div>
+          <div class="expand"></div>
+        </summary>
+        <div class="theme-body">
+          <div class="insight-detail-layout">
+            ${evidenceHtml}
+            <aside class="insight-side">
+              ${suggestionHtml}
+              ${monitorHtml}
+            </aside>
+          </div>
+        </div>`;
+      host.appendChild(el);
+    });
+  })();
+
+
+
+
+  /* ── items with no theme assigned ──────────────────────────── */
+  (function renderUnclassifiedItems() {
+    if (!unclassifiedItems.length) return;
+
+    var el = document.createElement("details");
+    el.id = "unclassifiedItemsCard";
+    el.className = "theme unclassified-card";
+    el.innerHTML = `
+      <summary class="theme-summary">
+        <div>
+          <h3 class="theme-title">Items with no theme assigned</h3>
+          <p class="theme-description">These items didn't share enough in common with other feedback to form a recurring theme — often one-off requests or isolated mentions of a topic that didn't recur elsewhere in this dataset.</p>
+        </div>
+        <div class="expand"></div>
+      </summary>
+      <div class="theme-body">
+        <div class="evidence-list">
+          ${unclassifiedItems.map((item, i) => {
+            var meta = [item.company, formatMonthYear(item.event_date_iso)].filter(Boolean).join(", ");
+            return `
+              <div class="evidence-item">
+                <span class="evidence-number">${String(i + 1).padStart(2, "0")}</span>
+                <p>${esc(item.excerpt)}${meta ? ` <span style="color:var(--muted);">(${esc(meta)})</span>` : ""}<br><em>${esc(item.reason)}</em></p>
+              </div>`;
+          }).join("")}
+        </div>
+      </div>`;
+    document.getElementById("themeStack").appendChild(el);
+  })();
+
+
+
+
+
+
+  /* ── footer ─────────────────────────────────────────────────── */
+  document.getElementById("reportFooter").textContent =
+    "Generated by Intuifi · " + new Date().toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
+
+
+
+
+  /* ── CSV downloads ──────────────────────────────────────────── */
+  function attach(id, text) {
+    var el = document.getElementById(id);
+    if (!el || !text) return;
+    el.href = URL.createObjectURL(new Blob([text], { type: "text/csv;charset=utf-8" }));
+  }
+  attach("downloadAll", csvBundle.all_signals_csv);
+
+
+
+
+  /* ── PDF PREVIEW ────────────────────────────────────────────── */
+  document.getElementById("previewPdf").addEventListener("click", function () {
+
+
+
+
+    var date = new Date().toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
+    var logoMarkup = document.getElementById("intuifiLogo")?.outerHTML || "";
+    logoMarkup = logoMarkup
+      .replace('class="brand-logo"', 'class="pdf-logo"')
+      .replace('id="intuifiLogo"', 'id="intuifiLogoPdf"');
+
+
+
+
+    function textOf(item) {
+      if (typeof item === "string") return esc(item);
+      if (!item) return "";
+      return esc(item.headline || "") + (item.detail ? ` — ${esc(item.detail)}` : "");
+    }
+
+
+
+
+    var TOP_N_THEMES_PDF = 5;
+    var takeawaysHtml = visibleThemes.slice(0, TOP_N_THEMES_PDF).map(function (t) {
+      var d = t.data_by_theme || {};
+      var stat = [
+        d.signals != null ? d.signals + " signals" : null,
+        d.proportion_of_feedback != null ? d.proportion_of_feedback + "% of feedback" : null
+      ].filter(Boolean).join(" · ");
+      return `<li><strong>${esc(t.theme_name)}.</strong>${stat ? " " + esc(stat) : ""}</li>`;
+    }).join("") || "<li>No themes available.</li>";
+    if (visibleThemes.length > TOP_N_THEMES_PDF) {
+      var remainingPdf = visibleThemes.length - TOP_N_THEMES_PDF;
+      takeawaysHtml += `<li style="list-style:none; padding-left:0; color:#6b7280;">+ ${remainingPdf} more theme${remainingPdf === 1 ? "" : "s"} — see "Detailed themes and evidence" below</li>`;
+    }
+    var tensionsHtml = (execSummary.tensions || []).filter(Boolean).map(i => `<li>${textOf(i)}</li>`).join("")
+      || "<li>No tensions available.</li>";
+
+
+
+
+    var implicationPdf = execSummary.strategic_implication
+      ? `<div class="pdf-tldr">
+           <div class="pdf-tldr-label">Strategic implication</div>
+           <div class="pdf-tldr-text">${esc(execSummary.strategic_implication)}</div>
+         </div>`
+      : "";
+
+
+
+
+    var actions = Array.isArray(execSummary.leadership_actions) ? execSummary.leadership_actions.filter(Boolean) : [];
+    var leadershipPdf = actions.length ? `
+      <div class="pdf-section-heading">Recommended actions</div>
+      <div style="font-size:12px; color:#6b7280; margin:-4px 0 10px;">Listed in priority order — most urgent first.</div>
+      <ol class="pdf-list" style="padding-left:20px;">
+        ${actions.map(a => `<li style="margin-bottom:10px;"><strong>${esc(a.title || "")}.</strong> ${esc(a.body || "")}</li>`).join("")}
+      </ol>` : "";
+
+
+
+
+    var risks = Array.isArray(execSummary.risks) ? execSummary.risks.filter(Boolean) : [];
+    var risksPdf = risks.length ? `
+      <div class="pdf-section-heading" style="margin-top:32px;">Risks if this remains unresolved</div>
+      <div style="font-size:12px; color:#6b7280; margin:-4px 0 10px;">Listed independently of the actions above — not in priority order, and not a 1:1 match to any single action.</div>
+      <ul class="pdf-list" style="padding-left:20px;">
+        ${risks.map(r => `<li style="margin-bottom:10px;"><strong>${esc(r.kicker || "Risk")}:</strong> ${esc(r.title || "")} — ${esc(r.body || "")}</li>`).join("")}
+      </ul>` : "";
+
+
+
+
+    var dv = execSummary.decision_view;
+    var decisionNarrative = dv ? [
+      { step: "1. Situation", title: "What is happening?", body: dv.what_is_happening, className: "context" },
+      { step: "2. Significance", title: "Why it matters", body: dv.why_it_matters, className: "impact" },
+      { step: "3. Exposure", title: "Biggest risk", body: dv.biggest_risk, className: "risk" }
+    ].filter(item => item.body) : [];
+    var decisionRequired = dv ? dv.decision_this_informs : "";
+
+
+
+
+    var decisionPdf = (decisionNarrative.length || decisionRequired) ? `
+      <div class="pdf-section-heading">Executive Summary</div>
+
+
+
+
+      ${decisionNarrative.length ? `
+        <div class="pdf-decision-flow">
+          ${decisionNarrative.map((item, index) => `
+            <div class="pdf-decision-card ${item.className}">
+              <div class="pdf-decision-step">${esc(item.step)}</div>
+              <div class="pdf-decision-title">${esc(item.title)}</div>
+              <div class="pdf-decision-copy">${esc(item.body)}</div>
+            </div>
+            ${index < decisionNarrative.length - 1 ? `<div class="pdf-decision-arrow">→</div>` : ""}
+          `).join("")}
+        </div>` : ""}
+
+
+
+
+      ${decisionRequired ? `
+        <div class="pdf-decision-outcome">
+          <div class="pdf-decision-outcome-title">Decision to be made</div>
+          <div class="pdf-decision-outcome-copy">${esc(decisionRequired)}</div>
+        </div>` : ""}
+    ` : "";
+
+
+
+
+    var themeSections = visibleThemes.map(function (theme, idx) {
+      var d = theme.data_by_theme || {};
+      var firstFmt = formatMonthYear(d.first_seen || "");
+      var lastFmt  = formatMonthYear(d.last_seen  || "");
+      var catLabel = categoryLabel(theme);
+
+
+
+
+      var statBits = [
+        catLabel || null,
+        d.signals != null ? d.signals + " signals" : null,
+        d.proportion_of_feedback != null ? d.proportion_of_feedback + "% of feedback" : null,
+        displayData.has_company_data && d.companies != null ? d.companies + " companies" : null,
+        (firstFmt && lastFmt && firstFmt !== lastFmt) ? "First seen: " + firstFmt + " &nbsp;·&nbsp; Last seen: " + lastFmt : null
+      ].filter(Boolean).join(" &nbsp;·&nbsp; ");
+
+
+
+
+      var decisionItem = theme.decision_this_informs
+        ? `<div class="pdf-subsection">
+             <div class="pdf-subsection-label">Decision this informs</div>
+             <p class="pdf-body">${esc(theme.decision_this_informs)}</p>
+           </div>` : "";
+
+
+
+
+      var evidenceItems = (Array.isArray(theme.supporting_evidence) && theme.supporting_evidence.length)
+        ? `<div class="pdf-subsection">
+             <div class="pdf-subsection-label">Supporting evidence</div>
+             <ul class="pdf-list">${theme.supporting_evidence.map(i=>`<li>${esc(i)}</li>`).join("")}</ul>
+           </div>` : "";
+
+
+
+
+      var implicationItem = theme.implication
+        ? `<div class="pdf-subsection">
+             <div class="pdf-subsection-label">What this suggests</div>
+             <p class="pdf-body">${esc(theme.implication)}</p>
+           </div>` : "";
+
+
+
+
+      var metricsItems = (Array.isArray(theme.suggested_metrics) && theme.suggested_metrics.length)
+        ? `<div class="pdf-subsection">
+             <div class="pdf-subsection-label">Signals to monitor</div>
+             <ul class="pdf-list">${theme.suggested_metrics.map(i=>`<li>${esc(i)}</li>`).join("")}</ul>
+           </div>` : "";
+
+
+
+
+      return `
+        <div class="pdf-theme">
+          <div class="pdf-theme-number">${idx + 1}</div>
+          <div class="pdf-theme-body">
+            <div class="pdf-theme-title">${esc(theme.theme_name)}</div>
+            <p class="pdf-takeaway">${esc(theme.strategic_takeaway || "")}</p>
+            <div class="pdf-stats">${statBits}</div>
+            ${decisionItem}${evidenceItems}${implicationItem}${metricsItems}
+          </div>
+        </div>`;
+    }).join("");
+
+    var unclassifiedItemsPdf = unclassifiedItems.length ? `
+      <div class="pdf-theme">
+        <div class="pdf-theme-number">–</div>
+        <div class="pdf-theme-body">
+          <div class="pdf-theme-title">Items with no theme assigned</div>
+          <p class="pdf-takeaway">These items didn't share enough in common with other feedback to form a recurring theme — often one-off requests or isolated mentions of a topic that didn't recur elsewhere in this dataset.</p>
+          <ul class="pdf-list">
+            ${unclassifiedItems.map(item => {
+              var meta = [item.company, formatMonthYear(item.event_date_iso)].filter(Boolean).join(", ");
+              return `<li><strong>${esc(item.excerpt)}</strong>${meta ? ` (${esc(meta)})` : ""} — <em>${esc(item.reason)}</em></li>`;
+            }).join("")}
+          </ul>
+        </div>
+      </div>` : "";
+
+
+
+
+
+
+    var html = `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>${esc(reportTitleText)} | Intuifi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+
+
+
+    body {
+      font-family: "Roboto", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+      color: #111827;
+      background: #fff;
+      padding: 0;
+    }
+
+
+
+
+    .pdf-toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #0f766e;
+      color: #fff;
+      padding: 12px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-family: "Roboto", system-ui, sans-serif;
+    }
+
+
+
+
+    .pdf-toolbar-note {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+
+
+
+    .pdf-print-btn {
+      border: 2px solid #fff;
+      background: transparent;
+      color: #fff;
+      padding: 8px 20px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      font-family: "Roboto", system-ui, sans-serif;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+
+
+
+
+    .pdf-print-btn:hover {
+      background: #fff;
+      color: #0f766e;
+    }
+
+
+
+
+    .pdf-page {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 56px 60px 72px;
+    }
+
+
+
+
+    .pdf-cover {
+      border-bottom: 3px solid #0f766e;
+      padding-bottom: 28px;
+      margin-bottom: 36px;
+    }
+
+
+
+
+    .pdf-cover-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 28px;
+    }
+
+
+
+
+    .pdf-cover-copy {
+      min-width: 0;
+    }
+
+
+
+
+    .pdf-logo {
+      display: block;
+      width: 132px;
+      height: auto;
+      flex: 0 0 auto;
+      overflow: visible;
+    }
+
+
+
+
+    .pdf-cover-label {
+      font-family: "Roboto", system-ui, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #0f766e;
+      margin-bottom: 10px;
+    }
+
+
+
+
+    .pdf-cover-title {
+      font-size: 32px;
+      font-weight: 700;
+      color: #111827;
+      line-height: 1.2;
+      margin-bottom: 8px;
+      font-family: "Roboto", system-ui, sans-serif;
+    }
+
+
+
+
+    .pdf-cover-date {
+      font-size: 13px;
+      color: #6b7280;
+      font-family: "Roboto", system-ui, sans-serif;
+    }
+
+
+
+
+    .pdf-section-heading {
+      font-family: "Roboto", system-ui, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #0f766e;
+      margin-bottom: 16px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #ccfbf1;
+    }
+
+
+
+
+
+
+    .pdf-decision-flow {
+      display: flex;
+      align-items: stretch;
+      gap: 8px;
+      margin-bottom: 16px;
+      break-inside: avoid;
+    }
+
+
+
+
+    .pdf-decision-card {
+      flex: 1 1 0;
+      min-width: 0;
+      border: 1px solid #e5e7eb;
+      border-top-width: 4px;
+      border-radius: 10px;
+      padding: 12px;
+      background: #ffffff;
+    }
+
+
+
+
+    .pdf-decision-card.context {
+      border-color: #ccfbf1;
+      border-top-color: #0f766e;
+      background: #f0fdfa;
+    }
+
+
+
+
+    .pdf-decision-card.impact {
+      border-color: #fde68a;
+      border-top-color: #d97706;
+      background: #fffbeb;
+    }
+
+
+
+
+    .pdf-decision-card.risk {
+      border-color: #fecaca;
+      border-top-color: #dc2626;
+      background: #fef2f2;
+    }
+
+
+
+
+    .pdf-decision-step {
+      margin-bottom: 6px;
+      color: #6b7280;
+      font-size: 8.5px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+
+
+
+    .pdf-decision-title {
+      margin-bottom: 6px;
+      color: #111827;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+
+
+
+    .pdf-decision-copy {
+      color: #374151;
+      font-size: 9.5px;
+      line-height: 1.45;
+    }
+
+
+
+
+    .pdf-decision-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 18px;
+      color: #9ca3af;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+
+
+
+    .pdf-decision-outcome {
+      margin-top: 16px;
+      margin-bottom: 16px;
+      padding: 14px;
+      border: 2px solid #0f766e;
+      border-radius: 10px;
+      background: #ecfdf5;
+      break-inside: avoid;
+    }
+
+
+
+
+    .pdf-decision-outcome-title {
+      margin-bottom: 5px;
+      color: #0f766e;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+
+
+
+    .pdf-decision-outcome-copy {
+      color: #1f2937;
+      font-size: 11px;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+
+
+
+    .pdf-tldr {
+      background: #ecfdf5;
+      border-left: 4px solid #0f766e;
+      padding: 14px 18px;
+      margin-bottom: 24px;
+      border-radius: 0 6px 6px 0;
+    }
+
+
+
+
+    .pdf-tldr-label {
+      font-family: "Roboto", system-ui, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #0f766e;
+      margin-bottom: 6px;
+    }
+
+
+
+
+    .pdf-tldr-text {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #1f2937;
+    }
+
+
+
+
+    .pdf-two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+
+
+
+
+    .pdf-panel-title {
+      font-family: "Roboto", system-ui, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      color: #374151;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+
+
+
+    .pdf-bullet-list {
+      list-style: none;
+      padding: 0;
+    }
+
+
+
+
+    .pdf-bullet-list li {
+      position: relative;
+      padding-left: 18px;
+      margin-bottom: 8px;
+      font-size: 13px;
+      line-height: 1.55;
+      color: #374151;
+    }
+
+
+
+
+    .pdf-bullet-list--check li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      top: 1px;
+      color: #0f766e;
+      font-size: 11px;
+    }
+
+
+
+
+    .pdf-bullet-list--warn li::before {
+      content: "⚠";
+      position: absolute;
+      left: 0;
+      top: 1px;
+      color: #b45309;
+      font-size: 11px;
+    }
+
+
+
+
+    .pdf-themes-heading {
+      font-family: "Roboto", system-ui, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #0f766e;
+      margin-top: 32px;
+      margin-bottom: 20px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #ccfbf1;
+    }
+
+
+
+
+    .pdf-theme {
+      display: flex;
+      gap: 18px;
+      padding: 20px 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+
+
+
+    .pdf-theme:last-child { border-bottom: none; }
+
+
+
+
+    .pdf-theme-number {
+      font-family: "Roboto", system-ui, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: #0f766e;
+      min-width: 22px;
+      padding-top: 2px;
+    }
+
+
+
+
+    .pdf-theme-body { flex: 1; min-width: 0; }
+
+
+
+
+    .pdf-theme-title {
+      font-family: "Roboto", system-ui, sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+
+
+
+
+    .pdf-takeaway {
+      font-size: 13px;
+      line-height: 1.6;
+      color: #374151;
+      margin-bottom: 8px;
+    }
+
+
+
+
+    .pdf-stats {
+      font-family: "Roboto", system-ui, sans-serif;
+      font-size: 11px;
+      color: #6b7280;
+      margin-bottom: 14px;
+      font-weight: 500;
+    }
+
+
+
+
+    .pdf-subsection {
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px dashed #e5e7eb;
+    }
+
+
+
+
+    .pdf-subsection-label {
+      font-family: "Roboto", system-ui, sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: #9ca3af;
+      margin-bottom: 6px;
+    }
+
+
+
+
+    .pdf-list {
+      padding-left: 16px;
+      margin: 0;
+    }
+
+
+
+
+    .pdf-list li {
+      font-size: 12px;
+      line-height: 1.55;
+      color: #4b5563;
+      margin-bottom: 5px;
+    }
+
+
+
+
+    .pdf-body {
+      font-size: 12px;
+      line-height: 1.6;
+      color: #4b5563;
+    }
+
+
+
+
+    .pdf-footer {
+      margin-top: 48px;
+      padding-top: 16px;
+      border-top: 1px solid #e5e7eb;
+      font-family: "Roboto", system-ui, sans-serif;
+      font-size: 11px;
+      color: #9ca3af;
+      display: flex;
+      justify-content: space-between;
+    }
+
+
+
+
+    @media print {
+      .pdf-toolbar { display: none !important; }
+      .pdf-page { padding: 32px 40px 48px; }
+      .pdf-theme { break-inside: avoid; }
+      .pdf-subsection { break-inside: avoid; }
+      body { background: #fff; }
+    }
+  </style>
+</head>
+<body>
+
+
+
+
+  <div class="pdf-toolbar">
+    <span class="pdf-toolbar-note">Review your report below, then save it as a PDF.</span>
+    <button class="pdf-print-btn" onclick="window.print()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Save as PDF
+    </button>
+  </div>
+
+
+
+
+  <div class="pdf-page">
+
+
+
+
+    <div class="pdf-cover">
+      <div class="pdf-cover-top">
+        <div class="pdf-cover-copy">
+          <div class="pdf-cover-label">Customer Insight Report</div>
+          <div class="pdf-cover-title">${esc(reportTitleText)}</div>
+          <div class="pdf-cover-date">Generated ${date}</div>
+        </div>
+        ${logoMarkup}
+      </div>
+    </div>
+
+
+
+
+    ${decisionPdf}
+    ${leadershipPdf}
+    ${risksPdf}
+
+
+
+
+    <div class="pdf-section-heading" style="margin-top:32px;">At a glance</div>
+
+
+
+
+    ${implicationPdf}
+
+
+
+
+    <div class="pdf-two-col" style="margin-top:24px;">
+      <div>
+        <div class="pdf-panel-title">Themes</div>
+        <ul class="pdf-bullet-list pdf-bullet-list--check">${takeawaysHtml}</ul>
+      </div>
+      <div>
+        <div class="pdf-panel-title">Tensions to be aware of</div>
+        <ul class="pdf-bullet-list pdf-bullet-list--warn">${tensionsHtml}</ul>
+      </div>
+    </div>
+
+
+
+
+    <div class="pdf-themes-heading">Detailed themes and evidence</div>
+    ${themeSections}
+    ${unclassifiedItemsPdf}
+
+
+
+
+
+    <div class="pdf-footer">
+      <span>Generated by Intuifi &nbsp;·&nbsp; intuifi.io</span>
+      <span>${date}</span>
+    </div>
+
+
+
+
+  </div>
+</body>
+</html>`;
+
+
+
+
+    var blob = new Blob([html], { type: "text/html;charset=utf-8" });
+    var url  = URL.createObjectURL(blob);
+    window.open(url, "_blank");
+  });
+
+
+
+
+})();
+</script>
+
+
+
+
+</body>
+</html>
