@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What I Got Wrong About Leadership Reporting | Intuifi</title>
+  <meta name="description" content="What I learned about leadership reporting, why the work continues after an update is sent, and how shared evidence could help teams align earlier.">
+  <link rel="canonical" href="https://intuifi.io/blogs/what-i-got-wrong-about-leadership-reporting">
+  <meta property="og:title" content="What I Got Wrong About Leadership Reporting | Intuifi">
+  <meta property="og:description" content="What I learned about leadership reporting, why the work continues after an update is sent, and how shared evidence could help teams align earlier.">
+  <meta property="og:image" content="https://intuifi.io/assets/intuifi-og-image.png">
+  <meta property="og:url" content="https://intuifi.io/blogs/what-i-got-wrong-about-leadership-reporting">
+  <meta property="og:type" content="article">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="What I Got Wrong About Leadership Reporting | Intuifi">
+  <meta name="twitter:description" content="What I learned about leadership reporting, why the work continues after an update is sent, and how shared evidence could help teams align earlier.">
+  <meta name="twitter:image" content="https://intuifi.io/assets/intuifi-og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="https://intuifi.io/assets/intuifi-icon.png">
+  <link rel="apple-touch-icon" href="https://intuifi.io/assets/intuifi-icon.png">
+  <meta name="theme-color" content="#0f625c">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What I Got Wrong About Leadership Reporting",
+    "description": "What I learned about leadership reporting, why the work continues after an update is sent, and how shared evidence could help teams align earlier.",
+    "datePublished": "2026-09-16",
+    "author": { "@type": "Person", "name": "Chris Burgess" },
+    "publisher": { "@type": "Organization", "name": "Intuifi", "url": "https://intuifi.io" },
+    "mainEntityOfPage": "https://intuifi.io/blogs/what-i-got-wrong-about-leadership-reporting"
+  }
+  </script>
+
+  <style>
+    :root{
+      --brand:#0f625c; --brand-light:#e6efee; --text:#111111; --muted:#5a5f66;
+      --border:#e7eaee; --bg-grey:#f6f8f9; --container:720px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:Roboto,system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:var(--text);background:#fff;line-height:1.6;}
+    .inner{max-width:var(--container);margin:0 auto;padding:0 20px;}
+    a{color:var(--brand);}
+    .site-header{background:#fff;border-bottom:1px solid var(--border);padding:16px 20px;}
+    .site-header .inner{max-width:1000px;display:flex;align-items:center;justify-content:center;}
+    .logo{display:block;width:140px;height:auto;}
+    .back-link{display:inline-block;margin:24px 0 0;font-size:14px;font-weight:600;text-decoration:none;color:var(--muted);}
+    .back-link:hover{color:var(--brand);}
+    article{padding:16px 0 48px;}
+    .byline{font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;margin:24px 0 8px;}
+    h1.post-title{font-size:clamp(28px,4vw,38px);line-height:1.2;margin:0 0 24px;}
+    article h2{font-size:22px;margin:36px 0 12px;}
+    article p{font-size:16px;color:var(--text);margin:0 0 18px;}
+    .pull-quote{border-left:4px solid var(--brand);padding:4px 0 4px 20px;margin:28px 0;font-style:italic;font-size:17px;}
+    .pull-quote p{margin:0 0 8px;font-style:italic;}
+    .pull-quote footer{font-style:normal;font-size:14px;color:var(--muted);font-weight:600;}
+    .cta-band{background:var(--brand);border-radius:20px;padding:32px;text-align:center;margin-top:32px;}
+    .cta-band h3{color:#fff;margin:0 0 8px;font-size:20px;}
+    .cta-band p{color:rgba(255,255,255,0.85);margin:0 0 18px;font-size:15px;}
+    .cta-band a.btn{display:inline-block;background:#fff;color:var(--brand);border-radius:24px;padding:12px 22px;font-weight:700;text-decoration:none;font-size:15px;}
+    .site-footer{background:var(--brand);padding:20px;text-align:center;margin-top:0;}
+    .site-footer p{margin:0;font-size:13px;color:rgba(255,255,255,0.7);}
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="inner"><a href="/"><img class="logo" src="/assets/logo.png" alt="Intuifi logo"></a></div>
+  </header>
+
+  <div class="inner">
+    <a class="back-link" href="/blogs">&larr; Back to the blog</a>
+
+    <article>
+      <p class="byline">By Chris Burgess</p>
+      <h1 class="post-title">What I Got Wrong About Leadership Reporting</h1>
+
+      <p>When I started building Intuifi, I had a very specific picture in my head of how reporting worked. I pictured it as a straight line: you do the analysis, write up the executive summary, send it to the CEO, and move on to the rest of your work.</p>
+
+      <p>I assumed the main, and perhaps only, audience for Intuifi would be the top layer of leadership.</p>
+
+      <p>But I was missing the messy reality of what actually happens after you hit 'send'. The CEO shares the update with the CTO, who wants to understand how you reached your conclusions. The development team needs to examine the source records behind those findings. Soon, you're fielding questions: Is this the same information from last month? Has anything changed? Which version are we looking at?</p>
+
+      <p>The original report might be finished, but the reporting work never really stops.</p>
+
+      <h2>The conversation that changed my roadmap</h2>
+      <p>Before I started speaking to early users like Kobai, my focus was entirely on giving leadership better visibility. But talking to them completely shifted how I thought about the problem I was solving.</p>
+
+      <p>What I learned from Kobai was that leadership didn't just want a polished final proposal. They expected the team to align before that proposal was brought forward. That showed me that the value of Intuifi could start much earlier in the process than I had expected.</p>
+
+      <p>If several people could work from the same findings and underlying evidence, they would have a shared basis for discussing what actually matters. It wasn't just about executive visibility; it could also help decision-makers reach consensus faster, with less effort and a more objective basis for the discussion.</p>
+
+      <h2>The hidden cost of the 'quick update'</h2>
+      <p>Once I saw it from that angle, I understood why the same reporting work keeps coming back.</p>
+
+      <p>Most leadership updates are static. They capture conclusions at a single point in time, but the detail behind those conclusions usually lives somewhere else. The presentation contains the headline, the examples sit in a separate document, and the source records are scattered across tickets, notes, and feedback channels.</p>
+
+      <p>You know how those pieces connect because you built the update. But nobody else can follow that route without coming back to ask you for directions. This creates more work whenever someone wants to look beyond the summary. You have to find the original records, explain why an example was included, and clarify which version of the data someone is looking at.</p>
+
+      <p>I realised that the problem I needed to solve wasn't helping people produce one report. It was maintaining the connection between the summary, the supporting evidence, and every conversation that follows.</p>
+
+      <h2>Building for the team, not just the CEO</h2>
+      <p>Because of that realisation, I shifted how I thought about Intuifi. Instead of treating the summary as the end product, I saw that the underlying findings and evidence needed to be useful to the people working through the problem before anything reached the CEO.</p>
+
+      <p>Intuifi gives technical and operational leaders access to the detail behind the summary, so they can inspect the evidence and use the same analysis as a basis for discussion. That creates the potential to reach a shared view before taking a recommendation to leadership.</p>
+
+      <p>You no longer have to predict every question or crowd the main report with supporting detail. The CEO can get the main conclusions, while technical leaders can examine individual findings and the records supporting them. Both are working from the same analysis.</p>
+
+      <p>When the update moves through the business, follow-up questions become part of the same conversation, rather than the start of a brand new reporting task.</p>
+
+      <p>As Katy Parkhill, Head of Engineering at Kobai, told me:</p>
+
+      <blockquote class="pull-quote">
+        <p>"Once the analysis was done, I could look at the details with the CTO and development team, then share the executive summary with the CEO. Having both levels in one place means I can give different people the information they need without rebuilding the report for each audience."</p>
+        <footer>Katy Parkhill, Head of Engineering, Kobai</footer>
+      </blockquote>
+
+      <h2>The judgement still sits with you</h2>
+      <p>Giving leadership access to the evidence doesn't remove the need for your judgement. If anything, it highlights it.</p>
+
+      <p>They can review the findings and understand the data, but they still need your context. You know which problems require an immediate response, which changes are temporary, the trade-offs involved, and what the team can realistically do next. Intuifi reduces the time you spend finding and relaying information, but it doesn't make those decisions for you.</p>
+
+      <p>I used to think reporting was about the final presentation. Now I know it's about maintaining the thread between the evidence and the conversation.</p>
+
+      <p>The next time you send leadership an update, give them a way to inspect the evidence behind it. When the follow-up questions arrive, you can spend your time discussing what the business should do next instead of digging through your source material to find the answers.</p>
+
+      <div class="cta-band">
+        <h3>See what Intuifi finds in your own data</h3>
+        <p>Every finding links back to the evidence behind it, so you can see the reasoning instead of just trusting the answer. You stay the one deciding what happens next.</p>
+        <a class="btn" href="/#early-access">Try Intuifi</a>
+      </div>
+    </article>
+  </div>
+
+  <footer class="site-footer"><p>© 2026 Intuifi</p></footer>
+
+  <script data-goatcounter="https://intuifi.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+  <noscript><img src="https://intuifi.goatcounter.com/count?p=/blogs/what-i-got-wrong-about-leadership-reporting" alt="" referrerpolicy="no-referrer-when-downgrade"></noscript>
+
+</body>
+</html>
