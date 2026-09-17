@@ -27,13 +27,19 @@
        <priority>0.6000</priority>
   </url>
   <url>
-       <loc>https://intuifi.io/blogs/keeping-leadership-in-the-loop</loc>
+       <loc>https://intuifi.io/blogs/why-i-stopped-telling-people-what-data-to-use</loc>
        <lastmod>2026-09-16T00:00:00+00:00</lastmod>
        <changefreq>monthly</changefreq>
        <priority>0.6000</priority>
   </url>
   <url>
-       <loc>https://intuifi.io/blogs/making-sense-of-scattered-feedback</loc>
+       <loc>https://intuifi.io/blogs/what-i-got-wrong-about-leadership-reporting</loc>
+       <lastmod>2026-09-16T00:00:00+00:00</lastmod>
+       <changefreq>monthly</changefreq>
+       <priority>0.6000</priority>
+  </url>
+  <url>
+       <loc>https://intuifi.io/blogs/what-i-got-wrong-about-executive-visibility</loc>
        <lastmod>2026-09-16T00:00:00+00:00</lastmod>
        <changefreq>monthly</changefreq>
        <priority>0.6000</priority>
