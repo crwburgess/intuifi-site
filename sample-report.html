@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- saved from url=(0032)https://intuifi.io/sample-report -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sample Strategic Insights Report | Intuifi</title>
   <meta name="description" content="See a real example of an Intuifi report: themes, evidence, and recommended actions drawn from scattered feedback data.">
   <link rel="canonical" href="https://intuifi.io/sample-report">
   <link rel="icon" type="image/png" href="https://intuifi.io/assets/intuifi-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./Sample Strategic Insights Report _ Intuifi_files/css2" rel="stylesheet">
 
 
   <style>
@@ -78,6 +78,23 @@
 
 
     .header-title-block { min-width: 0; }
+
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--muted);
+      text-decoration: none;
+      margin-bottom: 10px;
+    }
+
+
+    .back-link:hover { color: var(--ink); }
+
+
+    .back-link svg { flex: 0 0 auto; }
 
 
     .report-title {
@@ -975,71 +992,549 @@
       .decision-outcome { padding: 16px; }
       .evidence-item { grid-template-columns: 1fr; }
     }
+
+    /* Pin the Intuifi logo to the top-right corner of the header, regardless of title/subtitle length */
+    .header { position: relative; }
+    .header-top { position: relative; }
+    .header-title-block { padding-right: 170px; }
+    .brand-cluster { position: absolute; top: 0; right: 0; margin: 0; }
+    @media (max-width: 620px) {
+      .header-title-block { padding-right: 0; }
+      .brand-cluster { position: static; margin-top: 12px; }
+    }
   </style>
 </head>
-
-
 <body>
   <main class="page">
     <header class="header card">
       <div class="header-top">
         <div class="header-title-block">
+          <a class="back-link" href="https://intuifi.io/">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            Back to Intuifi
+          </a>
           <h1 class="report-title" id="reportTitle">Sample Strategic Insights Report</h1>
-          <p class="report-subtitle" id="reportSubtitle"></p>
+          <p class="report-subtitle" id="reportSubtitle">A sample report built from support tickets, calls and survey responses across ten accounts on a platform used to schedule and bill customer onboarding and implementation work for B2B software companies.</p>
           <div class="header-buttons">
-            <button id="previewPdf" class="btn">
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <button id="previewPdf" class="btn" onclick="window.print()">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
               Save as PDF
             </button>
           </div>
         </div>
         <div class="brand-cluster">
           <div class="logo-box intuifi-logo-box">
-          <svg
-            class="brand-logo"
-            id="intuifiLogo"
-            viewBox="0 0 1288 655"
-            role="img"
-            aria-label="Intuifi"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+          <svg class="brand-logo" id="intuifiLogo" viewBox="0 0 1288 655" role="img" aria-label="Intuifi" xmlns="http://www.w3.org/2000/svg">
             <path d="M1214,405L1014,405L1013,406L1005,406L1004,407L998,408L995,410L991,411L989,413L985,415L975,425L975,426L971,431L969,435L969,437L967,440L966,448L965,449L965,654L1015,654L1015,556L1016,555L1214,555L1214,505L1016,505L1015,504L1015,456L1016,455L1214,455ZM892,405L892,654L941,654L941,405ZM622,405L622,613L623,614L623,617L624,618L624,621L626,624L626,626L629,630L630,633L633,636L633,637L639,643L640,643L643,646L646,647L648,649L652,651L657,652L658,653L661,653L662,654L831,654L832,653L838,652L851,645L861,635L861,634L863,632L868,622L869,616L870,615L870,611L871,610L871,406L870,405L821,405L821,604L820,605L672,605L671,604L671,405ZM348,405L347,406L347,455L446,455L447,456L447,654L497,654L497,456L498,455L597,455L597,406L596,405ZM83,410L78,415L77,418L75,420L74,426L73,427L73,654L123,654L123,493L124,492L279,647L280,647L286,652L290,653L291,654L304,654L305,653L307,653L311,651L318,644L321,638L321,636L322,635L322,405L273,405L273,568L272,569L114,411L107,407L105,407L104,406L99,406L98,405L97,406L92,406L91,407L89,407ZM0,405L0,654L49,654L49,405ZM1238,403L1237,404L1237,652L1287,652L1287,403ZM907,325L909,325L913,323L924,323L925,324L930,325L934,327L942,335L942,336L945,340L945,342L947,346L947,358L946,359L946,361L941,370L937,374L936,374L929,379L926,379L925,380L920,380L919,381L908,379L901,375L895,369L891,362L891,359L890,358L890,353L889,352L890,351L890,345L891,344L891,342L894,336L897,333L897,332L899,331L903,327ZM913,317L912,318L906,319L900,322L898,324L897,324L890,331L888,336L886,338L885,344L884,345L884,359L885,360L886,365L889,371L894,377L895,377L899,381L905,384L907,384L911,386L917,386L919,387L920,386L926,386L927,385L932,384L938,381L942,377L943,377L943,376L947,372L948,369L951,365L951,362L953,358L953,345L952,344L951,339L948,333L945,330L945,329L937,322L931,319L929,319L928,318L924,318L923,317ZM1106,173L1110,173L1111,174L1117,174L1121,176L1124,176L1126,178L1131,180L1135,184L1136,184L1143,192L1147,200L1147,202L1149,206L1149,213L1150,214L1150,216L1149,217L1149,224L1148,225L1147,230L1143,238L1138,243L1138,244L1136,245L1131,250L1123,254L1121,254L1117,256L1110,256L1109,257L1106,257L1105,256L1099,256L1098,255L1092,254L1085,250L1082,247L1081,247L1076,242L1076,241L1073,238L1072,235L1070,233L1069,229L1068,228L1068,226L1067,225L1067,220L1066,219L1066,211L1067,210L1067,205L1068,204L1069,199L1072,193L1075,190L1075,189L1081,183L1082,183L1085,180L1088,179L1090,177L1094,176L1095,175L1098,175L1099,174L1105,174ZM1104,167L1103,168L1098,168L1097,169L1091,170L1081,175L1072,183L1072,184L1067,190L1063,198L1063,200L1061,204L1061,209L1060,210L1060,220L1061,221L1061,226L1062,227L1063,232L1068,242L1075,250L1076,250L1083,256L1089,259L1091,259L1094,261L1110,263L1111,262L1118,262L1119,261L1122,261L1125,259L1127,259L1131,257L1133,255L1137,253L1146,244L1146,243L1150,238L1151,234L1153,231L1154,225L1155,224L1155,216L1156,215L1155,214L1155,205L1154,204L1152,196L1150,192L1148,190L1147,187L1137,177L1136,177L1131,173L1127,171L1125,171L1122,169L1119,169L1118,168L1112,168L1111,167ZM914,19L929,19L930,20L938,21L939,22L944,23L950,26L955,30L956,30L965,38L965,39L969,43L969,44L973,49L976,55L976,57L978,60L979,68L980,69L980,87L979,88L979,92L978,93L978,96L976,99L976,101L973,107L969,112L969,113L957,125L956,125L951,129L943,133L941,133L937,135L934,135L933,136L927,136L926,137L917,137L916,136L910,136L909,135L906,135L905,134L900,133L890,128L887,125L886,125L874,113L874,112L870,107L867,101L867,99L865,96L864,88L863,87L863,68L864,67L864,63L865,62L866,57L873,44L883,33L884,33L887,30L888,30L893,26L899,23L901,23L905,21L908,21L909,20L913,20ZM908,14L907,15L904,15L903,16L898,17L888,22L886,24L882,26L870,38L870,39L867,42L866,45L864,47L864,49L861,54L861,56L859,59L859,62L858,63L858,67L857,68L857,88L858,89L859,97L861,100L861,102L866,112L871,118L871,119L880,128L881,128L884,131L899,139L905,140L906,141L909,141L910,142L918,142L919,143L924,143L925,142L933,142L934,141L937,141L938,140L944,139L947,137L949,137L953,135L955,133L959,131L962,128L963,128L972,119L972,118L975,115L976,112L978,110L982,102L982,100L984,96L984,93L985,92L985,88L986,87L986,69L985,68L985,63L984,62L984,59L982,56L982,54L980,51L980,49L977,45L976,42L973,39L973,38L962,27L961,27L955,22L947,18L945,18L942,16L939,16L938,15L935,15L934,14L929,14L928,13L914,13L913,14ZM911,6L932,6L933,7L938,7L939,8L945,9L948,11L950,11L956,14L958,16L961,17L970,25L971,25L982,38L983,41L985,43L989,51L989,53L991,57L991,60L992,61L992,64L993,65L993,71L994,72L994,82L993,83L993,90L992,91L991,99L989,102L988,107L983,115L983,118L986,121L987,121L1002,133L1006,135L1017,144L1021,146L1036,158L1040,160L1043,163L1044,163L1047,166L1048,166L1051,169L1055,171L1058,174L1059,174L1064,178L1067,178L1072,173L1073,173L1076,170L1077,170L1082,166L1086,164L1094,162L1095,161L1099,161L1100,160L1116,160L1117,161L1121,161L1122,162L1130,164L1134,166L1136,168L1140,170L1144,174L1145,174L1153,183L1160,196L1161,202L1162,203L1162,207L1163,208L1163,222L1162,223L1161,231L1157,239L1157,241L1155,243L1153,247L1149,251L1149,252L1137,262L1127,267L1121,268L1120,269L1116,269L1115,270L1100,270L1099,269L1095,269L1094,268L1092,268L1091,267L1089,267L1088,266L1086,266L1082,264L1080,262L1076,260L1073,257L1072,257L1066,251L1064,251L1062,253L1058,255L1055,258L1054,258L1051,261L1047,263L1044,266L1040,268L1033,274L1032,274L1026,279L1022,281L1015,287L1014,287L1008,292L1004,294L997,300L996,300L990,305L986,307L983,310L979,312L972,318L971,318L965,323L964,323L958,328L957,328L956,330L956,334L958,337L958,339L960,343L961,354L960,355L960,361L959,362L958,367L954,375L950,379L950,380L942,387L937,389L935,391L933,391L929,393L924,393L923,394L913,394L912,393L908,393L907,392L902,391L896,388L892,384L891,384L883,375L882,372L879,368L879,366L877,362L877,357L876,356L876,347L877,346L877,342L878,341L879,335L881,333L883,328L894,317L897,316L899,314L903,312L909,311L910,310L917,310L918,309L920,310L927,310L928,311L936,313L943,318L944,318L948,322L952,323L957,319L958,319L961,316L965,314L968,311L972,309L979,303L983,301L986,298L990,296L997,290L998,290L1004,285L1008,283L1015,277L1016,277L1022,272L1026,270L1033,264L1034,264L1040,259L1044,257L1051,251L1052,251L1058,246L1059,246L1060,244L1060,241L1056,234L1056,232L1054,228L1054,224L1053,223L1053,206L1054,205L1054,202L1055,201L1057,193L1060,188L1060,185L1052,178L1048,176L1037,167L1033,165L1018,153L1014,151L999,139L995,137L992,134L991,134L988,131L987,131L984,128L983,128L979,125L976,125L967,134L966,134L963,137L949,145L947,145L946,146L944,146L940,148L937,148L936,149L931,149L930,150L913,150L912,149L907,149L906,148L899,147L896,145L894,145L884,140L878,135L877,135L864,122L864,121L861,118L860,115L858,113L855,107L855,105L852,99L852,96L851,95L851,92L850,91L850,86L849,85L849,71L850,70L850,64L851,63L851,60L852,59L852,56L854,53L854,51L859,41L861,39L863,35L867,31L867,30L878,20L879,20L882,17L885,16L887,14L893,11L895,11L896,10L898,10L902,8L905,8L906,7L910,7ZM911,0L910,1L905,1L904,2L901,2L900,3L892,5L882,10L880,12L877,13L874,16L873,16L860,29L860,30L857,33L854,39L852,41L852,43L848,50L848,52L846,56L846,59L845,60L845,64L844,65L844,71L843,72L843,84L844,85L844,91L845,92L845,96L846,97L846,100L847,101L848,106L854,118L856,120L858,124L861,127L861,128L871,138L872,138L875,141L876,141L881,145L893,151L895,151L896,152L898,152L902,154L905,154L906,155L912,155L913,156L930,156L931,155L937,155L938,154L941,154L942,153L950,151L962,145L964,143L968,141L971,138L972,138L978,132L979,132L989,140L990,140L993,143L997,145L1000,148L1001,148L1004,151L1005,151L1008,154L1009,154L1012,157L1016,159L1027,168L1031,170L1046,182L1050,184L1053,187L1052,192L1050,195L1050,197L1048,201L1048,206L1047,207L1047,224L1048,225L1048,229L1049,230L1050,235L1053,241L1053,242L1050,245L1049,245L1046,248L1042,250L1035,256L1031,258L1028,261L1024,263L1017,269L1013,271L1010,274L1006,276L1003,279L999,281L992,287L988,289L985,292L981,294L974,300L970,302L967,305L963,307L960,310L959,310L956,313L955,313L951,316L943,310L937,307L932,306L931,305L928,305L927,304L909,304L908,305L905,305L899,308L897,308L890,313L889,313L880,322L880,323L876,328L874,332L874,334L872,337L872,340L871,341L871,346L870,347L870,357L871,358L871,363L872,364L873,369L878,379L886,388L887,388L893,393L901,397L903,397L907,399L911,399L912,400L925,400L926,399L930,399L931,398L936,397L947,391L957,381L957,380L961,375L963,371L964,366L965,365L965,362L966,361L966,355L967,354L967,350L966,349L966,342L965,341L965,339L963,335L963,332L966,329L970,327L977,321L978,321L984,316L988,314L995,308L999,306L1002,303L1006,301L1013,295L1017,293L1020,290L1024,288L1031,282L1035,280L1038,277L1042,275L1049,269L1053,267L1056,264L1057,264L1065,258L1070,263L1071,263L1074,266L1077,267L1079,269L1083,271L1085,271L1088,273L1090,273L1091,274L1094,274L1095,275L1100,275L1101,276L1115,276L1116,275L1121,275L1122,274L1125,274L1126,273L1131,272L1139,268L1145,263L1146,263L1156,253L1156,252L1159,249L1160,246L1162,244L1163,240L1165,237L1167,229L1168,228L1168,223L1169,222L1169,208L1168,207L1168,202L1167,201L1166,195L1164,192L1164,190L1161,184L1159,182L1157,178L1146,167L1145,167L1142,164L1139,163L1137,161L1131,158L1129,158L1125,156L1122,156L1121,155L1116,155L1115,154L1100,154L1099,155L1095,155L1094,156L1091,156L1090,157L1085,158L1071,166L1066,171L1064,171L1057,165L1053,163L1042,154L1038,152L1023,140L1019,138L1008,129L1004,127L1001,124L1000,124L997,121L996,121L993,118L992,118L990,116L990,115L993,110L993,108L995,105L995,103L997,99L997,96L998,95L998,91L999,90L999,82L1000,81L1000,74L999,73L999,65L998,64L998,60L997,59L997,56L996,55L995,50L992,45L991,41L989,39L986,33L983,30L983,29L971,17L970,17L967,14L966,14L961,10L951,5L949,5L948,4L946,4L942,2L939,2L938,1L933,1L932,0Z" fill="#2d615c" fill-rule="evenodd"></path>
           </svg>
           </div>
         </div>
       </div>
 
-
       <p class="header-summary-line" id="headerSummaryLine" style="display:none;"></p>
 
-
-      <aside class="meta-cluster" id="metaCluster"></aside>
+      <aside class="meta-cluster cols-3" id="metaCluster">
+        <div class="meta-card primary">
+          <div class="meta-card-main">
+            <svg class="meta-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14a9 3 0 0 0 18 0V5"></path><path d="M3 12a9 3 0 0 0 18 0"></path></svg>
+            <div class="meta-card-text"><strong>61</strong><span>records analysed</span></div>
+          </div>
+        </div>
+        <div class="meta-card warning">
+          <div class="meta-card-main">
+            <svg class="meta-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:var(--amber);"><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8a6 6 0 0 0-12 0c0 1 .23 2.23 1.5 3.5.72.72 1.23 1.53 1.41 2.5"></path></svg>
+            <div class="meta-card-text"><strong>5</strong><span>themes identified</span></div>
+          </div>
+        </div>
+        <div class="meta-card primary">
+          <div class="meta-card-main">
+            <svg class="meta-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            <div class="meta-card-text"><strong>3</strong><span>items with no theme assigned</span></div>
+          </div>
+        </div>
+      </aside>
     </header>
-
 
     <section class="card" id="execSection">
       <h2 class="section-title" id="executiveSummaryTitle" style="margin-top:0">Executive summary</h2>
-      <div id="decisionViewSection"></div>
-      <div id="leadershipSection"></div>
-      <div id="risksSection"></div>
+      <div id="decisionViewSection">
+      <section class="decision-section" aria-labelledby="executiveSummaryTitle">
+          <div class="decision-flow">
+              <article class="decision-card context">
+                <div class="decision-step">1. Situation</div>
+                <h3 class="decision-card-title">What's happening?</h3>
+                <p class="decision-card-copy">Invoice mismatches only hit accounts on the Xero integration. Scheduling conflicts only hit accounts running two or more engagements at once. And three accounts have gone quiet in the six weeks before their renewal.</p>
+              </article>
+              <article class="decision-card impact">
+                <div class="decision-step">2. Significance</div>
+                <h3 class="decision-card-title">Why it matters</h3>
+                <p class="decision-card-copy">The invoicing and scheduling issues are narrow and fixable. The real warning sign is the silence: it lines up with renewal dates, and one account mentioned reviewing other options.</p>
+              </article>
+              <article class="decision-card risk">
+                <div class="decision-step">3. Exposure</div>
+                <h3 class="decision-card-title">Biggest risk</h3>
+                <p class="decision-card-copy">Ticket volume alone hides the quiet accounts. Worth a direct call before their renewal, not after.</p>
+              </article>
+          </div>
+          <article class="decision-outcome">
+            <h3 class="decision-outcome-title">Decision to be made</h3>
+            <p class="decision-outcome-copy">Whether the drop-off in tickets from Solace Software, Ashford Digital and Brightline Technologies is a resolved issue or a warning sign worth a personal check-in before their renewal dates.</p>
+          </article>
+      </section></div>
+      <div id="leadershipSection">
+      <h2 class="section-title">Recommended actions</h2>
+      <p class="section-note">Listed in priority order — most urgent first.</p>
+      <section class="grid grid-3">
+          <div class="card action-card">
+            <h3 class="mini-title">1. Call Brightline Technologies first, and treat it differently to the other two</h3>
+            <p class="body-copy">Brightline Technologies isn't just one of three quiet accounts, it's also one of five accounts your sales team uses as a reference, and it's already mentioned reviewing other options once. Call this week and ask directly about renewal. Solace Software and Ashford Digital's silence doesn't carry the same signal and can follow after.</p>
+          </div>
+          <div class="card action-card">
+            <h3 class="mini-title">2. Fix the Xero export before the scheduling conflict</h3>
+            <p class="body-copy">Both bugs are scoped, but Xero hits every account on that integration with certainty, including Ridgemont Technologies, who is also waiting on the team-level reporting feature. Clearing their invoicing issue first is also the fastest way to earn the right to ask them to wait on that feature.</p>
+          </div>
+          <div class="card action-card">
+            <h3 class="mini-title">3. Hold team-level reporting back for two accounts, not all five</h3>
+            <p class="body-copy">Vantage Systems, Meridian Cloud and Larkfield Data aren't blocked by anything else in this report, so ship it for them now. Ridgemont Technologies and Brightline Technologies each have a live, unresolved issue of their own, so give them a firm date once that's fixed rather than a yes today.</p>
+          </div>
+      </section></div>
+      <div id="risksSection">
+      <h2 class="section-title">Risks if this remains unresolved</h2>
+      <p class="section-note">Listed independently of the actions above — not in priority order, and not a 1:1 match to any single action.</p>
+      <section class="grid grid-3">
+          <div class="card risk-card">
+            <div class="risk-kicker">Retention risk</div>
+            <h3 class="mini-title">Your best reference account is also your quietest one</h3>
+            <p class="body-copy">Brightline Technologies is one of five accounts you point to in sales conversations, and it's also the account that's gone quiet and mentioned reviewing other options. If it leaves, you lose a renewal and a reference story on the same day.</p>
+          </div>
+          <div class="card risk-card">
+            <div class="risk-kicker">Delivery risk</div>
+            <h3 class="mini-title">Fixing the bigger bug first leaves one account carrying two open issues</h3>
+            <p class="body-copy">If scheduling gets fixed before Xero, Ridgemont Technologies keeps hitting invoice mismatches while it's also waiting on the reporting feature it asked for. That's two open asks stacking on one account instead of one closed.</p>
+          </div>
+          <div class="card risk-card">
+            <div class="risk-kicker">Reference risk</div>
+            <h3 class="mini-title">Your other reference accounts are watching how this one gets handled</h3>
+            <p class="body-copy">Vantage Systems, Meridian Cloud, Ridgemont Technologies and Larkfield Data don't know Brightline Technologies is at risk, but if it churns quietly after raising a concern, that's the story your remaining reference accounts learn about raising concerns at all.</p>
+          </div>
+      </section></div>
     </section>
-
 
     <section class="card executive-card">
       <div class="executive-header">
         <h2 class="section-title" style="margin:0">At a glance</h2>
         <p class="section-note" style="margin:4px 0 0;">More detail than the summary above, short of the full evidence below.</p>
       </div>
-      <div class="executive-body" id="executiveBody"></div>
-      <div id="themeFlowSection"></div>
+      <div class="executive-body" id="executiveBody">
+      <div class="tldr-box">
+           <div class="tldr-label">Strategic implication</div>
+           <div class="tldr-text">The two biggest problems by volume are narrower than they look: one accounting integration, one scheduling workflow, both traceable to a specific cause. The real risk isn't in either of them, it's in three renewal-window accounts that have gone quiet, which ticket volume alone won't show you.</div>
+         </div>
+      <div class="executive-columns">
+        <div class="executive-panel">
+          <div class="panel-title">Themes</div>
+          <div class="summary-list">
+            <div class="summary-item">
+              <div class="summary-icon check">1</div>
+              <div>
+                <div class="summary-headline">Resource scheduling conflicts in multi-team accounts</div>
+                <div class="summary-detail">152 signals · 6 of 10 accounts</div>
+              </div>
+            </div>
+            <div class="summary-item">
+              <div class="summary-icon check">2</div>
+              <div>
+                <div class="summary-headline">Invoice mismatches on the Xero integration</div>
+                <div class="summary-detail">104 signals · 4 of 10 accounts</div>
+              </div>
+            </div>
+            <div class="summary-item">
+              <div class="summary-icon check">3</div>
+              <div>
+                <div class="summary-headline">Requests for time and cost breakdown on invoices</div>
+                <div class="summary-detail">71 signals · 8 of 10 accounts</div>
+              </div>
+            </div>
+            <div class="summary-item">
+              <div class="summary-icon check">4</div>
+              <div>
+                <div class="summary-headline">Multi-team reporting requests from reference accounts</div>
+                <div class="summary-detail">58 signals · 5 of 10 accounts</div>
+              </div>
+            </div>
+            <div class="summary-item">
+              <div class="summary-icon check">5</div>
+              <div>
+                <div class="summary-headline">Renewal-window accounts going quiet</div>
+                <div class="summary-detail">3 accounts flagged · renewals due within 90 days</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="executive-panel tension">
+          <div class="panel-title">Tensions to be aware of</div>
+          <div class="summary-list">
+            <div class="summary-item">
+              <div class="summary-icon warning">!</div>
+              <div>
+                <div class="summary-headline">Your best accounts are the ones asking for more</div>
+                <div class="summary-detail">The five accounts requesting team-level reporting are also the ones your sales team uses as references. Building for them competes with fixing the scoped bugs still affecting other accounts.</div>
+              </div>
+            </div>
+            <div class="summary-item">
+              <div class="summary-icon warning">!</div>
+              <div>
+                <div class="summary-headline">Ticket volume says nothing, silence says something</div>
+                <div class="summary-detail">Three renewal-window accounts have gone quiet after previously being among the most vocal. A volume-based view of the data would read this as good news.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div></div>
+      <div id="themeFlowSection">
+      <div class="theme-flow-inline">
+        <div class="flow-intro">
+          <h2 class="section-title" style="margin:0 0 8px">How the themes connect</h2>
+          <p>The two most common issues are narrower than they look: one integration, one scheduling condition. That narrowness is useful, it means faster fixes. The real complexity is downstream, in which accounts are asking for more and which have gone quiet.</p>
+          <div class="tag-legend">
+            <span class="legend-item"><span class="legend-swatch"></span>Named theme with evidence below</span>
+            <span class="legend-item"><span class="legend-swatch inferred"></span>Inferred pattern across themes</span>
+          </div>
+        </div>
+        <div class="theme-flow">
+        <div class="flow-column root">
+          <div class="flow-step-label">1. What's actually broken</div>
+          <h3>Two specific, fixable gaps, not a general reliability problem</h3>
+          <p>Scheduling conflicts and invoice mismatches both trace back to a single condition each: running two engagements at once, and using the Xero integration, rather than affecting the platform broadly.</p>
+          <div class="flow-tags"><span>Resource scheduling conflicts in multi-team accounts</span><span>Invoice mismatches on the Xero integration</span><span class="inferred">Concentrated in specific workflows and integrations, not platform-wide</span></div>
+        </div><div class="flow-arrow">→</div>
+        <div class="flow-column symptom">
+          <div class="flow-step-label">2. What clients ask for instead</div>
+          <h3>Your most visible accounts are asking for more</h3>
+          <p>Requests for clearer invoicing and team-level reporting are concentrated among the accounts you already use as references and case studies.</p>
+          <div class="flow-tags"><span>Requests for time and cost breakdown on invoices</span><span>Multi-team reporting requests from reference accounts</span><span class="inferred">Feature demand concentrated in your most visible accounts</span></div>
+        </div><div class="flow-arrow">→</div>
+        <div class="flow-column consequence">
+          <div class="flow-step-label">3. Where it shows up commercially</div>
+          <h3>Silence is doing more damage than complaints</h3>
+          <p>The accounts putting your renewal at risk aren't the ones filing tickets, they're the ones who've stopped, right as their renewal window opens.</p>
+          <div class="flow-tags"><span>Renewal-window accounts going quiet</span><span class="inferred">Silence lining up with renewal timing rather than resolution</span></div>
+        </div></div>
+      </div></div>
     </section>
-
 
     <section class="card">
       <h2 class="section-title" style="margin-top:0">Detailed themes and evidence</h2>
-      <div class="theme-stack" id="themeStack"></div>
-    </section>
+      <div class="theme-stack" id="themeStack">
 
+      <details class="theme" open="">
+        <summary class="theme-summary">
+          <div>
+            <h3 class="theme-title">Resource scheduling conflicts in multi-team accounts</h3>
+            <p class="theme-description">Implementation specialists are being double-booked when two active onboarding engagements at the same account overlap. It isn't happening everywhere: only accounts running more than one engagement at a time are affected.</p>
+            <div class="pill-row">
+              <span class="pill root">Root cause</span>
+              <span class="pill">152 signals across 6 of 10 accounts</span>
+              <span class="pill">24.6% of feedback</span>
+              <span class="pill">Jun 2025–Sept 2025</span>
+            </div>
+            <div class="theme-action"><strong>Decision this informs:</strong> Whether the fix belongs in how the calendar handles overlapping engagements specifically, rather than a general scheduling rebuild.</div>
+          </div>
+          <div class="expand"></div>
+        </summary>
+        <div class="theme-body">
+          <div class="insight-detail-layout">
+            <div class="evidence-panel">
+             <div class="panel-kicker">Evidence trail</div>
+             <h4>Why this theme emerged</h4>
+             <div class="evidence-list">
+               <div class="evidence-item">
+                 <span class="evidence-number">01</span>
+                 <p><strong>Northlane Analytics</strong>: two specialists double-booked into the same session, right after taking on a second engagement. Still open (RS-2210-JUN, 11 Jun 2025).</p>
+               </div>
+               <div class="evidence-item">
+                 <span class="evidence-number">02</span>
+                 <p><strong>Fernbridge Software</strong>: same double-booking, starting only once they added a second engagement. No issues in the four months before that (RS-2299-JUL, 16 Jul 2025).</p>
+               </div>
+               <div class="evidence-item">
+                 <span class="evidence-number">03</span>
+                 <p><strong>Halcyon Cloud</strong>: same conflict within weeks of starting a second engagement. Follow-up required (RS-2355-AUG, 2 Aug 2025).</p>
+               </div>
+               <div class="evidence-item">
+                 <span class="evidence-number">04</span>
+                 <p><strong>Vantage Systems</strong>: heaviest single-engagement user on the platform, zero scheduling conflicts all period (RS-2401, 1 Sept 2025).</p>
+               </div>
+               <div class="evidence-item">
+                 <span class="evidence-number">05</span>
+                 <p>152 signals total, all from accounts running two or more engagements at once. No single-engagement account reported it.</p>
+               </div>
+             </div>
+            </div>
+            <aside class="insight-side">
+              <div class="suggestion-panel">
+             <div class="panel-kicker">Interpretation</div>
+             <h4>What this suggests</h4>
+             <p>This reads like a general reliability problem if you only look at volume, but it's actually a specific gap: the calendar doesn't handle two active engagements at the same account well. That's a smaller, more precise fix than "scheduling is broken".</p>
+           </div>
+              <div class="monitor-panel">
+             <div class="panel-kicker">Signals to monitor</div>
+             <div class="metric-list">
+               <div class="metric-item"><span class="metric-dot"></span><span>Scheduling conflicts, split by accounts running one engagement versus two or more</span></div>
+               <div class="metric-item"><span class="metric-dot"></span><span>Time between an account starting a second concurrent engagement and their first scheduling conflict</span></div>
+               <div class="metric-item"><span class="metric-dot"></span><span>Whether any single-engagement account reports this after the fix ships</span></div>
+             </div>
+           </div>
+            </aside>
+          </div>
+        </div>
+      </details>
+
+      <details class="theme">
+        <summary class="theme-summary">
+          <div>
+            <h3 class="theme-title">Invoice mismatches on the Xero integration</h3>
+            <p class="theme-description">Exported invoices don't match what lands in clients' accounting software, but only for the accounts using the Xero integration. None of your QuickBooks accounts have reported it.</p>
+            <div class="pill-row">
+              <span class="pill root">Root cause</span>
+              <span class="pill">104 signals across 4 of 10 accounts</span>
+              <span class="pill">16.8% of feedback</span>
+              <span class="pill">Jun 2025–Sept 2025</span>
+            </div>
+            <div class="theme-action"><strong>Decision this informs:</strong> Whether this is worth a dedicated Xero export fix rather than a platform-wide invoicing review.</div>
+          </div>
+          <div class="expand"></div>
+        </summary>
+        <div class="theme-body">
+          <div class="insight-detail-layout">
+            <div class="evidence-panel">
+             <div class="panel-kicker">Evidence trail</div>
+             <h4>Why this theme emerged</h4>
+             <div class="evidence-list">
+               <div class="evidence-item">
+                 <span class="evidence-number">01</span>
+                 <p><strong>Fernbridge Software</strong>: exported invoices missing line items in Xero. Still open (IV-3102-JUN, 21 Jun 2025).</p>
+               </div>
+               <div class="evidence-item">
+                 <span class="evidence-number">02</span>
+                 <p><strong>Halcyon Cloud</strong>: same missing-line-item issue two months later, also on Xero (IV-3340-AUG, 11 Aug 2025).</p>
+               </div>
+               <div class="evidence-item">
+                 <span class="evidence-number">03</span>
+                 <p><strong>Ridgemont Technologies</strong>: needed a manual reconciliation after Xero totals didn't match. Follow-up required (IV-3199-JUL, 27 Jul 2025).</p>
+               </div>
+               <div class="evidence-item">
+                 <span class="evidence-number">04</span>
+                 <p><strong>Ashford Digital</strong>: hit the same bug immediately after switching from QuickBooks to Xero, having had no issues before (IV-3410-AUG, 19 Aug 2025).</p>
+               </div>
+               <div class="evidence-item">
+                 <span class="evidence-number">05</span>
+                 <p>104 signals total, all from the four Xero accounts. Zero from the six on QuickBooks or manual export.</p>
+               </div>
+             </div>
+            </div>
+            <aside class="insight-side">
+              <div class="suggestion-panel">
+             <div class="panel-kicker">Interpretation</div>
+             <h4>What this suggests</h4>
+             <p>This isn't a general invoicing reliability issue, it's specific to one integration. Ashford Digital switching from QuickBooks to Xero and immediately hitting the same bug the other three already had is about as clear a signal as you'll get.</p>
+           </div>
+              <div class="monitor-panel">
+             <div class="panel-kicker">Signals to monitor</div>
+             <div class="metric-list">
+               <div class="metric-item"><span class="metric-dot"></span><span>Invoice mismatch reports, split by accounting integration used</span></div>
+               <div class="metric-item"><span class="metric-dot"></span><span>Whether any account stops reporting this after switching away from Xero</span></div>
+               <div class="metric-item"><span class="metric-dot"></span><span>Time to resolve for the Xero-specific export path</span></div>
+             </div>
+           </div>
+            </aside>
+          </div>
+        </div>
+      </details>
+
+      <details class="theme">
+        <summary class="theme-summary">
+          <div>
+            <h3 class="theme-title">Requests for time and cost breakdown on invoices</h3>
+            <p class="theme-description">Clients want to see time and cost broken down by task on their invoices, rather than a single total per engagement.</p>
+            <div class="pill-row">
+              <span class="pill symptom">Symptom</span>
+              <span class="pill">71 signals across 8 of 10 accounts</span>
+              <span class="pill">11.5% of feedback</span>
+              <span class="pill">Jun 2025–Sept 2025</span>
+            </div>
+            <div class="theme-action"><strong>Decision this informs:</strong> Whether a task-level cost breakdown should be prioritised as a feature, given how consistently it's coming up across accounts otherwise unaffected by the two issues above.</div>
+          </div>
+          <div class="expand"></div>
+        </summary>
+        <div class="theme-body">
+          <div class="insight-detail-layout">
+            <div class="evidence-panel">
+             <div class="panel-kicker">Evidence trail</div>
+             <h4>Why this theme emerged</h4>
+             <div class="evidence-list">
+               <div class="evidence-item">
+                 <span class="evidence-number">01</span>
+                 <p><strong>Solace Software</strong>: wants invoices broken down by task hours, not one total (CB-3455-JUN, 18 Jun 2025).</p>
+               </div>
+               <div class="evidence-item">
+                 <span class="evidence-number">02</span>
+                 <p><strong>Meridian Cloud</strong>: same ask in a survey response, named it their top improvement (CB-3502-JUL, 22 Jul 2025).</p>
+               </div>
+               <div class="evidence-item">
+                 <span class="evidence-number">03</span>
+                 <p><strong>Brightline Technologies</strong>: repeated the request three months later. Still unaddressed (CB-3690-SEP, 5 Sept 2025).</p>
+               </div>
+               <div class="evidence-item">
+                 <span class="evidence-number">04</span>
+                 <p><strong>Larkfield Data</strong>: wants a downloadable breakdown their finance team can file directly (CB-3521-AUG, 14 Aug 2025).</p>
+               </div>
+               <div class="evidence-item">
+                 <span class="evidence-number">05</span>
+                 <p>71 signals across eight accounts, spread evenly regardless of team size or accounting integration.</p>
+               </div>
+             </div>
+            </div>
+            <aside class="insight-side">
+              <div class="suggestion-panel">
+             <div class="panel-kicker">Interpretation</div>
+             <h4>What this suggests</h4>
+             <p>Unlike the two issues above, this one isn't tied to any particular account setup. It's a plain feature gap, not a bug, and it's the one most accounts agree on regardless of size or integration.</p>
+           </div>
+              <div class="monitor-panel">
+             <div class="panel-kicker">Signals to monitor</div>
+             <div class="metric-list">
+               <div class="metric-item"><span class="metric-dot"></span><span>Number of accounts requesting a task-level cost breakdown</span></div>
+               <div class="metric-item"><span class="metric-dot"></span><span>How often the request repeats from the same account</span></div>
+               <div class="metric-item"><span class="metric-dot"></span><span>Whether demand concentrates in accounts billing multiple task types per engagement</span></div>
+             </div>
+           </div>
+            </aside>
+          </div>
+        </div>
+      </details>
+
+      <details class="theme">
+        <summary class="theme-summary">
+          <div>
+            <h3 class="theme-title">Multi-team reporting requests from reference accounts</h3>
+            <p class="theme-description">Clients running more than one team on the platform want performance reported by team rather than as one combined view. All five accounts asking for this are also ones you use as references in sales conversations.</p>
+            <div class="pill-row">
+              <span class="pill symptom">Symptom</span>
+              <span class="pill">58 signals across 5 of 10 accounts</span>
+              <span class="pill">9.4% of feedback</span>
+              <span class="pill">Jun 2025–Sept 2025</span>
+            </div>
+            <div class="theme-action"><strong>Decision this informs:</strong> Whether to prioritise team-level reporting given that the accounts asking are also the ones prospects hear from directly.</div>
+          </div>
+          <div class="expand"></div>
+        </summary>
+        <div class="theme-body">
+          <div class="insight-detail-layout">
+            <div class="evidence-panel">
+             <div class="panel-kicker">Evidence trail</div>
+             <h4>Why this theme emerged</h4>
+             <div class="evidence-list">
+               <div class="evidence-item">
+                 <span class="evidence-number">01</span>
+                 <p><strong>Vantage Systems</strong>: wants reports split by team, not combined (MT-3711-JUN, 25 Jun 2025).</p>
+               </div>
+               <div class="evidence-item">
+                 <span class="evidence-number">02</span>
+                 <p><strong>Ridgemont Technologies</strong>: same team-split request on a call. Follow-up required (MT-3788-JUL, 30 Jul 2025).</p>
+               </div>
+               <div class="evidence-item">
+                 <span class="evidence-number">03</span>
+                 <p><strong>Meridian Cloud</strong>: named this their top improvement, and they're quoted in your Q2 case study (MT-3820-AUG, 19 Aug 2025).</p>
+               </div>
+               <div class="evidence-item">
+                 <span class="evidence-number">04</span>
+                 <p><strong>Brightline Technologies and Larkfield Data</strong>: raised it independently, and both are used in reference calls this quarter (MT-3830-AUG, 25 Aug 2025).</p>
+               </div>
+               <div class="evidence-item">
+                 <span class="evidence-number">05</span>
+                 <p>58 signals total, from exactly the five accounts your sales team uses as references. No others.</p>
+               </div>
+             </div>
+            </div>
+            <aside class="insight-side">
+              <div class="suggestion-panel">
+             <div class="panel-kicker">Interpretation</div>
+             <h4>What this suggests</h4>
+             <p>This isn't just a feature request, it's coming from the accounts doing your selling for you. If their experience of the platform doesn't keep up, the cost isn't only their renewal, it's what they say on the next reference call.</p>
+           </div>
+              <div class="monitor-panel">
+             <div class="panel-kicker">Signals to monitor</div>
+             <div class="metric-list">
+               <div class="metric-item"><span class="metric-dot"></span><span>Overlap between accounts requesting this and accounts used as references or in case studies</span></div>
+               <div class="metric-item"><span class="metric-dot"></span><span>Volume of requests per month from this specific group</span></div>
+               <div class="metric-item"><span class="metric-dot"></span><span>Whether any reference account raises the request twice without a response</span></div>
+             </div>
+           </div>
+            </aside>
+          </div>
+        </div>
+      </details>
+
+      <details class="theme">
+        <summary class="theme-summary">
+          <div>
+            <h3 class="theme-title">Renewal-window accounts going quiet</h3>
+            <p class="theme-description">Three accounts that used to raise several tickets a month have logged nothing in the last six weeks, and all three renew within the current quarter.</p>
+            <div class="pill-row">
+              <span class="pill consequence">Consequence</span>
+              <span class="pill">3 accounts flagged</span>
+              <span class="pill">Renewal window: next 90 days</span>
+              <span class="pill">Last activity: early Aug 2025</span>
+            </div>
+            <div class="theme-action"><strong>Decision this informs:</strong> Whether the drop in tickets from these three accounts should be read as resolution or as a reason to check in before their renewal date.</div>
+          </div>
+          <div class="expand"></div>
+        </summary>
+        <div class="theme-body">
+          <div class="insight-detail-layout">
+            <div class="evidence-panel">
+             <div class="panel-kicker">Evidence trail</div>
+             <h4>Why this theme emerged</h4>
+             <div class="evidence-list">
+               <div class="evidence-item">
+                 <span class="evidence-number">01</span>
+                 <p><strong>Solace Software</strong>: six tickets a month through July, then none since early August. Renews in eight weeks.</p>
+               </div>
+               <div class="evidence-item">
+                 <span class="evidence-number">02</span>
+                 <p><strong>Ashford Digital</strong>: dropped from four tickets a month to zero over the same window, despite being one of the more vocal accounts on invoicing.</p>
+               </div>
+               <div class="evidence-item">
+                 <span class="evidence-number">03</span>
+                 <p><strong>Brightline Technologies</strong>: mentioned "reviewing other options" on a check-in call. No follow-up was logged (RC-4102-AUG, 14 Aug 2025).</p>
+               </div>
+               <div class="evidence-item">
+                 <span class="evidence-number">04</span>
+                 <p>All three: no open ticket, survey response, or call in six weeks, despite renewing this quarter.</p>
+               </div>
+             </div>
+            </div>
+            <aside class="insight-side">
+              <div class="suggestion-panel">
+             <div class="panel-kicker">Interpretation</div>
+             <h4>What this suggests</h4>
+             <p>Ticket volume dropping to zero usually gets read as good news. Here it lines up with renewal dates and, in one case, a comment about reviewing alternatives. That combination is worth a direct conversation, not a tally mark in the resolved column.</p>
+           </div>
+              <div class="monitor-panel">
+             <div class="panel-kicker">Signals to monitor</div>
+             <div class="metric-list">
+               <div class="metric-item"><span class="metric-dot"></span><span>Ticket and call volume per account in the eight weeks before their renewal date</span></div>
+               <div class="metric-item"><span class="metric-dot"></span><span>Any account whose volume drops to zero without a corresponding fix being shipped</span></div>
+               <div class="metric-item"><span class="metric-dot"></span><span>Whether a check-in call happens with each of these three accounts before their renewal date</span></div>
+             </div>
+           </div>
+            </aside>
+          </div>
+        </div>
+      </details>
+
+      </div>
+    </section>
 
     <div class="report-cta">
       <h3>Want this for your own data?</h3>
@@ -1047,1149 +1542,14 @@
       <a class="btn" href="https://intuifi.io/#early-access">Try Intuifi</a>
     </div>
 
-
-    <div class="report-footer" id="reportFooter"></div>
   </main>
 
-
-<script type="application/json" id="combinedCsvsData">{}</script>
-<script type="application/json" id="themeDisplayData">{"total_feedback_rows": 804, "has_company_data": true, "has_previous_run": false, "flagged_theme_count": 0, "flagged_theme_names": [], "themes": [{"theme_name": "Dashboard and Report Performance Issues", "strategic_takeaway": "Clients across all ten companies are experiencing a wide range of dashboard and report failures, including partial Excel exports, slow load times, and missing fraud-split functionality, generating the highest signal volume of any theme.", "category_class": "root", "data_by_theme": {"signals": 138, "proportion_of_feedback": 17.2, "companies": 10, "first_seen": "2025-06-01", "last_seen": "2025-09-01"}, "decision_this_informs": "Whether dashboard and report performance instability should be treated as the primary platform reliability issue given its breadth across all accounts and its sustained signal volume.", "supporting_evidence": ["Adriatic Coverage reported that exporting to Excel produces only partial data, with the issue still open as of the last recorded date (Adriatic Coverage, 7fe3d832_3d23_4ccd_84bb_2af2d9021b78_1783014886969_6003_14, 2025-09-09).", "Adriatic Coverage also triggered a support log check when dashboard filters produced unexpected results, with the support agent requesting confirmation of the filters used (Adriatic Coverage, 7fe3d832_3d23_4ccd_84bb_2af2d9021b78_1783014886969_6014_58, 2025-06-01).", "Britannia Insurance asked whether dashboards could split fraud versus non-fraud claims during a check-in call, with the outcome logged as follow-up required (Britannia Insurance, 7fe3d832_3d23_4ccd_84bb_2af2d9021b78_1783014886359_1079_80, 2025-08-02).", "A patch was deployed and logged as resolved for Britannia Insurance, though this was recorded more than two months before the partial Excel export issue was still open at another account (Britannia Insurance, 7fe3d832_3d23_4ccd_84bb_2af2d9021b78_1783014886969_6015_61, 2025-06-20).", "The theme generated 138 signals across 10 companies from June through September, making it the highest-volume named theme in the dataset and the only one with daily signal activity across the entire period."], "implication": "Dashboard and report performance is the most pervasive source of client friction in the platform, affecting every account and spanning functional failures, data accuracy issues, and missing analytical capabilities simultaneously.", "suggested_metrics": ["Volume of dashboard and report performance signals per week across all accounts", "Number of distinct failure types reported within the dashboard theme per month", "Proportion of dashboard-related support tickets closed versus open at any given point"]}, {"theme_name": "Renewal Risk and Loss Ratio Concerns", "strategic_takeaway": "Multiple brokers facing imminent renewals have flagged loss ratio concerns in Germany, creating direct retention risk across the portfolio.", "category_class": "consequence", "data_by_theme": {"signals": 93, "proportion_of_feedback": 11.6, "companies": 10, "first_seen": "2025-06-01", "last_seen": "2025-09-01"}, "decision_this_informs": "Whether accounts with open Germany loss ratio concerns and imminent renewals need escalated engagement before the renewal window closes.", "supporting_evidence": ["NorthStar Brokers raised loss ratio concerns in Germany ahead of a next-quarter renewal, but the call resulted in voicemail with no resolution (NorthStar Brokers, 7fe3d832_3d23_4ccd_84bb_2af2d9021b78_1783014886359_1182_183, 2025-06-02).", "Horizon Brokers flagged the same Germany loss ratio concern during a check-in call, with the outcome logged as follow-up required (Horizon Brokers, 7fe3d832_3d23_4ccd_84bb_2af2d9021b78_1783014886359_1092_93, 2025-06-07).", "NorthStar Brokers identified underwriting risk models as the most valuable feature, indicating the platform's analytical depth is central to their renewal calculus (NorthStar Brokers, 7fe3d832_3d23_4ccd_84bb_2af2d9021b78_1783014887412_broker_account_manager_r85_q2, 2025-09-09).", "Continental Assurance also cited underwriting risk models as the most valuable feature, reinforcing that this capability is a key retention anchor across accounts (Continental Assurance, 7fe3d832_3d23_4ccd_84bb_2af2d9021b78_1783014887412_operations_lead_r53_q2, 2025-06-30).", "The theme generated 93 signals across 10 companies between June and September 2025, with unresolved follow-ups concentrated in the early renewal window."], "implication": "Unresolved loss ratio concerns tied to upcoming renewals represent the most concentrated near-term revenue risk in the portfolio.", "suggested_metrics": ["Number of accounts with open loss ratio concerns and a renewal date within 90 days", "Rate of follow-up completion on renewal-flagged calls", "Proportion of renewal accounts citing underwriting risk models as a primary value driver"]}, {"theme_name": "Broker Benchmarking and Performance Insights", "strategic_takeaway": "Clients across the portfolio are actively requesting broker benchmarking by region and identifying broker performance insights as a top platform value driver.", "category_class": "symptom", "data_by_theme": {"signals": 78, "proportion_of_feedback": 9.7, "companies": 10, "first_seen": "2025-06-01", "last_seen": "2025-09-01"}, "decision_this_informs": "Whether broker benchmarking by region should be prioritised as a product capability given its volume of demand and its role in perceived platform value.", "supporting_evidence": ["NorthStar Brokers asked about broker benchmarking by region in a call that resulted in a connected outcome (NorthStar Brokers, 7fe3d832_3d23_4ccd_84bb_2af2d9021b78_1783014886359_1087_88, 2025-06-02).", "EuroSure Insurance raised the same broker benchmarking by region question during a check-in call, with the outcome logged as follow-up required (EuroSure Insurance, 7fe3d832_3d23_4ccd_84bb_2af2d9021b78_1783014886359_1044_45, 2025-07-02).", "Gaelic Brokers identified broker performance insights as the most valuable feature in a survey response (Gaelic Brokers, 7fe3d832_3d23_4ccd_84bb_2af2d9021b78_1783014887412_underwriting_analyst_r163_q2, 2025-09-08).", "Albion Mutual named the ability to benchmark brokers as their single biggest desired improvement in a survey response (Albion Mutual, 7fe3d832_3d23_4ccd_84bb_2af2d9021b78_1783014887412_exec_sponsor_r49_q1, 2025-07-07).", "The theme generated 78 signals across 10 companies from June through September, making it the second-highest volume named theme after dashboard performance."], "implication": "Broker benchmarking is simultaneously a perceived strength and an unmet capability gap, meaning the current feature set is not fully satisfying the demand it has created.", "suggested_metrics": ["Volume of broker benchmarking requests per month", "Number of accounts that have cited broker performance insights as a top value driver", "Rate of follow-up completion on broker benchmarking enquiries"]}, {"theme_name": "Claims Analytics Lag and Accuracy", "strategic_takeaway": "Clients are experiencing measurable lag in claims analytics for UK reports, and the issue has persisted across multiple accounts from June through September with a patch only recently deployed.", "category_class": "root", "data_by_theme": {"signals": 60, "proportion_of_feedback": 7.5, "companies": 10, "first_seen": "2025-06-01", "last_seen": "2025-09-01"}, "decision_this_informs": "Whether the patch deployed on 2025-09-09 has fully resolved the claims analytics lag across all affected accounts or whether residual issues remain.", "supporting_evidence": ["Albion Mutual complained about claims analytics lag specifically in UK reports during a check-in call, with the outcome logged as follow-up required (Albion Mutual, 7fe3d832_3d23_4ccd_84bb_2af2d9021b78_1783014886359_1074_75, 2025-06-01).", "NorthStar Brokers raised the same claims analytics lag in UK reports complaint three months later, with the call resulting in voicemail and no confirmed resolution (NorthStar Brokers, 7fe3d832_3d23_4ccd_84bb_2af2d9021b78_1783014886359_1012_13, 2025-09-01).", "A patch was deployed and logged as resolved for EuroSure Insurance, though this occurred on the final day of the recorded period (EuroSure Insurance, 7fe3d832_3d23_4ccd_84bb_2af2d9021b78_1783014886969_6018_70, 2025-09-09).", "The theme generated 60 signals across 10 companies, with activity concentrated in August and September, suggesting the issue intensified rather than resolved over time."], "implication": "A claims analytics lag that persisted for over three months across multiple named accounts represents a reliability gap in a core analytical function.", "suggested_metrics": ["Number of accounts with open or unconfirmed claims analytics lag complaints post-patch", "Time between first report and patch deployment for claims analytics issues", "Volume of claims analytics lag signals per month over the period"]}, {"theme_name": "Salesforce CRM Integration Instability", "strategic_takeaway": "Multiple clients are experiencing an unstable Salesforce CRM integration and have explicitly requested a product roadmap to understand when it will be fixed.", "category_class": "root", "data_by_theme": {"signals": 43, "proportion_of_feedback": 5.3, "companies": 10, "first_seen": "2025-06-01", "last_seen": "2025-09-01"}, "decision_this_informs": "Whether the Salesforce connector instability warrants a dedicated fix commitment and whether a roadmap should be shared with affected accounts.", "supporting_evidence": ["Britannia Insurance reported the Salesforce CRM integration as unstable during a check-in call and requested a roadmap, with the outcome logged as voicemail (Britannia Insurance, 7fe3d832_3d23_4ccd_84bb_2af2d9021b78_1783014886359_1003_4, 2025-06-03).", "Continental Assurance raised the same Salesforce CRM instability and roadmap request during a check-in call, with the outcome logged as follow-up required (Continental Assurance, 7fe3d832_3d23_4ccd_84bb_2af2d9021b78_1783014886359_1046_47, 2025-07-28).", "Continental Assurance's Salesforce CRM instability concern was revisited in a later call that resulted in a connected outcome, indicating the issue remained open for at least two months (Continental Assurance, 7fe3d832_3d23_4ccd_84bb_2af2d9021b78_1783014886359_1103_104, 2025-09-08).", "Gaelic Brokers identified a more stable Salesforce connector as their single biggest desired improvement in a survey response (Gaelic Brokers, 7fe3d832_3d23_4ccd_84bb_2af2d9021b78_1783014887412_underwriting_manager_r50_q1, 2025-08-22).", "The theme generated 43 signals across 10 companies over a three-month window, with the issue unresolved at the time of the last recorded signal."], "implication": "A persistent, named integration failure that clients are actively tracking against a promised roadmap creates a credibility risk if no resolution timeline is communicated.", "suggested_metrics": ["Number of accounts with at least one open Salesforce integration complaint", "Time elapsed since first recorded Salesforce instability report per account", "Frequency of roadmap requests related to the Salesforce connector"]}, {"theme_name": "Pricing Transparency and Cost Breakdown", "strategic_takeaway": "Clients across multiple companies are requesting clearer cost breakdowns in reports and dashboards, signalling that current pricing transparency is insufficient for their internal needs.", "category_class": "symptom", "data_by_theme": {"signals": 40, "proportion_of_feedback": 5.0, "companies": 10, "first_seen": "2025-06-01", "last_seen": "2025-09-01"}, "decision_this_informs": "Whether the current cost breakdown format in reports and dashboards meets the internal visibility needs of the client base.", "supporting_evidence": ["Rhine Insurance Group identified clearer cost breakdown in reports as their single biggest desired improvement in a survey response (Rhine Insurance Group, 7fe3d832_3d23_4ccd_84bb_2af2d9021b78_1783014887412_claims_manager_r70_q1, 2025-06-01).", "Horizon Brokers also named clearer cost breakdown in reports as their biggest improvement request in a survey response (Horizon Brokers, 7fe3d832_3d23_4ccd_84bb_2af2d9021b78_1783014887412_underwriting_manager_r59_q1, 2025-07-09).", "Nordic Shield repeated the same clearer cost breakdown in reports request in a survey response three months after the first instance (Nordic Shield, 7fe3d832_3d23_4ccd_84bb_2af2d9021b78_1783014887412_broker_account_manager_r72_q1, 2025-09-07).", "Adriatic Coverage requested clearer pricing breakdown specifically within dashboards during a check-in call that resulted in a connected outcome (Adriatic Coverage, 7fe3d832_3d23_4ccd_84bb_2af2d9021b78_1783014886359_1073_74, 2025-08-31).", "The theme generated 40 signals across 10 companies over the full June to September period, with consistent recurrence across both call and survey channels."], "implication": "The consistent recurrence of this request across companies and channels suggests the current reporting format does not meet clients' internal cost visibility requirements.", "suggested_metrics": ["Number of accounts that have raised cost breakdown or pricing transparency requests", "Recurrence rate of cost breakdown requests per account over the period", "Distribution of cost breakdown requests across call versus survey channels"]}, {"theme_name": "France Roll-out Interest and Geographic Expansion", "strategic_takeaway": "Several clients across the portfolio are actively interested in a France roll-out but are pairing that interest with concerns about dashboard speed.", "category_class": "symptom", "data_by_theme": {"signals": 31, "proportion_of_feedback": 3.9, "companies": 10, "first_seen": "2025-06-01", "last_seen": "2025-09-01"}, "decision_this_informs": "Whether dashboard performance must be resolved before a France roll-out can be positioned credibly to interested accounts.", "supporting_evidence": ["Gaelic Brokers expressed interest in the France roll-out but simultaneously flagged dashboard speed as a concern, with the outcome logged as follow-up required (Gaelic Brokers, 7fe3d832_3d23_4ccd_84bb_2af2d9021b78_1783014886359_1188_189, 2025-06-01).", "EuroSure Insurance raised France roll-out interest alongside dashboard speed worries during a check-in call, also resulting in a follow-up required outcome (EuroSure Insurance, 7fe3d832_3d23_4ccd_84bb_2af2d9021b78_1783014886359_1008_9, 2025-07-06).", "EuroSure Insurance returned to the same France roll-out and dashboard speed concern in a later call that resulted in a connected outcome, suggesting ongoing active engagement (EuroSure Insurance, 7fe3d832_3d23_4ccd_84bb_2af2d9021b78_1783014886359_1002_3, 2025-08-30).", "EuroSure Insurance raised the France roll-out and dashboard speed pairing a third time with a connected outcome, indicating the concern persisted across multiple months (EuroSure Insurance, 7fe3d832_3d23_4ccd_84bb_2af2d9021b78_1783014886359_1140_141, 2025-09-03).", "The theme spans 31 signals across 10 companies from June through early September, with EuroSure Insurance appearing as the most consistently engaged account."], "implication": "France expansion demand exists across the client base but is being conditioned on dashboard performance, meaning a slow platform could suppress uptake even if the geographic capability is delivered.", "suggested_metrics": ["Number of accounts that have raised France roll-out interest at least once", "Co-occurrence rate of France roll-out interest with dashboard speed complaints in the same interaction", "Volume of France-related signals per month over the period"]}, {"theme_name": "SSO Access and User Onboarding Failures", "strategic_takeaway": "New users at multiple companies are unable to access the dashboard via SSO, blocking onboarding and requiring support intervention to resolve each instance.", "category_class": "root", "data_by_theme": {"signals": 18, "proportion_of_feedback": 2.2, "companies": 8, "first_seen": "2025-06-01", "last_seen": "2025-08-01"}, "decision_this_informs": "Whether the SSO fix applied in August 2025 has durably resolved new user onboarding failures or whether a structural configuration issue remains across accounts.", "supporting_evidence": ["Horizon Brokers reported that new users could not access the dashboard with SSO, logging the issue as a requester-initiated support ticket (Horizon Brokers, 7fe3d832_3d23_4ccd_84bb_2af2d9021b78_1783014886969_6004_22, 2025-06-10).", "Britannia Insurance reported the identical SSO access failure for new users more than two months after the first instance at Horizon Brokers, indicating the issue recurred rather than being permanently resolved (Britannia Insurance, 7fe3d832_3d23_4ccd_84bb_2af2d9021b78_1783014886969_6002_9, 2025-08-26).", "Rhine Insurance Group received a fixed SSO configuration from the support team and was asked to retry, suggesting the resolution required manual intervention per account (Rhine Insurance Group, 7fe3d832_3d23_4ccd_84bb_2af2d9021b78_1783014886969_6005_26, 2025-08-27).", "A patch was deployed and logged as resolved for Horizon Brokers, though the same failure type reappeared at Britannia Insurance after this patch was applied (Horizon Brokers, 7fe3d832_3d23_4ccd_84bb_2af2d9021b78_1783014886969_6004_21, 2025-08-02).", "The theme generated 18 signals across 8 companies between June and August, with the absence of signals after 27 August potentially reflecting the Rhine Insurance Group fix rather than full resolution."], "implication": "Recurring SSO failures that block new user access suggest the fix applied has not been durable, meaning onboarding reliability remains at risk for any account adding users.", "suggested_metrics": ["Number of new SSO access failure reports per month post-patch", "Time between SSO failure report and confirmed resolution per account", "Number of accounts that have experienced SSO failures more than once"]}, {"theme_name": "Other / Unclassified", "data_by_theme": {"signals": 303}}]}</script>
-<script type="application/json" id="executiveSummaryData">{"strategic_implication": "The business is caught between the expectation of delivering advanced analytical value and the reality of unresolved foundational instability, making it difficult to credibly pursue expansion or renewal without first closing the reliability gap.", "tensions": [{"headline": "Growth demand blocked by platform instability", "detail": "Clients are actively requesting geographic expansion and deeper benchmarking capabilities while the foundational platform layer — dashboards, exports, SSO, and CRM integration — remains unreliable, creating a direct conflict between commercial momentum and technical readiness."}, {"headline": "High signal volume, low resolution evidence", "detail": "With 303 unclassified signals and repeated follow-up outcomes across named themes, the volume of open or unresolved interactions suggests that issue capture is outpacing issue closure across the account base."}], "leadership_actions": [{"title": "Resolve core platform reliability now", "body": "Prioritise dashboard performance, Salesforce connector stability, SSO access, and claims analytics accuracy as a coordinated reliability sprint, since these issues are present across all accounts and are actively blocking both daily usage and renewal confidence."}, {"title": "Build a renewal risk register by account", "body": "Map each account's open technical issues against their renewal timeline so leadership can identify which clients carry compounded commercial and operational risk before the next renewal cycle closes."}, {"title": "Gate France expansion on performance benchmarks", "body": "Define and communicate clear dashboard speed and reliability thresholds that must be met before committing to the France roll-out, so that expansion interest is not converted into new accounts inheriting existing platform instability."}], "risks": [{"kicker": "Retention risk", "title": "Renewals lost to unresolved operational friction", "body": "Accounts flagging loss ratio concerns and requesting follow-ups are experiencing the same unresolved technical issues, meaning renewal decisions will be made against a backdrop of accumulated dissatisfaction rather than demonstrated platform improvement."}, {"kicker": "Trust risk", "title": "Analytics value perception erodes", "body": "Clients who cite underwriting risk models and broker performance insights as their most valuable features will lose confidence in those outputs if claims analytics lag, export failures, and dashboard inaccuracies remain unaddressed."}, {"kicker": "Roadmap risk", "title": "Expansion commitments outpace platform readiness", "body": "Active France roll-out interest and benchmarking requests create implicit roadmap commitments that are difficult to deliver credibly while foundational reliability issues consume engineering and support capacity across the existing account base."}], "decision_view": {"what_is_happening": "All ten accounts are simultaneously experiencing recurring platform reliability failures and raising unmet demands for advanced analytics, geographic expansion, and pricing transparency across a sustained three-month window.", "why_it_matters": "The overlap between technical instability and commercial pressure at renewal stage means the business is at risk of losing accounts not because of product-market fit but because of execution gaps in the core platform.", "biggest_risk": "If platform reliability is not stabilised before the next renewal cycle, accounts with compounded technical and commercial concerns will have insufficient evidence to justify continued investment in the product.", "decision_this_informs": "Whether to redirect near-term engineering and customer success capacity from new capability delivery toward resolving the foundational reliability issues that are currently blocking both retention and expansion."}, "theme_flow": {"intro": "Foundational platform weaknesses form the root cause layer, producing a set of operational symptoms that affect analytical trust and workflow continuity, which in turn create measurable business consequences at the renewal and expansion level.", "root_cause": {"label": "Platform foundations", "headline": "Core infrastructure is unreliable across accounts", "description": "Dashboard performance, CRM integration, SSO access, and data export functions are failing or degrading consistently across the full client base, indicating structural weaknesses in the platform rather than edge-case incidents.", "inferred_tags": ["Cross-account infrastructure fragility", "Support volume outpacing resolution"]}, "symptom": {"label": "Operational symptoms", "headline": "Analytical workflows are disrupted and distrusted", "description": "Claims analytics lag, pricing opacity, and benchmarking gaps are surfacing as repeated follow-up requirements, meaning clients cannot complete core decision-support workflows reliably even when the underlying features exist.", "inferred_tags": ["Unresolved follow-up accumulation", "Feature value undermined by delivery gaps"]}, "consequence": {"label": "Business consequence", "headline": "Renewal exposure and expansion risk compound", "description": "Accounts approaching renewal are carrying both unresolved technical issues and unmet analytical expectations, while expansion interest in new geographies is conditionally held pending the same reliability improvements that have not yet been delivered.", "inferred_tags": ["Conditional expansion demand", "Compounded renewal vulnerability"]}}}</script>
-<script type="application/json" id="unclassifiedItemsData">{"items": []}</script>
-
-
-<script>
-(function () {
-
-
-  function esc(str) {
-    return String(str ?? "")
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;");
-  }
-
-
-  function safeParse(raw, fallback) {
-    try {
-      if (!raw || raw === "null" || raw === "undefined") return fallback;
-      return JSON.parse(raw);
-    } catch (e) {
-      return fallback;
-    }
-  }
-
-
-  function formatMonthYear(dateStr) {
-    if (!dateStr || !/^\d{4}-\d{2}-\d{2}$/.test(dateStr)) return "";
-    var d = new Date(dateStr + "T00:00:00Z");
-    return d.toLocaleString("en-GB", { month: "short", year: "numeric", timeZone: "UTC" });
-  }
-
-
-  var CATEGORY_DEFAULTS = {
-    root: "Root cause",
-    symptom: "Operational symptom",
-    consequence: "Business consequence"
-  };
-
-
-  function pillClass(catClass) {
-    return ["root", "symptom", "consequence"].includes(catClass) ? catClass : "";
-  }
-
-
-  function categoryLabel(theme) {
-    if (theme.category_label) return theme.category_label;
-    return CATEGORY_DEFAULTS[theme.category_class] || "";
-  }
-
-
-  var csvBundle   = safeParse(document.getElementById("combinedCsvsData")?.textContent, {});
-  var displayData = safeParse(document.getElementById("themeDisplayData")?.textContent,
-                      { total_feedback_rows: 0, has_company_data: false, has_previous_run: false, flagged_theme_count: 0, flagged_theme_names: [], themes: [] });
-  var execSummary = safeParse(document.getElementById("executiveSummaryData")?.textContent, {});
-  var unclassifiedItems = (safeParse(document.getElementById("unclassifiedItemsData")?.textContent, { items: [] }).items) || [];
-
-
-  var allThemes     = Array.isArray(displayData.themes) ? displayData.themes : [];
-  var unclassified  = allThemes.find(t => (t?.theme_name || "").trim() === "Other / Unclassified");
-  var visibleThemes = allThemes
-    .filter(t => (t?.theme_name || "").trim() !== "Other / Unclassified")
-    .sort((a, b) => {
-      var diff = (b?.data_by_theme?.signals ?? 0) - (a?.data_by_theme?.signals ?? 0);
-      if (diff !== 0) return diff;
-      diff = (b?.data_by_theme?.companies ?? 0) - (a?.data_by_theme?.companies ?? 0);
-      if (diff !== 0) return diff;
-      return (a.theme_name || "").localeCompare(b.theme_name || "");
-    });
-
-
-  var totalRows = Number(displayData.total_feedback_rows || 0);
-
-
-  (function renderMetaCluster() {
-    var el = document.getElementById("metaCluster");
-    var noThemeCount = Number(unclassified?.data_by_theme?.signals || 0);
-    var hasPreviousRun = displayData.has_previous_run === true;
-
-
-    function formatDelta(n) {
-      if (n == null) return null;
-      if (n === 0) return { text: "No change", noChange: true };
-      var arrow = n > 0 ? "↑" : "↓";
-      return { text: arrow + " " + Math.abs(n) + " since last report", noChange: false };
-    }
-
-
-    var ICONS = {
-      records: '<svg class="meta-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg>',
-      theme: '<svg class="meta-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8a6 6 0 0 0-12 0c0 1 .23 2.23 1.5 3.5.72.72 1.23 1.53 1.41 2.5"/></svg>',
-      warning: '<svg class="meta-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:var(--amber);"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>'
-    };
-    var cards = [
-      { cls: "primary", icon: ICONS.records, value: totalRows, label: "records analysed", delta: hasPreviousRun ? formatDelta(displayData.records_delta) : null },
-      {
-        cls: "primary",
-        icon: ICONS.theme,
-        value: visibleThemes.length,
-        label: visibleThemes.length === 1 ? "theme identified" : "themes identified",
-        delta: hasPreviousRun ? formatDelta(displayData.themes_delta) : null
-      }
-    ];
-
-
-    if (unclassified) {
-      cards.push({
-        cls: "warning",
-        icon: ICONS.warning,
-        value: noThemeCount,
-        label: noThemeCount === 1
-          ? "item with no theme assigned"
-          : "items with no theme assigned",
-        delta: hasPreviousRun ? formatDelta(displayData.unclassified_delta) : null,
-        emphasis: true
-      });
-    }
-
-
-    function deltaHtml(c) {
-      if (!c.delta) return "";
-      var classes = "meta-card-delta" + (c.emphasis ? " emphasis" : "") + (c.delta.noChange ? " no-change" : "");
-      return `<div class="${classes}">${esc(c.delta.text)}</div>`;
-    }
-
-
-    var columnsClass = cards.length === 1 ? "cols-1" : cards.length === 2 ? "cols-2" : "cols-3";
-    el.className = "meta-cluster " + columnsClass;
-    el.innerHTML = cards.map(c => {
-      if (c.cls === "warning") {
-        return `<button type="button" id="unclassifiedJumpCard" class="meta-card warning meta-card-clickable" aria-label="Jump to items with no theme assigned">
-          <div class="meta-card-main">${c.icon}<div class="meta-card-text"><strong>${esc(c.value)}</strong><span>${esc(c.label)}</span></div>
-          <svg class="meta-card-jump-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></div>
-          ${deltaHtml(c)}
-        </button>`;
-      }
-      return `<div class="meta-card ${c.cls}"><div class="meta-card-main">${c.icon}<div class="meta-card-text"><strong>${esc(c.value)}</strong><span>${esc(c.label)}</span></div></div>${deltaHtml(c)}</div>`;
-    }).join("");
-
-
-    var jumpBtn = document.getElementById("unclassifiedJumpCard");
-    if (jumpBtn) {
-      jumpBtn.addEventListener("click", function () {
-        var target = document.getElementById("unclassifiedItemsCard");
-        if (target) {
-          target.open = true;
-          target.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-      });
-    }
-  })();
-
-
-  (function renderHeaderSummary() {
-    var el = document.getElementById("headerSummaryLine");
-    if (!el || displayData.has_previous_run !== true) return;
-
-
-    var flaggedCount = Number(displayData.flagged_theme_count || 0);
-
-
-    el.style.display = "inline-flex";
-    if (flaggedCount === 0) {
-      el.className = "header-summary-line";
-      el.textContent = "No themes flagged this period";
-    } else {
-      el.className = "header-summary-line flagged";
-      el.textContent = flaggedCount + (flaggedCount === 1 ? " theme flagged" : " themes flagged");
-    }
-  })();
-
-
-  (function renderExecutiveSummary() {
-    var el = document.getElementById("executiveBody");
-
-
-    function summaryItems(items, iconClass, iconGlyph) {
-      var list = (items || []).filter(Boolean);
-      if (!list.length) return "<div class=\"summary-detail\">Nothing to show yet.</div>";
-      return `<div class="summary-list">${list.map(item => {
-        if (typeof item === "string") {
-          return `<div class="summary-item">
-            <div class="summary-icon ${iconClass}">${iconGlyph}</div>
-            <div><div class="summary-headline">${esc(item)}</div></div>
-          </div>`;
-        }
-        return `<div class="summary-item">
-          <div class="summary-icon ${iconClass}">${iconGlyph}</div>
-          <div>
-            <div class="summary-headline">${esc(item.headline || "")}</div>
-            ${item.detail ? `<div class="summary-detail">${esc(item.detail)}</div>` : ""}
-          </div>
-        </div>`;
-      }).join("")}</div>`;
-    }
-
-
-    function themeIndexItems(themes) {
-      if (!themes.length) return "<div class=\"summary-detail\">No themes to show yet.</div>";
-
-
-      var TOP_N = 5;
-      var shown = themes.slice(0, TOP_N);
-      var remaining = themes.length - shown.length;
-
-
-      var itemsHtml = shown.map((t, i) => {
-        var d = t.data_by_theme || {};
-        var stat = [
-          d.signals != null ? d.signals + " signals" : null,
-          d.proportion_of_feedback != null ? d.proportion_of_feedback + "% of feedback" : null
-        ].filter(Boolean).join(" · ");
-        return `<div class="summary-item">
-          <div class="summary-icon check">${i + 1}</div>
-          <div>
-            <div class="summary-headline">${esc(t.theme_name)}</div>
-            ${stat ? `<div class="summary-detail">${esc(stat)}</div>` : ""}
-          </div>
-        </div>`;
-      }).join("");
-
-
-      var moreHtml = remaining > 0
-        ? `<div class="summary-detail" style="margin-top:10px;">+ ${remaining} more theme${remaining === 1 ? "" : "s"} — see "Detailed themes and evidence" below</div>`
-        : "";
-
-
-      return `<div class="summary-list">${itemsHtml}</div>${moreHtml}`;
-    }
-
-
-    var implicationHtml = execSummary.strategic_implication
-      ? `<div class="tldr-box">
-           <div class="tldr-label">Strategic implication</div>
-           <div class="tldr-text">${esc(execSummary.strategic_implication)}</div>
-         </div>`
-      : "";
-
-
-    el.innerHTML = `
-      ${implicationHtml}
-      <div class="executive-columns">
-        <div class="executive-panel">
-          <div class="panel-title">Themes</div>
-          ${themeIndexItems(visibleThemes)}
-        </div>
-        <div class="executive-panel tension">
-          <div class="panel-title">Tensions to be aware of</div>
-          ${summaryItems(execSummary.tensions, "warning", "!")}
-        </div>
-      </div>`;
-  })();
-
-
-  (function renderLeadershipActions() {
-    var actions = Array.isArray(execSummary.leadership_actions) ? execSummary.leadership_actions.filter(Boolean) : [];
-    var host = document.getElementById("leadershipSection");
-    if (!actions.length) { host.innerHTML = ""; return; }
-
-
-    host.innerHTML = `
-      <h2 class="section-title">Recommended actions</h2>
-      <p class="section-note">Listed in priority order — most urgent first.</p>
-      <section class="grid grid-3">
-        ${actions.map((a, i) => `
-          <div class="card action-card">
-            <h3 class="mini-title">${i + 1}. ${esc(a.title || "")}</h3>
-            <p class="body-copy">${esc(a.body || "")}</p>
-          </div>`).join("")}
-      </section>`;
-  })();
-
-
-  (function renderRisks() {
-    var risks = Array.isArray(execSummary.risks) ? execSummary.risks.filter(Boolean) : [];
-    var host = document.getElementById("risksSection");
-    if (!risks.length) { host.innerHTML = ""; return; }
-
-
-    host.innerHTML = `
-      <h2 class="section-title">Risks if this remains unresolved</h2>
-      <p class="section-note">Listed independently of the actions above — not in priority order, and not a 1:1 match to any single action.</p>
-      <section class="grid grid-3">
-        ${risks.map(r => `
-          <div class="card risk-card">
-            <div class="risk-kicker">${esc(r.kicker || "Risk")}</div>
-            <h3 class="mini-title">${esc(r.title || "")}</h3>
-            <p class="body-copy">${esc(r.body || "")}</p>
-          </div>`).join("")}
-      </section>`;
-  })();
-
-
-  (function renderDecisionView() {
-    var dv = execSummary.decision_view;
-    var host = document.getElementById("decisionViewSection");
-    if (!dv || typeof dv !== "object") { host.innerHTML = ""; return; }
-
-
-    var narrative = [
-      { step: "1. Situation", title: "What is happening?", body: dv.what_is_happening, className: "context" },
-      { step: "2. Significance", title: "Why it matters", body: dv.why_it_matters, className: "impact" },
-      { step: "3. Exposure", title: "Biggest risk", body: dv.biggest_risk, className: "risk" }
-    ].filter(item => item.body);
-
-
-    var decision = dv.decision_this_informs;
-
-
-    if (!narrative.length && !decision) { host.innerHTML = ""; return; }
-
-
-    host.innerHTML = `
-      <section class="decision-section" aria-labelledby="executiveSummaryTitle">
-        ${narrative.length ? `
-          <div class="decision-flow">
-            ${narrative.map(item => `
-              <article class="decision-card ${item.className}">
-                <div class="decision-step">${esc(item.step)}</div>
-                <h3 class="decision-card-title">${esc(item.title)}</h3>
-                <p class="decision-card-copy">${esc(item.body)}</p>
-              </article>`).join("")}
-          </div>` : ""}
-
-
-        ${decision ? `
-          <article class="decision-outcome">
-            <h3 class="decision-outcome-title">Decision to be made</h3>
-            <p class="decision-outcome-copy">${esc(decision)}</p>
-          </article>` : ""}
-      </section>`;
-  })();
-
-
-  (function toggleExecSectionVisibility() {
-    var wrap = document.getElementById("execSection");
-    if (!wrap) return;
-    var hasContent = ["decisionViewSection", "leadershipSection", "risksSection"]
-      .some(id => (document.getElementById(id)?.textContent || "").trim().length > 0);
-    if (!hasContent) { wrap.style.display = "none"; }
-  })();
-
-
-  (function renderThemeFlow() {
-    var flow = execSummary.theme_flow;
-    var host = document.getElementById("themeFlowSection");
-
-
-    if (!flow || typeof flow !== "object") { host.innerHTML = ""; return; }
-
-
-    var layers = [
-      { key: "root_cause",  cls: "root",       num: 1, defaultLabel: "Root causes" },
-      { key: "symptom",     cls: "symptom",    num: 2, defaultLabel: "Operational symptoms" },
-      { key: "consequence", cls: "consequence", num: 3, defaultLabel: "Business consequence" }
-    ];
-
-
-    var hasAnyHeadline = layers.some(l => flow[l.key] && flow[l.key].headline);
-    if (!hasAnyHeadline) { host.innerHTML = ""; return; }
-
-
-    var hasInferred = layers.some(l => Array.isArray(flow[l.key]?.inferred_tags) && flow[l.key].inferred_tags.length);
-
-
-    var columnsHtml = layers.map((l, idx) => {
-      var layerData = flow[l.key] || {};
-      var themeTags = visibleThemes
-        .filter(t => pillClass(t.category_class) === l.cls)
-        .map(t => `<span>${esc(t.theme_name)}</span>`);
-      var inferredTags = (Array.isArray(layerData.inferred_tags) ? layerData.inferred_tags : [])
-        .filter(Boolean)
-        .map(t => `<span class="inferred">${esc(t)}</span>`);
-
-
-      var column = `
-        <div class="flow-column ${l.cls}">
-          <div class="flow-step-label">${l.num}. ${esc(layerData.label || l.defaultLabel)}</div>
-          <h3>${esc(layerData.headline || "")}</h3>
-          <p>${esc(layerData.description || "")}</p>
-          <div class="flow-tags">${themeTags.join("")}${inferredTags.join("")}</div>
-        </div>`;
-
-
-      return idx < layers.length - 1 ? column + `<div class="flow-arrow">→</div>` : column;
-    }).join("");
-
-
-    var legendHtml = hasInferred ? `
-      <div class="tag-legend">
-        <span class="legend-item"><span class="legend-swatch"></span>Named theme with evidence below</span>
-        <span class="legend-item"><span class="legend-swatch inferred"></span>Inferred pattern across themes</span>
-      </div>` : "";
-
-
-    host.innerHTML = `
-      <div class="theme-flow-inline">
-        <div class="flow-intro">
-          <h2 class="section-title" style="margin:0 0 8px">How the themes connect</h2>
-          ${flow.intro ? `<p>${esc(flow.intro)}</p>` : ""}
-          ${legendHtml}
-        </div>
-        <div class="theme-flow">${columnsHtml}</div>
-      </div>`;
-  })();
-
-
-  (function renderThemes() {
-    var host = document.getElementById("themeStack");
-
-
-    if (!visibleThemes.length) {
-      host.innerHTML = "<p>No themes found.</p>";
-      return;
-    }
-
-
-    visibleThemes.forEach(function (theme, index) {
-      var d = theme.data_by_theme || {};
-      var firstFmt = formatMonthYear(d.first_seen || "");
-      var lastFmt  = formatMonthYear(d.last_seen  || "");
-
-
-      var catCls = pillClass(theme.category_class);
-      var catLabel = categoryLabel(theme);
-      var categoryPill = catLabel ? `<span class="pill ${catCls}">${esc(catLabel)}</span>` : "";
-
-
-      var signalsAccountsPill;
-      if (displayData.has_company_data && d.companies != null) {
-        var accountWord = d.companies === 1 ? "account" : "accounts";
-        signalsAccountsPill = `<span class="pill">${d.signals ?? "-"} signals across ${d.companies} ${accountWord}</span>`;
-      } else {
-        signalsAccountsPill = `<span class="pill">${d.signals ?? "-"} signals</span>`;
-      }
-
-
-      var proportionPill = `<span class="pill">${d.proportion_of_feedback != null ? d.proportion_of_feedback + "% of feedback" : "Feedback share unavailable"}</span>`;
-
-
-      var datePills = (firstFmt && lastFmt && firstFmt !== lastFmt)
-        ? `<span class="pill">${esc(firstFmt)}–${esc(lastFmt)}</span>` : "";
-
-
-      var isFlagged = Array.isArray(displayData.flagged_theme_names)
-        && displayData.flagged_theme_names.includes(theme.theme_name);
-      var stateBadgeHtml = theme.change_state
-        ? `<span class="state-badge${isFlagged ? " concentrated" : ""}">${esc(theme.change_state)}</span>`
-        : "";
-
-
-      var concentrationNoteHtml = theme.concentration_note
-        ? `<div class="concentration-note">${esc(theme.concentration_note)}</div>`
-        : "";
-
-
-      var baselineCaptionHtml = theme.change_since_baseline_caption
-        ? `<div class="baseline-caption">${esc(theme.change_since_baseline_caption)}</div>`
-        : "";
-
-
-      var actionHtml = theme.decision_this_informs
-        ? `<div class="theme-action"><strong>Decision this informs:</strong> ${esc(theme.decision_this_informs)}</div>`
-        : "";
-
-
-      var evidence = Array.isArray(theme.supporting_evidence) ? theme.supporting_evidence.filter(Boolean) : [];
-      var evidenceHtml = evidence.length
-        ? `<div class="evidence-panel">
-             <div class="panel-kicker">Evidence trail</div>
-             <h4>Why this theme emerged</h4>
-             <div class="evidence-list">
-               ${evidence.map((item, i) => `
-                 <div class="evidence-item">
-                   <span class="evidence-number">${String(i + 1).padStart(2, "0")}</span>
-                   <p>${esc(item)}</p>
-                 </div>`).join("")}
-             </div>
-           </div>`
-        : `<div class="evidence-panel"><div class="panel-kicker">Evidence trail</div><h4>Why this theme emerged</h4><p class="body-copy">No supporting evidence available.</p></div>`;
-
-
-      var suggestionHtml = theme.implication
-        ? `<div class="suggestion-panel">
-             <div class="panel-kicker">Interpretation</div>
-             <h4>What this suggests</h4>
-             <p>${esc(theme.implication)}</p>
-           </div>`
-        : "";
-
-
-      var metrics = Array.isArray(theme.suggested_metrics) ? theme.suggested_metrics.filter(Boolean) : [];
-      var monitorHtml = metrics.length
-        ? `<div class="monitor-panel">
-             <div class="panel-kicker">Signals to monitor</div>
-             <div class="metric-list">
-               ${metrics.map(m => `<div class="metric-item"><span class="metric-dot"></span><span>${esc(m)}</span></div>`).join("")}
-             </div>
-           </div>`
-        : "";
-
-
-      var el = document.createElement("details");
-      el.className = "theme";
-      if (index === 0) el.open = true;
-      el.innerHTML = `
-        <summary class="theme-summary">
-          <div>
-            ${stateBadgeHtml ? `<div class="pill-row" style="margin-top:0; margin-bottom:10px;">${stateBadgeHtml}</div>` : ""}
-            <h3 class="theme-title">${esc(theme.theme_name)}</h3>
-            <p class="theme-description">${esc(theme.strategic_takeaway || "")}</p>
-            <div class="pill-row">
-              ${categoryPill}
-              ${signalsAccountsPill}
-              ${proportionPill}
-              ${datePills}
-            </div>
-            ${concentrationNoteHtml}
-            ${baselineCaptionHtml}
-            ${actionHtml}
-          </div>
-          <div class="expand"></div>
-        </summary>
-        <div class="theme-body">
-          <div class="insight-detail-layout">
-            ${evidenceHtml}
-            <aside class="insight-side">
-              ${suggestionHtml}
-              ${monitorHtml}
-            </aside>
-          </div>
-        </div>`;
-      host.appendChild(el);
-    });
-  })();
-
-
-  (function renderUnclassifiedItems() {
-    if (!unclassifiedItems.length) return;
-
-
-    var el = document.createElement("details");
-    el.id = "unclassifiedItemsCard";
-    el.className = "theme unclassified-card";
-    el.innerHTML = `
-      <summary class="theme-summary">
-        <div>
-          <h3 class="theme-title">Items with no theme assigned</h3>
-          <p class="theme-description">These items didn't share enough in common with other feedback to form a recurring theme — often one-off requests or isolated mentions of a topic that didn't recur elsewhere in this dataset.</p>
-        </div>
-        <div class="expand"></div>
-      </summary>
-      <div class="theme-body">
-        <div class="evidence-list">
-          ${unclassifiedItems.map((item, i) => {
-            var meta = [item.company, formatMonthYear(item.event_date_iso)].filter(Boolean).join(", ");
-            return `
-              <div class="evidence-item">
-                <span class="evidence-number">${String(i + 1).padStart(2, "0")}</span>
-                <p>${esc(item.excerpt)}${meta ? ` <span style="color:var(--muted);">(${esc(meta)})</span>` : ""}<br><em>${esc(item.reason)}</em></p>
-              </div>`;
-          }).join("")}
-        </div>
-      </div>`;
-    document.getElementById("themeStack").appendChild(el);
-  })();
-
-
-  document.getElementById("reportFooter").textContent =
-    "Generated by Intuifi";
-
-
-  document.getElementById("previewPdf").addEventListener("click", function () {
-
-
-    var date = new Date().toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
-    var logoMarkup = document.getElementById("intuifiLogo")?.outerHTML || "";
-    logoMarkup = logoMarkup
-      .replace('class="brand-logo"', 'class="pdf-logo"')
-      .replace('id="intuifiLogo"', 'id="intuifiLogoPdf"');
-
-
-    function textOf(item) {
-      if (typeof item === "string") return esc(item);
-      if (!item) return "";
-      return esc(item.headline || "") + (item.detail ? ` — ${esc(item.detail)}` : "");
-    }
-
-
-    var reportTitleText = "Sample Strategic Insights Report";
-
-
-    var TOP_N_THEMES_PDF = 5;
-    var takeawaysHtml = visibleThemes.slice(0, TOP_N_THEMES_PDF).map(function (t) {
-      var d = t.data_by_theme || {};
-      var stat = [
-        d.signals != null ? d.signals + " signals" : null,
-        d.proportion_of_feedback != null ? d.proportion_of_feedback + "% of feedback" : null
-      ].filter(Boolean).join(" · ");
-      return `<li><strong>${esc(t.theme_name)}.</strong>${stat ? " " + esc(stat) : ""}</li>`;
-    }).join("") || "<li>No themes available.</li>";
-    if (visibleThemes.length > TOP_N_THEMES_PDF) {
-      var remainingPdf = visibleThemes.length - TOP_N_THEMES_PDF;
-      takeawaysHtml += `<li style="list-style:none; padding-left:0; color:#6b7280;">+ ${remainingPdf} more theme${remainingPdf === 1 ? "" : "s"} — see "Detailed themes and evidence" below</li>`;
-    }
-    var tensionsHtml = (execSummary.tensions || []).filter(Boolean).map(i => `<li>${textOf(i)}</li>`).join("")
-      || "<li>No tensions available.</li>";
-
-
-    var implicationPdf = execSummary.strategic_implication
-      ? `<div class="pdf-tldr">
-           <div class="pdf-tldr-label">Strategic implication</div>
-           <div class="pdf-tldr-text">${esc(execSummary.strategic_implication)}</div>
-         </div>`
-      : "";
-
-
-    var actions = Array.isArray(execSummary.leadership_actions) ? execSummary.leadership_actions.filter(Boolean) : [];
-    var leadershipPdf = actions.length ? `
-      <div class="pdf-section-heading">Recommended actions</div>
-      <div style="font-size:12px; color:#6b7280; margin:-4px 0 10px;">Listed in priority order — most urgent first.</div>
-      <ol class="pdf-list" style="padding-left:20px;">
-        ${actions.map(a => `<li style="margin-bottom:10px;"><strong>${esc(a.title || "")}.</strong> ${esc(a.body || "")}</li>`).join("")}
-      </ol>` : "";
-
-
-    var risks = Array.isArray(execSummary.risks) ? execSummary.risks.filter(Boolean) : [];
-    var risksPdf = risks.length ? `
-      <div class="pdf-section-heading" style="margin-top:32px;">Risks if this remains unresolved</div>
-      <div style="font-size:12px; color:#6b7280; margin:-4px 0 10px;">Listed independently of the actions above — not in priority order, and not a 1:1 match to any single action.</div>
-      <ul class="pdf-list" style="padding-left:20px;">
-        ${risks.map(r => `<li style="margin-bottom:10px;"><strong>${esc(r.kicker || "Risk")}:</strong> ${esc(r.title || "")} — ${esc(r.body || "")}</li>`).join("")}
-      </ul>` : "";
-
-
-    var dv = execSummary.decision_view;
-    var decisionNarrative = dv ? [
-      { step: "1. Situation", title: "What is happening?", body: dv.what_is_happening, className: "context" },
-      { step: "2. Significance", title: "Why it matters", body: dv.why_it_matters, className: "impact" },
-      { step: "3. Exposure", title: "Biggest risk", body: dv.biggest_risk, className: "risk" }
-    ].filter(item => item.body) : [];
-    var decisionRequired = dv ? dv.decision_this_informs : "";
-
-
-    var decisionPdf = (decisionNarrative.length || decisionRequired) ? `
-      <div class="pdf-section-heading">Executive Summary</div>
-
-
-      ${decisionNarrative.length ? `
-        <div class="pdf-decision-flow">
-          ${decisionNarrative.map((item, index) => `
-            <div class="pdf-decision-card ${item.className}">
-              <div class="pdf-decision-step">${esc(item.step)}</div>
-              <div class="pdf-decision-title">${esc(item.title)}</div>
-              <div class="pdf-decision-copy">${esc(item.body)}</div>
-            </div>
-            ${index < decisionNarrative.length - 1 ? `<div class="pdf-decision-arrow">→</div>` : ""}
-          `).join("")}
-        </div>` : ""}
-
-
-      ${decisionRequired ? `
-        <div class="pdf-decision-outcome">
-          <div class="pdf-decision-outcome-title">Decision to be made</div>
-          <div class="pdf-decision-outcome-copy">${esc(decisionRequired)}</div>
-        </div>` : ""}
-    ` : "";
-
-
-    var themeSections = visibleThemes.map(function (theme, idx) {
-      var d = theme.data_by_theme || {};
-      var firstFmt = formatMonthYear(d.first_seen || "");
-      var lastFmt  = formatMonthYear(d.last_seen  || "");
-      var catLabel = categoryLabel(theme);
-
-
-      var statBits = [
-        catLabel || null,
-        d.signals != null ? d.signals + " signals" : null,
-        d.proportion_of_feedback != null ? d.proportion_of_feedback + "% of feedback" : null,
-        displayData.has_company_data && d.companies != null ? d.companies + " companies" : null,
-        (firstFmt && lastFmt && firstFmt !== lastFmt) ? "First seen: " + firstFmt + " &nbsp;·&nbsp; Last seen: " + lastFmt : null
-      ].filter(Boolean).join(" &nbsp;·&nbsp; ");
-
-
-      var decisionItem = theme.decision_this_informs
-        ? `<div class="pdf-subsection">
-             <div class="pdf-subsection-label">Decision this informs</div>
-             <p class="pdf-body">${esc(theme.decision_this_informs)}</p>
-           </div>` : "";
-
-
-      var evidenceItems = (Array.isArray(theme.supporting_evidence) && theme.supporting_evidence.length)
-        ? `<div class="pdf-subsection">
-             <div class="pdf-subsection-label">Supporting evidence</div>
-             <ul class="pdf-list">${theme.supporting_evidence.map(i=>`<li>${esc(i)}</li>`).join("")}</ul>
-           </div>` : "";
-
-
-      var implicationItem = theme.implication
-        ? `<div class="pdf-subsection">
-             <div class="pdf-subsection-label">What this suggests</div>
-             <p class="pdf-body">${esc(theme.implication)}</p>
-           </div>` : "";
-
-
-      var metricsItems = (Array.isArray(theme.suggested_metrics) && theme.suggested_metrics.length)
-        ? `<div class="pdf-subsection">
-             <div class="pdf-subsection-label">Signals to monitor</div>
-             <ul class="pdf-list">${theme.suggested_metrics.map(i=>`<li>${esc(i)}</li>`).join("")}</ul>
-           </div>` : "";
-
-
-      return `
-        <div class="pdf-theme">
-          <div class="pdf-theme-number">${idx + 1}</div>
-          <div class="pdf-theme-body">
-            <div class="pdf-theme-title">${esc(theme.theme_name)}</div>
-            <p class="pdf-takeaway">${esc(theme.strategic_takeaway || "")}</p>
-            <div class="pdf-stats">${statBits}</div>
-            ${decisionItem}${evidenceItems}${implicationItem}${metricsItems}
-          </div>
-        </div>`;
-    }).join("");
-
-
-    var unclassifiedItemsPdf = unclassifiedItems.length ? `
-      <div class="pdf-theme">
-        <div class="pdf-theme-number">–</div>
-        <div class="pdf-theme-body">
-          <div class="pdf-theme-title">Items with no theme assigned</div>
-          <p class="pdf-takeaway">These items didn't share enough in common with other feedback to form a recurring theme — often one-off requests or isolated mentions of a topic that didn't recur elsewhere in this dataset.</p>
-          <ul class="pdf-list">
-            ${unclassifiedItems.map(item => {
-              var meta = [item.company, formatMonthYear(item.event_date_iso)].filter(Boolean).join(", ");
-              return `<li><strong>${esc(item.excerpt)}</strong>${meta ? ` (${esc(meta)})` : ""} — <em>${esc(item.reason)}</em></li>`;
-            }).join("")}
-          </ul>
-        </div>
-      </div>` : "";
-
-
-    var html = `<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>${esc(reportTitleText)} | Intuifi</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-
-    body {
-      font-family: "Roboto", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
-      color: #111827;
-      background: #fff;
-      padding: 0;
-    }
-
-
-    .pdf-toolbar {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: #0f625c;
-      color: #fff;
-      padding: 12px 32px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      font-family: "Roboto", system-ui, sans-serif;
-    }
-
-
-    .pdf-toolbar-note { font-size: 14px; opacity: 0.9; }
-
-
-    .pdf-print-btn {
-      border: 2px solid #fff;
-      background: transparent;
-      color: #fff;
-      padding: 8px 20px;
-      border-radius: 6px;
-      font-weight: 700;
-      font-size: 14px;
-      cursor: pointer;
-      font-family: "Roboto", system-ui, sans-serif;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: background 0.15s ease, color 0.15s ease;
-    }
-
-
-    .pdf-print-btn:hover { background: #fff; color: #0f625c; }
-
-
-    .pdf-page { max-width: 780px; margin: 0 auto; padding: 56px 60px 72px; }
-
-
-    .pdf-cover { border-bottom: 3px solid #0f625c; padding-bottom: 28px; margin-bottom: 36px; }
-
-
-    .pdf-cover-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 28px; }
-    .pdf-cover-copy { min-width: 0; }
-
-
-    .pdf-brand-cluster { display: flex; align-items: center; gap: 14px; flex: 0 0 auto; }
-
-
-    .pdf-logo { display: block; width: 132px; height: auto; flex: 0 0 auto; overflow: visible; }
-
-
-    .pdf-cover-label {
-      font-family: "Roboto", system-ui, sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #0f625c;
-      margin-bottom: 10px;
-    }
-
-
-    .pdf-cover-title {
-      font-size: 32px;
-      font-weight: 700;
-      color: #111827;
-      line-height: 1.2;
-      margin-bottom: 8px;
-      font-family: "Roboto", system-ui, sans-serif;
-    }
-
-
-    .pdf-cover-date { font-size: 13px; color: #6b7280; font-family: "Roboto", system-ui, sans-serif; }
-
-
-    .pdf-section-heading {
-      font-family: "Roboto", system-ui, sans-serif;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #0f625c;
-      margin-bottom: 16px;
-      padding-bottom: 6px;
-      border-bottom: 1px solid #b9d6d2;
-    }
-
-
-    .pdf-decision-flow { display: flex; align-items: stretch; gap: 8px; margin-bottom: 16px; break-inside: avoid; }
-
-
-    .pdf-decision-card {
-      flex: 1 1 0;
-      min-width: 0;
-      border: 1px solid #e5e7eb;
-      border-top-width: 4px;
-      border-radius: 10px;
-      padding: 12px;
-      background: #ffffff;
-    }
-
-
-    .pdf-decision-card.context { border-color: #b9d6d2; border-top-color: #0f625c; background: #e6f0ef; }
-    .pdf-decision-card.impact { border-color: #fde68a; border-top-color: #d97706; background: #fffbeb; }
-    .pdf-decision-card.risk { border-color: #fecaca; border-top-color: #dc2626; background: #fef2f2; }
-
-
-    .pdf-decision-step {
-      margin-bottom: 6px;
-      color: #6b7280;
-      font-size: 8.5px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-
-
-    .pdf-decision-title { margin-bottom: 6px; color: #111827; font-size: 12px; font-weight: 700; line-height: 1.25; }
-    .pdf-decision-copy { color: #374151; font-size: 9.5px; line-height: 1.45; }
-
-
-    .pdf-decision-arrow {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex: 0 0 18px;
-      color: #9ca3af;
-      font-size: 18px;
-      font-weight: 700;
-    }
-
-
-    .pdf-decision-outcome {
-      margin-top: 16px;
-      margin-bottom: 16px;
-      padding: 14px;
-      border: 2px solid #0f625c;
-      border-radius: 10px;
-      background: #e6f0ef;
-      break-inside: avoid;
-    }
-
-
-    .pdf-decision-outcome-title { margin-bottom: 5px; color: #0f625c; font-size: 13px; font-weight: 700; }
-    .pdf-decision-outcome-copy { color: #1f2937; font-size: 11px; font-weight: 500; line-height: 1.5; }
-
-
-    .pdf-tldr {
-      background: #e6f0ef;
-      border-left: 4px solid #0f625c;
-      padding: 14px 18px;
-      margin-bottom: 24px;
-      border-radius: 0 6px 6px 0;
-    }
-
-
-    .pdf-tldr-label {
-      font-family: "Roboto", system-ui, sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #0f625c;
-      margin-bottom: 6px;
-    }
-
-
-    .pdf-tldr-text { font-size: 15px; line-height: 1.6; color: #1f2937; }
-
-
-    .pdf-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px; }
-
-
-    .pdf-panel-title {
-      font-family: "Roboto", system-ui, sans-serif;
-      font-size: 12px;
-      font-weight: 700;
-      color: #374151;
-      margin-bottom: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-
-    .pdf-bullet-list { list-style: none; padding: 0; }
-
-
-    .pdf-bullet-list li {
-      position: relative;
-      padding-left: 18px;
-      margin-bottom: 8px;
-      font-size: 13px;
-      line-height: 1.55;
-      color: #374151;
-    }
-
-
-    .pdf-bullet-list--check li::before { content: "✔"; position: absolute; left: 0; top: 1px; color: #0f625c; font-size: 11px; }
-    .pdf-bullet-list--warn li::before { content: "⚠"; position: absolute; left: 0; top: 1px; color: #b45309; font-size: 11px; }
-
-
-    .pdf-themes-heading {
-      font-family: "Roboto", system-ui, sans-serif;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #0f625c;
-      margin-top: 32px;
-      margin-bottom: 20px;
-      padding-bottom: 6px;
-      border-bottom: 1px solid #b9d6d2;
-    }
-
-
-    .pdf-theme { display: flex; gap: 18px; padding: 20px 0; border-bottom: 1px solid #e5e7eb; }
-    .pdf-theme:last-child { border-bottom: none; }
-
-
-    .pdf-theme-number {
-      font-family: "Roboto", system-ui, sans-serif;
-      font-size: 13px;
-      font-weight: 700;
-      color: #0f625c;
-      min-width: 22px;
-      padding-top: 2px;
-    }
-
-
-    .pdf-theme-body { flex: 1; min-width: 0; }
-
-
-    .pdf-theme-title {
-      font-family: "Roboto", system-ui, sans-serif;
-      font-size: 16px;
-      font-weight: 700;
-      color: #111827;
-      margin-bottom: 6px;
-      line-height: 1.3;
-    }
-
-
-    .pdf-takeaway { font-size: 13px; line-height: 1.6; color: #374151; margin-bottom: 8px; }
-
-
-    .pdf-stats {
-      font-family: "Roboto", system-ui, sans-serif;
-      font-size: 11px;
-      color: #6b7280;
-      margin-bottom: 14px;
-      font-weight: 500;
-    }
-
-
-    .pdf-subsection { margin-top: 12px; padding-top: 10px; border-top: 1px dashed #e5e7eb; }
-
-
-    .pdf-subsection-label {
-      font-family: "Roboto", system-ui, sans-serif;
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      color: #9ca3af;
-      margin-bottom: 6px;
-    }
-
-
-    .pdf-list { padding-left: 16px; margin: 0; }
-    .pdf-list li { font-size: 12px; line-height: 1.55; color: #4b5563; margin-bottom: 5px; }
-    .pdf-body { font-size: 12px; line-height: 1.6; color: #4b5563; }
-
-
-    .pdf-footer {
-      margin-top: 48px;
-      padding-top: 16px;
-      border-top: 1px solid #e5e7eb;
-      font-family: "Roboto", system-ui, sans-serif;
-      font-size: 11px;
-      color: #9ca3af;
-      display: flex;
-      justify-content: space-between;
-    }
-
-
     @media print {
-      .pdf-toolbar { display: none !important; }
-      .pdf-page { padding: 32px 40px 48px; }
-      .pdf-theme { break-inside: avoid; }
-      .pdf-subsection { break-inside: avoid; }
+      #previewPdf { display: none; }
+      details.theme:not([open]) > *:not(summary) { display: block !important; }
       body { background: #fff; }
     }
   </style>
-</head>
-<body>
-
-
-  <div class="pdf-toolbar">
-    <span class="pdf-toolbar-note">Review your report below, then save it as a PDF.</span>
-    <button class="pdf-print-btn" onclick="window.print()">
-      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-      Save as PDF
-    </button>
-  </div>
-
-
-  <div class="pdf-page">
-
-
-    <div class="pdf-cover">
-      <div class="pdf-cover-top">
-        <div class="pdf-cover-copy">
-          <div class="pdf-cover-label">Customer Insight Report</div>
-          <div class="pdf-cover-title">${esc(reportTitleText)}</div>
-          <div class="pdf-cover-date">Generated ${date}</div>
-        </div>
-        <div class="pdf-brand-cluster">
-          ${logoMarkup}
-        </div>
-      </div>
-    </div>
-
-
-    ${decisionPdf}
-    ${leadershipPdf}
-    ${risksPdf}
-
-
-    <div class="pdf-section-heading" style="margin-top:32px;">At a glance</div>
-
-
-    ${implicationPdf}
-
-
-    <div class="pdf-two-col" style="margin-top:24px;">
-      <div>
-        <div class="pdf-panel-title">Themes</div>
-        <ul class="pdf-bullet-list pdf-bullet-list--check">${takeawaysHtml}</ul>
-      </div>
-      <div>
-        <div class="pdf-panel-title">Tensions to be aware of</div>
-        <ul class="pdf-bullet-list pdf-bullet-list--warn">${tensionsHtml}</ul>
-      </div>
-    </div>
-
-
-    <div class="pdf-themes-heading">Detailed themes and evidence</div>
-    ${themeSections}
-    ${unclassifiedItemsPdf}
-
-
-    <div class="pdf-footer">
-      <span>Generated by Intuifi &nbsp;·&nbsp; intuifi.io</span>
-      <span>${date}</span>
-    </div>
-
-
-  </div>
-</body>
-</html>`;
-
-
-    var blob = new Blob([html], { type: "text/html;charset=utf-8" });
-    var url  = URL.createObjectURL(blob);
-    window.open(url, "_blank");
-  });
-
-
-})();
-</script>
-
-
 </body>
 </html>
