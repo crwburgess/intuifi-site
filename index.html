@@ -518,7 +518,7 @@ html,body{margin:0;padding:0;font-family:Roboto,system-ui,-apple-system,Segoe UI
 <!-- ============ CTA BAND ============ -->
 <div class="section-white">
   <div class="inner">
-    <div class="cta-band">
+    <div class="cta-band" id="cta-band">
       <div id="cta-default">
         <h2>See what Intuifi finds in your own data.</h2>
         <p class="sub">Export your data, then choose how to submit it.</p>
@@ -594,6 +594,21 @@ async function submitEmail(e){
   }
   return false;
 }
+
+// Auto-open the "Get my free report" form when arriving with #early-access in the URL
+// (used by the sample report's "Try Intuifi" link)
+function maybeAutoOpenForm() {
+  if (location.hash === '#early-access') {
+    revealForm();
+    var band = document.getElementById('cta-band');
+    if (band) {
+      setTimeout(function() {
+        band.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 60);
+    }
+  }
+}
+document.addEventListener('DOMContentLoaded', maybeAutoOpenForm);
 </script>
 
 <!-- ============ BIO ============ -->
