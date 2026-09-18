@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Intuifi | See What's Really Happening Across Your Business</title>
-  <meta name="description" content="Intuifi turns scattered evidence from your CRM, support tickets and backlogs into structured reports, with every finding linked back to its source.">
-  <meta property="og:title" content="Intuifi | See What's Really Happening Across Your Business">
-  <meta property="og:description" content="Intuifi turns scattered evidence from your CRM, support tickets and backlogs into structured reports, with every finding linked back to its source.">
-  <meta property="og:image" content="https://intuifi.io/assets/intuifi-og-image.png">
-  <meta property="og:url" content="https://intuifi.io">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Intuifi | See What's Really Happening Across Your Business">
-  <meta name="twitter:description" content="Intuifi turns scattered evidence from your CRM, support tickets and backlogs into structured reports, with every finding linked back to its source.">
-  <meta name="twitter:image" content="https://intuifi.io/assets/intuifi-og-image.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="https://intuifi.io/assets/intuifi-icon.png">
-  <link rel="apple-touch-icon" href="https://intuifi.io/assets/intuifi-icon.png">
-  <meta name="theme-color" content="#0f625c">
-  <script type="application/ld+json">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Intuifi | See What's Really Happening Across Your Business</title>
+<meta name="description" content="Intuifi turns scattered evidence from your CRM, support tickets and backlogs into structured reports, with every finding linked back to its source.">
+<meta property="og:title" content="Intuifi | See What's Really Happening Across Your Business">
+<meta property="og:description" content="Intuifi turns scattered evidence from your CRM, support tickets and backlogs into structured reports, with every finding linked back to its source.">
+<meta property="og:image" content="https://intuifi.io/assets/intuifi-og-image.png">
+<meta property="og:url" content="https://intuifi.io">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Intuifi | See What's Really Happening Across Your Business">
+<meta name="twitter:description" content="Intuifi turns scattered evidence from your CRM, support tickets and backlogs into structured reports, with every finding linked back to its source.">
+<meta name="twitter:image" content="https://intuifi.io/assets/intuifi-og-image.png">
+<link rel="icon" type="image/png" href="https://intuifi.io/assets/intuifi-icon.png">
+<link rel="apple-touch-icon" href="https://intuifi.io/assets/intuifi-icon.png">
+<meta name="theme-color" content="#0f625c">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -32,8 +29,8 @@
     "name": "Chris Burgess"
   }
 }
-  </script>
-  <script type="application/ld+json">
+</script>
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -120,13 +117,19 @@
     }
   ]
 }
-  </script>
-  <style>
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
 :root{
   --brand:#0f625c;
+  --brand-dark:#0a423e;
   --brand-light:#e6efee;
-  --bg-muted:#a2c4c9;
+  --accent:#d97757;
+  --accent-light:#fbe9e2;
   --text:#111111;
+  --text-mid:#3f4548;
   --muted:#5a5f66;
   --border:#e7eaee;
   --bg-grey:#f6f8f9;
@@ -136,38 +139,58 @@
 html,body{margin:0;padding:0;font-family:Roboto,system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:var(--text);background:#fff;line-height:1.5;overflow-x:hidden;}
 .inner{max-width:var(--container);margin:0 auto;padding:0 20px;}
 
-/* HEADER */
+/* ============ HEADER ============ */
 .site-header{background:#fff;border-bottom:1px solid var(--border);padding:16px 20px;}
 .site-header .inner{display:flex;align-items:center;justify-content:center;}
 .logo{display:block;width:140px;height:auto;}
 
-/* HERO BANNER */
-.hero-banner{background:var(--brand);padding:56px 20px;text-align:center;}
-.hero-banner h1{font-size:clamp(40px,5.5vw,64px);line-height:1.1;margin:0;letter-spacing:-0.5px;color:#fff;max-width:860px;margin-left:auto;margin-right:auto;}
+/* ============ TYPE SCALE ============ */
+.eyebrow{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--brand);margin:0 0 10px;}
+.h1{font-size:clamp(38px,5.2vw,58px);line-height:1.08;font-weight:800;letter-spacing:-0.5px;margin:0;}
+.h2{font-size:clamp(26px,3vw,34px);font-weight:800;letter-spacing:-0.3px;margin:0;}
+.lede{font-size:clamp(18px,2vw,21px);line-height:1.55;color:var(--text-mid);margin:0;}
 
-/* HERO SECTION */
-.hero-section{background:#fff;padding:40px 20px 48px;text-align:center;}
-.hero-subhead{font-size:clamp(20px,2.2vw,24px);font-weight:700;color:var(--text);margin:0 auto 28px;max-width:720px;line-height:1.4;}
-.btn{display:inline-block;background:var(--brand);color:#fff;border:none;border-radius:24px;padding:14px 24px;font-weight:600;text-decoration:none;font-size:15px;transition:transform .15s ease,box-shadow .15s ease;}
-.btn:focus{outline:2px solid #0a423e;outline-offset:2px;}
-.btn:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(15,98,92,.2);}
+/* ============ SECTIONS ============ */
+.section-grey{background:var(--bg-grey);padding:80px 20px;}
+.section-white{background:#fff;padding:80px 20px;}
 
-/* SECTIONS */
-.section-grey{background:var(--bg-grey);padding:56px 20px;}
-.section-white{background:#fff;padding:56px 20px;}
+/* ============ HERO ============ */
+.hero-banner{background:var(--brand);padding:88px 20px 96px;position:relative;overflow:hidden;}
+.hero-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:48px;align-items:center;max-width:1280px;margin:0 auto;padding:0 20px;}
+@media(max-width:960px){.hero-grid{grid-template-columns:1fr;text-align:center;max-width:700px;}}
+.hero-copy h1{color:#fff;}
+.hero-copy .lede{color:rgba(255,255,255,0.82);margin:22px 0 30px;max-width:520px;}
+@media(max-width:860px){.hero-copy .lede{margin-left:auto;margin-right:auto;}}
 
-/* HOW IT WORKS DIAGRAM */
-.diagram-vertical{max-width:1000px;margin:0 auto;}
-.diagram-outer-card{background:#fff;border-radius:24px;padding:36px 32px;box-shadow:0 4px 20px rgba(0,0,0,.05);border:1px solid var(--border);}
-.diagram-row{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;min-height:110px;}
+.btn{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--brand);border:none;border-radius:999px;padding:15px 28px;font-weight:700;text-decoration:none;font-size:15px;transition:transform .15s ease,box-shadow .15s ease;}
+.btn:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(0,0,0,.18);}
+.btn-outline{display:inline-flex;align-items:center;gap:8px;background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.5);border-radius:999px;padding:13px 26px;font-weight:700;text-decoration:none;font-size:15px;}
+
+.hero-visual{position:relative;}
+
+/* ============ CARD SYSTEM ============ */
+/* Tier 1: module container */
+.card-1{background:#fff;border-radius:20px;padding:40px;box-shadow:0 4px 24px rgba(15,20,20,.06);border:1px solid var(--border);}
+@media(max-width:640px){.card-1{padding:28px 22px;}}
+/* Tier 2: item within a module */
+.card-2{border-radius:12px;padding:18px 20px;background:var(--bg-grey);}
+.card-2--accent{background:var(--brand-light);}
+
+/* ============ SECTION HEAD ============ */
+.section-head{text-align:center;max-width:680px;margin:0 auto 48px;}
+.section-head .eyebrow{display:block;text-align:center;}
+
+/* ============ HOW IT WORKS DIAGRAM ============ */
+.diagram-row{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;min-height:110px;}
 .diagram-row-text{text-align:left;}
 .diagram-row-num{display:inline-block;background:var(--brand-light);color:var(--brand);font-weight:700;font-size:13px;border-radius:999px;padding:4px 10px;flex-shrink:0;}
 .diagram-row-heading{display:flex;align-items:center;gap:10px;margin-bottom:6px;}
-.diagram-row-title{font-size:17px;font-weight:700;margin:0;color:var(--text);}
+.diagram-row-title{font-size:18px;font-weight:700;margin:0;color:var(--text);}
 .diagram-row-desc{font-size:14px;color:var(--muted);margin:0;line-height:1.5;}
 .diagram-row-visual{display:flex;justify-content:center;}
+.diagram-row-gap{height:12px;}
 
-.diagram-box{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;border-radius:8px;padding:12px 14px;font-size:12px;font-weight:500;white-space:nowrap;text-align:center;}
+.diagram-box{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;border-radius:10px;padding:12px 14px;font-size:12px;font-weight:500;white-space:nowrap;text-align:center;}
 .diagram-box--logo{background:#fff;border:1px solid var(--border);box-shadow:0 2px 10px rgba(0,0,0,.04);padding:12px 14px;white-space:normal;}
 .diagram-logo-badge{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:13px;margin:0 auto 6px;flex-shrink:0;}
 .diagram-logo-name{display:block;font-size:12px;font-weight:700;color:var(--text);}
@@ -181,7 +204,7 @@ html,body{margin:0;padding:0;font-family:Roboto,system-ui,-apple-system,Segoe UI
 
 .diagram-logo-card{background:#fff;border:1.5px solid var(--brand);border-radius:12px;padding:16px 20px;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(15,98,92,0.08);}
 
-.diagram-box--report-single{background:#fff;border:1px solid var(--border);border-radius:12px;padding:0;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.06);white-space:normal;width:100%;max-width:520px;gap:0;align-items:stretch;margin:0 auto;}
+.diagram-box--report-single{background:#fff;border:1px solid var(--border);border-radius:12px;padding:0;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.06);white-space:normal;width:100%;max-width:340px;gap:0;align-items:stretch;margin:0 auto;}
 .report-bar{height:5px;background:var(--brand);width:100%;}
 .report-body{padding:16px 18px;width:100%;text-align:left;}
 .report-heading{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);margin:0 0 12px;text-align:left;display:flex;align-items:center;flex-wrap:wrap;}
@@ -191,55 +214,54 @@ html,body{margin:0;padding:0;font-family:Roboto,system-ui,-apple-system,Segoe UI
 .report-col:first-child{border-left:none;padding-left:0;}
 .report-col-icon{width:20px;height:20px;flex-shrink:0;}
 .report-row-label{font-size:12px;font-weight:600;color:var(--text);line-height:1.3;}
-.diagram-row-visual .diagram-box--report-single{max-width:340px;}
 
 .converge-wrap{position:relative;z-index:0;}
 .converge-svg{position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1;overflow:visible;}
 
 @media(max-width:640px){
-  .diagram-row{grid-template-columns:1fr;text-align:center;min-height:auto;}
+  .diagram-row{grid-template-columns:1fr;text-align:center;min-height:auto;gap:14px;}
   .diagram-row-text{text-align:center;}
-  .diagram-row-heading{justify-content:center;}
+  .diagram-row-heading{flex-direction:column;justify-content:center;gap:6px;}
   .diagram-sources{align-items:center;}
   .report-cols{flex-direction:column;gap:12px;}
   .report-col{border-left:none;padding-left:0;border-top:1px solid var(--border);padding-top:12px;}
   .report-col:first-child{border-top:none;padding-top:0;}
+  .converge-svg{display:none;}
+  .diagram-row-gap{height:44px;}
 }
 
-/* OUTER CARDS */
-.outer-card{background:#fff;border-radius:24px;padding:28px;box-shadow:0 4px 20px rgba(0,0,0,.05);border:1px solid var(--border);}
-.outer-card-head{text-align:center;margin-bottom:20px;display:flex;flex-direction:column;align-items:center;gap:10px;}
+/* ============ CHALLENGES / OUTCOMES ============ */
 .twocol{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;}
 @media(max-width:720px){.twocol{grid-template-columns:1fr;}}
-.list{display:grid;gap:16px;}
-.comparison-image{display:block;margin:0 auto 8px;width:auto;object-fit:contain;height:44px;}
-.column-head{font-size:17px;font-weight:700;margin:0;}
-.benefit-card{display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:center;min-height:100px;background:var(--bg-grey);border:1px solid var(--border);border-radius:16px;padding:16px 18px;}
-@media(max-width:720px){.benefit-card{min-height:auto;}}
-.icon-wrap{width:44px;height:44px;display:flex;align-items:center;justify-content:center;}
-.benefit-title{margin:0;font-weight:700;font-size:15px;line-height:1.4;}
-.benefit-card--positive{border:1px solid var(--border);border-left:4px solid var(--brand);border-radius:20px;}
+.col-head{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;margin-bottom:24px;}
+.col-head-icon{width:44px;height:44px;display:flex;align-items:center;justify-content:center;}
+.col-title{font-size:18px;font-weight:800;margin:0;}
+.item-list{display:grid;gap:14px;}
+.item{display:grid;grid-template-columns:40px 1fr;gap:16px;align-items:center;}
+.item-icon{width:40px;height:40px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.item-title{margin:0;font-weight:700;font-size:15px;line-height:1.4;}
+.card-2--outcome{border-left:3px solid var(--brand);}
 
-/* CTA BAND */
-.cta-band{background:var(--brand);border-radius:24px;padding:40px 32px;text-align:center;}
+/* ============ TESTIMONIAL (asymmetric) ============ */
+.testimonial-grid{display:grid;grid-template-columns:0.8fr 1.2fr;gap:0;align-items:stretch;border-radius:24px;overflow:hidden;box-shadow:0 4px 24px rgba(15,20,20,.06);border:1px solid var(--border);}
+@media(max-width:760px){.testimonial-grid{grid-template-columns:1fr;}}
+.testimonial-panel{background:var(--brand);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 32px;text-align:center;color:#fff;}
+.testimonial-avatar{width:88px;height:88px;border-radius:50%;background:rgba(255,255,255,0.15);border:2px solid rgba(255,255,255,0.4);display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:800;margin-bottom:16px;}
+.testimonial-name{font-weight:700;font-size:16px;margin:0 0 2px;}
+.testimonial-role{font-size:13px;color:rgba(255,255,255,0.78);margin:0;}
+.testimonial-role a{color:#fff;font-weight:700;}
+.testimonial-copy{background:#fff;padding:48px 44px;display:flex;flex-direction:column;justify-content:center;}
+@media(max-width:640px){.testimonial-copy{padding:32px 26px;}}
+.testimonial-quote{font-size:22px;line-height:1.5;font-style:italic;color:var(--text);margin:0;}
+.testimonial-quote .quote-mark{color:var(--brand);font-style:normal;font-weight:800;}
 
-/* SAMPLE FINDING CARD */
-.finding-wrap{max-width:420px;margin:0 auto 28px;}
-.finding-label{font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin:0 0 10px;}
-.finding-card{background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.06);text-align:left;}
-.finding-card .bar{height:5px;background:var(--brand);}
-.finding-card .body{padding:18px;}
-.finding-tag{display:inline-block;font-size:10px;font-weight:700;background:var(--brand-light);color:var(--brand);padding:3px 8px;border-radius:6px;margin-bottom:10px;text-transform:uppercase;letter-spacing:.4px;}
-.finding-title{font-size:15px;font-weight:700;margin:0 0 8px;color:var(--text);}
-.finding-evidence{font-size:13px;color:var(--muted);line-height:1.5;margin:0 0 10px;padding-left:10px;border-left:2px solid var(--border);}
-.finding-note{font-size:11px;color:var(--muted);}
-.cta-band h2{color:#fff;font-size:26px;margin:0 0 12px;font-weight:700;}
-.cta-band p.sub{color:rgba(255,255,255,0.82);max-width:none;margin:0 auto 24px;font-size:16px;}
+/* ============ CTA BAND ============ */
+.cta-band{background:var(--brand);border-radius:24px;padding:56px 40px;text-align:center;position:relative;overflow:hidden;}
+.cta-band h2{color:#fff;font-size:clamp(24px,3vw,30px);margin:0 0 12px;font-weight:800;}
+.cta-band p.sub{color:rgba(255,255,255,0.82);max-width:none;margin:0 auto 28px;font-size:16px;}
 .cta-band .email-form{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:24px;}
 .cta-band .email-input{min-width:280px;max-width:380px;width:100%;padding:12px 14px;border-radius:12px;border:none;font:16px Roboto,system-ui,sans-serif;}
 .cta-band .btn{background:#fff;color:var(--brand);}
-
-/* INLINE CONFIRMATION */
 .confirm-icon{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;}
 .confirm-note{color:rgba(255,255,255,0.65);font-size:13px;line-height:1.5;margin:0 auto;max-width:380px;}
 .cta-meta-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;max-width:600px;margin:0 auto;}
@@ -248,32 +270,42 @@ html,body{margin:0;padding:0;font-family:Roboto,system-ui,-apple-system,Segoe UI
 .cta-meta-label{display:inline-flex;align-items:center;justify-content:center;gap:8px;color:rgba(255,255,255,0.72);font-size:0.9rem;font-weight:600;margin-bottom:8px;}
 .cta-meta-icon{width:16px;height:16px;flex-shrink:0;}
 .cta-meta-item p{margin:0;color:#fff;font-size:0.95rem;line-height:1.4;}
-.cta-band a.white-link{color:#fff;font-weight:700;text-decoration:none;}
-.cta-band a.white-link:hover{color:rgba(255,255,255,0.82);}
 
-/* FAQ */
-.faq-header{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:28px;}
-.faq-header h2{margin:0;font-size:28px;font-weight:700;}
+/* ============ BIO ============ */
+.bio-card{display:grid;grid-template-columns:280px 1fr;gap:40px;align-items:center;}
+@media(max-width:720px){.bio-card{grid-template-columns:1fr;}}
+.bio-photo-wrap{position:relative;}
+.bio-photo{width:100%;border-radius:16px;display:block;box-shadow:0 20px 40px -12px rgba(0,0,0,.2);}
+.bio-title{font-size:26px;font-weight:800;color:var(--text);margin:0 0 16px;}
+.bio-text{font-size:16px;color:var(--text-mid);line-height:1.7;margin:0 0 20px;}
+.bio-buttons{display:flex;flex-wrap:wrap;gap:10px;}
+.bio-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border:1px solid var(--border);border-radius:999px;background:#fff;text-decoration:none;color:var(--text-mid);font-size:13px;font-weight:600;transition:border-color .15s ease,color .15s ease,background .15s ease;}
+.bio-btn:hover{border-color:var(--brand);color:var(--brand);background:var(--brand-light);}
+.bio-btn svg{width:14px;height:14px;flex-shrink:0;}
+
+/* ============ FAQ ============ */
+.faq-header{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:32px;}
+.faq-header h2{margin:0;}
 .faq-search{display:flex;align-items:center;gap:8px;border:1px solid var(--border);border-radius:999px;padding:8px 14px;background:#fff;}
 .faq-search input{border:none;outline:none;font-size:14px;color:var(--text);background:transparent;font-family:Roboto,system-ui,-apple-system,Segoe UI,Arial,sans-serif;width:160px;}
 .faq-search input::placeholder{color:var(--muted);}
 .faq-search svg{color:var(--muted);flex-shrink:0;}
 .faq-no-results{display:none;color:var(--muted);font-size:15px;padding:20px 0;}
-.faq-tabs{display:flex;border-bottom:2px solid var(--border);margin-bottom:24px;}
-.faq-tab{background:none;border:none;padding:12px 20px 12px 0;font-size:15px;font-weight:600;color:var(--muted);cursor:pointer;position:relative;transition:color .15s ease;font-family:Roboto,system-ui,-apple-system,Segoe UI,Arial,sans-serif;}
+.faq-tabs{display:flex;border-bottom:2px solid var(--border);margin-bottom:24px;gap:4px;}
+.faq-tab{background:none;border:none;padding:12px 20px 12px 0;font-size:15px;font-weight:700;color:var(--muted);cursor:pointer;position:relative;transition:color .15s ease;font-family:Roboto,system-ui,-apple-system,Segoe UI,Arial,sans-serif;}
 .faq-tab:hover{color:var(--text);}
 .faq-tab.active{color:var(--brand);}
-.faq-tab.active::after{content:"";position:absolute;bottom:-2px;left:0;right:0;height:2px;background:var(--brand);}
+.faq-tab.active::after{content:"";position:absolute;bottom:-2px;left:0;right:20px;height:3px;border-radius:2px;background:var(--brand);}
 .faq-panel{display:none;}
 .faq-panel.active{display:block;}
-.faq-accordion details{background:none;border:none;border-bottom:1px solid var(--border);padding:0;}
-.faq-accordion details:first-child{border-top:1px solid var(--border);}
-.faq-accordion summary{list-style:none;cursor:pointer;padding:20px 40px 20px 0;font-weight:600;font-size:15px;position:relative;outline:none;color:var(--text);}
+.faq-accordion{border-radius:16px;border:1px solid var(--border);overflow:hidden;}
+.faq-accordion details{background:#fff;border-bottom:1px solid var(--border);padding:0;}
+.faq-accordion details:last-child{border-bottom:none;}
+.faq-accordion summary{list-style:none;cursor:pointer;padding:18px 44px 18px 20px;font-weight:700;font-size:15px;position:relative;outline:none;color:var(--text);}
 .faq-accordion summary::-webkit-details-marker{display:none;}
-.faq-accordion details[open] summary{border-bottom:none;}
-.faq-accordion .chev{position:absolute;right:0;top:50%;transform:translateY(-50%);width:20px;height:20px;display:grid;place-items:center;transition:transform .2s ease;}
+.faq-accordion .chev{position:absolute;right:16px;top:50%;transform:translateY(-50%);width:20px;height:20px;display:grid;place-items:center;transition:transform .2s ease;}
 .faq-accordion details[open] .chev{transform:translateY(-50%) rotate(180deg);}
-.faq-accordion .panel{padding:0 0 20px;color:var(--muted);font-size:15px;line-height:1.6;}
+.faq-accordion .panel{padding:0 20px 20px;color:var(--muted);font-size:15px;line-height:1.6;}
 .faq-accordion .panel p:first-child{margin-top:0;}
 .faq-accordion .panel a{color:var(--brand);}
 .faq-roadmap{margin-top:20px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
@@ -286,72 +318,48 @@ html,body{margin:0;padding:0;font-family:Roboto,system-ui,-apple-system,Segoe UI
 .faq-roadmap-item p{margin:2px 0 0;font-size:12px;font-weight:400;color:var(--muted);}
 @media(max-width:600px){.faq-roadmap{grid-template-columns:1fr;}}
 
-/* BIO */
-.bio-card{display:grid;grid-template-columns:1fr 2fr;gap:24px;align-items:flex-start;background:transparent;padding:0;}
-.bio-card-left{display:flex;flex-direction:column;gap:8px;align-items:flex-start;}
-.bio-card-right{display:flex;flex-direction:column;justify-content:space-between;}
-@media(max-width:720px){.bio-card{grid-template-columns:1fr;}.bio-card-left{display:none;}}
-.bio-title{font-size:22px;font-weight:700;color:var(--text);margin:0;}
-.bio-text{font-size:15px;color:var(--muted);line-height:1.7;margin:0 0 16px;}
-.bio-photo{width:100%;max-width:300px;border-radius:12px;display:block;}
-.bio-buttons{display:flex;flex-direction:column;gap:10px;margin-top:12px;}
-.bio-btn{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:#fff;text-decoration:none;color:var(--muted);font-size:13px;font-weight:600;font-family:Roboto,system-ui,-apple-system,Segoe UI,Arial,sans-serif;transition:border-color .15s ease,color .15s ease;white-space:nowrap;}
-.bio-btn:hover{border-color:var(--brand);color:var(--brand);}
-.bio-btn svg{width:14px;height:14px;flex-shrink:0;margin-left:8px;}
-
-/* FOOTER */
-.site-footer{background:var(--brand);padding:20px;text-align:center;}
+/* ============ FOOTER ============ */
+.site-footer{background:var(--brand-dark);padding:24px;text-align:center;}
 .site-footer p{margin:0;font-size:13px;color:rgba(255,255,255,0.7);}
 
-/* FORMS */
+/* ============ FORMS ============ */
 .hp{position:absolute;left:-9999px;opacity:0;}
 .sr-only{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;}
-
-@media(max-width:640px){
-  .desktop-break{display:none;}
-}
-  </style>
+</style>
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="inner">
-      <img class="logo" src="./assets/logo.png" alt="Intuifi logo">
-    </div>
-  </header>
-
-  <div class="hero-banner">
-    <div class="inner">
-      <h1>See What's Really Happening, Not What You're Told</h1>
-    </div>
-  </div>
-
-  <div class="hero-section">
+<header class="site-header">
   <div class="inner">
+    <img class="logo" src="./assets/logo.png" alt="Intuifi logo">
+  </div>
+</header>
 
-    <p class="hero-subhead" style="margin-top:8px;"><strong>Revenue at risk. Priorities based on guesswork. Customer shifts spotted too late. Intuifi is a platform that surfaces what matters and shows you the evidence behind it.</strong></p>
-
-    <div style="text-align:center;">
-      <a href="https://intuifi.io/sample-report" style="display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border:2px solid var(--brand);border-radius:999px;color:var(--brand);font-weight:600;font-size:15px;text-decoration:none;">
+<!-- ============ HERO ============ -->
+<div class="hero-banner">
+  <div class="inner hero-grid">
+    <div class="hero-copy">
+      <h1 class="h1">See What's Really Happening Across Your Business</h1>
+      <p class="lede">Priorities based on guesswork. Customer shifts spotted too late. Revenue at risk. Everyone has a version of why. Intuifi shows you what your data actually says and the evidence behind it, so you can judge for yourself.</p>
+      <a href="https://intuifi.io/sample-report" class="btn">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
         See an example report
       </a>
     </div>
-
+    <div class="hero-visual">
+      <img src="./assets/hero-mockup.png" alt="Intuifi sample strategic insights report" style="width:100%;height:auto;display:block;filter:drop-shadow(0 30px 50px rgba(0,0,0,.35));">
+    </div>
   </div>
 </div>
-
-<!-- GREY: HOW IT WORKS -->
+<!-- ============ HOW IT WORKS ============ -->
 <div class="section-grey">
   <div class="inner">
-
-    <div style="text-align:center;margin-bottom:32px;">
-      <p style="font-size:22px;font-weight:700;margin:0 0 10px;color:var(--text);">How it works</p>
+    <div class="section-head">
+      <span class="eyebrow">The mechanism</span>
+      <h2 class="h2">How it works</h2>
     </div>
 
-    <div class="diagram-vertical">
-      <div class="diagram-outer-card">
-
+    <div class="card-1">
       <div class="converge-wrap" id="converge-wrap">
         <svg class="converge-svg" id="converge-svg" aria-hidden="true"></svg>
 
@@ -359,9 +367,9 @@ html,body{margin:0;padding:0;font-family:Roboto,system-ui,-apple-system,Segoe UI
           <div class="diagram-row-text">
             <div class="diagram-row-heading">
               <span class="diagram-row-num">01</span>
-              <p class="diagram-row-title">Your team makes the data available</p>
+              <p class="diagram-row-title">Your team exports the data</p>
             </div>
-            <p class="diagram-row-desc">Exported straight from wherever your data already lives.</p>
+            <p class="diagram-row-desc">Pulled straight from wherever your data already lives.</p>
           </div>
           <div class="diagram-row-visual">
             <div class="diagram-sources">
@@ -381,7 +389,7 @@ html,body{margin:0;padding:0;font-family:Roboto,system-ui,-apple-system,Segoe UI
           </div>
         </div>
 
-        <div style="height:8px;"></div>
+        <div class="diagram-row-gap"></div>
 
         <div class="diagram-row">
           <div class="diagram-row-text">
@@ -392,13 +400,13 @@ html,body{margin:0;padding:0;font-family:Roboto,system-ui,-apple-system,Segoe UI
             <p class="diagram-row-desc">Patterns and themes surface, linked back to their source.</p>
           </div>
           <div class="diagram-row-visual">
-<div class="diagram-logo-card" id="intuifi-target">
-  <img src="./assets/i-Logo.png" alt="Intuifi" style="height:70px;width:auto;display:block;">
-</div>
+            <div class="diagram-logo-card" id="intuifi-target">
+              <img src="./assets/i-Logo.png" alt="Intuifi" style="height:56px;width:auto;display:block;">
+            </div>
           </div>
         </div>
 
-        <div style="height:8px;"></div>
+        <div class="diagram-row-gap"></div>
 
         <div class="diagram-row">
           <div class="diagram-row-text">
@@ -432,84 +440,93 @@ html,body{margin:0;padding:0;font-family:Roboto,system-ui,-apple-system,Segoe UI
           </div>
         </div>
       </div>
-      </div>
     </div>
 
     <p style="text-align:center;font-size:11px;font-style:italic;color:#9aa0a6;max-width:1000px;margin:20px auto 0;opacity:0.85;">*Examples. Intuifi currently works by analysing data you export from one or more tools like these.</p>
-
   </div>
 </div>
 
-<!-- WHITE: PROBLEMS / SOLUTIONS -->
+<!-- ============ CHALLENGES / OUTCOMES ============ -->
 <div class="section-white">
   <div class="inner">
-    <p style="text-align:center;font-size:16px;font-weight:600;color:var(--muted);max-width:680px;margin:0 auto 28px;">If your company has grown enough that revenue, product and customer service are each handled by their own team, you'll recognise these challenges.</p>
+    <div class="section-head">
+      <span class="eyebrow">Recognise this?</span>
+      <p class="lede" style="margin-top:6px;">If your company has grown enough that revenue, product and customer service are each handled by their own team, you'll recognise these challenges.</p>
+    </div>
     <div class="twocol">
-      <div class="outer-card">
-        <div class="outer-card-head">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#a2c4c9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="comparison-image"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path><path d="M9 13a4.5 4.5 0 0 0 3-4"></path><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path d="M6 18a4 4 0 0 1-1.967-.516"></path><path d="M12 13h4"></path><path d="M12 18h6a2 2 0 0 1 2 2v1"></path><path d="M12 8h8"></path><path d="M16 8V5a2 2 0 0 1 2-2"></path><circle cx="16" cy="13" r=".5"></circle><circle cx="18" cy="3" r=".5"></circle><circle cx="20" cy="21" r=".5"></circle><circle cx="20" cy="8" r=".5"></circle></svg>
-          <div class="column-head">Challenges</div>
+      <div class="card-1">
+        <div class="col-head">
+          <div class="col-head-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#a2c4c9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="40" height="40"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path><path d="M9 13a4.5 4.5 0 0 0 3-4"></path><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path d="M6 18a4 4 0 0 1-1.967-.516"></path><path d="M12 13h4"></path><path d="M12 18h6a2 2 0 0 1 2 2v1"></path><path d="M12 8h8"></path><path d="M16 8V5a2 2 0 0 1 2-2"></path><circle cx="16" cy="13" r=".5"></circle><circle cx="18" cy="3" r=".5"></circle><circle cx="20" cy="21" r=".5"></circle><circle cx="20" cy="8" r=".5"></circle></svg></div>
+          <p class="col-title">Challenges</p>
         </div>
-        <div class="list">
-          <article class="benefit-card">
-            <div class="icon-wrap" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#a2c4c9" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"><path d="M11 21a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1"></path><path d="M16 16a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1"></path><path d="M21 6a2 2 0 0 0-.586-1.414l-2-2A2 2 0 0 0 17 2h-3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1z"></path></svg></div>
-            <div><p class="benefit-title">Evidence is scattered across teams and tools, making the full picture hard to see</p></div>
-          </article>
-          <article class="benefit-card">
-            <div class="icon-wrap" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#a2c4c9" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg></div>
-            <div><p class="benefit-title">It's on leaders to build the full picture, because no team sees it all</p></div>
-          </article>
-          <article class="benefit-card">
-            <div class="icon-wrap" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#a2c4c9" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="M9.1 9a3 3 0 0 1 5.82 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></div>
-            <div><p class="benefit-title">Using AI saves time, but without the evidence it is hard to trust the output</p></div>
-          </article>
+        <div class="item-list">
+          <div class="item card-2">
+            <div class="item-icon"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a929a" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><path d="M11 21a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1"></path><path d="M16 16a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1"></path><path d="M21 6a2 2 0 0 0-.586-1.414l-2-2A2 2 0 0 0 17 2h-3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1z"></path></svg></div>
+            <p class="item-title">Evidence is scattered across teams and tools, making the full picture hard to see</p>
+          </div>
+          <div class="item card-2">
+            <div class="item-icon"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a929a" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg></div>
+            <p class="item-title">It's on leaders to build the full picture, because no team sees it all</p>
+          </div>
+          <div class="item card-2">
+            <div class="item-icon"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a929a" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="M9.1 9a3 3 0 0 1 5.82 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></div>
+            <p class="item-title">Using AI saves time, but without the evidence it is hard to trust the output</p>
+          </div>
         </div>
       </div>
-      <div class="outer-card">
-        <div class="outer-card-head">
-          <img src="./assets/i-Logo.png" alt="Intuifi" class="comparison-image">
-          <div class="column-head">Outcomes</div>
+      <div class="card-1">
+        <div class="col-head">
+          <div class="col-head-icon"><img src="./assets/i-Logo.png" alt="Intuifi" style="height:44px;width:auto;"></div>
+          <p class="col-title">Outcomes</p>
         </div>
-        <div class="list">
-          <article class="benefit-card benefit-card--positive">
-            <div class="icon-wrap" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"></circle><circle cx="6" cy="6" r="3"></circle><path d="M6 21V9a9 9 0 0 0 9 9"></path></svg></div>
-            <div><p class="benefit-title">Get a shared view of evidence from across the tools your teams already use</p></div>
-          </article>
-          <article class="benefit-card benefit-card--positive">
-            <div class="icon-wrap" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72"></path><path d="m14 7 3 3"></path><path d="M5 6v4"></path><path d="M19 14v4"></path><path d="M10 2v2"></path><path d="M7 8H3"></path><path d="M21 16h-4"></path><path d="M11 3H9"></path></svg></div>
-            <div><p class="benefit-title">See what emerges across every team, including patterns trapped in silos</p></div>
-          </article>
-          <article class="benefit-card benefit-card--positive">
-            <div class="icon-wrap" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="m9 15 2 2 4-4"></path></svg></div>
-            <div><p class="benefit-title">Each finding links back to the source, so you can verify what you need to</p></div>
-          </article>
+        <div class="item-list">
+          <div class="item card-2 card-2--outcome card-2--accent">
+            <div class="item-icon"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"></circle><circle cx="6" cy="6" r="3"></circle><path d="M6 21V9a9 9 0 0 0 9 9"></path></svg></div>
+            <p class="item-title">Get a shared view of evidence from across the tools your teams already use</p>
+          </div>
+          <div class="item card-2 card-2--outcome card-2--accent">
+            <div class="item-icon"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72"></path><path d="m14 7 3 3"></path><path d="M5 6v4"></path><path d="M19 14v4"></path><path d="M10 2v2"></path><path d="M7 8H3"></path><path d="M21 16h-4"></path><path d="M11 3H9"></path></svg></div>
+            <p class="item-title">See what emerges across every team, including patterns trapped in silos</p>
+          </div>
+          <div class="item card-2 card-2--outcome card-2--accent">
+            <div class="item-icon"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="m9 15 2 2 4-4"></path></svg></div>
+            <p class="item-title">Each finding links back to the source, so you can verify what you need to</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-  <div class="section-white">
-    <div class="inner" style="max-width:680px;text-align:center;">
-      <svg width="36" height="28" viewBox="0 0 36 28" fill="none" style="margin:0 auto 20px;display:block;"><path d="M0 28V16.8C0 7.467 5.6 1.4 14.933 0L16.8 4.667C11.2 6.533 8.4 10.267 8.4 15.867H14.933V28H0ZM19.6 28V16.8C19.6 7.467 25.2 1.4 34.533 0L36.4 4.667C30.8 6.533 28 10.267 28 15.867H34.533V28H19.6Z" fill="#0f625c"/></svg>
-      <p style="font-size:20px;line-height:1.5;color:var(--text);font-style:italic;margin:0 0 20px;">When I first joined the company, I needed to go through the entire backlog of over 400 tickets to decide what mattered and what didn't. The themes Intuifi found matched very closely with my own analysis, work that had taken almost six weeks was done in five minutes.</p>
-      <p style="font-size:15px;font-weight:600;color:var(--muted);margin:0;">Katy Parkhill, Head of Engineering, <a href="https://kobai.io" target="_blank" rel="noopener" style="color:var(--brand);">Kobai</a></p>
+<!-- ============ TESTIMONIAL ============ -->
+<div class="section-grey">
+  <div class="inner" style="max-width:900px;">
+    <div class="testimonial-grid">
+      <div class="testimonial-panel">
+        <div class="testimonial-avatar">KP</div>
+        <p class="testimonial-name">Katy Parkhill</p>
+        <p class="testimonial-role">Head of Engineering, <a href="https://kobai.io" target="_blank" rel="noopener">Kobai</a></p>
+      </div>
+      <div class="testimonial-copy">
+        <p class="testimonial-quote"><span class="quote-mark">&ldquo;</span>When I first joined the company, I needed to go through the entire backlog of over 400 tickets to decide what mattered and what didn't. The themes Intuifi found matched very closely with my own analysis, work that had taken almost six weeks was done in five minutes.<span class="quote-mark">&rdquo;</span></p>
+      </div>
     </div>
   </div>
+</div>
 
-  <div class="section-white">
-    <div class="inner">
-
-      <div class="cta-band">
-        <div id="cta-default">
+<!-- ============ CTA BAND ============ -->
+<div class="section-white">
+  <div class="inner">
+    <div class="cta-band">
+      <div id="cta-default">
         <h2>See what Intuifi finds in your own data.</h2>
         <p class="sub">Export your data, then choose how to submit it.</p>
         <div class="cta-buttons" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:28px;">
-          <a href="https://intuifi.io/sample-report" id="sample-report-link" style="display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border:2px solid rgba(255,255,255,0.5);border-radius:999px;color:#ffffff;font-weight:600;font-size:15px;text-decoration:none;">
+          <a href="https://intuifi.io/sample-report" id="sample-report-link" class="btn-outline">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
             See an example report
           </a>
-          <button id="reveal-form-btn" onclick="revealForm()" style="display:inline-flex;align-items:center;gap:8px;padding:14px 28px;background:#ffffff;border:none;border-radius:999px;color:#0f625c;font-weight:700;font-size:15px;cursor:pointer;">
+          <button id="reveal-form-btn" onclick="revealForm()" class="btn" style="border:none;cursor:pointer;">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             Get my free report
           </button>
@@ -538,189 +555,189 @@ html,body{margin:0;padding:0;font-family:Roboto,system-ui,-apple-system,Segoe UI
             </div>
           </div>
         </div>
+      </div>
+      <div id="cta-confirm" style="display:none;">
+        <div class="confirm-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
         </div>
-        <div id="cta-confirm" style="display:none;">
-          <div class="confirm-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
-          </div>
-          <h2>Thanks, you're in.</h2>
-          <p class="sub" id="cta-confirm-text">Check your email for next steps.</p>
-        </div>
+        <h2>Thanks, you're in.</h2>
+        <p class="sub" id="cta-confirm-text">Check your email for next steps.</p>
       </div>
     </div>
   </div>
+</div>
 
-  <script>
-  function revealForm() {
-    var form = document.getElementById('request-form');
-    var btn = document.getElementById('reveal-form-btn');
-    form.style.maxHeight = '600px';
-    btn.style.display = 'none';
-    setTimeout(function() { document.getElementById('email').focus(); }, 400);
+<script>
+function revealForm() {
+  var form = document.getElementById('request-form');
+  var btn = document.getElementById('reveal-form-btn');
+  form.style.maxHeight = '600px';
+  btn.style.display = 'none';
+  setTimeout(function() { document.getElementById('email').focus(); }, 400);
+}
+
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxnV5Hm28fhpJlWedXuU7JdXDsrI4wLOC1zkXOI3Tj0o3s-bkkKR1tgPuwbfGPPNF92ww/exec';
+async function submitEmail(e){
+  e.preventDefault();
+  const form = e.target;
+  const email = form.email.value.trim();
+  if(form.company && form.company.value) return false;
+  const btn = form.querySelector('button[type="submit"]');
+  if(btn) btn.disabled = true;
+  try {
+    fetch(SCRIPT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,ref:document.referrer||''})});
+    document.getElementById('cta-default').style.display = 'none';
+    document.getElementById('cta-confirm').style.display = 'block';
+  } catch(err) {
+    form.innerHTML = "<p class='confirm-note' style='color:rgba(255,255,255,0.9);font-size:15px;'>Something went wrong. Please email info@crwburgess.com.</p>";
   }
-  </script>
+  return false;
+}
+</script>
 
-  <!-- GREY: BIO -->
-  <div class="section-grey">
-    <div class="inner">
-      <div class="bio-card">
-        <p class="bio-title" style="grid-column:1/-1;margin:0;">The person behind this</p>
-        <div class="bio-card-left">
-          <img class="bio-photo" src="./assets/chris-burgess.png" alt="Chris Burgess">
-        </div>
-        <div class="bio-card-right">
-          <p class="bio-text">I am Chris Burgess, a product leader with 15 years of experience across startups, scale-ups, and a Fortune 100 company. I built Intuifi because I kept seeing how difficult it was for leaders to get a reliable picture of what was happening across a scaling business. Evidence was scattered across teams and tools, summaries lost context, and decisions were too often made without a clear view of what supported them. I am fixing that.</p>
-          <div class="bio-buttons">
-            <a class="bio-btn" href="https://crwburgess.com/" target="_blank" rel="noopener">
-              <span>Learn more about me</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-            </a>
-            <a class="bio-btn" href="https://linkedin.com/in/crwburgess" target="_blank" rel="noopener">
-              <span>Connect with me on LinkedIn</span>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8.25h5V23H0V8.25zM8 8.25h4.8v2.01h.07c.67-1.27 2.3-2.61 4.74-2.61 5.07 0 6 3.34 6 7.68V23h-5v-6.49c0-1.55-.03-3.55-2.17-3.55-2.17 0-2.5 1.69-2.5 3.44V23H8V8.25z"/></svg>
-            </a>
-            <a class="bio-btn" href="/blogs">
-              <span>Read what I’m learning building Intuifi</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
-            </a>
-          </div>
+<!-- ============ BIO ============ -->
+<div class="section-grey">
+  <div class="inner">
+    <div class="bio-card">
+      <div class="bio-photo-wrap">
+        <img class="bio-photo" src="./assets/chris-burgess.png" alt="Chris Burgess">
+      </div>
+      <div>
+        <span class="eyebrow">The person behind this</span>
+        <p class="bio-title">Chris Burgess</p>
+        <p class="bio-text">I am Chris Burgess, a product leader with 15 years of experience across startups, scale-ups, and a Fortune 100 company. I built Intuifi because I kept seeing how difficult it was for leaders to get a reliable picture of what was happening across a scaling business. Evidence was scattered across teams and tools, summaries lost context, and decisions were too often made without a clear view of what supported them. I am fixing that.</p>
+        <div class="bio-buttons">
+          <a class="bio-btn" href="https://crwburgess.com/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+            Learn more about me
+          </a>
+          <a class="bio-btn" href="https://linkedin.com/in/crwburgess" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8.25h5V23H0V8.25zM8 8.25h4.8v2.01h.07c.67-1.27 2.3-2.61 4.74-2.61 5.07 0 6 3.34 6 7.68V23h-5v-6.49c0-1.55-.03-3.55-2.17-3.55-2.17 0-2.5 1.69-2.5 3.44V23H8V8.25z"/></svg>
+            Connect on LinkedIn
+          </a>
+          <a class="bio-btn" href="/blogs">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+            What I'm learning
+          </a>
         </div>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- WHITE: FAQ -->
-  <div class="section-white" id="faq">
-    <div class="inner">
-      <div class="faq-header">
-        <h2>Frequently asked questions</h2>
-        <div class="faq-search">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
-          <input type="text" id="faq-search-input" placeholder="Looking for something" aria-label="Search questions">
-        </div>
+<!-- ============ FAQ ============ -->
+<div class="section-white" id="faq">
+  <div class="inner">
+    <div class="faq-header">
+      <h2 class="h2">Frequently asked questions</h2>
+      <div class="faq-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" id="faq-search-input" placeholder="Looking for something" aria-label="Search questions">
       </div>
-      <div class="faq-no-results" id="faq-no-results">No questions found. Try a different search term.</div>
-      <div class="faq-tabs" role="tablist">
-        <button class="faq-tab active" role="tab" aria-selected="true" aria-controls="tab-getting-started" id="btn-getting-started">Getting started</button>
-        <button class="faq-tab" role="tab" aria-selected="false" aria-controls="tab-trust" id="btn-trust">Trusting the output</button>
-      </div>
-      <div id="tab-getting-started" class="faq-panel active" role="tabpanel" aria-labelledby="btn-getting-started">
-        <div class="faq-accordion">
-          <details><summary>How does it actually work?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary><div class="panel">Upload CSVs from the tools your teams already use - such as CRM records, support tickets or product backlogs. Intuifi analyses everything across all your files, identifies the recurring themes, patterns and tensions, and produces a structured report. You start with a high level summary and can drill down into the evidence behind any finding whenever you need to.</div></details>
-          <details><summary>What effort is involved and how much of my time does this take?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary><div class="panel">Simply ask your team to export the data from the tools they are using. Then upload those files in a few clicks and sit back while the analysis happens. There is nothing to configure and no prompting required. Around five minutes later you will get back a structured report with an executive summary, the key themes across your data, and the evidence behind each one. From there you can share it with your team, use it to prepare for a planning session, or just keep it as a reference point.</div></details>
-          <details><summary>What results can I expect?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary><div class="panel">The report opens with an executive summary of the key themes and tensions across your data. Each theme comes with supporting evidence, an implication for your business, and signals to track. For example, a theme might read "Renewal risk rising in 3 accounts", with the evidence behind it (matching signals from CRM, support tickets and the engineering backlog) linked directly beneath, and an implication such as "the related fix is already logged in the backlog but hasn't been prioritised." Everything links back to the source so you can verify what matters. To see exactly what you get, take a look at <a href="https://intuifi.io/sample-report" target="_blank" rel="noopener">this sample report</a>.</div></details>
-          <details><summary>This looks like a manual process. Why?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary>
-            <div class="panel">
-              <p>This is an MVP and the decision to keep it manual is deliberate. I am looking to build trust, and the way I am approaching that is to reduce any concerns you might have about your data, by enabling you to edit or sanitise anything you want to upload before it reaches Intuifi. Automation is coming, but only once I am confident you are getting the insight you need.</p>
-              <p>Here is where Intuifi is heading:</p>
-              <div class="faq-roadmap">
-                <div class="faq-roadmap-stage faq-roadmap-stage--now"><p class="faq-roadmap-label">Now</p><div class="faq-roadmap-item">On-demand reports<p>Upload your data, get back a structured report with themes, priorities and evidence.</p></div></div>
-                <div class="faq-roadmap-stage"><p class="faq-roadmap-label faq-roadmap-label--future">Next</p><div class="faq-roadmap-item">Automated data ingestion<p>Connect directly to the tools your team already uses.</p></div><div class="faq-roadmap-item">Pattern memory<p>Track how themes and issues change across reports over time.</p></div><div class="faq-roadmap-item">Continuous monitoring<p>Alert your team when new trends emerge.</p></div></div>
-                <div class="faq-roadmap-stage"><p class="faq-roadmap-label faq-roadmap-label--future">Later</p><div class="faq-roadmap-item">Interactive discovery<p>Ask follow-up questions and let Intuifi investigate for you.</p></div><div class="faq-roadmap-item">Contextual input<p>See how market needs align with your business goals.</p></div><div class="faq-roadmap-item">Strategic simulation<p>Explore how market headwinds could reshape your priorities.</p></div></div>
-              </div>
+    </div>
+    <div class="faq-no-results" id="faq-no-results">No questions found. Try a different search term.</div>
+    <div class="faq-tabs" role="tablist">
+      <button class="faq-tab active" role="tab" aria-selected="true" aria-controls="tab-getting-started" id="btn-getting-started">Getting started</button>
+      <button class="faq-tab" role="tab" aria-selected="false" aria-controls="tab-trust" id="btn-trust">Trusting the output</button>
+    </div>
+    <div id="tab-getting-started" class="faq-panel active" role="tabpanel" aria-labelledby="btn-getting-started">
+      <div class="faq-accordion">
+        <details><summary>How does it actually work?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary><div class="panel">Upload CSVs from the tools your teams already use - such as CRM records, support tickets or product backlogs. Intuifi analyses everything across all your files, identifies the recurring themes, patterns and tensions, and produces a structured report. You start with a high level summary and can drill down into the evidence behind any finding whenever you need to.</div></details>
+        <details><summary>What effort is involved and how much of my time does this take?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary><div class="panel">Simply ask your team to export the data from the tools they are using. Then upload those files in a few clicks and sit back while the analysis happens. There is nothing to configure and no prompting required. Around five minutes later you will get back a structured report with an executive summary, the key themes across your data, and the evidence behind each one. From there you can share it with your team, use it to prepare for a planning session, or just keep it as a reference point.</div></details>
+        <details><summary>What results can I expect?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary><div class="panel">The report opens with an executive summary of the key themes and tensions across your data. Each theme comes with supporting evidence, an implication for your business, and signals to track. For example, a theme might read "Renewal risk rising in 3 accounts", with the evidence behind it (matching signals from CRM, support tickets and the engineering backlog) linked directly beneath, and an implication such as "the related fix is already logged in the backlog but hasn't been prioritised." Everything links back to the source so you can verify what matters. To see exactly what you get, take a look at <a href="https://intuifi.io/sample-report" target="_blank" rel="noopener">this sample report</a>.</div></details>
+        <details><summary>This looks like a manual process. Why?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary>
+          <div class="panel">
+            <p>This is an MVP and the decision to keep it manual is deliberate. I am looking to build trust, and the way I am approaching that is to reduce any concerns you might have about your data, by enabling you to edit or sanitise anything you want to upload before it reaches Intuifi. Automation is coming, but only once I am confident you are getting the insight you need.</p>
+            <p>Here is where Intuifi is heading:</p>
+            <div class="faq-roadmap">
+              <div class="faq-roadmap-stage faq-roadmap-stage--now"><p class="faq-roadmap-label">Now</p><div class="faq-roadmap-item">On-demand reports<p>Upload your data, get back a structured report with themes, priorities and evidence.</p></div></div>
+              <div class="faq-roadmap-stage"><p class="faq-roadmap-label faq-roadmap-label--future">Next</p><div class="faq-roadmap-item">Automated data ingestion<p>Connect directly to the tools your team already uses.</p></div><div class="faq-roadmap-item">Pattern memory<p>Track how themes and issues change across reports over time.</p></div><div class="faq-roadmap-item">Continuous monitoring<p>Alert your team when new trends emerge.</p></div></div>
+              <div class="faq-roadmap-stage"><p class="faq-roadmap-label faq-roadmap-label--future">Later</p><div class="faq-roadmap-item">Interactive discovery<p>Ask follow-up questions and let Intuifi investigate for you.</p></div><div class="faq-roadmap-item">Contextual input<p>See how market needs align with your business goals.</p></div><div class="faq-roadmap-item">Strategic simulation<p>Explore how market headwinds could reshape your priorities.</p></div></div>
             </div>
-          </details>
-        </div>
+          </div>
+        </details>
       </div>
-      <div id="tab-trust" class="faq-panel" role="tabpanel" aria-labelledby="btn-trust">
-        <div class="faq-accordion">
-          <details><summary>How is my data handled?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary><div class="panel">The files you upload are processed to generate your report and then deleted. Nothing is stored, nothing is retained, and I never see your data at any point. Intuifi does not train on your data.<br><br>For more information:<br><a href="https://www.anthropic.com/safety-and-privacy/data-usage" target="_blank" rel="noopener">Anthropic data usage</a><br><a href="https://studio.mindstudio.ai/privacy" target="_blank" rel="noopener">MindStudio privacy policy</a></div></details>
-          <details><summary>How accurate is the output?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary><div class="panel">That depends on the quality of the data you upload. Intuifi analyses what is there and surfaces the patterns it finds across it. It will not always get every theme right, and some findings may reflect noise rather than signal. That is why every finding links back to the source data, so you can check what looks right, discard what does not, and act with confidence on what remains. The analysis is a starting point, not a verdict.</div></details>
-          <details><summary>How is this different from a typical dashboard?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary><div class="panel">This is not another dashboard. Dashboards usually present quantitative data and leave the interpretation to you. Intuifi works differently. It takes qualitative evidence like CRM records, support tickets, product backlogs and notes, then turns it into a structured report with clear themes, strategic implications, and the evidence behind each one. You are not exploring charts. You are seeing what is happening across the evidence your teams already hold, and why it matters.</div></details>
-          <details><summary>Why would I not just use ChatGPT or Claude?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary><div class="panel">You shouldn't have to spend your time prompt engineering just to understand what is happening across your business. You still have to prepare your data, structure your questions, interpret the output, and turn it into something another person can review and trust. Intuifi removes that friction. Upload your files as they are and get back a structured report with themes, priorities, and the evidence behind every finding.</div></details>
-          <details><summary>Why not just get my team to build this?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary>
-    <div class="panel">
-      <p>Vibe coding tools make it easier than ever to build something that generates an initial output. The harder part is making it consistent, objective, and trustworthy enough to guide strategic business decisions. Doing it in-house brings back the exact problems you are trying to fix:</p>
-      <ul>
-        <li><strong>Unbiased truth:</strong> You need an objective picture of what is happening across your business. If an internal team writes the rules for how data gets analysed, they inevitably control what gets highlighted and what gets buried, whether intentionally or not. This is particularly true when feedback points to issues with their own team's work.</li>
-        <li><strong>Ongoing maintenance:</strong> In-house scripts rarely last more than a few months. As file formats change and new software is introduced, internal tools quietly break. Keeping a side project working will never take priority over your main product roadmap, so the tool is eventually abandoned.</li>
-        <li><strong>Team focus:</strong> Your engineers should spend their time building your core product and growing the business, not fixing broken file imports, tweaking prompts, or checking inaccurate outputs.</li>
-      </ul>
     </div>
-  </details>
-          <details><summary>Won't this become obsolete as AI improves?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary><div class="panel">The opposite. As AI becomes more capable, so does Intuifi. The methodology that structures your data, preserves the evidence, and produces something your team can trust is built on top of AI, not instead of it. A more powerful engine makes the output better, not unnecessary. What stays constant is the structure that makes the insight trustworthy and actionable.</div></details>
-        </div>
+    <div id="tab-trust" class="faq-panel" role="tabpanel" aria-labelledby="btn-trust">
+      <div class="faq-accordion">
+        <details><summary>How is my data handled?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary><div class="panel">The files you upload are processed to generate your report and then deleted. Nothing is stored, nothing is retained, and I never see your data at any point. Intuifi does not train on your data.<br><br>For more information:<br><a href="https://www.anthropic.com/safety-and-privacy/data-usage" target="_blank" rel="noopener">Anthropic data usage</a><br><a href="https://studio.mindstudio.ai/privacy" target="_blank" rel="noopener">MindStudio privacy policy</a></div></details>
+        <details><summary>How accurate is the output?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary><div class="panel">That depends on the quality of the data you upload. Intuifi analyses what is there and surfaces the patterns it finds across it. It will not always get every theme right, and some findings may reflect noise rather than signal. That is why every finding links back to the source data, so you can check what looks right, discard what does not, and act with confidence on what remains. The analysis is a starting point, not a verdict.</div></details>
+        <details><summary>How is this different from a typical dashboard?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary><div class="panel">This is not another dashboard. Dashboards usually present quantitative data and leave the interpretation to you. Intuifi works differently. It takes qualitative evidence like CRM records, support tickets, product backlogs and notes, then turns it into a structured report with clear themes, strategic implications, and the evidence behind each one. You are not exploring charts. You are seeing what is happening across the evidence your teams already hold, and why it matters.</div></details>
+        <details><summary>Why would I not just use ChatGPT or Claude?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary><div class="panel">You shouldn't have to spend your time prompt engineering just to understand what is happening across your business. You still have to prepare your data, structure your questions, interpret the output, and turn it into something another person can review and trust. Intuifi removes that friction. Upload your files as they are and get back a structured report with themes, priorities, and the evidence behind every finding.</div></details>
+        <details><summary>Why not just get my team to build this?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary>
+          <div class="panel">
+            <p>Vibe coding tools make it easier than ever to build something that generates an initial output. The harder part is making it consistent, objective, and trustworthy enough to guide strategic business decisions. Doing it in-house brings back the exact problems you are trying to fix:</p>
+            <ul>
+              <li><strong>Unbiased truth:</strong> You need an objective picture of what is happening across your business. If an internal team writes the rules for how data gets analysed, they inevitably control what gets highlighted and what gets buried, whether intentionally or not. This is particularly true when feedback points to issues with their own team's work.</li>
+              <li><strong>Ongoing maintenance:</strong> In-house scripts rarely last more than a few months. As file formats change and new software is introduced, internal tools quietly break. Keeping a side project working will never take priority over your main product roadmap, so the tool is eventually abandoned.</li>
+              <li><strong>Team focus:</strong> Your engineers should spend their time building your core product and growing the business, not fixing broken file imports, tweaking prompts, or checking inaccurate outputs.</li>
+            </ul>
+          </div>
+        </details>
+        <details><summary>Won't this become obsolete as AI improves?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary><div class="panel">The opposite. As AI becomes more capable, so does Intuifi. The methodology that structures your data, preserves the evidence, and produces something your team can trust is built on top of AI, not instead of it. A more powerful engine makes the output better, not unnecessary. What stays constant is the structure that makes the insight trustworthy and actionable.</div></details>
       </div>
     </div>
   </div>
+</div>
 
-  <footer class="site-footer">
-    <p>© 2026 Intuifi</p>
-  </footer>
+<footer class="site-footer">
+  <p>© 2026 Intuifi</p>
+</footer>
 
-  <script>
-  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxnV5Hm28fhpJlWedXuU7JdXDsrI4wLOC1zkXOI3Tj0o3s-bkkKR1tgPuwbfGPPNF92ww/exec';
-  async function submitEmail(e){
-    e.preventDefault();
-    const form = e.target;
-    const email = form.email.value.trim();
-    if(form.company && form.company.value) return false;
-    const btn = form.querySelector('button[type="submit"]');
-    if(btn) btn.disabled = true;
-    try {
-      fetch(SCRIPT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,ref:document.referrer||''})});
-      document.getElementById('cta-default').style.display = 'none';
-      document.getElementById('cta-confirm').style.display = 'block';
-    } catch(err) {
-      form.innerHTML = "<p class='confirm-note' style='color:rgba(255,255,255,0.9);font-size:15px;'>Something went wrong. Please email info@crwburgess.com.</p>";
-    }
-    return false;
-  }
-
-  document.addEventListener('DOMContentLoaded', function() {
-    const searchInput = document.getElementById("faq-search-input");
-    const noResults = document.getElementById("faq-no-results");
-    const tabs = document.querySelectorAll('.faq-tab');
-    const panels = document.querySelectorAll('.faq-panel');
-    if(searchInput){
-      searchInput.addEventListener("input",function(){
-        const q = this.value.trim().toLowerCase();
-        if(!q){
-          document.querySelector(".faq-tabs").style.display="";
-          panels.forEach(function(p){p.classList.remove("active");});
-          panels[0].classList.add("active");
-          tabs.forEach(function(t,i){t.classList.toggle("active",i===0);t.setAttribute("aria-selected",i===0?"true":"false");});
-          document.querySelectorAll(".faq-accordion details").forEach(function(d){d.style.display="";});
-          noResults.style.display="none";
-          return;
-        }
-        document.querySelector(".faq-tabs").style.display="none";
-        panels.forEach(function(p){p.classList.add("active");});
-        let found=0;
-        document.querySelectorAll(".faq-accordion details").forEach(function(d){
-          const match=d.textContent.toLowerCase().includes(q);
-          d.style.display=match?"":"none";
-          if(match)found++;
-        });
-        noResults.style.display=found===0?"block":"none";
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.getElementById("faq-search-input");
+  const noResults = document.getElementById("faq-no-results");
+  const tabs = document.querySelectorAll('.faq-tab');
+  const panels = document.querySelectorAll('.faq-panel');
+  if(searchInput){
+    searchInput.addEventListener("input",function(){
+      const q = this.value.trim().toLowerCase();
+      if(!q){
+        document.querySelector(".faq-tabs").style.display="";
+        panels.forEach(function(p){p.classList.remove("active");});
+        panels[0].classList.add("active");
+        tabs.forEach(function(t,i){t.classList.toggle("active",i===0);t.setAttribute("aria-selected",i===0?"true":"false");});
+        document.querySelectorAll(".faq-accordion details").forEach(function(d){d.style.display="";});
+        noResults.style.display="none";
+        return;
+      }
+      document.querySelector(".faq-tabs").style.display="none";
+      panels.forEach(function(p){p.classList.add("active");});
+      let found=0;
+      document.querySelectorAll(".faq-accordion details").forEach(function(d){
+        const match=d.textContent.toLowerCase().includes(q);
+        d.style.display=match?"":"none";
+        if(match)found++;
       });
-    }
-    tabs.forEach(function(tab){
-      tab.addEventListener('click',function(){
-        tabs.forEach(function(t){t.classList.remove('active');t.setAttribute('aria-selected','false');});
-        panels.forEach(function(p){p.classList.remove('active');});
-        tab.classList.add('active');
-        tab.setAttribute('aria-selected','true');
-        document.getElementById(tab.getAttribute('aria-controls')).classList.add('active');
-      });
+      noResults.style.display=found===0?"block":"none";
     });
-    const form = document.getElementById('early-access');
-    if(form){
-      form.addEventListener('submit',function(){
-        if(window.goatcounter && goatcounter.count) goatcounter.count({path:location.pathname+'#early-access-form',title:'Form: early access submit'});
-      });
-    }
-    const sampleReportLink = document.getElementById('sample-report-link');
-    if(sampleReportLink){
-      sampleReportLink.addEventListener('click',function(){
-        if(window.goatcounter && goatcounter.count) goatcounter.count({path:location.pathname+'#sample-report-click',title:'CTA: sample report click'});
-      });
-    }
-    drawLines();
+  }
+  tabs.forEach(function(tab){
+    tab.addEventListener('click',function(){
+      tabs.forEach(function(t){t.classList.remove('active');t.setAttribute('aria-selected','false');});
+      panels.forEach(function(p){p.classList.remove('active');});
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected','true');
+      document.getElementById(tab.getAttribute('aria-controls')).classList.add('active');
+    });
   });
+  const form = document.getElementById('early-access');
+  if(form){
+    form.addEventListener('submit',function(){
+      if(window.goatcounter && goatcounter.count) goatcounter.count({path:location.pathname+'#early-access-form',title:'Form: early access submit'});
+    });
+  }
+  const sampleReportLink = document.getElementById('sample-report-link');
+  if(sampleReportLink){
+    sampleReportLink.addEventListener('click',function(){
+      if(window.goatcounter && goatcounter.count) goatcounter.count({path:location.pathname+'#sample-report-click',title:'CTA: sample report click'});
+    });
+  }
+});
 
-  var drawTimeout;
-  function drawConvergeLines(){
+function drawConvergeLines(){
+  if(window.innerWidth <= 640) return;
   var wrap = document.getElementById('converge-wrap');
   var svg = document.getElementById('converge-svg');
   var target = document.getElementById('intuifi-target');
@@ -758,14 +775,13 @@ html,body{margin:0;padding:0;font-family:Roboto,system-ui,-apple-system,Segoe UI
     svg.appendChild(line2);
   }
 }
-
 window.addEventListener('load', drawConvergeLines);
 window.addEventListener('resize', drawConvergeLines);
 document.addEventListener('DOMContentLoaded', function(){ setTimeout(drawConvergeLines, 50); });
 </script>
 
-  <script data-goatcounter="https://intuifi.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
-  <noscript><img src="https://intuifi.goatcounter.com/count?p=/" alt="" referrerpolicy="no-referrer-when-downgrade"></noscript>
+<script data-goatcounter="https://intuifi.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<noscript><img src="https://intuifi.goatcounter.com/count?p=/" alt="" referrerpolicy="no-referrer-when-downgrade"></noscript>
 
 </body>
 </html>
