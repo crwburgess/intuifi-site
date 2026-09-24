@@ -37,18 +37,18 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "How does it actually work?",
+      "name": "How does it actually work, and what does it take from me?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Upload CSVs from the tools your teams already use - such as CRM records, support tickets or product backlogs. Intuifi analyses everything across all your files, identifies the recurring themes, patterns and tensions, and produces a structured report. You start with a high level summary and can drill down into the evidence behind any finding whenever you need to."
+        "text": "You ask one or two people on your team to export the data from whatever tools you use, such as your CRM, support platform or project tracker. That's your part, the ask itself. Send the export to me and I'll run the analysis, then get a structured report back to you, usually within a day or two of receiving your data. You start with a high level summary and can drill down into the evidence behind any finding whenever you need to. Once you sign up, I'll send you a short note you can forward to whoever's doing the export."
       }
     },
     {
       "@type": "Question",
-      "name": "What effort is involved and how much of my time does this take?",
+      "name": "Do I have to email you the file?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Simply ask your team to export the data from the tools they are using. Then upload those files in a few clicks and sit back while the analysis happens. There is nothing to configure and no prompting required. Around five minutes later you will get back a structured report with an executive summary, the key themes across your data, and the evidence behind each one. From there you can share it with your team, use it to prepare for a planning session, or just keep it as a reference point."
+        "text": "No. The note you forward includes a secure upload link, so whoever does the export can use that instead of email."
       }
     },
     {
@@ -61,10 +61,34 @@
     },
     {
       "@type": "Question",
-      "name": "This looks like a manual process. Why?",
+      "name": "How much data do I need?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "This is an MVP and the decision to keep it manual is deliberate. I am looking to build trust, and the way I am approaching that is to reduce any concerns you might have about your data, by enabling you to edit or sanitise anything you want to upload before it reaches Intuifi. Automation is coming, but only once I am confident you are getting the insight you need. Here is where Intuifi is heading: Now On-demand reports Upload your data, get back a structured report with themes, priorities and evidence. Next Automated data ingestion Connect directly to the tools your team already uses. Pattern memory Track how themes and issues change across reports over time. Continuous monitoring Alert your team when new trends emerge. Later Interactive discovery Ask follow-up questions and let Intuifi investigate for you. Contextual input See how market needs align with your business goals. Strategic simulation Explore how market headwinds could reshape your priorities."
+        "text": "A few months of support tickets, or a CRM export covering your active accounts, is usually enough to see real patterns. You don't need your whole history from every system. More sources and more time just make the picture fuller."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who sees the report first?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "I do. I check every report before it's sent, partly for quality, partly because I'm still learning what's working at this stage. After that, it comes to you and only you. You decide who else on your team sees it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does this cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nothing right now. In return, I'll ask you for a short call after your first report to hear what worked and what didn't. When Intuifi moves to paid pricing, you'll know well in advance before anything changes for you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's coming next?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "I'm focused on getting this snapshot report right first, a clear, one off picture of what's in your data today. Once that's proving useful, the natural next step is tracking how things change over time rather than a single point in time view. Here's what's next: Now On-demand reports Upload your data, get back a structured report with themes, priorities and evidence. Next Automated data ingestion Connect directly to the tools your team already uses. Pattern memory Track how themes and issues change across reports over time. Continuous monitoring Alert your team when new trends emerge."
       }
     },
     {
@@ -72,7 +96,7 @@
       "name": "How is my data handled?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The files you upload are processed to generate your report and then deleted. Nothing is stored, nothing is retained, and I never see your data at any point. Intuifi does not train on your data. For more information: Anthropic data usage MindStudio privacy policy"
+        "text": "I review the data behind every report I generate, to run the analysis and troubleshoot anything that doesn't process correctly. Your report and the underlying data are stored on MindStudio's servers, hosted on AWS in the United States, encrypted at rest and in transit, and are accessible to you via Intuifi using the email address you signed up with. MindStudio uses Anthropic's models under a commercial licence to run the analysis, and neither MindStudio nor Anthropic use your data to train their models. MindStudio is SOC 2 Type I and Type II certified. You can request deletion of your data at any time. For more information: Anthropic data usage MindStudio privacy policy"
       }
     },
     {
@@ -96,7 +120,7 @@
       "name": "Why would I not just use ChatGPT or Claude?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "You shouldn't have to spend your time prompt engineering just to understand what is happening across your business. You still have to prepare your data, structure your questions, interpret the output, and turn it into something another person can review and trust. Intuifi removes that friction. Upload your files as they are and get back a structured report with themes, priorities, and the evidence behind every finding."
+        "text": "ChatGPT and Claude can take several files at once, but they won't reliably match the same issue across different tools or tell you how many customers raised it. Intuifi is built to do exactly that: correlate evidence across sources and rank findings by how often they come up, with the evidence behind every one."
       }
     },
     {
@@ -104,7 +128,7 @@
       "name": "Why not just get my team to build this?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Vibe coding tools make it easier than ever to build something that generates an initial output. The harder part is making it consistent, objective, and trustworthy enough to guide strategic business decisions. Doing it in-house brings back the exact problems you are trying to fix: Unbiased truth: You need an objective picture of what is happening across your business. If an internal team writes the rules for how data gets analysed, they inevitably control what gets highlighted and what gets buried, whether intentionally or not. This is particularly true when feedback points to issues with their own team's work. Ongoing maintenance: In-house scripts rarely last more than a few months. As file formats change and new software is introduced, internal tools quietly break. Keeping a side project working will never take priority over your main product roadmap, so the tool is eventually abandoned. Team focus: Your engineers should spend their time building your core product and growing the business, not fixing broken file imports, tweaking prompts, or checking inaccurate outputs."
+        "text": "Vibe coding tools make it easier than ever to build something that generates an initial output. The harder part is making it consistent and reliable enough to guide real decisions. Ongoing maintenance: In-house scripts rarely last more than a few months. As file formats change and new software is introduced, internal tools quietly break. Keeping a side project working will never take priority over your main product roadmap, so the tool is eventually abandoned. Team focus: Your engineers should spend their time building your core product and growing the business, not fixing broken file imports, tweaking prompts, or checking inaccurate outputs."
       }
     },
     {
@@ -309,7 +333,7 @@ html,body{margin:0;padding:0;font-family:Roboto,system-ui,-apple-system,Segoe UI
 .faq-accordion .panel{padding:0 20px 20px;color:var(--muted);font-size:15px;line-height:1.6;}
 .faq-accordion .panel p:first-child{margin-top:0;}
 .faq-accordion .panel a{color:var(--brand);}
-.faq-roadmap{margin-top:20px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+.faq-roadmap{margin-top:20px;display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
 .faq-roadmap-stage{background:var(--bg-grey);border:1px solid var(--border);border-radius:14px;padding:16px;}
 .faq-roadmap-stage--now{border-top:3px solid var(--brand);}
 .faq-roadmap-label{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--brand);margin:0 0 10px;}
@@ -368,9 +392,9 @@ html,body{margin:0;padding:0;font-family:Roboto,system-ui,-apple-system,Segoe UI
           <div class="diagram-row-text">
             <div class="diagram-row-heading">
               <span class="diagram-row-num">01</span>
-              <p class="diagram-row-title">Your team exports the data</p>
+              <p class="diagram-row-title">Get data exported from your tools</p>
             </div>
-            <p class="diagram-row-desc">Pulled straight from wherever your data already lives.</p>
+            <p class="diagram-row-desc">Send it over and I'll take it from there, nothing to set up.</p>
           </div>
           <div class="diagram-row-visual">
             <div class="diagram-sources">
@@ -658,17 +682,18 @@ document.addEventListener('DOMContentLoaded', maybeAutoOpenForm);
     </div>
     <div id="tab-getting-started" class="faq-panel active" role="tabpanel" aria-labelledby="btn-getting-started">
       <div class="faq-accordion">
-        <details><summary>How does it actually work?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary><div class="panel">Upload CSVs from the tools your teams already use - such as CRM records, support tickets or product backlogs. Intuifi analyses everything across all your files, identifies the recurring themes, patterns and tensions, and produces a structured report. You start with a high level summary and can drill down into the evidence behind any finding whenever you need to.</div></details>
-        <details><summary>What effort is involved and how much of my time does this take?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary><div class="panel">Simply ask your team to export the data from the tools they are using. Then upload those files in a few clicks and sit back while the analysis happens. There is nothing to configure and no prompting required. Around five minutes later you will get back a structured report with an executive summary, the key themes across your data, and the evidence behind each one. From there you can share it with your team, use it to prepare for a planning session, or just keep it as a reference point.</div></details>
+        <details><summary>How does it actually work, and what does it take from me?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary><div class="panel">You ask one or two people on your team to export the data from whatever tools you use, such as your CRM, support platform or project tracker. That's your part, the ask itself. Send the export to me and I'll run the analysis, then get a structured report back to you, usually within a day or two of receiving your data. You start with a high level summary and can drill down into the evidence behind any finding whenever you need to. Once you sign up, I'll send you a short note you can forward to whoever's doing the export.</div></details>
+        <details><summary>Do I have to email you the file?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary><div class="panel">No. The note you forward includes a secure upload link, so whoever does the export can use that instead of email.</div></details>
         <details><summary>What results can I expect?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary><div class="panel">The report opens with an executive summary of the key themes and tensions across your data. Each theme comes with supporting evidence, an implication for your business, and signals to track. For example, a theme might read "Renewal risk rising in 3 accounts", with the evidence behind it (matching signals from CRM, support tickets and the engineering backlog) linked directly beneath, and an implication such as "the related fix is already logged in the backlog but hasn't been prioritised." Everything links back to the source so you can verify what matters. To see exactly what you get, take a look at <a href="https://intuifi.io/sample-report" target="_blank" rel="noopener">this sample report</a>.</div></details>
-        <details><summary>This looks like a manual process. Why?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary>
+        <details><summary>How much data do I need?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary><div class="panel">A few months of support tickets, or a CRM export covering your active accounts, is usually enough to see real patterns. You don't need your whole history from every system. More sources and more time just make the picture fuller.</div></details>
+        <details><summary>Who sees the report first?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary><div class="panel">I do. I check every report before it's sent, partly for quality, partly because I'm still learning what's working at this stage. After that, it comes to you and only you. You decide who else on your team sees it.</div></details>
+        <details><summary>What does this cost?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary><div class="panel">Nothing right now. In return, I'll ask you for a short call after your first report to hear what worked and what didn't. When Intuifi moves to paid pricing, you'll know well in advance before anything changes for you.</div></details>
+        <details><summary>What's coming next?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary>
           <div class="panel">
-            <p>This is an MVP and the decision to keep it manual is deliberate. I am looking to build trust, and the way I am approaching that is to reduce any concerns you might have about your data, by enabling you to edit or sanitise anything you want to upload before it reaches Intuifi. Automation is coming, but only once I am confident you are getting the insight you need.</p>
-            <p>Here is where Intuifi is heading:</p>
+            <p>I'm focused on getting this snapshot report right first, a clear, one off picture of what's in your data today. Once that's proving useful, the natural next step is tracking how things change over time rather than a single point in time view. Here's what's next:</p>
             <div class="faq-roadmap">
               <div class="faq-roadmap-stage faq-roadmap-stage--now"><p class="faq-roadmap-label">Now</p><div class="faq-roadmap-item">On-demand reports<p>Upload your data, get back a structured report with themes, priorities and evidence.</p></div></div>
               <div class="faq-roadmap-stage"><p class="faq-roadmap-label faq-roadmap-label--future">Next</p><div class="faq-roadmap-item">Automated data ingestion<p>Connect directly to the tools your team already uses.</p></div><div class="faq-roadmap-item">Pattern memory<p>Track how themes and issues change across reports over time.</p></div><div class="faq-roadmap-item">Continuous monitoring<p>Alert your team when new trends emerge.</p></div></div>
-              <div class="faq-roadmap-stage"><p class="faq-roadmap-label faq-roadmap-label--future">Later</p><div class="faq-roadmap-item">Interactive discovery<p>Ask follow-up questions and let Intuifi investigate for you.</p></div><div class="faq-roadmap-item">Contextual input<p>See how market needs align with your business goals.</p></div><div class="faq-roadmap-item">Strategic simulation<p>Explore how market headwinds could reshape your priorities.</p></div></div>
             </div>
           </div>
         </details>
@@ -676,7 +701,7 @@ document.addEventListener('DOMContentLoaded', maybeAutoOpenForm);
     </div>
     <div id="tab-trust" class="faq-panel" role="tabpanel" aria-labelledby="btn-trust">
       <div class="faq-accordion">
-        <details><summary>How is my data handled?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary><div class="panel">The files you upload are processed to generate your report and then deleted. Nothing is stored, nothing is retained, and I never see your data at any point. Intuifi does not train on your data.<br><br>For more information:<br><a href="https://www.anthropic.com/safety-and-privacy/data-usage" target="_blank" rel="noopener">Anthropic data usage</a><br><a href="https://studio.mindstudio.ai/privacy" target="_blank" rel="noopener">MindStudio privacy policy</a></div></details>
+        <details><summary>How is my data handled?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary><div class="panel">I review the data behind every report I generate, to run the analysis and troubleshoot anything that doesn't process correctly. Your report and the underlying data are stored on MindStudio's servers, hosted on AWS in the United States, encrypted at rest and in transit, and are accessible to you via Intuifi using the email address you signed up with. MindStudio uses Anthropic's models under a commercial licence to run the analysis, and neither MindStudio nor Anthropic use your data to train their models. MindStudio is SOC 2 Type I and Type II certified. You can request deletion of your data at any time.<br><br>For more information:<br><a href="https://www.anthropic.com/safety-and-privacy/data-usage" target="_blank" rel="noopener">Anthropic data usage</a><br><a href="https://studio.mindstudio.ai/privacy" target="_blank" rel="noopener">MindStudio privacy policy</a></div></details>
         <details><summary>How accurate is the output?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary><div class="panel">That depends on the quality of the data you upload. Intuifi analyses what is there and surfaces the patterns it finds across it. It will not always get every theme right, and some findings may reflect noise rather than signal. That is why every finding links back to the source data, so you can check what looks right, discard what does not, and act with confidence on what remains. The analysis is a starting point, not a verdict.</div></details>
         <details><summary>How is this different from a typical dashboard?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary><div class="panel">This is not another dashboard. Dashboards usually present quantitative data and leave the interpretation to you. Intuifi works differently. It takes qualitative evidence like CRM records, support tickets, product backlogs and notes, then turns it into a structured report with clear themes, strategic implications, and the evidence behind each one. You are not exploring charts. You are seeing what is happening across the evidence your teams already hold, and why it matters.</div></details>
         <details><summary>Why would I not just use ChatGPT or Claude?<span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke-width="2" stroke="#0f625c"></path></svg></span></summary><div class="panel">You shouldn't have to spend your time prompt engineering just to understand what is happening across your business. You still have to prepare your data, structure your questions, interpret the output, and turn it into something another person can review and trust. Intuifi removes that friction. Upload your files as they are and get back a structured report with themes, priorities, and the evidence behind every finding.</div></details>
