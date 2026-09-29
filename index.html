@@ -162,6 +162,7 @@
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 html,body{margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 body{font-family:Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.5;overflow-x:clip;-webkit-font-smoothing:antialiased}
 img{max-width:100%}
 a{color:var(--brand)}
@@ -322,6 +323,7 @@ html{scroll-padding-top:var(--hh)}
   .wif-step--quote{background:#fff;border-radius:18px;box-shadow:0 8px 24px rgba(15,46,42,.08);padding:22px 20px}
   .wif-quote{grid-template-columns:1fr;gap:20px}
   .wif-step .wif-quote figure{padding:0 !important;box-shadow:none !important;border-radius:0 !important}
+  .wif-stage .wif-next{display:none}
   .wif-quote .qh span{font-size:30px !important}
   .wif-quote blockquote{font-size:16px !important}
 }
@@ -455,7 +457,7 @@ html{scroll-padding-top:var(--hh)}
   .hiw .wrap{gap:40px}
   .hiw-card{display:none}
   .hiw-mobile{display:block}
-  .hiw-note{text-align:left}
+  .hiw-note{display:none}
 }
 
 /* ============ REQUEST ============ */
@@ -869,7 +871,7 @@ html{scroll-padding-top:var(--hh)}
         <span style="display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 16px; color: #0f2e2a">Lee Tedstone</strong><span style="font-size: 14px; color: #24403c">CEO, Kobai</span></span>
       </figcaption>
     </figure></div>
-<button type="button" class="wif-next">Next: what changes for Engineering<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+<button type="button" class="wif-next">Next: <span class="wn-long">what changes for </span>Engineering<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
 </div>
 <div class="wif-step" data-aud="eng" data-i="4">
 <div class="wif-toggle" role="group" aria-label="Show before or after"><button type="button" data-side="before" aria-pressed="true">Before</button><button type="button" data-side="after" aria-pressed="false">After</button></div>
@@ -985,7 +987,7 @@ html{scroll-padding-top:var(--hh)}
 <div class="wd-item wd-item--quote" data-i="3" data-aud="lead"><div class="qh">
       <span style="font-size: 60px; font-weight: 700; line-height: 1.05; letter-spacing: -.03em; color: #0f625c">Business insights,</span>
       <span style="font-size: 60px; font-weight: 700; line-height: 1.05; letter-spacing: -.03em; color: #0f2e2a">with all the detail needed.</span>
-    </div><button type="button" class="wif-next">Next: what changes for Engineering<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+    </div><button type="button" class="wif-next">Next: <span class="wn-long">what changes for </span>Engineering<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
 <div class="wd-item" data-i="4" data-aud="eng"><div class="side side-before"><div class="colhead" style="color: #6b7a78">Where you are now</div><p style="margin: 0; font-size: 26px; line-height: 1.25; font-weight: 700; letter-spacing: -.01em; color: #0f2e2a; min-height: 65px; text-wrap: balance">Priorities shift with whoever asks loudest.</p><div class="en-card" style="position: relative; box-shadow: 0 6px 16px rgba(15,46,42,.08)"><span class="warn" style="top: -11px; right: 18px; font-size: 11px; padding: 5px 11px">Ranked by who asked</span>
           <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><div class="en-chead"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"></path></svg>Backlog</div></div>
           <div class="en-pane en-before" style="padding: 14px"><div class="en-body"><div class="en-item"><div class="en-itop"><span class="en-id">ENG-318</span></div><span class="en-it">Custom export format</span><div class="en-tags"><span class="en-tag" style="background: #fde7e5; color: #b3261e">Urgent, from Sales</span></div></div><div class="en-item"><div class="en-itop"><span class="en-id">ENG-296</span></div><span class="en-it">Bulk user import</span></div><div class="en-item"><div class="en-itop"><span class="en-id">ENG-274</span></div><span class="en-it">Dark mode for dashboards</span></div><div class="en-item"><div class="en-itop"><span class="en-id">ENG-231</span></div><span class="en-it">Onboarding delays across new accounts</span></div></div></div>
@@ -1212,7 +1214,7 @@ html{scroll-padding-top:var(--hh)}
     <div class="about-copy">
       <p class="eyebrow">The person behind this</p>
       <h2 class="h2">Chris Burgess</h2>
-      <p>I'm a product leader with 15 years of experience across startups, scale-ups, and a Fortune 100 company. I built Intuifi because I kept seeing how difficult it was for leaders to get a reliable picture of what was happening across a scaling business. Evidence was scattered across teams and tools, summaries lost context, and decisions were too often made without a clear view of what supported them. I'm fixing that.</p>
+      <p>I'm a product leader with 15 years of experience across startups, scale-ups and a Fortune 100 company. I built Intuifi because, as each business grew, it was my job to pull together the context and evidence Engineering needed, and then turn it into something Leadership could use too. I felt the pain of chasing teams and customers for feedback, then capturing and sharing it, knowing that a lack of real evidence led to decisions without a shared understanding of why. I'm fixing that.</p>
       <div class="about-links">
         <a class="lnk" href="https://crwburgess.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>Learn more about me</a>
         <a class="lnk" href="https://linkedin.com/in/crwburgess" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8.25h5V23H0V8.25zM8 8.25h4.8v2.01h.07c.67-1.27 2.3-2.61 4.74-2.61 5.07 0 6 3.34 6 7.68V23h-5v-6.49c0-1.55-.03-3.55-2.17-3.55-2.17 0-2.5 1.69-2.5 3.44V23H8V8.25z"/></svg>Connect on LinkedIn</a>
@@ -1285,9 +1287,15 @@ function fitAll(){
     if (!w) return;
     var base = +el.getAttribute('data-fit');
     var max = +(el.getAttribute('data-fit-max') || 1);
-    var fw = el.getAttribute('data-fit-w');
-    el.style.width = (fw || base) + 'px';
-    el.style.zoom = Math.min(max, w / base);
+    var fw = +(el.getAttribute('data-fit-w') || base);
+    var z = Math.min(max, w / base);
+    el.style.width = fw + 'px';
+    el.style.zoom = '';
+    el.style.transform = 'scale(' + z + ')';
+    el.style.transformOrigin = 'top left';
+    var h = el.offsetHeight;
+    el.style.marginBottom = (-(h * (1 - z))) + 'px';
+    el.style.marginRight = (-(fw * (1 - z))) + 'px';
   });
 }
 
