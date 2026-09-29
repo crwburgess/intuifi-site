@@ -4,15 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Intuifi | Make sure you're building the right things</title>
-<meta name="description" content="Intuifi turns your support tickets, sales notes and backlog into one view Leadership and Engineering both work from: what's happening, and why it matters.">
+<meta name="description" content="Intuifi turns your support tickets, sales notes and product backlog into one view Leadership and Engineering both work from: what's happening, and why it matters.">
 <meta property="og:title" content="Intuifi | Make sure you're building the right things">
-<meta property="og:description" content="Intuifi turns your support tickets, sales notes and backlog into one view Leadership and Engineering both work from: what's happening, and why it matters.">
+<meta property="og:description" content="Intuifi turns your support tickets, sales notes and product backlog into one view Leadership and Engineering both work from: what's happening, and why it matters.">
 <meta property="og:image" content="https://intuifi.io/assets/intuifi-og-image.png">
 <meta property="og:url" content="https://intuifi.io">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Intuifi | Make sure you're building the right things">
-<meta name="twitter:description" content="Intuifi turns your support tickets, sales notes and backlog into one view Leadership and Engineering both work from: what's happening, and why it matters.">
+<meta name="twitter:description" content="Intuifi turns your support tickets, sales notes and product backlog into one view Leadership and Engineering both work from: what's happening, and why it matters.">
 <meta name="twitter:image" content="https://intuifi.io/assets/intuifi-og-image.png">
 <link rel="icon" type="image/png" href="https://intuifi.io/assets/intuifi-icon.png">
 <link rel="apple-touch-icon" href="https://intuifi.io/assets/intuifi-icon.png">
@@ -258,6 +258,11 @@ html{scroll-padding-top:var(--hh)}
 .wif-step.is-past{transform:translateY(-48px)}
 .wif-step.is-active{opacity:1;visibility:visible;transform:none;transition:opacity .45s ease,transform .45s ease}
 @media (prefers-reduced-motion:reduce){.wif-step{transition:none !important;transform:none !important}}
+/* When not pinned, the section is only as tall as the example on show */
+.wif:not(.is-pinned) .wif-step:not(.is-active){display:none}
+.wif:not(.is-pinned) .wif-step.is-active{animation:wifIn .4s ease}
+@keyframes wifIn{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.wif:not(.is-pinned) .wif-step.is-active{animation:none}}
 .wif-arrows{display:flex;gap:8px;margin-left:auto}
 .wif-arrows button{width:44px;height:44px;border-radius:50%;border:1px solid rgba(15,98,92,.25);background:#fff;color:#0f625c;display:flex;align-items:center;justify-content:center;cursor:pointer}
 .wif-arrows button[disabled]{opacity:.35;cursor:default}
@@ -289,8 +294,12 @@ html{scroll-padding-top:var(--hh)}
 .wd-item.on > .side{opacity:1}
 .wd-item .qh span{font-size:clamp(38px,4vw,56px) !important}
 .wd-sticky{position:sticky;top:calc(var(--hh) + var(--bh));height:calc(100vh - var(--hh) - var(--bh));display:grid;align-items:center}
-.wd-card{grid-area:1/1;opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity .45s ease,transform .45s ease,visibility 0s linear .45s}
-.wd-card.on{opacity:1;visibility:visible;transform:none;transition:opacity .45s ease,transform .45s ease}
+.wd-card{grid-area:1/1;opacity:0;visibility:hidden;transform:translateY(80px) scale(.94);transition:opacity .35s ease,transform .6s cubic-bezier(.2,.8,.2,1),visibility 0s linear .6s}
+.wd-card.is-past{transform:translateY(-80px) scale(.94)}
+.wd-card.on{opacity:1;visibility:visible;transform:none;transition:opacity .45s ease .12s,transform .6s cubic-bezier(.2,.8,.2,1) .12s}
+.wd-card.on .stamp{animation:stampIn .5s cubic-bezier(.3,1.6,.5,1) .55s both}
+@keyframes stampIn{from{opacity:0;transform:rotate(-14deg) scale(.5)}to{opacity:1;transform:rotate(-4deg) scale(1)}}
+@media (prefers-reduced-motion:reduce){.wd-card{transition:opacity .2s !important;transform:none !important}.wd-card.on .stamp{animation:none}}
 .wd-card > .side{height:auto}
 .wif.is-pinned .wif-tex{background-size:1600px auto;background-repeat:repeat-y;-webkit-mask-image:none;mask-image:none}
 .wif-next{align-self:flex-start;display:inline-flex;align-items:center;gap:10px;height:46px;padding:0 20px;border-radius:999px;border:0;background:#0f625c;color:#fff;font-family:inherit;font-size:15px;font-weight:700;cursor:pointer}
@@ -586,7 +595,7 @@ html{scroll-padding-top:var(--hh)}
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <h1>Make sure you're building the right things.</h1>
-      <p class="hero-sub">Intuifi turns your support tickets, sales notes and backlog into one view Leadership and Engineering both work from: what's happening, and why it matters.</p>
+      <p class="hero-sub">Intuifi turns your support tickets, sales notes and product backlog into one view Leadership and Engineering both work from: what's happening, and why it matters.</p>
       <div class="hero-ctas">
         <a href="#early-access" class="pill-btn pill-btn--teal">Request a free report</a>
         <a href="https://intuifi.io/sample-report" class="pill-btn pill-btn--ghost" id="hero-sample-link">See an example report</a>
@@ -1329,7 +1338,7 @@ function fitAll(){
     if (count) count.textContent = (step - base + 1) + ' of 4';
     arrows.forEach(function(a){ var d = +a.getAttribute('data-dir'); a.disabled = (d < 0 && step === 0) || (d > 0 && step === 7); });
     steps.forEach(function(s){ var i = +s.getAttribute('data-i'); s.classList.toggle('is-active', i === step); s.classList.toggle('is-past', i < step); });
-    sec.querySelectorAll('.wd-item,.wd-card').forEach(function(el){ el.classList.toggle('on', +el.getAttribute('data-i') === step); });
+    sec.querySelectorAll('.wd-item,.wd-card').forEach(function(el){ var i = +el.getAttribute('data-i'); el.classList.toggle('on', i === step); el.classList.toggle('is-past', i < step); });
     fitAll();
   }
 
