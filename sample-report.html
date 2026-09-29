@@ -1,1555 +1,528 @@
 <!DOCTYPE html>
-<!-- saved from url=(0032)https://intuifi.io/sample-report -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sample Strategic Insights Report | Intuifi</title>
-  <meta name="description" content="See a real example of an Intuifi report: themes, evidence, and recommended actions drawn from scattered feedback data.">
-  <link rel="canonical" href="https://intuifi.io/sample-report">
-  <link rel="icon" type="image/png" href="https://intuifi.io/assets/intuifi-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com/">
-  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-  <link href="./Sample Strategic Insights Report _ Intuifi_files/css2" rel="stylesheet">
-
-
-  <style>
-    :root {
-      --bg: #f7f8fa;
-      --card: #ffffff;
-      --ink: #111827;
-      --muted: #6b7280;
-      --text: #374151;
-      --border: #e5e7eb;
-      --soft: #f2f2f2;
-
-
-      --teal: #0f625c;
-      --teal-accent: #3abcb5;
-      --teal-soft: #e6f0ef;
-      --teal-border: #b9d6d2;
-
-
-      --amber: #92400e;
-      --amber-soft: #fffbeb;
-      --amber-border: #fde68a;
-
-
-      --red: #991b1b;
-      --red-soft: #fef2f2;
-      --red-border: #fecaca;
-
-
-      --blue: #2563eb;
-
-
-      --radius: 18px;
-      --shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
-      --max: 1080px;
-    }
-
-
-    * { box-sizing: border-box; }
-
-
-    body {
-      margin: 0;
-      padding: 28px 20px 64px;
-      background: var(--bg);
-      color: var(--ink);
-      font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont,
-        "Segoe UI", Helvetica, Arial, sans-serif;
-      line-height: 1.5;
-    }
-
-
-    .page { max-width: var(--max); margin: 0 auto; }
-
-
-    .header { margin-bottom: 14px; }
-
-
-    .header-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 28px;
-      flex-wrap: wrap;
-    }
-
-
-    .header-title-block { min-width: 0; }
-
-
-    .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 13px;
-      color: var(--muted);
-      text-decoration: none;
-      margin-bottom: 10px;
-    }
-
-
-    .back-link:hover { color: var(--ink); }
-
-
-    .back-link svg { flex: 0 0 auto; }
-
-
-    .report-title {
-      margin: 0;
-      min-width: 0;
-      font-size: clamp(28px, 4vw, 38px);
-      line-height: 1.1;
-      letter-spacing: -0.03em;
-      color: var(--ink);
-      display: flex;
-      flex-wrap: wrap;
-      align-items: baseline;
-      column-gap: 0.24em;
-      row-gap: 0.08em;
-    }
-
-
-    .report-subtitle {
-      margin: 6px 0 0;
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-
-    .brand-cluster {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      flex: 0 0 auto;
-    }
-
-
-    .brand-logo {
-      display: block;
-      width: clamp(138px, 16vw, 180px);
-      height: auto;
-      flex: 0 0 auto;
-      overflow: visible;
-    }
-
-
-    .logo-box {
-      height: 48px;
-      padding: 8px 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      background: #fff;
-    }
-
-
-    .logo-box img,
-    .logo-box svg {
-      max-height: 100%;
-      max-width: 150px;
-      object-fit: contain;
-      display: block;
-    }
-
-
-    .logo-box .brand-logo {
-      width: auto;
-      max-width: 140px;
-      height: 32px;
-    }
-
-
-    .client-logo-fallback {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--text);
-      white-space: nowrap;
-    }
-
-
-    .header-buttons {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-top: 12px;
-    }
-
-
-    .btn {
-      border: 0;
-      background: var(--teal);
-      color: #fff;
-      padding: 9px 14px;
-      border-radius: 8px;
-      font-weight: 600;
-      cursor: pointer;
-      text-decoration: none;
-      font-size: 13.5px;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: background 0.15s ease;
-      font-family: inherit;
-    }
-
-
-    .btn:hover { background: #0a4f4a; }
-
-
-    .header-summary-line {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      border-radius: 999px;
-      padding: 6px 14px;
-      font-size: 14px;
-      font-weight: 700;
-      margin: 10px 0 2px;
-      background: var(--teal-soft);
-      border: 1px solid var(--teal-border);
-      color: var(--teal);
-    }
-
-
-    .header-summary-line.flagged {
-      background: var(--amber-soft);
-      border-color: var(--amber-border);
-      color: var(--amber);
-    }
-
-
-    .meta-cluster {
-      display: grid;
-      gap: 10px;
-      margin: 18px 0 24px;
-    }
-
-
-    .meta-cluster.cols-1 { grid-template-columns: minmax(0, 1fr); max-width: 230px; }
-    .meta-cluster.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .meta-cluster.cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-
-
-    .meta-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 12px 16px;
-      box-shadow: var(--shadow);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-
-    .meta-card-main {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-    }
-
-
-    .meta-card-icon {
-      flex: 0 0 auto;
-      width: 22px;
-      height: 22px;
-      color: var(--muted);
-    }
-
-
-    .meta-card-text {
-      display: flex;
-      align-items: baseline;
-      gap: 6px;
-    }
-
-
-    .meta-card.primary { border-color: var(--teal-border); background: #ffffff; }
-    .meta-card.warning { border-color: #8c8b8b; background: var(--soft); }
-
-
-    .meta-card-clickable {
-      cursor: pointer;
-      font: inherit;
-      appearance: none;
-      -webkit-appearance: none;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      transition: box-shadow 0.15s ease, transform 0.15s ease;
-    }
-
-
-    .meta-card-clickable:hover {
-      box-shadow: 0 14px 32px rgba(146, 64, 14, 0.16);
-      transform: translateY(-1px);
-    }
-
-
-    .meta-card-clickable:focus-visible {
-      outline: 2px solid var(--amber);
-      outline-offset: 2px;
-    }
-
-
-    .meta-card-jump-icon {
-      flex: 0 0 auto;
-      width: 16px;
-      height: 16px;
-      color: var(--amber);
-      opacity: 0.75;
-    }
-
-
-    .meta-card strong { font-size: 22px; color: var(--ink); line-height: 1.15; }
-    .meta-card span { color: var(--muted); font-size: 12px; white-space: nowrap; }
-
-
-    .meta-card-delta {
-      margin-top: 4px;
-      font-size: 11px;
-      color: var(--muted);
-    }
-
-
-    .meta-card-delta.emphasis {
-      font-size: 12.5px;
-      font-weight: 700;
-      color: var(--amber);
-    }
-
-
-    .meta-card-delta.emphasis.no-change {
-      color: var(--muted);
-      font-weight: 500;
-    }
-
-
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 20px;
-      margin-bottom: 18px;
-    }
-
-
-    .section-title {
-      margin: 34px 0 14px;
-      font-size: 22px;
-      line-height: 1.2;
-      letter-spacing: -0.025em;
-    }
-
-
-    .eyebrow {
-      font-size: 12px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--teal);
-      margin-bottom: 8px;
-    }
-
-
-    .section-note {
-      margin: -6px 0 16px;
-      font-size: 13px;
-      font-weight: 400;
-      color: var(--muted);
-    }
-
-
-    .executive-card { padding: 0; overflow: hidden; }
-
-
-    .executive-header {
-      padding: 18px 20px;
-      border-bottom: 1px solid var(--border);
-      font-size: 22px;
-      font-weight: 800;
-      line-height: 1.2;
-      letter-spacing: -0.025em;
-    }
-
-
-    .executive-body { padding: 20px; display: grid; gap: 16px; }
-
-
-    .tldr-box {
-      background: var(--teal-soft);
-      border: 1px solid var(--teal-border);
-      border-radius: 15px;
-      padding: 16px;
-    }
-
-
-    .tldr-label {
-      font-size: 12px;
-      font-weight: 850;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--teal);
-      margin-bottom: 7px;
-    }
-
-
-    .tldr-text {
-      font-size: 16px;
-      color: #1f2937;
-      line-height: 1.5;
-      font-weight: 650;
-    }
-
-
-    .executive-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-
-
-    .executive-panel {
-      background: #f9fafb;
-      border: 1px solid var(--border);
-      border-radius: 15px;
-      padding: 16px;
-    }
-
-
-    .executive-panel.tension { background: var(--amber-soft); border-color: var(--amber-border); }
-
-
-    .panel-title { font-size: 14px; font-weight: 850; color: var(--ink); margin-bottom: 14px; }
-
-
-    .summary-list { display: grid; gap: 14px; }
-
-
-    .summary-item {
-      display: grid;
-      grid-template-columns: 28px 1fr;
-      gap: 14px;
-      align-items: start;
-    }
-
-
-    .summary-icon {
-      width: 28px;
-      height: 28px;
-      border-radius: 999px;
-      display: grid;
-      place-items: center;
-      font-size: 15px;
-      font-weight: 900;
-      line-height: 1;
-      margin-top: 1px;
-    }
-
-
-    .summary-icon.check { background: var(--teal-soft); color: var(--teal); border: 1px solid var(--teal-border); }
-    .summary-icon.warning { background: #fff7ed; color: var(--amber); border: 1px solid var(--amber-border); }
-
-
-    .summary-headline { font-size: 15px; font-weight: 850; line-height: 1.3; color: var(--ink); margin-bottom: 3px; }
-    .summary-detail { font-size: 13.5px; line-height: 1.45; color: var(--muted); }
-
-
-    .grid { display: grid; gap: 16px; }
-    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-
-
-    .action-card { border-left: 5px solid var(--teal); }
-
-
-    .risk-card { border-left: 5px solid var(--red); background: #ffffff; }
-
-
-    .risk-kicker {
-      color: var(--red);
-      font-size: 11px;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 0.07em;
-      margin-bottom: 8px;
-    }
-
-
-    .mini-title { margin: 0 0 8px; font-size: 15px; font-weight: 850; color: var(--ink); }
-    .body-copy { margin: 0; color: var(--text); font-size: 14px; }
-
-
-    .decision-section { margin-bottom: 18px; }
-    .decision-section .section-title { margin: 0 0 14px; }
-
-
-    .decision-flow {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 42px;
-      align-items: stretch;
-    }
-
-
-    .decision-card {
-      position: relative;
-      min-width: 0;
-      border: 1px solid var(--border);
-      border-top-width: 6px;
-      border-radius: var(--radius);
-      padding: 22px 24px 24px;
-      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.09);
-    }
-
-
-    .decision-card:not(:last-child)::after {
-      content: "→";
-      position: absolute;
-      top: 50%;
-      right: -38px;
-      width: 34px;
-      transform: translateY(-50%);
-      color: #64748b;
-      font-size: 36px;
-      font-weight: 900;
-      line-height: 1;
-      text-align: center;
-    }
-
-
-    .decision-card.context { border-color: var(--teal-border); border-top-color: var(--teal); background: var(--teal-soft); }
-    .decision-card.impact { border-color: var(--amber-border); border-top-color: #d97706; background: var(--amber-soft); }
-    .decision-card.risk { border-color: var(--red-border); border-top-color: #dc2626; background: var(--red-soft); }
-
-
-    .decision-step {
-      margin-bottom: 12px;
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #4b5563;
-    }
-
-
-    .decision-card-title {
-      margin: 0 0 12px;
-      color: var(--ink);
-      font-size: 20px;
-      font-weight: 850;
-      line-height: 1.22;
-      letter-spacing: -0.02em;
-    }
-
-
-    .decision-card-copy { margin: 0; color: var(--text); font-size: 15px; line-height: 1.58; }
-
-
-    .decision-outcome {
-      margin: 22px 0 18px;
-      padding: 22px 26px;
-      border: 2px solid var(--teal);
-      border-radius: var(--radius);
-      background: #ffffff;
-      box-shadow: var(--shadow);
-    }
-
-
-    .decision-outcome-title {
-      margin: 0 0 8px;
-      color: var(--teal);
-      font-size: 20px;
-      font-weight: 900;
-      line-height: 1.25;
-      letter-spacing: -0.02em;
-    }
-
-
-    .decision-outcome-copy { margin: 0; color: #1f2937; font-size: 16px; font-weight: 650; line-height: 1.55; }
-
-
-    .theme-flow-card { padding: 22px; }
-    .theme-flow-inline { border-top: 1px solid var(--border); padding: 26px 20px 20px; }
-    .flow-intro { margin-bottom: 20px; }
-
-
-    .flow-section-title {
-      margin: 0 0 8px;
-      color: var(--ink);
-      font-size: 20px;
-      font-weight: 850;
-      line-height: 1.25;
-      letter-spacing: -0.025em;
-    }
-
-
-    .flow-intro p { margin: 0; color: var(--text); font-size: 15px; line-height: 1.55; }
-
-
-    .tag-legend {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 14px;
-      font-size: 12px;
-      color: var(--muted);
-    }
-
-
-    .legend-item { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; }
-
-
-    .legend-swatch {
-      width: 18px;
-      height: 10px;
-      border-radius: 999px;
-      background: #ffffff;
-      border: 1px solid rgba(17, 24, 39, 0.12);
-    }
-
-
-    .legend-swatch.inferred {
-      background: rgba(124, 58, 237, 0.1);
-      border: 1.5px dashed rgba(124, 58, 237, 0.55);
-    }
-
-
-    .theme-flow {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 42px minmax(0, 1fr) 42px minmax(0, 1fr);
-      gap: 12px;
-      align-items: stretch;
-    }
-
-
-    .flow-column {
-      border-radius: 18px;
-      padding: 18px;
-      border: 1px solid var(--border);
-      display: flex;
-      flex-direction: column;
-      align-self: start;
-    }
-
-
-    .flow-column.root { background: var(--red-soft); border-color: var(--red-border); }
-    .flow-column.symptom { background: var(--amber-soft); border-color: var(--amber-border); }
-    .flow-column.consequence { background: var(--teal-soft); border-color: var(--teal-border); }
-
-
-    .flow-step-label {
-      font-size: 11px;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 0.07em;
-      color: var(--muted);
-      margin-bottom: 10px;
-    }
-
-
-    .flow-column h3 { margin: 0 0 8px; font-size: 18px; line-height: 1.2; letter-spacing: -0.025em; color: var(--ink); }
-    .flow-column p { margin: 0 0 16px; color: var(--text); font-size: 14px; line-height: 1.5; }
-
-
-    .flow-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
-
-
-    .flow-tags span {
-      display: inline-flex;
-      align-items: center;
-      border-radius: 999px;
-      padding: 6px 10px;
-      background: rgba(255, 255, 255, 0.78);
-      border: 1px solid rgba(17, 24, 39, 0.08);
-      color: #374151;
-      font-size: 12px;
-      font-weight: 750;
-    }
-
-
-    .flow-tags span.inferred {
-      background: rgba(124, 58, 237, 0.08);
-      border: 1.5px dashed rgba(124, 58, 237, 0.5);
-      color: #6d28d9;
-      font-weight: 700;
-      font-style: italic;
-    }
-
-
-    .flow-arrow { display: grid; place-items: center; color: #9ca3af; font-size: 28px; font-weight: 900; }
-
-
-    .pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
-
-
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      border-radius: 999px;
-      padding: 5px 10px;
-      background: var(--soft);
-      border: 1px solid var(--border);
-      color: #4b5563;
-      font-size: 12px;
-      font-weight: 750;
-    }
-
-
-    .pill.root { background: var(--red-soft); border-color: var(--red-border); color: var(--red); }
-    .pill.symptom { background: var(--amber-soft); border-color: var(--amber-border); color: var(--amber); }
-    .pill.consequence { background: var(--teal-soft); border-color: var(--teal-border); color: var(--teal); }
-
-
-    .theme-stack { display: grid; gap: 14px; }
-
-
-    details.theme {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-
-
-    details.theme[open] { border-color: #cbd5e1; }
-    details.theme.unclassified-card { border-left: 5px solid var(--amber); }
-
-
-    summary { cursor: pointer; list-style: none; }
-    summary::-webkit-details-marker { display: none; }
-
-
-    .theme-summary {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 18px;
-      align-items: center;
-      padding: 20px;
-    }
-
-
-    .theme-title { margin: 0; font-size: 19px; line-height: 1.25; letter-spacing: -0.02em; color: var(--ink); }
-    .theme-description { margin: 8px 0 0; color: var(--text); font-size: 14px; max-width: 820px; }
-
-
-    .theme-action {
-      margin-top: 12px;
-      padding: 12px 14px;
-      background: #f9fafb;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      font-size: 14px;
-      color: var(--text);
-    }
-
-
-    .theme-action strong { color: var(--ink); }
-
-
-    .expand {
-      width: 42px;
-      height: 42px;
-      border-radius: 12px;
-      background: #f9fafb;
-      border: 1px solid var(--border);
-      display: grid;
-      place-items: center;
-      color: var(--muted);
-      font-size: 22px;
-      font-weight: 850;
-    }
-
-
-    details[open] .expand::before { content: "−"; }
-    details:not([open]) .expand::before { content: "+"; }
-
-
-    .theme-body { padding: 0 20px 22px; }
-
-
-    .insight-detail-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
-      gap: 18px;
-      border-top: 1px solid var(--border);
-      padding-top: 20px;
-    }
-
-
-    .insight-detail-layout > *,
-    .evidence-panel,
-    .evidence-list,
-    .evidence-item,
-    .evidence-item p { min-width: 0; }
-
-
-    .panel-kicker {
-      font-size: 11px;
-      font-weight: 850;
-      text-transform: uppercase;
-      letter-spacing: 0.07em;
-      color: var(--muted);
-      margin-bottom: 6px;
-    }
-
-
-    .evidence-panel {
-      background: #ffffff;
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 20px;
-      overflow: hidden;
-    }
-
-
-    .evidence-panel h4,
-    .suggestion-panel h4 { margin: 0 0 14px; font-size: 18px; letter-spacing: -0.025em; color: var(--ink); }
-
-
-    .evidence-list { display: grid; gap: 12px; }
-
-
-    .evidence-item {
-      display: grid;
-      grid-template-columns: 42px 1fr;
-      gap: 12px;
-      padding: 12px;
-      border-radius: 14px;
-      background: #f9fafb;
-      border: 1px solid #edf0f3;
-    }
-
-
-    .evidence-number {
-      width: 34px;
-      height: 34px;
-      border-radius: 10px;
-      display: grid;
-      place-items: center;
-      background: var(--teal-soft);
-      color: var(--teal);
-      border: 1px solid var(--teal-border);
-      font-size: 12px;
-      font-weight: 900;
-    }
-
-
-    .evidence-item p {
-      margin: 0;
-      color: var(--text);
-      font-size: 14px;
-      line-height: 1.5;
-      overflow-wrap: anywhere;
-      word-break: break-word;
-    }
-
-
-    .insight-side { display: grid; gap: 16px; align-content: start; }
-
-
-    .suggestion-panel {
-      background: var(--teal-soft);
-      border: 1px solid var(--teal-border);
-      border-radius: 18px;
-      padding: 20px;
-    }
-
-
-    .suggestion-panel p { margin: 0; font-size: 16px; line-height: 1.55; color: var(--teal); font-weight: 650; }
-
-
-    .monitor-panel { background: var(--teal); border-radius: 18px; padding: 20px; color: white; }
-    .monitor-panel .panel-kicker { color: #a2c4c9; }
-
-
-    .metric-list { display: grid; gap: 12px; }
-
-
-    .metric-item {
-      display: grid;
-      grid-template-columns: 14px 1fr;
-      gap: 10px;
-      align-items: start;
-      color: #f2f2f2;
-      font-size: 13.5px;
-      line-height: 1.45;
-    }
-
-
-    .metric-dot {
-      width: 8px;
-      height: 8px;
-      margin-top: 7px;
-      border-radius: 999px;
-      background: var(--teal-accent);
-      box-shadow: 0 0 0 4px rgba(58, 188, 181, 0.18);
-    }
-
-
-    .state-badge {
-      display: inline-flex;
-      align-items: center;
-      border-radius: 999px;
-      padding: 5px 12px;
-      font-size: 13px;
-      font-weight: 800;
-      background: var(--teal-soft);
-      border: 1px solid var(--teal-border);
-      color: var(--teal);
-    }
-
-
-    .state-badge.concentrated {
-      background: var(--amber-soft);
-      border-color: var(--amber-border);
-      color: var(--amber);
-    }
-
-
-    .concentration-note { margin-top: 10px; font-size: 13px; line-height: 1.5; color: var(--amber); }
-    .baseline-caption { margin-top: 8px; font-size: 12.5px; color: var(--muted); }
-
-
-    .report-footer {
-      margin-top: 36px;
-      padding-top: 18px;
-      border-top: 1px solid var(--border);
-      text-align: center;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-
-    .report-cta {
-      background: var(--teal);
-      border-radius: var(--radius);
-      padding: 32px;
-      text-align: center;
-      margin-top: 24px;
-    }
-    .report-cta h3 { color: #fff; margin: 0 0 8px; font-size: 20px; }
-    .report-cta p { color: rgba(255,255,255,0.85); margin: 0 0 18px; font-size: 15px; }
-    .report-cta a.btn { display: inline-flex; background: #fff; color: var(--teal); border-radius: 999px; padding: 12px 22px; font-weight: 700; text-decoration: none; font-size: 15px; }
-
-
-    @media (max-width: 1040px) {
-      .meta-cluster.cols-3 { max-width: 100%; }
-    }
-
-
-    @media (max-width: 920px) {
-      .executive-columns,
-      .grid-3,
-      .theme-flow,
-      .insight-detail-layout,
-      .meta-cluster.cols-2,
-      .meta-cluster.cols-3 { grid-template-columns: 1fr; }
-
-
-      .meta-cluster { max-width: 100%; }
-      .flow-arrow { transform: rotate(90deg); height: 28px; }
-      .flow-column { min-height: auto; }
-      .theme-summary { grid-template-columns: 1fr; }
-      .expand { display: none; }
-      .decision-flow { grid-template-columns: 1fr; gap: 42px; }
-
-
-      .decision-card:not(:last-child)::after {
-        content: "↓";
-        top: auto;
-        right: 50%;
-        bottom: -35px;
-        transform: translateX(50%);
-      }
-
-
-      .header-buttons { width: 100%; }
-    }
-
-
-    @media (max-width: 620px) {
-      .header-top { gap: 16px; }
-      .brand-logo { width: 118px; }
-      .report-title { font-size: 28px; }
-      body { padding: 20px 14px 48px; }
-
-
-      .card,
-      .executive-body,
-      .theme-summary,
-      .theme-body { padding: 16px; }
-
-
-      .executive-header { padding: 16px; }
-      .decision-card,
-      .decision-outcome { padding: 16px; }
-      .evidence-item { grid-template-columns: 1fr; }
-    }
-
-    /* Pin the Intuifi logo to the top-right corner of the header, regardless of title/subtitle length */
-    .header { position: relative; }
-    .header-top { position: relative; }
-    .header-title-block { padding-right: 170px; }
-    .brand-cluster { position: absolute; top: 0; right: 0; margin: 0; }
-    @media (max-width: 620px) {
-      .header-title-block { padding-right: 0; }
-      .brand-cluster { position: static; margin-top: 12px; }
-    }
-  </style>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sample Strategic Insights Report | Intuifi</title>
+<meta name="description" content="See a real example of an Intuifi report: themes, evidence, and recommended actions drawn from scattered feedback data.">
+<link rel="canonical" href="https://intuifi.io/sample-report">
+<meta property="og:title" content="Sample Strategic Insights Report | Intuifi">
+<meta property="og:description" content="See a real example of an Intuifi report: themes, evidence, and recommended actions drawn from scattered feedback data.">
+<meta property="og:image" content="https://intuifi.io/assets/intuifi-og-image.png">
+<meta property="og:url" content="https://intuifi.io/sample-report">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="https://intuifi.io/assets/intuifi-icon.png">
+<link rel="apple-touch-icon" href="https://intuifi.io/assets/intuifi-icon.png">
+<meta name="theme-color" content="#0b3b37">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0f2e2a;--ink-mid:#3c4b49;--muted:#6b7a78;--brand:#0f625c;--brand-dark:#0b3b37;--teal:#2bb3a3;--line:#e1e8e6;--bg:#eef2f1;--pad:clamp(16px,7.5vw,96px);--hh:84px}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-top:calc(var(--hh) + 16px)}
+html,body{margin:0;padding:0}
+body{font-family:Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.5;overflow-x:clip;-webkit-font-smoothing:antialiased}
+*,*::before,*::after{box-sizing:border-box}
+a{color:var(--brand)}a:hover{color:var(--brand-dark)}
+.wrap{max-width:1280px;margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+
+/* Header and footer (same as the home page) */
+.site-header{background:var(--brand-dark);position:sticky;top:0;z-index:50}
+.site-header .wrap{height:var(--hh);display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:28px}
+.logo{display:block;height:44px;aspect-ratio:353/185;background:url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI4MjQuMDAwMDAwIDE0ODAuMDAwMDAwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBtZWV0Ij48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLjAwMDAwMCwxNDgwLjAwMDAwMCkgc2NhbGUoMC4xMDAwMDAsLTAuMTAwMDAwKSIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSJub25lIj48cGF0aCBkPSJNMTk4NjUgMTQzODAgYy0xNiAtNSAtNDkgLTE2IC03MyAtMjQgLTIzIC05IC04NCAtMjMgLTEzNSAtMzIgLTUzIC05IC0xMDkgLTI1IC0xMzIgLTM5IC0yMyAtMTMgLTcwIC0zMSAtMTA1IC00MCAtMzYgLTkgLTg1IC0yOSAtMTEwIC00NSAtMjUgLTE1IC01NyAtMzAgLTcxIC0zNCAtMTQgLTMgLTQzIC0yMCAtNjUgLTM3IC0yMSAtMTcgLTU1IC0zOSAtNzUgLTQ5IC0zMCAtMTYgLTg5IC02OCAtMjAxIC0xNzggLTEzIC0xMiAtMjkgLTI4IC0zNiAtMzUgLTY4IC02NCAtMTQyIC0xNDQgLTE0MiAtMTUzIDAgLTYgLTE1IC0yOCAtMzMgLTUwIC0xOCAtMjEgLTM5IC01NSAtNDcgLTc0IC03IC0xOSAtMjUgLTQ4IC00MCAtNjUgLTE1IC0xNiAtMzMgLTQ4IC00MCAtNzAgLTcgLTIyIC0yNSAtNjEgLTQxIC04NiAtMTYgLTI1IC0zNCAtNzIgLTQwIC0xMDUgLTYgLTMyIC0yNSAtOTAgLTQyIC0xMjkgbC0zMiAtNzAgLTMgLTI5NCBjLTQgLTMxMCAzIC0zOTMgMzkgLTQ2MiAxMSAtMjIgMjYgLTc2IDM1IC0xMjIgOSAtNTAgMjUgLTk2IDQwIC0xMTcgMTMgLTIwIDMxIC01OCA0MCAtODUgOSAtMjggMjcgLTYxIDQwIC03NSAxMiAtMTQgMzQgLTUxIDQ4IC04MiAxNCAtMzIgMzAgLTU4IDM2IC01OCA1IDAgMTkgLTE0IDI5IC0zMCAzMyAtNTUgMTg4IC0yMjAgMzE0IC0zMzUgMTYgLTE0IDUwIC0zNiA3NiAtNTAgMjYgLTEzIDUzIC0zMSA2MSAtNDAgNyAtOSAzMiAtMjYgNTQgLTM3IDIzIC0xMSA1MiAtMzEgNjYgLTQzIDE0IC0xMyA1NCAtMzEgODkgLTQwIDM0IC05IDgwIC0yNyAxMDAgLTQwIDIwIC0xNCA2NCAtMzAgOTYgLTM2IDMzIC01IDEwMSAtMjEgMTUwIC0zNCAxMjQgLTMzIDI4OSAtNDggNDU4IC00MyAxMjIgNCAxNTIgOSAyMTAgMzEgMzcgMTUgMTA2IDMzIDE1MiA0MSA4MSAxNCAxMzcgMzUgMTUwIDU2IDMgNSAzMCAxNyA2MCAyNSAyOSA5IDcwIDI5IDkxIDQ1IDIwIDE3IDUzIDM0IDc0IDQwIDIwIDUgNDUgMTkgNTYgMzEgMTAgMTIgNDIgMzIgNjkgNDYgNTEgMjUgNTggMzIgMTUyIDEyMiAyOSAyOCA2MSA1MSA3MSA1MSA0NCAwIDg0IC0xNCAxMDUgLTM3IDEyIC0xMyAzOCAtMzMgNTkgLTQzIDIwIC0xMSA1NyAtMzggODMgLTYwIDI1IC0yMiA1MyAtNDAgNjAgLTQwIDggMCAyMiAtMTIgMzEgLTI2IDEwIC0xNCAzMyAtMzMgNTMgLTQ0IDIwIC0xMCA0NSAtMjggNTYgLTQwIDExIC0xMiAzOCAtMzEgNjAgLTQyIDIyIC0xMiA1NiAtMzQgNzUgLTUwIDEwMiAtODUgMTMyIC0xMDggMTQxIC0xMDggNSAwIDI2IC0xNSA0NiAtMzQgMjEgLTE4IDU3IC00MyA3OSAtNTQgMjMgLTEyIDQ0IC0yOCA0NyAtMzYgMyAtOCAyMSAtMjIgMzkgLTMyIDE4IC05IDQ0IC0yNyA1OCAtNDEgMjQgLTI0IDk2IC03NSAxNTQgLTExMCAxNiAtMTAgNDggLTM1IDcxIC01NSAyMyAtMjEgNDcgLTM4IDUyIC0zOCA1IDAgMjAgLTEyIDM0IC0yNiAxMyAtMTQgNDQgLTM4IDY5IC01MiAyNSAtMTQgNjIgLTQxIDgzIC01OSAyMCAtMTggNDAgLTMzIDQ1IC0zMyAxNyAwIDExMiAtOTkgMTEyIC0xMTcgMCAtMTEgLTEzIC0zOSAtMjkgLTY0IC0xNiAtMjQgLTM0IC03MSAtNDEgLTEwNCAtNiAtMzMgLTIzIC05NiAtMzggLTE0MCAtMjUgLTc1IC0yNyAtOTEgLTI3IC0yNjUgMCAtMTc1IDEgLTE4OSAyNyAtMjY1IDE1IC00NCAzMiAtMTA2IDM4IC0xMzggNyAtMzMgMjIgLTY5IDM2IC04NiAxMyAtMTYgMjQgLTM5IDI0IC01MSAwIC0zMSAtNTUgLTk3IC0xMDAgLTEyMCAtMjEgLTExIC00MCAtMjYgLTQzIC0zNCAtMyAtOCAtMjQgLTI0IC00NiAtMzYgLTIyIC0xMSAtNTUgLTMzIC03MyAtNDkgLTE4IC0xNSAtNDkgLTM2IC02OCAtNDYgLTE5IC0xMCAtNDMgLTI4IC01MyAtNDEgLTEwIC0xMyAtMjUgLTI0IC0zMyAtMjQgLTggMCAtMzEgLTE1IC01MSAtMzQgLTIxIC0xOCAtNTYgLTQzIC03OSAtNTQgLTIyIC0xMSAtNDcgLTI4IC01NSAtMzggLTcgLTkgLTMyIC0yOCAtNTQgLTQyIC0yMiAtMTQgLTQ2IC0zNCAtNTMgLTQ0IC03IC0xMCAtMjggLTI0IC00NiAtMzIgLTE4IC03IC00OCAtMjcgLTY3IC00MyAtMTkgLTE3IC00OCAtMzcgLTY1IC00NiAtMTggLTkgLTQ2IC0zMCAtNjIgLTQ3IC0xNyAtMTYgLTM3IC0zMCAtNDQgLTMwIC04IDAgLTI1IC0xMiAtMzkgLTI2IC0xMyAtMTQgLTQ0IC0zNiAtNjkgLTQ5IC0yNSAtMTMgLTU2IC0zNCAtNjggLTQ4IC0xMyAtMTQgLTM3IC0zMSAtNTMgLTM3IC0xNSAtNyAtMzUgLTIzIC00NCAtMzYgLTggLTEzIC0zMCAtMzAgLTQ4IC0zOCAtMTkgLTcgLTQ5IC0yNyAtNjggLTQzIC0xOSAtMTcgLTUwIC0zOCAtNjkgLTQ4IC0xOSAtMTAgLTQxIC0yNiAtNDggLTM3IC03IC0xMCAtMzAgLTI3IC01MSAtMzcgLTIwIC0xMSAtNDQgLTI3IC01MSAtMzYgLTggLTkgLTM0IC0yNyAtNTkgLTQwIC0yNSAtMTIgLTU1IC0zMyAtNjYgLTQ1IC0xMSAtMTIgLTM3IC0zMSAtNTggLTQyIC0yMSAtMTAgLTQxIC0yNiAtNDQgLTM0IC0zIC04IC0yMyAtMjQgLTQ0IC0zNCAtMjEgLTExIC01MyAtMzMgLTcxIC00OSAtMTggLTE1IC00OSAtMzYgLTY4IC00NiAtMTkgLTkgLTQ0IC0yOCAtNTUgLTQwIC0xMSAtMTMgLTQxIC0zMSAtNjggLTQwIC00NSAtMTcgLTQ5IC0xNyAtOTAgMCAtMjMgMTAgLTU2IDMxIC03MiA0NyAtMTcgMTUgLTUzIDM1IC04MCA0NSAtMjggOSAtNjMgMjYgLTgwIDM5IC0xNiAxMiAtNTcgMjcgLTkwIDM0IC0zMyA2IC04NyAyMCAtMTIwIDMxIC0xMzUgNDMgLTI4MiA0MyAtNDIwIC0xIC0zMyAtMTAgLTg3IC0yNCAtMTE5IC0yOSAtMzQgLTYgLTczIC0yMSAtOTEgLTM1IC0xNyAtMTMgLTQ5IC0zMiAtNzAgLTQxIC0yMiAtOSAtNTAgLTI1IC02MiAtMzcgLTEyIC0xMSAtMzggLTMwIC01NyAtNDIgLTUyIC0zMSAtMTUzIC0xMzIgLTE4MiAtMTgxIC0xNCAtMjQgLTMxIC00NiAtMzkgLTQ5IC04IC0zIC0yMyAtMjIgLTMyIC00MyAtMTAgLTIxIC0yOSAtNTIgLTQ0IC02OSAtMTUgLTE4IC0zMiAtNTYgLTM5IC04NSAtNyAtMzAgLTI2IC04NSAtNDQgLTEyNCBsLTMxIC03MCAwIC0xOTUgMCAtMTk1IDMxIC03MCBjMTggLTM4IDM1IC05MCAzOSAtMTE1IDkgLTUzIDIwIC03NyA1MCAtMTA4IDEyIC0xMiAyOCAtNDMgMzUgLTY3IDggLTMwIDIzIC01MyA0MiAtNjYgMTUgLTExIDM1IC0zMyA0MiAtNDggOCAtMTUgMjUgLTMzIDM5IC00MCAxNCAtNyAzMSAtMjQgMzggLTM4IDcgLTE0IDI3IC0zMiA0NCAtNDAgMTYgLTkgNDEgLTI4IDU1IC00MyAxNCAtMTYgNDIgLTMzIDYyIC00MCAyMCAtNiA1MyAtMjQgNzMgLTQwIDIxIC0xNiA1NCAtMzIgNzQgLTM1IDQwIC03IDEyMiAtMzMgMTkxIC02MSAzOCAtMTYgNzEgLTE5IDIxNSAtMTggMTYzIDAgMTczIDEgMjM1IDI4IDM2IDE1IDEwMCAzNiAxNDMgNDYgNTIgMTEgODcgMjUgMTA1IDQyIDE1IDE0IDQzIDMxIDYzIDM3IDIwIDcgNTYgMjkgNzkgNTEgMjQgMjIgNTAgNDIgNjAgNDUgOSAzIDIzIDE3IDMwIDMxIDggMTQgMjcgMzMgNDIgNDIgMTUgOSAzMCAyNCAzMyAzMyAzIDEwIDI0IDM3IDQ1IDYxIDIyIDIzIDQ2IDYyIDU0IDg2IDkgMjQgMjYgNTYgNDAgNzIgMTQgMTggMjkgNTQgMzYgODcgNiAzMiAyMCA4MyAzMSAxMTMgMzEgODMgMzggMTI2IDM4IDIzMCAwIDk5IC0xMCAxNTcgLTU0IDMwMCAtMjIgNzIgLTI1IDkxIC0xNSAxMjIgMTEgMzcgNjAgODggODYgODggOCAwIDM0IDE4IDU4IDQwIDI0IDIyIDQ4IDQwIDU0IDQwIDYgMCAyMyAxNCAzOSAzMSAxNSAxNyA0NCAzOSA2NCA0OSAxOSAxMCA0MiAyNiA0OSAzNSA4IDkgMzQgMjcgNTkgNDAgMjUgMTMgNTkgMzcgNzQgNTQgMTYgMTcgMzQgMzEgNDEgMzEgNyAwIDI1IDE0IDQyIDMxIDE2IDE3IDQzIDM2IDYwIDQ0IDE3IDcgNDYgMjYgNjUgNDIgMTkgMTcgNDggMzggNjYgNDcgMTcgOSAzOCAyNCA0NSAzNCA3IDExIDI3IDI2IDQzIDM0IDE3IDkgMzkgMjYgNTAgMzggMTEgMTIgNDMgMzQgNzAgNDcgMjggMTQgNTYgMzQgNjMgNDUgNyAxMCAzMSAyNyA1MyAzOSAyMiAxMSA0MyAyNyA0NiAzNSAzIDggMjYgMjUgNTIgMzggMjUgMTMgNTUgMzQgNjYgNDYgMTEgMTIgMzggMzEgNjAgNDMgMjIgMTEgNDYgMjggNTMgMzkgNyAxMCAzMSAyNyA1MyAzOSAyMiAxMSA0MiAyNiA0NSAzMyAzIDggMzIgMjggNjUgNDYgMzIgMTcgNTkgMzUgNTkgNDAgMCA0IDE3IDE5IDM4IDMxIDIwIDEyIDU0IDM4IDc1IDU2IDIwIDE4IDQxIDMzIDQ2IDMzIDUgMCAyOSAxNiA1MyAzNiAyMyAyMCA1NyA0MyA3MyA1MCAxNyA3IDQzIDI3IDU4IDQzIDE2IDE3IDM1IDMxIDQyIDMxIDcgMCAyNCAxMiAzNyAyOCAyOSAzNCAxMTMgODIgMTQ1IDgyIDM5IDAgODYgLTI1IDE0MiAtNzQgMjggLTI1IDU2IC00NiA2MSAtNDYgNSAwIDI0IC0xMyA0MiAtMjggMTggLTE2IDU1IC0zNiA4MSAtNDYgMjYgLTEwIDYxIC0yOSA3NiAtNDIgMTcgLTE0IDU2IC0zMCA5OSAtMzkgMzggLTggODkgLTI0IDExMiAtMzYgNTggLTMwIDE5MSAtNDIgMzk5IC0zNSAxNTggNSAxNzggOCAyMzAgMzEgMzEgMTUgODcgMzMgMTI2IDQxIDQ2IDEwIDc4IDIzIDk1IDM5IDE0IDE0IDQ4IDMyIDc1IDQxIDI4IDkgNjEgMjcgNzUgMzkgMTQgMTIgMzYgMjggNTAgMzUgOTUgNDggMzIxIDI3MiAzNTQgMzUyIDggMTggMjQgNDIgMzUgNTIgMTIgMTEgMzAgNDggNDEgODMgMTEgMzYgMjkgNzYgNDAgOTAgMjYgMzMgMzIgNjAgNzEgMjkzIGwzMiAxOTUgLTE3IDExMCBjLTQ4IDMxMSAtNTggMzYwIC04MCAzOTUgLTEzIDE5IC0zMCA1OCAtNDAgODYgLTkgMjkgLTI1IDU5IC0zNiA2OSAtMTAgOSAtMzAgNDEgLTQ0IDcxIC0xNCAzMCAtMzAgNTQgLTM2IDU0IC01IDAgLTIxIDE3IC0zNCAzOCAtMzAgNDcgLTE2MSAxODMgLTIwMSAyMDggLTE2IDEwIC00MSAzMSAtNTMgNDcgLTEzIDE1IC0zMCAyNyAtMzcgMjcgLTcgMCAtMzcgMTYgLTY2IDM3IC0yOSAyMCAtNzMgNDIgLTk4IDUwIC0yNCA3IC01MiAxOSAtNjAgMjcgLTI4IDI0IC01OSAzNiAtMTE4IDQ3IC0zMiA2IC04NyAxOSAtMTIzIDMwIC0xMzcgNDAgLTM4MyA0MCAtNTIwIDAgLTM2IC0xMSAtOTMgLTI1IC0xMjggLTMyIC0zNSAtNiAtODAgLTIzIC0xMDAgLTM3IC0yMCAtMTQgLTUxIC0yOSAtNjggLTM0IC0xNyAtNCAtNDcgLTE5IC02NSAtMzMgLTE5IC0xNCAtNTQgLTM1IC03OCAtNDYgLTQxIC0yMCAtNjMgLTM3IC0xNDcgLTExOSAtNDMgLTQzIC04OSAtNDEgLTE0NCA1IC0yMyAxOSAtNDYgMzUgLTUxIDM1IC00IDAgLTIzIDE1IC00MiAzMyAtMTggMTcgLTQ3IDQwIC02MyA1MCAtNTggMzUgLTEzMCA4NyAtMTYxIDExNyAtMTggMTYgLTM3IDMwIC00MiAzMCAtNSAwIC0zMCAxNyAtNTUgMzggLTUyIDQzIC0xMTQgODggLTE2MyAxMTggLTE5IDExIC00OCAzNSAtNjYgNTEgLTE4IDE3IC00NyAzOCAtNjQgNDcgLTE4IDkgLTMzIDIxIC0zMyAyNiAwIDUgLTE4IDE5IC00MCAzMCAtMjMgMTIgLTU4IDM2IC03OCA1NCAtMjAgMTggLTUxIDQwIC02OCA0OSAtMTcgOSAtMzQgMjMgLTM3IDMxIC0zIDggLTIzIDI0IC00NCAzNCAtMjEgMTEgLTQ3IDMwIC01NyA0MSAtMTEgMTIgLTQxIDMzIC02NyA0OCAtMjYgMTQgLTUwIDMxIC01MyAzOSAtMyA3IC0yMCAyMSAtMzggMzAgLTE4IDkgLTQ5IDMwIC02OCA0NiAtNjggNTcgLTEyNiA5OCAtMTcxIDEyMiAtMzggMjAgLTQ4IDMyIC01MyA1OSAtNyA0MCAtMSA2MiAyOSA5OSAxMiAxNCAzMCA1NyAzOSA5NSAxMCAzNyAyOCA4NyA0MiAxMTAgMjMgMzkgMzMgOTEgNzQgMzczIDEyIDc5IDExIDIwOCAtMSAyNjAgLTYgMjUgLTE5IDExMiAtMjkgMTkzIC0xNSAxMTcgLTI0IDE1NyAtNDQgMTkwIC0xMyAyNCAtMzEgNjkgLTQwIDEwMSAtOCAzMyAtMjggNzggLTQ0IDEwMCAtMTYgMjMgLTM1IDU4IC00MSA3OSAtNyAyMSAtMjMgNTAgLTM1IDY1IC0xMyAxNSAtMzIgNDUgLTQ0IDY3IC0xMSAyMiAtMzEgNTEgLTQ1IDYzIC0xNCAxMyAtMzAgMzYgLTM3IDUxIC02IDE1IC02OCA4MCAtMTM4IDE0NSAtNzAgNjQgLTE0NiAxMzUgLTE2OSAxNTcgLTIzIDIxIC00OCAzOSAtNTYgMzkgLTcgMCAtMjYgMTQgLTQyIDMwIC0xNiAxNyAtMzQgMzAgLTQwIDMwIC02IDAgLTQ2IDE4IC04OSA0MCAtNDMgMjIgLTEwMyA0NyAtMTM1IDU2IC0zMSA5IC03NCAyNyAtOTYgNDAgLTI1IDE0IC03OCAyOSAtMTM4IDM5IC01NCA5IC0xMjEgMjUgLTE1MCAzNyAtNDYgMTkgLTc0IDIyIC0yMzIgMjQgLTk5IDIgLTE5MyAtMSAtMjEwIC02eiBtNDc1IC0xNTEgYzM1IC02IDg1IC0xOSAxMTAgLTMxIDI1IC0xMSA4NSAtMjkgMTM0IC0zOSA2NSAtMTMgOTYgLTI1IDExNiAtNDQgMTQgLTEzIDQ5IC0zMiA3NyAtNDAgMjggLTggNTYgLTIyIDY0IC0zMSA3IC04IDMxIC0yNSA1MyAtMzYgMjMgLTExIDU2IC0zNSA3MyAtNTIgMTggLTE3IDUyIC00OCA3NSAtNjkgNjIgLTU0IDE0NyAtMTQwIDE5MyAtMTk0IDIyIC0yNiA1NSAtNjMgNzQgLTgyIDE5IC0yMCA0MiAtNTQgNTEgLTc2IDEwIC0yMiAzMCAtNTUgNDQgLTc0IDE0IC0xOSAzMSAtNTAgMzcgLTcwIDcgLTIwIDIzIC01MiAzNiAtNzIgMTUgLTIzIDMwIC02OCAzOCAtMTE4IDggLTQ0IDI1IC0xMDYgMzkgLTEzOCA1OCAtMTQxIDYyIC01NjQgNSAtNjkzIC0xMSAtMjUgLTI5IC04MyAtNDAgLTEzMCAtMTEgLTQ3IC0zMCAtMTAxIC00MyAtMTIwIC0xMiAtMTkgLTMwIC01NSAtMzggLTgwIC04IC0yNSAtMjcgLTYzIC00MiAtODQgLTM1IC01MiAtMzQgLTkwIDIgLTExMyAxNSAtOSA0MSAtMzEgNTcgLTQ3IDE3IC0xNyA0NCAtMzkgNjAgLTQ5IDQ3IC0yOCAxMjcgLTg0IDE2MCAtMTEyIDc1IC02NCAxMzcgLTExMiAxNzcgLTEzOCA3NCAtNDcgMTEyIC03NCAxNDMgLTEwNCAxNyAtMTYgNDMgLTM1IDU4IC00MSAxNSAtNyAzMCAtMTkgMzQgLTI3IDMgLTkgMjYgLTI2IDUyIC0zOSAyNSAtMTMgNTUgLTM0IDY2IC00NiAxMSAtMTIgMzcgLTMxIDU3IC00MSAyMSAtMTEgNDUgLTMwIDUzIC00MyA5IC0xMyAyOSAtMzAgNDYgLTM2IDE2IC03IDM4IC0yMyA0NyAtMzUgMTAgLTEyIDM2IC0zMiA1NyAtNDMgMjIgLTExIDU1IC0zNCA3MiAtNTEgMTggLTE3IDM4IC0zMSA0MyAtMzEgNiAwIDI4IC0xNyA0OSAtMzcgMzggLTM3IDYxIC01NCAxNTAgLTExMCAyNCAtMTYgNjQgLTQ1IDg4IC02NSAyNCAtMjEgNDggLTM4IDUzIC0zOCA1IDAgMjQgLTE1IDQzIC0zMiAxOCAtMTggNDcgLTQxIDYzIC01MCAxNiAtMTAgNDAgLTI2IDU0IC0zNyAxNCAtMTEgMzcgLTIzIDUyIC0yNyAyOSAtNiAzMiAtNCAxNTMgMTE0IDI0IDIzIDQ4IDQyIDUzIDQyIDUgMCAyNSAxNSA0NiAzNCAyMSAxOCA1NiAzOSA3OCA0NiAyMiA2IDUxIDIzIDY0IDM3IDE1IDE2IDQ3IDMxIDk2IDQzIDQxIDEwIDkxIDI4IDExMiA0MSA1NCAzMiAyNjEgNDcgNDM0IDMyIDExMCAtMTAgMTM1IC0xNiAxODYgLTQyIDMyIC0xNyA3MCAtMzEgODMgLTMxIDMzIDAgODQgLTIzIDEwNiAtNDggMTAgLTExIDQxIC0yNiA2NyAtMzIgMjcgLTcgNTkgLTIyIDcyIC0zNCAxMyAtMTMgNDIgLTM1IDY1IC00OSAyMyAtMTUgNDcgLTM1IDUzIC00NiA1IC0xMSAxOCAtMjIgMjkgLTI2IDEwIC0zIDQ1IC0zOCA3NyAtNzcgMzIgLTM5IDcxIC04MyA4NiAtOTggMTUgLTE1IDM3IC01MiA0OCAtODIgMTEgLTMxIDI5IC02MyA0MCAtNzMgMTEgLTEwIDI4IC00NCAzNiAtNzQgOSAtMzEgMjkgLTg2IDQ1IC0xMjIgMjQgLTU1IDMwIC04NyAzNyAtMjAwIDkgLTEyOCAyIC0zNjAgLTEzIC00MjQgLTQgLTE2IC0xNiAtNDQgLTI2IC02MSAtMTAgLTE2IC0yNSAtNTcgLTM0IC05MCAtOCAtMzIgLTI0IC03MCAtMzUgLTg0IC0xMiAtMTQgLTMwIC00NSAtNDIgLTcwIC0xMiAtMjUgLTM3IC02NSAtNTcgLTg4IC01NyAtNjkgLTIwMyAtMjEyIC0yMzMgLTIyOCAtMTUgLTcgLTMzIC0yMiAtNDAgLTMzIC03IC0xMCAtMzMgLTI4IC01OCAtNDEgLTI1IC0xMiAtNTQgLTMwIC02NSAtNDEgLTE4IC0xNiAtMTAwIC01NCAtMjEwIC05NiAtNjQgLTI0IC0zMjcgLTM4IC01MDEgLTI2IC0xMzcgOSAtMTU0IDEyIC0yMDkgNDEgLTMzIDE3IC04MCAzNiAtMTA1IDQyIC0yNSA3IC02MSAyNSAtODAgNDAgLTE5IDE1IC01MyAzNSAtNzQgNDQgLTIxIDkgLTQ5IDI2IC02MiAzOSAtMjMgMjMgLTkxIDgyIC0xNTUgMTM2IC0yMCAxNyAtNDcgMzEgLTU5IDMxIC0zMSAwIC0xMzggLTYxIC0xNzQgLTk5IC0xNyAtMTcgLTM1IC0zMSAtNDEgLTMxIC02IDAgLTI3IC0xNSAtNDcgLTMyIC0yMCAtMTggLTU1IC00NSAtNzkgLTYxIC01OCAtMzYgLTEwNSAtNjkgLTE1NCAtMTA3IC00OSAtMzggLTk2IC03MSAtMTU0IC0xMDcgLTI0IC0xNiAtNjAgLTQzIC04MSAtNjAgLTIxIC0xOCAtNDIgLTMzIC00NyAtMzMgLTUgMCAtMjggLTE4IC01MSAtNDAgLTIyIC0yMiAtNDcgLTQwIC01NSAtNDAgLTcgMCAtMjQgLTEyIC0zOCAtMjYgLTEzIC0xNCAtNDIgLTM1IC02NCAtNDYgLTIyIC0xMSAtNTcgLTM1IC03OCAtNTIgLTIwIC0xNyAtNTQgLTQ1IC03NSAtNjIgLTIwIC0xNyAtNTUgLTQwIC03NyAtNTIgLTIyIC0xMSAtNDkgLTMwIC02MCAtNDIgLTExIC0xMiAtMzYgLTMwIC01NSAtNDAgLTE5IC0xMCAtNDQgLTI4IC01NSAtNDAgLTExIC0xMiAtMzYgLTMwIC01NSAtNDAgLTE5IC0xMCAtNDQgLTI4IC01NSAtNDAgLTExIC0xMiAtMzggLTMxIC02MCAtNDIgLTIyIC0xMSAtNDkgLTI5IC02MCAtMzkgLTExIC0xMSAtMzQgLTMwIC01MiAtNDIgLTY3IC00NyAtMTE2IC04MyAtMTU1IC0xMTUgLTIzIC0xOCAtNTYgLTM5IC03MyAtNDYgLTE4IC04IC0zOSAtMjMgLTQ2IC0zMyAtOCAtMTEgLTI4IC0yNyAtNDQgLTM1IC0xNyAtOSAtMzkgLTI2IC01MCAtMzggLTExIC0xMiAtMzggLTMxIC02MCAtNDIgLTIyIC0xMiAtNTcgLTM2IC03OCAtNTQgLTIwIC0xOSAtNDEgLTM0IC00NyAtMzQgLTUgMCAtMjcgLTE4IC00OSAtNDAgLTIyIC0yMiAtNDQgLTQwIC00OSAtNDAgLTM3IDAgLTMxIC0xMjggOCAtMTgyIDExIC0xNSAyNSAtNDAgMzEgLTU0IDE3IC00NyAyOSAtMjcyIDIwIC0zOTAgLTggLTEwMyAtMTIgLTExOSAtNTYgLTIxNSAtMjYgLTU3IC01OSAtMTE5IC03NCAtMTM3IC01OSAtNzYgLTI4NyAtMjkyIC0zMDYgLTI5MiAtNSAwIC00NyAtMTggLTk0IC0zOSAtNDcgLTIyIC0xMDggLTQyIC0xMzYgLTQ2IC0yNyAtNCAtOTAgLTEzIC0xMzkgLTIyIC04MCAtMTQgLTk1IC0xNCAtMTY1IDAgLTQyIDkgLTEwMSAxOCAtMTMxIDIyIC00NyA1IC0xNjIgNDggLTIzNiA4OCAtOTEgNDkgLTMyNSAyODQgLTM0NSAzNDYgLTcgMjAgLTIwIDQ4IC0zMCA2MiAtMzIgNDUgLTQwIDgwIC01MyAyMTkgLTE4IDIwMCAwIDQxNyA0MSA0NzcgMTMgMjAgMzMgNjAgNDQgODkgMTEgMzAgMjkgNTkgNDAgNjQgMTAgNiAyNiAyNSAzNSA0MiAyMSA0MiAxODEgMjAyIDIyMCAyMjIgMTcgOCAzNCAyMiAzNyAzMCAzIDggMzIgMjMgNjQgMzIgMzIgOSA4MSAyOSAxMDkgNDUgNDMgMjQgNzEgMzEgMTYwIDQwIDExMSAxMSAyNzMgNSAzNTQgLTEyIDI1IC02IDYxIC0yMSA4MCAtMzQgMTkgLTEyIDYwIC0zMCA5MCAtMzkgMzEgLTggNjYgLTI2IDc5IC00MCAxMyAtMTMgMzYgLTMwIDUyIC0zNiAxNSAtNyAzNSAtMjMgNDQgLTM2IDggLTEzIDM3IC0zNSA2NCAtNDkgbDQ5IC0yNSA1OCAyNiBjMzIgMTQgNjQgMzQgNzIgNDUgNyAxMCAyOCAyNiA0NSAzNSAxOCA5IDQ3IDMwIDY2IDQ3IDE5IDE2IDUwIDM2IDY4IDQ0IDE5IDcgMzYgMjAgNDAgMjkgMyA4IDI1IDI2IDQ5IDQwIDI1IDE0IDUwIDM0IDU3IDQ0IDYgOSAzNSAyOSA2MyA0MyAyNyAxNCA1NiAzMyA2NCA0MiA3IDkgMzEgMjUgNTEgMzYgMjEgMTAgNDQgMjcgNTEgMzcgNyAxMSAyNyAyNiA0MyAzNCAxNyA5IDM5IDI2IDUwIDM4IDExIDEyIDQwIDMyIDY1IDQ1IDI1IDEzIDU0IDMzIDY1IDQ1IDExIDEyIDM3IDMxIDU4IDQyIDIxIDEwIDQxIDI2IDQ0IDM0IDMgOCAyNCAyNCA0NyAzNiAyMiAxMSA1NiAzNCA3NSA1MSAxOSAxNiA0OSAzNiA2NyA0MyAxOCA4IDM4IDIzIDQ0IDM0IDYgMTEgMjUgMjcgNDMgMzYgMTggOSA1MCAzMiA3MSA1MCAyMiAxOSA0NSAzNCA1MiAzNCA2IDAgMzEgMTggNTUgNDAgMjQgMjIgNDcgNDAgNTEgNDAgNCAwIDI3IDE3IDUxIDM4IDI0IDIwIDU3IDQ1IDczIDU1IDgxIDQ5IDEzNiA4NyAxNjggMTEzIDg1IDY5IDE4NCAxNDIgMjUxIDE4MSAxNiAxMCA0MiAzMSA1OCA0NiAxNiAxNSA0NiAzNiA2NiA0NyAyMCAxMCA0MyAyNyA1MiAzNyA4IDEwIDM3IDMzIDY0IDUxIDQ2IDMyIDQ3IDM1IDQyIDczIC0zIDIyIC0xMiA0OCAtMjEgNTggLTkgMTAgLTI0IDQyIC0zNSA3MiAtMTAgMzAgLTMxIDgwIC00NiAxMTIgLTU5IDEyNyAtNTkgNTU4IDEgNjcyIDE0IDI3IDM0IDc4IDQ1IDExMyAxMCAzNCAyOSA3NiA0MyA5MyAxOSAyMyAyNiA0MiAyNiA3NCAwIDQxIC0xOCA3NSAtNDAgNzUgLTUgMCAtMzAgMTggLTU1IDQwIC0yNiAyMiAtNjQgNDkgLTg2IDYwIC0yMSAxMSAtMzkgMjUgLTM5IDMwIDAgNiAtMjIgMjQgLTUwIDQxIC0yNyAxNyAtNTAgMzQgLTUwIDM4IDAgNCAtMTkgMTggLTQyIDMxIC0yNCAxMyAtNjAgMzggLTgxIDU3IC0yMCAxOCAtNDEgMzMgLTQ2IDMzIC02IDAgLTMxIDE4IC01NiA0MCAtMjUgMjIgLTUwIDQwIC01NSA0MCAtNSAwIC0zMCAxOCAtNTUgNDAgLTI1IDIyIC01MCA0MCAtNTUgNDAgLTUgMCAtMzAgMTggLTU1IDQwIC0yNSAyMiAtNTAgNDAgLTU1IDQwIC01IDAgLTMwIDE4IC01NSA0MCAtMjUgMjIgLTUwIDQwIC01NiA0MCAtNSAwIC0yNiAxNSAtNDYgMzQgLTIxIDE4IC01NyA0MyAtNzkgNTQgLTIzIDEyIC00NCAyOCAtNDcgMzYgLTMgOCAtMjMgMjQgLTQ0IDM0IC0yMSAxMSAtNDcgMzAgLTU4IDQyIC0xMSAxMiAtMzEgMjggLTQ1IDM1IC0xNCA3IC00OCAzMiAtNzUgNTQgLTI3IDIzIC01NSA0MSAtNjEgNDEgLTYgMCAtMjEgMTIgLTM1IDI2IC0xMyAxNCAtNDAgMzQgLTU5IDQ0IC0xOSAxMCAtNDQgMjggLTU1IDQwIC0xMSAxMiAtNDEgMzMgLTY3IDQ2IC0yNiAxMyAtNTIgMzMgLTU4IDQzIC05IDE3IC0xMDMgNjEgLTEzMCA2MSAtNiAwIC01NCAtNDIgLTEwOCAtOTMgLTU0IC01MiAtMTA5IC0xMDAgLTEyMiAtMTA3IC0xNCAtNyAtMzEgLTIyIC0zOCAtMzIgLTggLTExIC0zNyAtMjkgLTY1IC00MiAtMjkgLTEyIC01OCAtMzAgLTY1IC0zOSAtOCAtOSAtMzkgLTI2IC02OSAtMzcgLTMwIC0xMSAtNjkgLTMxIC04NyAtNDUgLTE3IC0xMyAtNTQgLTI5IC04MSAtMzUgLTI4IC02IC04OCAtMjQgLTEzNSAtNDAgLTE0OCAtNTAgLTMyNSAtNjEgLTY0NyAtNDAgLTEyMyA4IC0xNTEgMTMgLTIxMCAzOCAtMzcgMTcgLTkzIDM1IC0xMjMgNDEgLTMyIDcgLTcwIDI0IC05MCA0MCAtMTkgMTUgLTU1IDM4IC04MCA1MCAtNTAgMjMgLTkwIDQ5IC0xNTMgOTggLTIzIDE4IC01OCA0MyAtNzcgNTcgLTQ1IDMwIC0xODYgMTY5IC0yMDggMjA1IC05IDE0IC0yNyAzNyAtNDAgNTEgLTMzIDM1IC0xMDggMTUyIC0xMTcgMTgxIC00IDEzIC0yMiA0NyAtNDAgNzQgLTE5IDI4IC0zOSA3MCAtNDUgOTUgLTYgMjUgLTI0IDc0IC00MCAxMTAgLTIzIDUxIC0zNSAxMDMgLTUyIDIzMCAtMjggMjA0IC0yOCAyODAgLTEgNDkzIDE4IDEzOCAyNyAxNzkgNTIgMjMwIDE2IDM0IDMzIDgwIDM3IDEwMiA4IDQ3IDE5IDcwIDUwIDEwNyAxMiAxNSAyOCA0NCAzNCA2NSA3IDIxIDI0IDU0IDM5IDczIDE0IDE5IDM1IDQ4IDQ2IDY2IDI5IDQ1IDcxIDk1IDE0MSAxNjcgMTM1IDEzNyAyMTkgMjA5IDI2MyAyMjcgMTkgOCA0OSAyNiA2NSA0MSAxNyAxNCA0OSAzMiA3MSAzOSAyMiA3IDU1IDIzIDcyIDM3IDIwIDE0IDY3IDMxIDEyMiA0MyA0OSAxMCAxMDggMjggMTMxIDQwIDM4IDE5IDEyNyAzNCAyNjAgNDQgODIgNSAzMzYgLTQgNDEwIC0xNXogTTE5Nzk0IDE0MDgwIGMtNDIgLTUgLTk4IC0yMCAtMTQwIC0zOCAtMzggLTE2IC05MyAtMzUgLTEyMyAtNDIgLTMwIC03IC02NyAtMjUgLTg1IC00MCAtMTcgLTE1IC00MSAtMzAgLTU0IC0zNCAtMTIgLTQgLTQyIC0yMiAtNjYgLTQxIC0yNCAtMTggLTU3IC00MCAtNzIgLTQ4IC00NCAtMjMgLTE4NSAtMTU0IC0yNTkgLTI0MSAtMjIgLTI2IC01NCAtNjEgLTcxIC03OSAtMTcgLTE4IC0zNyAtNTAgLTQ0IC03MiAtNyAtMjIgLTI1IC01NiAtNDAgLTc2IC0xNiAtMjAgLTM0IC01NiAtNDAgLTgwIC02IC0yNCAtMjQgLTcxIC00MCAtMTA0IC0xOCAtMzggLTM1IC05NSAtNDQgLTE1NSAtNDMgLTI4NSAtNDMgLTI3OCAtMTEgLTUzNSAxOSAtMTU2IDIyIC0xNjcgNTEgLTIyNSAxMiAtMjUgMzAgLTczIDM5IC0xMDUgMTAgLTMzIDI4IC03MiA0MCAtODcgMTMgLTE1IDMxIC00OSA0MSAtNzUgOSAtMjYgMzIgLTYzIDUxIC04MiAxOCAtMTggMzMgLTM3IDMzIC00MiAwIC03IDE2NiAtMTc0IDIzMyAtMjM0IDE2IC0xNCA0NiAtMzQgNjYgLTQ1IDIxIC0xMCA0NCAtMjYgNTEgLTM1IDggLTEwIDQwIC0yOSA3MCAtNDQgMzEgLTE1IDY2IC0zNyA3OCAtNDkgMTEgLTExIDQwIC0yNiA2NCAtMzIgNDQgLTExIDgwIC0yMyAxNzggLTU5IDcwIC0yNSAzNDkgLTM3IDU1NSAtMjMgMTIxIDggMTQ3IDEzIDE5MiAzNiAyOSAxNCA3OSAzMiAxMTEgNDAgNjUgMTUgOTIgMjcgMTExIDUwIDcgOCAzNCAyMiA2MCAzMSAyNyA5IDU5IDI3IDcyIDQxIDEzIDE0IDM4IDMzIDU0IDQxIDE3IDkgMzYgMjQgNDIgMzMgNyAxMCAzMiAyOSA1NSA0MyA1NyAzMyAyMTQgMjAyIDI0OCAyNjcgNyAxNCAyNiA0MSA0MSA2MCAxNSAxOSAzNCA1OCA0MyA4NyAxMCAyOCAyNCA1NyAzMiA2NCAyNCAxOSAzMyA0MiA0OSAxMjEgOCA0MCAyNyA5OSA0MSAxMzEgMjMgNTMgMjYgNzQgMzEgMjMwIDcgMjA4IC03IDM1OCAtMzcgNDE3IC0xMiAyMyAtMjggNzYgLTM2IDExOCAtOSA0OCAtMjUgOTEgLTQ0IDEyMCAtMTYgMjQgLTM0IDYxIC00MSA4MSAtNiAyMCAtMjMgNTIgLTM4IDcxIC0xNCAxOSAtMzEgNDQgLTM3IDU2IC0zNiA2OSAtMTg1IDIzMiAtMjQ2IDI3MCAtMjQgMTUgLTQ2IDMzIC01MSA0MCAtNCA3IC0yNCAyMyAtNDUgMzUgLTIwIDEyIC00OCAzMiAtNjIgNDQgLTE0IDEzIC00MiAyOCAtNjMgMzUgLTIxIDcgLTUzIDI1IC03MSA0MCAtMTggMTYgLTU3IDM1IC05MiA0NCAtMzQgOSAtODYgMjcgLTExNyA0MSAtMzcgMTcgLTg3IDI5IC0xNDQgMzUgLTEwMiAxMSAtNDE1IDExIC01MTkgMHogbTUyOSAtMTI4IGMyNiAtMTIgNzcgLTI3IDExMiAtMzMgMzggLTYgODEgLTIyIDEwMyAtMzcgMjAgLTE0IDU5IC0zNCA4NiAtNDQgMjggLTExIDY1IC0zMyA4MyAtNDkgMTkgLTE2IDM5IC0yOSA0NiAtMjkgNyAwIDMzIC0xOSA1OCAtNDIgMTExIC0xMDYgMTU3IC0xNTEgMTk0IC0xOTMgMjIgLTI1IDUyIC01OCA2NyAtNzQgMTUgLTE2IDM2IC00OCA0NyAtNzIgMTAgLTI0IDMwIC01OSA0NCAtNzggMTQgLTE4IDI5IC00OCAzMiAtNjUgNCAtMTcgMjIgLTY1IDQxIC0xMDYgMjYgLTU5IDM3IC0xMDQgNDkgLTIwMCAzMSAtMjQ0IDMyIC0yMTAgLTYgLTQ4NSAtNSAtMzggLTIxIC05MyAtMzQgLTEyMSAtMTQgLTI4IC0zNCAtNzYgLTQ0IC0xMDYgLTExIC0zMSAtMzMgLTc0IC00OSAtOTcgLTE3IC0yMyAtMzMgLTU1IC0zNyAtNzEgLTMgLTE1IC0xNSAtMzYgLTI3IC00NiAtMTEgLTExIC0zMiAtMzcgLTQ2IC01OSAtODUgLTEzNCAtMjg0IC0yOTkgLTQxNiAtMzQ1IC0zMSAtMTAgLTY4IC0yOCAtODIgLTM5IC0xMyAtMTAgLTU5IC0yNyAtMTAyIC0zNiAtNDIgLTEwIC05OSAtMjcgLTEyNyAtMzggLTQ1IC0xOSAtNzAgLTIxIC0yNTUgLTIxIC0xNzMgMCAtMjEyIDMgLTI1MCAxOCAtMjUgMTAgLTgwIDI2IC0xMjMgMzcgLTQ0IDExIC05OCAzMCAtMTIxIDQ0IC0yNCAxNCAtNjYgMzIgLTkzIDQwIC0yOCA4IC02NyAyOCAtODggNDUgLTIxIDE2IC00MiAzMCAtNDcgMzAgLTE2IDAgLTE5NCAxNzUgLTI1MSAyNDcgLTU2IDcxIC0xMDggMTUzIC0xMjMgMTk3IC04IDIyIC0yNiA1NCAtMzkgNzIgLTE0IDE4IC0zNCA2NiAtNDQgMTA2IC0xMCA0MCAtMjkgOTMgLTQyIDExOCAtMjMgNDQgLTI0IDUxIC0yNCAyODUgbDAgMjQwIDI3IDU5IGMxNiAzMiAzMiA4NSAzOCAxMTggNSAzMyAxOCA3NCAzMCA5MSAxMSAxOCAyOSA1MiA0MCA3NyAzNCA3NSA5MiAxNjYgMTQwIDIyMCA5OSAxMTIgMjMyIDIzNCAyNzEgMjQ4IDEzIDYgNDEgMjQgNjIgNDAgMjEgMTcgNTUgMzYgNzUgNDMgMTkgNiA1NSAyNCA3OSAzOSAyNiAxNyA3MSAzMyAxMTAgNDAgMzYgNiA4MCAxOCA5NyAyNyA0OSAyNSAxMjAgMzIgMzExIDI5IDE1NyAtMyAxODYgLTYgMjI4IC0yNHogTTIzODU2IDEwNzg5IGMtMzIgLTUgLTY5IC0xNSAtODIgLTI0IC0xMiAtOCAtNTQgLTIzIC05MyAtMzQgLTM5IC0xMSAtODcgLTMzIC0xMDggLTQ5IC0yMSAtMTYgLTU0IC0zNSAtNzMgLTQyIC0xOSAtNyAtNDggLTI1IC02NSAtNDAgLTE2IC0xNSAtNDMgLTM1IC02MCAtNDMgLTE2IC04IC00NiAtMzQgLTY1IC01NyAtMTkgLTIzIC01NCAtNjQgLTc3IC05MSAtMjQgLTI3IC00MyAtNTMgLTQzIC01OCAwIC01IC0xMyAtMjUgLTI5IC00NSAtMTcgLTIxIC0zNSAtNTQgLTQxIC03NCAtNyAtMjAgLTI1IC02NSAtNDIgLTk5IC0zOCAtODEgLTUyIC0yMTIgLTQ0IC00MjcgNSAtMTM5IDkgLTE2NiAzMiAtMjIwIDE0IC0zMyAzNiAtOTIgNDkgLTEyOSAxMiAtMzggMzIgLTc4IDQzIC05MCAxMSAtMTIgMzAgLTQyIDQyIC02NyAxMiAtMjUgMzcgLTU3IDU2IC03MyAxOCAtMTUgMzYgLTM2IDM5IC00NyAzIC0xMCAxNCAtMjIgMjUgLTI1IDEwIC0zIDM2IC0yMiA1NyAtNDEgMjEgLTIwIDUyIC00MyA2OCAtNTEgMTcgLTkgNDcgLTMxIDY4IC00OSAyMCAtMTkgNDUgLTM0IDU1IC0zNCAxMCAwIDM4IC0xMyA2MyAtMjggNTkgLTM4IDY1IC00MCAxODIgLTU2IDIxMiAtMzEgMjQwIC0zMSA0ODcgNCA1MCA3IDkwIDIwIDEyMCAzOCAyNSAxNSA2NyAzNiA5MyA0NiAyNyAxMCA1MSAyNSA1NCAzMyAzIDcgMjQgMjMgNDcgMzUgOTAgNDYgMjMzIDE4NiAyNzIgMjY2IDE0IDI4IDMwIDUyIDM0IDUyIDEzIDAgMzUgNDcgNDkgMTA0IDcgMjcgMjMgNjggMzcgOTEgMzAgNTMgNDMgMTQ4IDQzIDMyMCAwIDE3NyAtMTIgMjY1IC00OSAzNDAgLTE2IDM0IC0zMCA2NyAtMzAgNzQgMCAxNyAtNDggMTA4IC02MSAxMTYgLTYgNCAtMTYgMjAgLTIzIDM2IC0xOCA0MyAtMTY2IDIwMCAtMjAzIDIxNiAtMTkgNyAtMzcgMjEgLTQwIDMwIC0zIDggLTMxIDI3IC02MiA0MCAtMzEgMTQgLTY3IDM1IC04MSA0OCAtMTQgMTMgLTU0IDMxIC04OSA0MCAtMzYgOSAtODEgMjUgLTEwMiAzNSAtMjAgMTEgLTY1IDI0IC0xMDAgMzAgLTc1IDEyIC0yNjggMTEgLTM1MyAtMXogbTI5OSAtMTI4IGM1NSAtMTAgMTI2IC0yMiAxNTggLTI2IDM3IC00IDY3IC0xNCA4NSAtMjkgMTUgLTEzIDQ3IC0zMyA3MiAtNDYgMjUgLTEyIDYyIC0zOCA4MyAtNTYgMjAgLTE5IDQwIC0zNCA0NSAtMzQgMTQgMCAxMDkgLTk2IDEyNSAtMTI2IDkgLTE3IDIzIC0zNCAzMiAtMzggOSAtMyAyOSAtMzQgNDUgLTY4IDE2IC0zNSAzOCAtNzQgNDkgLTg4IDExIC0xNCAyNSAtNTIgMzEgLTg1IDUgLTMzIDE5IC05OCAzMCAtMTQ1IDI2IC0xMTMgMjUgLTE3MiAtNiAtMzA0IC0zOSAtMTcwIC00NCAtMTg4IC02OSAtMjIwIC0xMyAtMTcgLTI2IC00MyAtMzAgLTU3IC00IC0xNSAtMjQgLTQ2IC00NiAtNzAgLTIxIC0yNCAtNTYgLTYzIC03NiAtODcgLTIxIC0yMyAtNTUgLTUxIC03NSAtNjIgLTIxIC0xMSAtNDIgLTI5IC00OCAtNDAgLTYgLTExIC0yNyAtMjcgLTQ4IC0zNiAtMjAgLTggLTQ4IC0yNiAtNjIgLTM4IC0zNCAtMzIgLTU3IC00MiAtMTA5IC01MSAtMjUgLTQgLTcwIC0xNiAtMTAwIC0yNyAtNjYgLTIzIC0yNjQgLTM1IC0zMjYgLTIwIC0yMzcgNjAgLTI2NSA2OSAtMzA1IDEwNiAtMjIgMjAgLTQ3IDM2IC01NSAzNiAtOCAwIC0yMiAxMSAtMzEgMjUgLTkgMTMgLTI2IDI3IC0zNyAzMSAtMzMgMTAgLTE4NyAxNzIgLTIwNCAyMTMgLTggMjAgLTI1IDUwIC0zOCA2NyAtMTMgMTcgLTMxIDYwIC00MCA5NSAtOSAzNSAtMjYgOTMgLTM3IDEyOSAtMzMgOTggLTMxIDI0NiA0IDM2NSAxNSA1MCAzMCAxMDYgMzMgMTI1IDQgMTkgMTkgNTEgMzQgNzAgMTUgMTkgMzUgNTUgNDQgNzggMTAgMjQgMzEgNTUgNDcgNjkgMTcgMTQgMzAgMzAgMzAgMzYgMCAxNSAxMDIgMTEyIDEzNyAxMzEgMTcgOCAzMyAyMiAzNiAzMSA0IDggMzIgMjcgNjQgNDMgMzIgMTUgNzIgMzggODggNTAgMjAgMTUgNTYgMjUgMTEwIDMyIDQ0IDYgMTA5IDE3IDE0NSAyNCA5MCAxOSAxMDIgMTkgMjE1IC0zeiBNMTk4NDEgNzYwMCBjLTQ5IC01IC05MiAtMTggLTEzMCAtMzggLTMxIC0xNiAtNzIgLTM0IC05MSAtNDEgLTYzIC0yMSAtMTgwIC0xNDUgLTI2NyAtMjg1IC01OSAtOTQgLTYzIC0xMDYgLTc4IC0yMDMgLTE4IC0xMTYgLTE5IC0xODcgLTQgLTMwOCAxMiAtMTA5IDI0IC0xNDcgNDkgLTE3MCAxMSAtMTAgMjcgLTQxIDM1IC02OCA5IC0zMSAyOSAtNjQgNTIgLTg4IDQ4IC00OCA2NiAtNjUgMTEyIC0xMTEgMjEgLTIxIDU3IC00NCA4MCAtNTMgMjQgLTggNTYgLTI2IDczIC00MCAxNiAtMTQgMzMgLTI1IDM2IC0yNSA0IDAgNjAgLTkgMTI1IC0yMCAxNDggLTI1IDE3NSAtMjUgMzI4IDEgODMgMTMgMTMyIDI3IDE0OSA0MCAxNCAxMCA0OCAzMCA3NiA0MyA4MiAzOCAyMjUgMTkyIDI2MCAyODAgMTIgMjkgMzEgNjYgNDIgODIgMjggMzkgNDIgMTI1IDQyIDI2MyAwIDE1MyAtMTQgMjM1IC00OSAyOTIgLTE2IDI2IC0zNCA2MyAtNDEgODMgLTYgMjAgLTIwIDQyIC0zMSA1MCAtMTEgNyAtMzIgMzMgLTQ4IDU3IC0zOCA2MSAtMTYyIDE2OCAtMjA4IDE4MSAtMjEgNiAtNTEgMTkgLTY2IDMwIC0xNiAxMSAtNDkgMjYgLTczIDM0IC01NyAxNyAtMjc2IDI1IC0zNzMgMTR6IG0yNzQgLTE0NSBjMzkgLTcgODkgLTE2IDExMiAtMjAgMjUgLTQgNjEgLTIwIDg0IC0zOCA1NSAtNDIgMTY5IC0xNTQgMTY5IC0xNjYgMCAtNSAxNSAtMjggMzQgLTUwIDIzIC0yOCAzOCAtNjAgNDYgLTk3IDcgLTMxIDIxIC04MSAzMSAtMTEyIDIzIC02NyAyNSAtMTY5IDMgLTIyMCAtOCAtMjAgLTIyIC02NiAtMzAgLTEwMSAtMTcgLTcwIC00NCAtMTEwIC0xNDAgLTIwNiAtOTggLTk2IC0xMjIgLTExMSAtMjQ1IC0xNDkgLTE1NSAtNDggLTIxMiAtNDggLTM2NyAxIC0xMTQgMzUgLTEzMCA0NCAtMjMwIDEyOCAtNjEgNTIgLTEzMSAxNDMgLTE0MiAxODggLTcgMjMgLTIzIDY3IC0zNyA5NyAtMjMgNDggLTI2IDY4IC0yNiAxNTYgMCA4NiAzIDEwOCAyMiAxNDUgMTMgMjQgMzIgNzIgNDIgMTA2IDExIDM0IDI4IDY4IDM4IDc1IDkgNyAyNiAyNyAzNyA0MyAyMyAzNyA5NCAxMTAgMTM3IDE0MSAxOCAxMyA0MiAzMCA1MyAzOSAxMiA5IDY0IDIyIDExNSAzMCA1MiA4IDEwOCAxOSAxMjQgMjQgMzEgMTAgNTYgOCAxNzAgLTE0eiBNNjI1OSA1ODg0IGMtMTEgLTYgLTI5IC0yNCAtNDAgLTQwIC0xOSAtMjggLTE5IC01OCAtMTggLTE3MTQgMCAtOTI3IC0zIC0xNjg1IC04IC0xNjg1IC00MyAyIC05NSAzNCAtMTQzIDg3IC00OCA1MSAtMzA4NyAzMDkzIC0zMTgwIDMxODIgLTE5IDE5IC01MSA0MiAtNzAgNTEgLTE5IDEwIC00NiAyOCAtNjAgNDEgLTI1IDIzIC0xNTYgNjcgLTIzOSA4MCAtNTEgOCAtMjMwIC00MCAtMjc1IC03MyAtMTcgLTEzIC00NCAtMzEgLTYxIC00MCAtMzUgLTIyIC02NSAtNTIgLTExNiAtMTIwIC0zNSAtNDcgLTU1IC04OCAtOTUgLTE5NSAtMTEgLTMxIC0xNCAtNDI3IC0xNCAtMjQ0OSAtMSAtMjE4NiAxIC0yNDE0IDE1IC0yNDI4IDE0IC0xNCA3NCAtMTYgNTI1IC0xNiA0NDcgMCA1MTEgMiA1MjUgMTYgMTQgMTMgMTUgMTkwIDE1IDE3MDEgbDAgMTY4NyAyMiAxNSBjMTIgOSAyNiAxNiAzMCAxNiAxMCAwIDEzOCAtMTMwIDEzOCAtMTM5IDAgLTQgMTMgLTE0IDI4IC0yMyAxNSAtOSAzNCAtMjggNDEgLTQxIDcgLTE0IDI0IC0zMSAzOCAtMzggMTQgLTcgMzEgLTI2IDM5IC00MSA4IC0xNSAyNyAtMzQgNDIgLTQyIDE1IC04IDM0IC0yNiA0MiAtNDEgOCAtMTUgMjcgLTMzIDQxIC00MSAxNSAtNyAzMCAtMjMgMzQgLTMzIDMgLTExIDIxIC0yOSAzOSAtNDAgMTggLTExIDM4IC0zMSA0NSAtNDQgNyAtMTMgMjUgLTMxIDQwIC00MCAxNSAtOSAzMyAtMjcgNDAgLTQwIDcgLTEzIDI1IC0zMSA0MCAtNDAgMTUgLTkgMzMgLTI3IDQwIC00MCA3IC0xMyAyNSAtMzEgNDAgLTQwIDE1IC05IDMzIC0yNyA0MCAtNDAgNyAtMTMgMjUgLTMxIDQwIC00MCAxNSAtOSAzMyAtMjcgNDAgLTQwIDcgLTEzIDI1IC0zMSA0MCAtNDAgMTUgLTkgMzMgLTI3IDQwIC00MCA3IC0xMyAyNSAtMzEgNDAgLTQwIDE1IC05IDMzIC0yNyA0MCAtNDAgNyAtMTMgMjUgLTMxIDQwIC00MCAxNSAtOSAzMyAtMjcgNDAgLTQwIDcgLTEzIDI1IC0zMSA0MCAtNDAgMTUgLTkgMzMgLTI3IDQwIC00MCA3IC0xMyAyNSAtMzEgNDAgLTQwIDE1IC05IDMzIC0yNyA0MCAtNDAgNyAtMTMgMjUgLTMxIDQwIC00MCAxNSAtOSAzMyAtMjcgNDAgLTQwIDcgLTEzIDI1IC0zMSA0MCAtNDAgMTUgLTkgMzMgLTI3IDQwIC00MCA3IC0xMyAyNSAtMzEgNDAgLTQwIDE1IC05IDMzIC0yNyA0MCAtNDAgNyAtMTMgMjUgLTMxIDQwIC00MCAxNSAtOSAzMyAtMjcgNDAgLTQwIDcgLTEzIDI1IC0zMSA0MCAtNDAgMTUgLTkgMzMgLTI3IDQwIC00MCA3IC0xMyAyNSAtMzEgNDAgLTQwIDE1IC05IDMzIC0yNyA0MCAtNDAgNyAtMTQgMjQgLTMxIDM4IC0zOCAxMyAtNyAzMSAtMjUgNDAgLTQwIDkgLTE1IDI3IC0zMyA0MCAtNDAgMTMgLTcgMzEgLTI1IDQwIC00MCA5IC0xNSAyNyAtMzMgNDAgLTQwIDEzIC03IDMxIC0yNSA0MCAtNDAgOSAtMTUgMjcgLTMzIDQwIC00MCAxMyAtNyAzMSAtMjUgNDAgLTQwIDkgLTE1IDI3IC0zMyA0MCAtNDAgMTMgLTcgMzEgLTI1IDQwIC00MCA5IC0xNSAyNyAtMzMgNDAgLTQwIDEzIC03IDMxIC0yNSA0MCAtNDAgOSAtMTUgMjcgLTMzIDQwIC00MCAxMyAtNyAzMSAtMjUgNDAgLTQwIDkgLTE1IDI3IC0zMyA0MCAtNDAgMTMgLTcgMzEgLTI1IDQwIC00MCA5IC0xNSAyNyAtMzMgNDAgLTQwIDEzIC03IDMxIC0yNSA0MCAtNDAgOSAtMTUgMjcgLTMzIDQwIC00MCAxMyAtNyAzMSAtMjUgNDAgLTQwIDkgLTE1IDI3IC0zMyA0MCAtNDAgMTMgLTcgMzEgLTI1IDQwIC00MCA5IC0xNSAyNyAtMzMgNDAgLTQwIDEzIC03IDMxIC0yNSA0MCAtNDAgOSAtMTUgMjcgLTMzIDQwIC00MCAxMyAtNyAzMSAtMjUgNDAgLTQwIDkgLTE1IDI3IC0zMyA0MCAtNDAgMTMgLTcgMzEgLTI1IDQwIC00MCA5IC0xNSAyNyAtMzMgNDAgLTQwIDEzIC03IDMxIC0yNSA0MCAtNDAgOSAtMTUgMjcgLTMzIDQwIC00MCAxMyAtNyAzMSAtMjUgNDAgLTQwIDkgLTE1IDI3IC0zMyA0MCAtNDAgMTMgLTcgMzEgLTI1IDQwIC00MCA5IC0xNSAyNyAtMzMgNDAgLTQwIDEzIC03IDMxIC0yNSA0MCAtNDAgOSAtMTUgMjcgLTMzIDQwIC00MCAxMyAtNyAzMSAtMjUgNDAgLTQwIDkgLTE1IDMxIC0zNCA1MCAtNDMgMTggLTkgMzYgLTIzIDQwIC0zMSAzIC05IDM3IC0zMyA3NiAtNTMgMzggLTIwIDgxIC00MyA5NSAtNTEgMzEgLTE3IDE2OCAtMjYgMjU1IC0xNyA0NiA1IDc2IDE1IDk5IDMyIDE4IDEzIDUxIDMyIDc0IDQzIDQ2IDIxIDE4MyAxNjYgMTk5IDIxMCA2IDE1IDIxIDQ0IDM0IDY1IDE3IDI4IDI2IDYxIDMyIDEyNSA1IDQ4IDggMTE0NiA3IDI0NDEgLTMgMjU0NiAwIDIzOTMgLTUzIDI0MDUgLTQ2IDExIC05NDcgMTAgLTk2NiAtMXogTTc4ODQgNTg5MSBjLTEwIC0xIC0yNyAtMTAgLTM4IC0yMCAtNDYgLTQwIC00NiAtNDUgLTQ2IC01MTMgMCAtMjc0IDQgLTQ1NyAxMCAtNDgwIDIxIC03MyAtNTggLTY4IDEwNjcgLTY4IDEwMDAgMCAxMDEzIDAgMTAzMyAtMjAgMjAgLTIwIDIwIC0zMyAyMCAtMjExMCBsMCAtMjA5MCAyNCAtMTUgYzIwIC0xNCA4NSAtMTUgNTE5IC0xMyA0NzEgMyA0OTYgNCA1MTYgMjIgbDIxIDE5IDAgMjA4MSAtMSAyMDgxIDI2IDIzIDI2IDIyIDEwMTggMCBjOTM1IDAgMTAyMCAxIDEwMzIgMTcgMTEgMTMgMTUgMTA2IDE3IDQ4NyAyIDI1OSAwIDQ4NSAtMyA1MDMgLTMgMTcgLTEzIDQxIC0yMyA1MiBsLTE3IDIxIC0yNTkxIDMgYy0xNDI1IDEgLTI1OTkgMCAtMjYxMCAtMnogTTEzNzE5IDU4ODggYy01MSAtMTkgLTQ5IDgzIC00OSAtMjE4MCAwIC0xMTU3IDUgLTIxNTggOSAtMjIyNSA4IC05OSAxNCAtMTMxIDM1IC0xNzMgMTQgLTI4IDMzIC03NiA0MiAtMTA2IDggLTMwIDI2IC02NyA0MCAtODMgMTMgLTE2IDMyIC00NyA0MiAtNjkgMjcgLTYxIDE2NiAtMjE4IDIyNyAtMjU2IDE3IC0xMSAzNCAtMjYgMzkgLTM0IDQgLTggMzMgLTI1IDY0IC0zOSAzMSAtMTMgNjggLTM1IDgzIC00OCAxNSAtMTIgNTIgLTI4IDgxIC0zNSAyOSAtNyA4NSAtMjYgMTIzIC00NCBsNzAgLTMxIDE4MDUgMCAxODA1IDAgNjcgMzIgYzM3IDE3IDkyIDM3IDEyMiA0MyAzMSA2IDY5IDIyIDg1IDM2IDE2IDEzIDUwIDMzIDc2IDQ0IDI2IDExIDU5IDMyIDc0IDQ1IDE0IDE0IDQ3IDQ0IDcyIDY3IDI2IDI0IDU1IDUxIDY1IDYwIDYxIDU2IDE1NyAxOTkgMTkwIDI4MiAxMyAzMyAzMCA2OSAzOSA4MiAyMSAzMiAzMiA4OCA0OSAyNTggMjMgMjE2IDI0IDQyODEgMiA0MzI1IC0yOSA1NCAtOSA1MiAtNTI3IDUyIC00NzMgLTEgLTQ4NCAtMSAtNTA0IC0yMSAtMjAgLTIxIC0yMCAtMjMgLTI1IC0yMTE5IC00IC0xNzU4IC03IC0yMTAxIC0xOSAtMjExNCAtMTIgLTE2IC0xMzQgLTE3IC0xNTY2IC0xNyAtMTUxNCAwIC0xNTUzIDAgLTE1NzYgMTkgbC0yNCAxOSAtNSAyMDg5IGMtNSAxOTc4IC02IDIwOTAgLTIzIDIxMTYgLTkgMTUgLTIzIDI3IC0zMCAyNyAtNiAwIC0yMjAgMSAtNDc1IDMgLTI1NSAxIC00NzIgLTEgLTQ4MyAtNXogTTIxOTE1IDU4NjkgYy0yMjUgLTQzIC0yNDkgLTQ5IC0yODQgLTczIC0yMCAtMTMgLTUzIC0yOSAtNzMgLTM2IC0yMSAtNiAtNTYgLTI3IC03OSAtNDYgLTIyIC0xOSAtNDUgLTM0IC00OSAtMzQgLTggMCAtMTE0IC04NyAtMTMzIC0xMDkgLTUgLTUgLTI0IC0yNiAtNDMgLTQ3IC0xOSAtMjAgLTQwIC00NiAtNDYgLTU4IC02IC0xMiAtMjYgLTM5IC00MyAtNjEgLTE4IC0yMiAtMzggLTU3IC00NSAtNzggLTYgLTIxIC0yMyAtNTEgLTM2IC02NiAtMTYgLTIwIC0zMSAtNTkgLTQzIC0xMTggLTExIC00OCAtMjQgLTEwMCAtMzAgLTExNiAtNiAtMTUgLTE1IC01NiAtMjAgLTkwIC02IC0zOCAtMTEgLTkwMCAtMTMgLTIxOTkgLTIgLTIwMzEgLTIgLTIxMzkgMTUgLTIxNTUgMTYgLTE3IDU0IC0xOCA1MjcgLTE4IDQ1MiAwIDUxMSAyIDUyNSAxNiAxNSAxNCAxNiAxMTUgMTUgMTAyMiAwIDkyNCAxIDEwMDggMTYgMTA0MSAxMCAxOSAyNCAzOCAzMiA0MSA5IDMgOTQzIDUgMjA3OCA1IDEyNTEgMCAyMDcxIDMgMjA4NiA5IDQ3IDE4IDQ5IDM0IDQ2IDU0OCAtMiAzNzkgLTYgNDg1IC0xNiA0OTUgLTExIDExIC00MDYgMTMgLTIxMDkgMTYgLTE5MzEgMiAtMjA5OCAzIC0yMTE1IDE5IC0xNyAxNSAtMTggNDUgLTE4IDUwMCBsMCA0ODQgMjUgMjQgMjQgMjUgMjA4NSAwIGMyMzAyIDAgMjEwOSAtNiAyMTIxIDYzIDMgMTggNSAyNDEgMyA0OTcgLTMgNDI2IC01IDQ2OCAtMjEgNDkzIGwtMTcgMjcgLTIxMzMgLTEgYy0yMDUyIC0xIC0yMTM2IC0yIC0yMjMyIC0yMHogTTI2ODEwIDU3NTAgYy0yMCAtMjAgLTIwIC0zMyAtMjAgLTI2MjYgMCAtMTk0NCAzIC0yNjExIDExIC0yNjI3IDcgLTEyIDE3IC0yNSAyMyAtMjkgNiAtNCAyMzAgLTggNDk4IC04IGw0ODcgMCAxNSAyMiBjMTQgMjAgMTYgMjg3IDE2IDI2MzkgMCAyNTIyIC0xIDI2MTYgLTE4IDI2MzIgLTE3IDE1IC02NiAxNyAtNTA1IDE3IC00NzQgMCAtNDg4IC0xIC01MDcgLTIweiBNNDE0IDU3MjkgYy0xOSAtMjEgLTE5IC04MSAtMjIgLTI2NDkgLTIgLTI0OTMgLTEgLTI2MjkgMTUgLTI2NDkgMTggLTIxIDIyIC0yMSA1MDggLTIyIGw0OTAgMCAxNyAyMiBjMTcgMjAgMTggMTQ5IDE2IDI2NTEgbC0zIDI2MzAgLTI0IDE5IGMtMjIgMTggLTQ1IDE5IC01MDEgMTkgLTQ3MiAwIC00NzcgMCAtNDk2IC0yMXogTTE5NDUzIDU3MjggYy0xNyAtMTkgLTE4IC0xNDEgLTIwIC0yNjQyIC0yIC0yMTAwIDAgLTI2MjYgMTAgLTI2NDYgbDEzIC0yNSA0OTkgMCA0OTkgMCAxMyAyNSBjMTAgMjAgMTMgNTUwIDEzIDI2MzEgMCAyNTM5IC0xIDI2NjUgLTI4IDI2NzAgLTQgMSAtMjI2IDIgLTQ5NCA0IC00NzQgMiAtNDg4IDIgLTUwNSAtMTd6Ii8+PC9nPjwvc3ZnPg==) no-repeat center/contain}
+.back{font-size:15px;font-weight:500;color:#cfe7e2;text-decoration:none}
+.back:hover{color:#fff}
+.pill-btn{display:inline-flex;align-items:center;justify-content:center;height:44px;padding:0 20px;border-radius:999px;font-size:15px;font-weight:700;text-decoration:none;border:0;font-family:inherit;cursor:pointer;white-space:nowrap;transition:transform .15s ease,box-shadow .15s ease}
+.pill-btn:hover{transform:translateY(-1px)}
+.pill-btn--white{background:#fff;color:var(--brand-dark)}.pill-btn--white:hover{color:var(--brand-dark)}
+.pill-btn--teal{height:54px;padding:0 28px;font-size:16px;background:var(--teal);color:#06221f}.pill-btn--teal:hover{color:#06221f;box-shadow:0 10px 24px rgba(0,0,0,.18)}
+.site-footer{background:var(--brand-dark)}
+.site-footer .wrap{height:110px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.site-footer .logo{height:36px}
+.site-footer span{font-size:14px;color:#a9cfc9}
+
+/* Report */
+main.wrap{padding-top:40px;padding-bottom:64px;display:flex;flex-direction:column;gap:24px}
+.back-m{display:none;font-size:14px;font-weight:600;text-decoration:none;padding:4px 6px}
+.sr-panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:32px 36px;display:flex;flex-direction:column;gap:20px;min-width:0}
+.sr-h2{margin:0;font-size:22px;font-weight:700;color:var(--ink);line-height:1.3}
+.sr-head{display:flex;flex-direction:column;gap:4px}
+.sr-note{margin:0;font-size:13px;color:var(--muted)}
+.sr-body{margin:0;font-size:14px;line-height:1.6;color:var(--ink-mid)}
+.sm{font-size:13px}
+.sr-eyebrow{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.sr-grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.sr-card{border:1px solid var(--line);border-radius:12px;padding:18px 20px;display:flex;flex-direction:column;gap:10px;background:#fff;min-width:0}
+.sr-ct{margin:0;font-size:15px;font-weight:700;line-height:1.35;color:var(--ink)}
+.sr-chip{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;padding:5px 11px;border-radius:999px;white-space:nowrap;width:fit-content;max-width:100%}
+.sr-chip.wrap-ok{white-space:normal}
+.sr-teal{background:#e1f3f0;color:var(--brand)}
+.sr-amber{background:#fdf0dc;color:#9a5b0b}
+.sr-red{background:#fde7e5;color:#b3261e}
+.sr-grey{background:var(--bg);color:var(--ink-mid)}
+.sr-inferred{background:#fff;color:var(--brand);border:1.5px dashed var(--teal)}
+.sr-num{width:26px;height:26px;min-width:26px;border-radius:50%;background:#e1f3f0;color:var(--brand);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.sr-ev{display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--bg)}
+.sr-ev.last{border-bottom:0}
+.sr-ev.backlog{background:#f2faf8;border-radius:10px;padding:12px;border-bottom:0;margin:6px 0}
+.sr-src{display:inline-block;font-size:11px;font-weight:700;padding:3px 8px;border-radius:6px;background:var(--bg);color:var(--ink-mid);white-space:nowrap}
+.sr-src-p{background:#e1f3f0;color:var(--brand)}
+.sr-arrow{display:flex;align-items:center;justify-content:center;color:#9aa7a5}
+.sr-flow{display:grid;grid-template-columns:minmax(0,1fr) 28px minmax(0,1fr) 28px minmax(0,1fr);gap:8px}
+.sr-flow--tight{grid-template-columns:minmax(0,1fr) 24px minmax(0,1fr) 24px minmax(0,1fr)}
+.sr-chips{display:flex;gap:8px;flex-wrap:wrap}
+.sr-legend{display:flex;gap:12px 16px;align-items:center;flex-wrap:wrap}
+
+/* Report header */
+.rep-top{display:flex;align-items:flex-start;justify-content:space-between;gap:24px}
+.rep-top h1{margin:0 0 10px;font-size:36px;line-height:1.15;font-weight:700;letter-spacing:-.02em}
+.rep-top .sr-body{max-width:760px}
+.pdf-btn{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 16px;border:0;border-radius:10px;background:var(--brand);color:#fff;font-family:inherit;font-size:14px;font-weight:600;white-space:nowrap;cursor:pointer;flex:none}
+.pdf-btn:hover{background:var(--brand-dark)}
+.stat{flex-direction:row;align-items:center;gap:12px}
+.stat strong{font-size:26px;line-height:1}
+.sources{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+
+/* Executive summary */
+.decision{border:1.5px solid var(--teal);border-radius:12px;padding:18px 22px;display:flex;flex-direction:column;gap:6px}
+.decision strong{font-size:15px;color:var(--brand)}
+.decision .sr-body{color:var(--ink);font-weight:500}
+
+/* At a glance */
+.implication{background:#e9f5f2;border-radius:12px;padding:18px 22px;display:flex;flex-direction:column;gap:6px}
+.implication .sr-body{color:var(--ink);font-weight:500}
+.glance{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:16px}
+.glance .sr-card{gap:14px}
+.glance-row{display:flex;gap:12px}
+.glance-row .sr-ct{font-size:14px}
+.tensions{background:#fffaf1;border-color:#f4e4c4}
+.bang{color:#d9463b;font-weight:900;width:10px;flex:none}
+
+/* Themes */
+.theme{border:1px solid var(--line);border-radius:12px;background:#fff}
+.theme>summary{list-style:none;cursor:pointer;padding:24px;display:flex;flex-direction:column;gap:14px;border-radius:12px}
+.theme>summary::-webkit-details-marker{display:none}
+.theme>summary:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.theme-title{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.theme-title .sr-ct{font-size:17px}
+.toggle{flex:none;width:28px;height:28px;border-radius:50%;background:#e1f3f0;color:var(--brand);display:flex;align-items:center;justify-content:center;transition:transform .2s ease}
+.theme[open] .toggle{transform:rotate(45deg)}
+.theme-hint{font-size:13px;font-weight:600;color:var(--brand)}
+.theme[open] .theme-hint{display:none}
+.informs{background:#f5f7f7;border-radius:10px;padding:12px 16px}
+.theme-body{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:20px;padding:0 24px 24px}
+.theme-body h4{margin:4px 0 6px;font-size:15px}
+.side{display:flex;flex-direction:column;gap:12px}
+.interp{background:#e9f5f2;border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;gap:6px}
+.interp strong{font-size:14px}
+.monitor{background:var(--brand);border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;gap:8px;color:#fff}
+.monitor ul{margin:0;padding-left:18px;font-size:13px;line-height:1.5}
+.monitor li{margin:0 0 8px}
+.monitor li:last-child{margin:0}
+
+/* Closing CTA */
+.closing{position:relative;isolation:isolate;overflow:hidden;background:var(--brand-dark);border-radius:22px;padding:56px 48px;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center}
+.closing .tex{position:absolute;inset:0;z-index:-1;pointer-events:none;background:url(/assets/mesh-dark.svg) no-repeat center top/cover;-webkit-mask-image:linear-gradient(to bottom,#000 40%,transparent 100%);mask-image:linear-gradient(to bottom,#000 40%,transparent 100%)}
+.closing h2{margin:0;font-size:32px;font-weight:700;letter-spacing:-.02em;color:#fff;line-height:1.2}
+.closing p{margin:0;max-width:640px;font-size:16px;line-height:1.6;color:#cfe7e2}
+.closing .pill-btn{margin-top:8px}
+
+/* Tablet */
+@media(max-width:1000px){
+  .sr-grid3{grid-template-columns:minmax(0,1fr)}
+  .sr-flow,.sr-flow--tight{grid-template-columns:minmax(0,1fr);gap:6px}
+  .sr-arrow{transform:rotate(90deg);height:18px}
+  .glance{grid-template-columns:minmax(0,1fr);gap:12px}
+  .theme-body{grid-template-columns:minmax(0,1fr);gap:16px}
+}
+/* Phone */
+@media(max-width:640px){
+  :root{--hh:64px}
+  .logo{height:34px}
+  .back{display:none}
+  .back-m{display:inline-block;align-self:flex-start}
+  .pill-btn{height:38px;padding:0 14px;font-size:13px}
+  .pill-btn--teal{height:52px;width:100%;font-size:16px}
+  main.wrap{padding-top:16px;padding-bottom:40px;gap:16px;padding-left:12px;padding-right:12px}
+  .sr-panel{border-radius:16px;padding:22px 18px;gap:18px}
+  .rep-top{flex-direction:column;gap:16px}
+  .rep-top h1{font-size:27px}
+  .sr-ev{gap:10px}
+  .theme>summary{padding:18px 14px;gap:12px}
+  .theme-body{padding:0 14px 18px}
+  .closing{padding:40px 22px;border-radius:18px}
+  .closing h2{font-size:26px}
+  .site-footer .wrap{height:96px}
+  .site-footer .logo{height:30px}
+}
+@media (prefers-reduced-motion:reduce){.toggle,.pill-btn{transition:none}}
+
+/* Print: keep colours, open every theme, drop site chrome */
+@media print{
+  @page{margin:14mm}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{background:#fff}
+  .site-header,.site-footer,.closing,.pdf-btn,.back-m,.toggle,.theme-hint{display:none !important}
+  main.wrap{padding:0;max-width:none;gap:14px}
+  .sr-panel{border:0;padding:0 0 8px;border-radius:0}
+  .sr-card,.theme-body>div,.decision,.implication,.interp,.monitor,.sr-ev{break-inside:avoid}
+  .theme{break-inside:auto}
+  .theme>summary{padding:16px 16px 12px}
+  .theme-body{padding:0 16px 16px}
+  details.theme::details-content{content-visibility:visible;display:contents}
+  details.theme:not([open]) .theme-body{display:grid}
+}
+</style>
 </head>
 <body>
-  <main class="page">
-    <header class="header card">
-      <div class="header-top">
-        <div class="header-title-block">
-          <a class="back-link" href="https://intuifi.io/">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-            Back to Intuifi
-          </a>
-          <h1 class="report-title" id="reportTitle">Sample Strategic Insights Report</h1>
-          <p class="report-subtitle" id="reportSubtitle">A sample report built from support tickets, calls and survey responses across ten accounts on a platform used to schedule and bill customer onboarding and implementation work for B2B software companies.</p>
-          <div class="header-buttons">
-            <button id="previewPdf" class="btn" onclick="window.print()">
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-              Save as PDF
-            </button>
-          </div>
-        </div>
-        <div class="brand-cluster">
-          <div class="logo-box intuifi-logo-box">
-          <svg class="brand-logo" id="intuifiLogo" viewBox="0 0 1288 655" role="img" aria-label="Intuifi" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1214,405L1014,405L1013,406L1005,406L1004,407L998,408L995,410L991,411L989,413L985,415L975,425L975,426L971,431L969,435L969,437L967,440L966,448L965,449L965,654L1015,654L1015,556L1016,555L1214,555L1214,505L1016,505L1015,504L1015,456L1016,455L1214,455ZM892,405L892,654L941,654L941,405ZM622,405L622,613L623,614L623,617L624,618L624,621L626,624L626,626L629,630L630,633L633,636L633,637L639,643L640,643L643,646L646,647L648,649L652,651L657,652L658,653L661,653L662,654L831,654L832,653L838,652L851,645L861,635L861,634L863,632L868,622L869,616L870,615L870,611L871,610L871,406L870,405L821,405L821,604L820,605L672,605L671,604L671,405ZM348,405L347,406L347,455L446,455L447,456L447,654L497,654L497,456L498,455L597,455L597,406L596,405ZM83,410L78,415L77,418L75,420L74,426L73,427L73,654L123,654L123,493L124,492L279,647L280,647L286,652L290,653L291,654L304,654L305,653L307,653L311,651L318,644L321,638L321,636L322,635L322,405L273,405L273,568L272,569L114,411L107,407L105,407L104,406L99,406L98,405L97,406L92,406L91,407L89,407ZM0,405L0,654L49,654L49,405ZM1238,403L1237,404L1237,652L1287,652L1287,403ZM907,325L909,325L913,323L924,323L925,324L930,325L934,327L942,335L942,336L945,340L945,342L947,346L947,358L946,359L946,361L941,370L937,374L936,374L929,379L926,379L925,380L920,380L919,381L908,379L901,375L895,369L891,362L891,359L890,358L890,353L889,352L890,351L890,345L891,344L891,342L894,336L897,333L897,332L899,331L903,327ZM913,317L912,318L906,319L900,322L898,324L897,324L890,331L888,336L886,338L885,344L884,345L884,359L885,360L886,365L889,371L894,377L895,377L899,381L905,384L907,384L911,386L917,386L919,387L920,386L926,386L927,385L932,384L938,381L942,377L943,377L943,376L947,372L948,369L951,365L951,362L953,358L953,345L952,344L951,339L948,333L945,330L945,329L937,322L931,319L929,319L928,318L924,318L923,317ZM1106,173L1110,173L1111,174L1117,174L1121,176L1124,176L1126,178L1131,180L1135,184L1136,184L1143,192L1147,200L1147,202L1149,206L1149,213L1150,214L1150,216L1149,217L1149,224L1148,225L1147,230L1143,238L1138,243L1138,244L1136,245L1131,250L1123,254L1121,254L1117,256L1110,256L1109,257L1106,257L1105,256L1099,256L1098,255L1092,254L1085,250L1082,247L1081,247L1076,242L1076,241L1073,238L1072,235L1070,233L1069,229L1068,228L1068,226L1067,225L1067,220L1066,219L1066,211L1067,210L1067,205L1068,204L1069,199L1072,193L1075,190L1075,189L1081,183L1082,183L1085,180L1088,179L1090,177L1094,176L1095,175L1098,175L1099,174L1105,174ZM1104,167L1103,168L1098,168L1097,169L1091,170L1081,175L1072,183L1072,184L1067,190L1063,198L1063,200L1061,204L1061,209L1060,210L1060,220L1061,221L1061,226L1062,227L1063,232L1068,242L1075,250L1076,250L1083,256L1089,259L1091,259L1094,261L1110,263L1111,262L1118,262L1119,261L1122,261L1125,259L1127,259L1131,257L1133,255L1137,253L1146,244L1146,243L1150,238L1151,234L1153,231L1154,225L1155,224L1155,216L1156,215L1155,214L1155,205L1154,204L1152,196L1150,192L1148,190L1147,187L1137,177L1136,177L1131,173L1127,171L1125,171L1122,169L1119,169L1118,168L1112,168L1111,167ZM914,19L929,19L930,20L938,21L939,22L944,23L950,26L955,30L956,30L965,38L965,39L969,43L969,44L973,49L976,55L976,57L978,60L979,68L980,69L980,87L979,88L979,92L978,93L978,96L976,99L976,101L973,107L969,112L969,113L957,125L956,125L951,129L943,133L941,133L937,135L934,135L933,136L927,136L926,137L917,137L916,136L910,136L909,135L906,135L905,134L900,133L890,128L887,125L886,125L874,113L874,112L870,107L867,101L867,99L865,96L864,88L863,87L863,68L864,67L864,63L865,62L866,57L873,44L883,33L884,33L887,30L888,30L893,26L899,23L901,23L905,21L908,21L909,20L913,20ZM908,14L907,15L904,15L903,16L898,17L888,22L886,24L882,26L870,38L870,39L867,42L866,45L864,47L864,49L861,54L861,56L859,59L859,62L858,63L858,67L857,68L857,88L858,89L859,97L861,100L861,102L866,112L871,118L871,119L880,128L881,128L884,131L899,139L905,140L906,141L909,141L910,142L918,142L919,143L924,143L925,142L933,142L934,141L937,141L938,140L944,139L947,137L949,137L953,135L955,133L959,131L962,128L963,128L972,119L972,118L975,115L976,112L978,110L982,102L982,100L984,96L984,93L985,92L985,88L986,87L986,69L985,68L985,63L984,62L984,59L982,56L982,54L980,51L980,49L977,45L976,42L973,39L973,38L962,27L961,27L955,22L947,18L945,18L942,16L939,16L938,15L935,15L934,14L929,14L928,13L914,13L913,14ZM911,6L932,6L933,7L938,7L939,8L945,9L948,11L950,11L956,14L958,16L961,17L970,25L971,25L982,38L983,41L985,43L989,51L989,53L991,57L991,60L992,61L992,64L993,65L993,71L994,72L994,82L993,83L993,90L992,91L991,99L989,102L988,107L983,115L983,118L986,121L987,121L1002,133L1006,135L1017,144L1021,146L1036,158L1040,160L1043,163L1044,163L1047,166L1048,166L1051,169L1055,171L1058,174L1059,174L1064,178L1067,178L1072,173L1073,173L1076,170L1077,170L1082,166L1086,164L1094,162L1095,161L1099,161L1100,160L1116,160L1117,161L1121,161L1122,162L1130,164L1134,166L1136,168L1140,170L1144,174L1145,174L1153,183L1160,196L1161,202L1162,203L1162,207L1163,208L1163,222L1162,223L1161,231L1157,239L1157,241L1155,243L1153,247L1149,251L1149,252L1137,262L1127,267L1121,268L1120,269L1116,269L1115,270L1100,270L1099,269L1095,269L1094,268L1092,268L1091,267L1089,267L1088,266L1086,266L1082,264L1080,262L1076,260L1073,257L1072,257L1066,251L1064,251L1062,253L1058,255L1055,258L1054,258L1051,261L1047,263L1044,266L1040,268L1033,274L1032,274L1026,279L1022,281L1015,287L1014,287L1008,292L1004,294L997,300L996,300L990,305L986,307L983,310L979,312L972,318L971,318L965,323L964,323L958,328L957,328L956,330L956,334L958,337L958,339L960,343L961,354L960,355L960,361L959,362L958,367L954,375L950,379L950,380L942,387L937,389L935,391L933,391L929,393L924,393L923,394L913,394L912,393L908,393L907,392L902,391L896,388L892,384L891,384L883,375L882,372L879,368L879,366L877,362L877,357L876,356L876,347L877,346L877,342L878,341L879,335L881,333L883,328L894,317L897,316L899,314L903,312L909,311L910,310L917,310L918,309L920,310L927,310L928,311L936,313L943,318L944,318L948,322L952,323L957,319L958,319L961,316L965,314L968,311L972,309L979,303L983,301L986,298L990,296L997,290L998,290L1004,285L1008,283L1015,277L1016,277L1022,272L1026,270L1033,264L1034,264L1040,259L1044,257L1051,251L1052,251L1058,246L1059,246L1060,244L1060,241L1056,234L1056,232L1054,228L1054,224L1053,223L1053,206L1054,205L1054,202L1055,201L1057,193L1060,188L1060,185L1052,178L1048,176L1037,167L1033,165L1018,153L1014,151L999,139L995,137L992,134L991,134L988,131L987,131L984,128L983,128L979,125L976,125L967,134L966,134L963,137L949,145L947,145L946,146L944,146L940,148L937,148L936,149L931,149L930,150L913,150L912,149L907,149L906,148L899,147L896,145L894,145L884,140L878,135L877,135L864,122L864,121L861,118L860,115L858,113L855,107L855,105L852,99L852,96L851,95L851,92L850,91L850,86L849,85L849,71L850,70L850,64L851,63L851,60L852,59L852,56L854,53L854,51L859,41L861,39L863,35L867,31L867,30L878,20L879,20L882,17L885,16L887,14L893,11L895,11L896,10L898,10L902,8L905,8L906,7L910,7ZM911,0L910,1L905,1L904,2L901,2L900,3L892,5L882,10L880,12L877,13L874,16L873,16L860,29L860,30L857,33L854,39L852,41L852,43L848,50L848,52L846,56L846,59L845,60L845,64L844,65L844,71L843,72L843,84L844,85L844,91L845,92L845,96L846,97L846,100L847,101L848,106L854,118L856,120L858,124L861,127L861,128L871,138L872,138L875,141L876,141L881,145L893,151L895,151L896,152L898,152L902,154L905,154L906,155L912,155L913,156L930,156L931,155L937,155L938,154L941,154L942,153L950,151L962,145L964,143L968,141L971,138L972,138L978,132L979,132L989,140L990,140L993,143L997,145L1000,148L1001,148L1004,151L1005,151L1008,154L1009,154L1012,157L1016,159L1027,168L1031,170L1046,182L1050,184L1053,187L1052,192L1050,195L1050,197L1048,201L1048,206L1047,207L1047,224L1048,225L1048,229L1049,230L1050,235L1053,241L1053,242L1050,245L1049,245L1046,248L1042,250L1035,256L1031,258L1028,261L1024,263L1017,269L1013,271L1010,274L1006,276L1003,279L999,281L992,287L988,289L985,292L981,294L974,300L970,302L967,305L963,307L960,310L959,310L956,313L955,313L951,316L943,310L937,307L932,306L931,305L928,305L927,304L909,304L908,305L905,305L899,308L897,308L890,313L889,313L880,322L880,323L876,328L874,332L874,334L872,337L872,340L871,341L871,346L870,347L870,357L871,358L871,363L872,364L873,369L878,379L886,388L887,388L893,393L901,397L903,397L907,399L911,399L912,400L925,400L926,399L930,399L931,398L936,397L947,391L957,381L957,380L961,375L963,371L964,366L965,365L965,362L966,361L966,355L967,354L967,350L966,349L966,342L965,341L965,339L963,335L963,332L966,329L970,327L977,321L978,321L984,316L988,314L995,308L999,306L1002,303L1006,301L1013,295L1017,293L1020,290L1024,288L1031,282L1035,280L1038,277L1042,275L1049,269L1053,267L1056,264L1057,264L1065,258L1070,263L1071,263L1074,266L1077,267L1079,269L1083,271L1085,271L1088,273L1090,273L1091,274L1094,274L1095,275L1100,275L1101,276L1115,276L1116,275L1121,275L1122,274L1125,274L1126,273L1131,272L1139,268L1145,263L1146,263L1156,253L1156,252L1159,249L1160,246L1162,244L1163,240L1165,237L1167,229L1168,228L1168,223L1169,222L1169,208L1168,207L1168,202L1167,201L1166,195L1164,192L1164,190L1161,184L1159,182L1157,178L1146,167L1145,167L1142,164L1139,163L1137,161L1131,158L1129,158L1125,156L1122,156L1121,155L1116,155L1115,154L1100,154L1099,155L1095,155L1094,156L1091,156L1090,157L1085,158L1071,166L1066,171L1064,171L1057,165L1053,163L1042,154L1038,152L1023,140L1019,138L1008,129L1004,127L1001,124L1000,124L997,121L996,121L993,118L992,118L990,116L990,115L993,110L993,108L995,105L995,103L997,99L997,96L998,95L998,91L999,90L999,82L1000,81L1000,74L999,73L999,65L998,64L998,60L997,59L997,56L996,55L995,50L992,45L991,41L989,39L986,33L983,30L983,29L971,17L970,17L967,14L966,14L961,10L951,5L949,5L948,4L946,4L942,2L939,2L938,1L933,1L932,0Z" fill="#2d615c" fill-rule="evenodd"></path>
-          </svg>
-          </div>
-        </div>
-      </div>
 
-      <p class="header-summary-line" id="headerSummaryLine" style="display:none;"></p>
-
-      <aside class="meta-cluster cols-3" id="metaCluster">
-        <div class="meta-card primary">
-          <div class="meta-card-main">
-            <svg class="meta-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14a9 3 0 0 0 18 0V5"></path><path d="M3 12a9 3 0 0 0 18 0"></path></svg>
-            <div class="meta-card-text"><strong>61</strong><span>records analysed</span></div>
-          </div>
-        </div>
-        <div class="meta-card warning">
-          <div class="meta-card-main">
-            <svg class="meta-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:var(--amber);"><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8a6 6 0 0 0-12 0c0 1 .23 2.23 1.5 3.5.72.72 1.23 1.53 1.41 2.5"></path></svg>
-            <div class="meta-card-text"><strong>5</strong><span>themes identified</span></div>
-          </div>
-        </div>
-        <div class="meta-card primary">
-          <div class="meta-card-main">
-            <svg class="meta-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-            <div class="meta-card-text"><strong>3</strong><span>items with no theme assigned</span></div>
-          </div>
-        </div>
-      </aside>
-    </header>
-
-    <section class="card" id="execSection">
-      <h2 class="section-title" id="executiveSummaryTitle" style="margin-top:0">Executive summary</h2>
-      <div id="decisionViewSection">
-      <section class="decision-section" aria-labelledby="executiveSummaryTitle">
-          <div class="decision-flow">
-              <article class="decision-card context">
-                <div class="decision-step">1. Situation</div>
-                <h3 class="decision-card-title">What's happening?</h3>
-                <p class="decision-card-copy">Invoice mismatches only hit accounts on the Xero integration. Scheduling conflicts only hit accounts running two or more engagements at once. And three accounts have gone quiet in the six weeks before their renewal.</p>
-              </article>
-              <article class="decision-card impact">
-                <div class="decision-step">2. Significance</div>
-                <h3 class="decision-card-title">Why it matters</h3>
-                <p class="decision-card-copy">The invoicing and scheduling issues are narrow and fixable. The real warning sign is the silence: it lines up with renewal dates, and one account mentioned reviewing other options.</p>
-              </article>
-              <article class="decision-card risk">
-                <div class="decision-step">3. Exposure</div>
-                <h3 class="decision-card-title">Biggest risk</h3>
-                <p class="decision-card-copy">Ticket volume alone hides the quiet accounts. Worth a direct call before their renewal, not after.</p>
-              </article>
-          </div>
-          <article class="decision-outcome">
-            <h3 class="decision-outcome-title">Decision to be made</h3>
-            <p class="decision-outcome-copy">Whether the drop-off in tickets from Solace Software, Ashford Digital and Brightline Technologies is a resolved issue or a warning sign worth a personal check-in before their renewal dates.</p>
-          </article>
-      </section></div>
-      <div id="leadershipSection">
-      <h2 class="section-title">Recommended actions</h2>
-      <p class="section-note">Listed in priority order — most urgent first.</p>
-      <section class="grid grid-3">
-          <div class="card action-card">
-            <h3 class="mini-title">1. Call Brightline Technologies first, and treat it differently to the other two</h3>
-            <p class="body-copy">Brightline Technologies isn't just one of three quiet accounts, it's also one of five accounts your sales team uses as a reference, and it's already mentioned reviewing other options once. Call this week and ask directly about renewal. Solace Software and Ashford Digital's silence doesn't carry the same signal and can follow after.</p>
-          </div>
-          <div class="card action-card">
-            <h3 class="mini-title">2. Fix the Xero export before the scheduling conflict</h3>
-            <p class="body-copy">Both bugs are scoped, but Xero hits every account on that integration with certainty, including Ridgemont Technologies, who is also waiting on the team-level reporting feature. Clearing their invoicing issue first is also the fastest way to earn the right to ask them to wait on that feature.</p>
-          </div>
-          <div class="card action-card">
-            <h3 class="mini-title">3. Hold team-level reporting back for two accounts, not all five</h3>
-            <p class="body-copy">Vantage Systems, Meridian Cloud and Larkfield Data aren't blocked by anything else in this report, so ship it for them now. Ridgemont Technologies and Brightline Technologies each have a live, unresolved issue of their own, so give them a firm date once that's fixed rather than a yes today.</p>
-          </div>
-      </section></div>
-      <div id="risksSection">
-      <h2 class="section-title">Risks if this remains unresolved</h2>
-      <p class="section-note">Listed independently of the actions above — not in priority order, and not a 1:1 match to any single action.</p>
-      <section class="grid grid-3">
-          <div class="card risk-card">
-            <div class="risk-kicker">Retention risk</div>
-            <h3 class="mini-title">Your best reference account is also your quietest one</h3>
-            <p class="body-copy">Brightline Technologies is one of five accounts you point to in sales conversations, and it's also the account that's gone quiet and mentioned reviewing other options. If it leaves, you lose a renewal and a reference story on the same day.</p>
-          </div>
-          <div class="card risk-card">
-            <div class="risk-kicker">Delivery risk</div>
-            <h3 class="mini-title">Fixing the bigger bug first leaves one account carrying two open issues</h3>
-            <p class="body-copy">If scheduling gets fixed before Xero, Ridgemont Technologies keeps hitting invoice mismatches while it's also waiting on the reporting feature it asked for. That's two open asks stacking on one account instead of one closed.</p>
-          </div>
-          <div class="card risk-card">
-            <div class="risk-kicker">Reference risk</div>
-            <h3 class="mini-title">Your other reference accounts are watching how this one gets handled</h3>
-            <p class="body-copy">Vantage Systems, Meridian Cloud, Ridgemont Technologies and Larkfield Data don't know Brightline Technologies is at risk, but if it churns quietly after raising a concern, that's the story your remaining reference accounts learn about raising concerns at all.</p>
-          </div>
-      </section></div>
-    </section>
-
-    <section class="card executive-card">
-      <div class="executive-header">
-        <h2 class="section-title" style="margin:0">At a glance</h2>
-        <p class="section-note" style="margin:4px 0 0;">More detail than the summary above, short of the full evidence below.</p>
-      </div>
-      <div class="executive-body" id="executiveBody">
-      <div class="tldr-box">
-           <div class="tldr-label">Strategic implication</div>
-           <div class="tldr-text">The two biggest problems by volume are narrower than they look: one accounting integration, one scheduling workflow, both traceable to a specific cause. The real risk isn't in either of them, it's in three renewal-window accounts that have gone quiet, which ticket volume alone won't show you.</div>
-         </div>
-      <div class="executive-columns">
-        <div class="executive-panel">
-          <div class="panel-title">Themes</div>
-          <div class="summary-list">
-            <div class="summary-item">
-              <div class="summary-icon check">1</div>
-              <div>
-                <div class="summary-headline">Resource scheduling conflicts in multi-team accounts</div>
-                <div class="summary-detail">152 signals · 6 of 10 accounts</div>
-              </div>
-            </div>
-            <div class="summary-item">
-              <div class="summary-icon check">2</div>
-              <div>
-                <div class="summary-headline">Invoice mismatches on the Xero integration</div>
-                <div class="summary-detail">104 signals · 4 of 10 accounts</div>
-              </div>
-            </div>
-            <div class="summary-item">
-              <div class="summary-icon check">3</div>
-              <div>
-                <div class="summary-headline">Requests for time and cost breakdown on invoices</div>
-                <div class="summary-detail">71 signals · 8 of 10 accounts</div>
-              </div>
-            </div>
-            <div class="summary-item">
-              <div class="summary-icon check">4</div>
-              <div>
-                <div class="summary-headline">Multi-team reporting requests from reference accounts</div>
-                <div class="summary-detail">58 signals · 5 of 10 accounts</div>
-              </div>
-            </div>
-            <div class="summary-item">
-              <div class="summary-icon check">5</div>
-              <div>
-                <div class="summary-headline">Renewal-window accounts going quiet</div>
-                <div class="summary-detail">3 accounts flagged · renewals due within 90 days</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="executive-panel tension">
-          <div class="panel-title">Tensions to be aware of</div>
-          <div class="summary-list">
-            <div class="summary-item">
-              <div class="summary-icon warning">!</div>
-              <div>
-                <div class="summary-headline">Your best accounts are the ones asking for more</div>
-                <div class="summary-detail">The five accounts requesting team-level reporting are also the ones your sales team uses as references. Building for them competes with fixing the scoped bugs still affecting other accounts.</div>
-              </div>
-            </div>
-            <div class="summary-item">
-              <div class="summary-icon warning">!</div>
-              <div>
-                <div class="summary-headline">Ticket volume says nothing, silence says something</div>
-                <div class="summary-detail">Three renewal-window accounts have gone quiet after previously being among the most vocal. A volume-based view of the data would read this as good news.</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div></div>
-      <div id="themeFlowSection">
-      <div class="theme-flow-inline">
-        <div class="flow-intro">
-          <h2 class="section-title" style="margin:0 0 8px">How the themes connect</h2>
-          <p>The two most common issues are narrower than they look: one integration, one scheduling condition. That narrowness is useful, it means faster fixes. The real complexity is downstream, in which accounts are asking for more and which have gone quiet.</p>
-          <div class="tag-legend">
-            <span class="legend-item"><span class="legend-swatch"></span>Named theme with evidence below</span>
-            <span class="legend-item"><span class="legend-swatch inferred"></span>Inferred pattern across themes</span>
-          </div>
-        </div>
-        <div class="theme-flow">
-        <div class="flow-column root">
-          <div class="flow-step-label">1. What's actually broken</div>
-          <h3>Two specific, fixable gaps, not a general reliability problem</h3>
-          <p>Scheduling conflicts and invoice mismatches both trace back to a single condition each: running two engagements at once, and using the Xero integration, rather than affecting the platform broadly.</p>
-          <div class="flow-tags"><span>Resource scheduling conflicts in multi-team accounts</span><span>Invoice mismatches on the Xero integration</span><span class="inferred">Concentrated in specific workflows and integrations, not platform-wide</span></div>
-        </div><div class="flow-arrow">→</div>
-        <div class="flow-column symptom">
-          <div class="flow-step-label">2. What clients ask for instead</div>
-          <h3>Your most visible accounts are asking for more</h3>
-          <p>Requests for clearer invoicing and team-level reporting are concentrated among the accounts you already use as references and case studies.</p>
-          <div class="flow-tags"><span>Requests for time and cost breakdown on invoices</span><span>Multi-team reporting requests from reference accounts</span><span class="inferred">Feature demand concentrated in your most visible accounts</span></div>
-        </div><div class="flow-arrow">→</div>
-        <div class="flow-column consequence">
-          <div class="flow-step-label">3. Where it shows up commercially</div>
-          <h3>Silence is doing more damage than complaints</h3>
-          <p>The accounts putting your renewal at risk aren't the ones filing tickets, they're the ones who've stopped, right as their renewal window opens.</p>
-          <div class="flow-tags"><span>Renewal-window accounts going quiet</span><span class="inferred">Silence lining up with renewal timing rather than resolution</span></div>
-        </div></div>
-      </div></div>
-    </section>
-
-    <section class="card">
-      <h2 class="section-title" style="margin-top:0">Detailed themes and evidence</h2>
-      <div class="theme-stack" id="themeStack">
-
-      <details class="theme" open="">
-        <summary class="theme-summary">
-          <div>
-            <h3 class="theme-title">Resource scheduling conflicts in multi-team accounts</h3>
-            <p class="theme-description">Implementation specialists are being double-booked when two active onboarding engagements at the same account overlap. It isn't happening everywhere: only accounts running more than one engagement at a time are affected.</p>
-            <div class="pill-row">
-              <span class="pill root">Root cause</span>
-              <span class="pill">152 signals across 6 of 10 accounts</span>
-              <span class="pill">24.6% of feedback</span>
-              <span class="pill">Jun 2025–Sept 2025</span>
-            </div>
-            <div class="theme-action"><strong>Decision this informs:</strong> Whether the fix belongs in how the calendar handles overlapping engagements specifically, rather than a general scheduling rebuild.</div>
-          </div>
-          <div class="expand"></div>
-        </summary>
-        <div class="theme-body">
-          <div class="insight-detail-layout">
-            <div class="evidence-panel">
-             <div class="panel-kicker">Evidence trail</div>
-             <h4>Why this theme emerged</h4>
-             <div class="evidence-list">
-               <div class="evidence-item">
-                 <span class="evidence-number">01</span>
-                 <p><strong>Northlane Analytics</strong>: two specialists double-booked into the same session, right after taking on a second engagement. Still open (RS-2210-JUN, 11 Jun 2025).</p>
-               </div>
-               <div class="evidence-item">
-                 <span class="evidence-number">02</span>
-                 <p><strong>Fernbridge Software</strong>: same double-booking, starting only once they added a second engagement. No issues in the four months before that (RS-2299-JUL, 16 Jul 2025).</p>
-               </div>
-               <div class="evidence-item">
-                 <span class="evidence-number">03</span>
-                 <p><strong>Halcyon Cloud</strong>: same conflict within weeks of starting a second engagement. Follow-up required (RS-2355-AUG, 2 Aug 2025).</p>
-               </div>
-               <div class="evidence-item">
-                 <span class="evidence-number">04</span>
-                 <p><strong>Vantage Systems</strong>: heaviest single-engagement user on the platform, zero scheduling conflicts all period (RS-2401, 1 Sept 2025).</p>
-               </div>
-               <div class="evidence-item">
-                 <span class="evidence-number">05</span>
-                 <p>152 signals total, all from accounts running two or more engagements at once. No single-engagement account reported it.</p>
-               </div>
-             </div>
-            </div>
-            <aside class="insight-side">
-              <div class="suggestion-panel">
-             <div class="panel-kicker">Interpretation</div>
-             <h4>What this suggests</h4>
-             <p>This reads like a general reliability problem if you only look at volume, but it's actually a specific gap: the calendar doesn't handle two active engagements at the same account well. That's a smaller, more precise fix than "scheduling is broken".</p>
-           </div>
-              <div class="monitor-panel">
-             <div class="panel-kicker">Signals to monitor</div>
-             <div class="metric-list">
-               <div class="metric-item"><span class="metric-dot"></span><span>Scheduling conflicts, split by accounts running one engagement versus two or more</span></div>
-               <div class="metric-item"><span class="metric-dot"></span><span>Time between an account starting a second concurrent engagement and their first scheduling conflict</span></div>
-               <div class="metric-item"><span class="metric-dot"></span><span>Whether any single-engagement account reports this after the fix ships</span></div>
-             </div>
-           </div>
-            </aside>
-          </div>
-        </div>
-      </details>
-
-      <details class="theme">
-        <summary class="theme-summary">
-          <div>
-            <h3 class="theme-title">Invoice mismatches on the Xero integration</h3>
-            <p class="theme-description">Exported invoices don't match what lands in clients' accounting software, but only for the accounts using the Xero integration. None of your QuickBooks accounts have reported it.</p>
-            <div class="pill-row">
-              <span class="pill root">Root cause</span>
-              <span class="pill">104 signals across 4 of 10 accounts</span>
-              <span class="pill">16.8% of feedback</span>
-              <span class="pill">Jun 2025–Sept 2025</span>
-            </div>
-            <div class="theme-action"><strong>Decision this informs:</strong> Whether this is worth a dedicated Xero export fix rather than a platform-wide invoicing review.</div>
-          </div>
-          <div class="expand"></div>
-        </summary>
-        <div class="theme-body">
-          <div class="insight-detail-layout">
-            <div class="evidence-panel">
-             <div class="panel-kicker">Evidence trail</div>
-             <h4>Why this theme emerged</h4>
-             <div class="evidence-list">
-               <div class="evidence-item">
-                 <span class="evidence-number">01</span>
-                 <p><strong>Fernbridge Software</strong>: exported invoices missing line items in Xero. Still open (IV-3102-JUN, 21 Jun 2025).</p>
-               </div>
-               <div class="evidence-item">
-                 <span class="evidence-number">02</span>
-                 <p><strong>Halcyon Cloud</strong>: same missing-line-item issue two months later, also on Xero (IV-3340-AUG, 11 Aug 2025).</p>
-               </div>
-               <div class="evidence-item">
-                 <span class="evidence-number">03</span>
-                 <p><strong>Ridgemont Technologies</strong>: needed a manual reconciliation after Xero totals didn't match. Follow-up required (IV-3199-JUL, 27 Jul 2025).</p>
-               </div>
-               <div class="evidence-item">
-                 <span class="evidence-number">04</span>
-                 <p><strong>Ashford Digital</strong>: hit the same bug immediately after switching from QuickBooks to Xero, having had no issues before (IV-3410-AUG, 19 Aug 2025).</p>
-               </div>
-               <div class="evidence-item">
-                 <span class="evidence-number">05</span>
-                 <p>104 signals total, all from the four Xero accounts. Zero from the six on QuickBooks or manual export.</p>
-               </div>
-             </div>
-            </div>
-            <aside class="insight-side">
-              <div class="suggestion-panel">
-             <div class="panel-kicker">Interpretation</div>
-             <h4>What this suggests</h4>
-             <p>This isn't a general invoicing reliability issue, it's specific to one integration. Ashford Digital switching from QuickBooks to Xero and immediately hitting the same bug the other three already had is about as clear a signal as you'll get.</p>
-           </div>
-              <div class="monitor-panel">
-             <div class="panel-kicker">Signals to monitor</div>
-             <div class="metric-list">
-               <div class="metric-item"><span class="metric-dot"></span><span>Invoice mismatch reports, split by accounting integration used</span></div>
-               <div class="metric-item"><span class="metric-dot"></span><span>Whether any account stops reporting this after switching away from Xero</span></div>
-               <div class="metric-item"><span class="metric-dot"></span><span>Time to resolve for the Xero-specific export path</span></div>
-             </div>
-           </div>
-            </aside>
-          </div>
-        </div>
-      </details>
-
-      <details class="theme">
-        <summary class="theme-summary">
-          <div>
-            <h3 class="theme-title">Requests for time and cost breakdown on invoices</h3>
-            <p class="theme-description">Clients want to see time and cost broken down by task on their invoices, rather than a single total per engagement.</p>
-            <div class="pill-row">
-              <span class="pill symptom">Symptom</span>
-              <span class="pill">71 signals across 8 of 10 accounts</span>
-              <span class="pill">11.5% of feedback</span>
-              <span class="pill">Jun 2025–Sept 2025</span>
-            </div>
-            <div class="theme-action"><strong>Decision this informs:</strong> Whether a task-level cost breakdown should be prioritised as a feature, given how consistently it's coming up across accounts otherwise unaffected by the two issues above.</div>
-          </div>
-          <div class="expand"></div>
-        </summary>
-        <div class="theme-body">
-          <div class="insight-detail-layout">
-            <div class="evidence-panel">
-             <div class="panel-kicker">Evidence trail</div>
-             <h4>Why this theme emerged</h4>
-             <div class="evidence-list">
-               <div class="evidence-item">
-                 <span class="evidence-number">01</span>
-                 <p><strong>Solace Software</strong>: wants invoices broken down by task hours, not one total (CB-3455-JUN, 18 Jun 2025).</p>
-               </div>
-               <div class="evidence-item">
-                 <span class="evidence-number">02</span>
-                 <p><strong>Meridian Cloud</strong>: same ask in a survey response, named it their top improvement (CB-3502-JUL, 22 Jul 2025).</p>
-               </div>
-               <div class="evidence-item">
-                 <span class="evidence-number">03</span>
-                 <p><strong>Brightline Technologies</strong>: repeated the request three months later. Still unaddressed (CB-3690-SEP, 5 Sept 2025).</p>
-               </div>
-               <div class="evidence-item">
-                 <span class="evidence-number">04</span>
-                 <p><strong>Larkfield Data</strong>: wants a downloadable breakdown their finance team can file directly (CB-3521-AUG, 14 Aug 2025).</p>
-               </div>
-               <div class="evidence-item">
-                 <span class="evidence-number">05</span>
-                 <p>71 signals across eight accounts, spread evenly regardless of team size or accounting integration.</p>
-               </div>
-             </div>
-            </div>
-            <aside class="insight-side">
-              <div class="suggestion-panel">
-             <div class="panel-kicker">Interpretation</div>
-             <h4>What this suggests</h4>
-             <p>Unlike the two issues above, this one isn't tied to any particular account setup. It's a plain feature gap, not a bug, and it's the one most accounts agree on regardless of size or integration.</p>
-           </div>
-              <div class="monitor-panel">
-             <div class="panel-kicker">Signals to monitor</div>
-             <div class="metric-list">
-               <div class="metric-item"><span class="metric-dot"></span><span>Number of accounts requesting a task-level cost breakdown</span></div>
-               <div class="metric-item"><span class="metric-dot"></span><span>How often the request repeats from the same account</span></div>
-               <div class="metric-item"><span class="metric-dot"></span><span>Whether demand concentrates in accounts billing multiple task types per engagement</span></div>
-             </div>
-           </div>
-            </aside>
-          </div>
-        </div>
-      </details>
-
-      <details class="theme">
-        <summary class="theme-summary">
-          <div>
-            <h3 class="theme-title">Multi-team reporting requests from reference accounts</h3>
-            <p class="theme-description">Clients running more than one team on the platform want performance reported by team rather than as one combined view. All five accounts asking for this are also ones you use as references in sales conversations.</p>
-            <div class="pill-row">
-              <span class="pill symptom">Symptom</span>
-              <span class="pill">58 signals across 5 of 10 accounts</span>
-              <span class="pill">9.4% of feedback</span>
-              <span class="pill">Jun 2025–Sept 2025</span>
-            </div>
-            <div class="theme-action"><strong>Decision this informs:</strong> Whether to prioritise team-level reporting given that the accounts asking are also the ones prospects hear from directly.</div>
-          </div>
-          <div class="expand"></div>
-        </summary>
-        <div class="theme-body">
-          <div class="insight-detail-layout">
-            <div class="evidence-panel">
-             <div class="panel-kicker">Evidence trail</div>
-             <h4>Why this theme emerged</h4>
-             <div class="evidence-list">
-               <div class="evidence-item">
-                 <span class="evidence-number">01</span>
-                 <p><strong>Vantage Systems</strong>: wants reports split by team, not combined (MT-3711-JUN, 25 Jun 2025).</p>
-               </div>
-               <div class="evidence-item">
-                 <span class="evidence-number">02</span>
-                 <p><strong>Ridgemont Technologies</strong>: same team-split request on a call. Follow-up required (MT-3788-JUL, 30 Jul 2025).</p>
-               </div>
-               <div class="evidence-item">
-                 <span class="evidence-number">03</span>
-                 <p><strong>Meridian Cloud</strong>: named this their top improvement, and they're quoted in your Q2 case study (MT-3820-AUG, 19 Aug 2025).</p>
-               </div>
-               <div class="evidence-item">
-                 <span class="evidence-number">04</span>
-                 <p><strong>Brightline Technologies and Larkfield Data</strong>: raised it independently, and both are used in reference calls this quarter (MT-3830-AUG, 25 Aug 2025).</p>
-               </div>
-               <div class="evidence-item">
-                 <span class="evidence-number">05</span>
-                 <p>58 signals total, from exactly the five accounts your sales team uses as references. No others.</p>
-               </div>
-             </div>
-            </div>
-            <aside class="insight-side">
-              <div class="suggestion-panel">
-             <div class="panel-kicker">Interpretation</div>
-             <h4>What this suggests</h4>
-             <p>This isn't just a feature request, it's coming from the accounts doing your selling for you. If their experience of the platform doesn't keep up, the cost isn't only their renewal, it's what they say on the next reference call.</p>
-           </div>
-              <div class="monitor-panel">
-             <div class="panel-kicker">Signals to monitor</div>
-             <div class="metric-list">
-               <div class="metric-item"><span class="metric-dot"></span><span>Overlap between accounts requesting this and accounts used as references or in case studies</span></div>
-               <div class="metric-item"><span class="metric-dot"></span><span>Volume of requests per month from this specific group</span></div>
-               <div class="metric-item"><span class="metric-dot"></span><span>Whether any reference account raises the request twice without a response</span></div>
-             </div>
-           </div>
-            </aside>
-          </div>
-        </div>
-      </details>
-
-      <details class="theme">
-        <summary class="theme-summary">
-          <div>
-            <h3 class="theme-title">Renewal-window accounts going quiet</h3>
-            <p class="theme-description">Three accounts that used to raise several tickets a month have logged nothing in the last six weeks, and all three renew within the current quarter.</p>
-            <div class="pill-row">
-              <span class="pill consequence">Consequence</span>
-              <span class="pill">3 accounts flagged</span>
-              <span class="pill">Renewal window: next 90 days</span>
-              <span class="pill">Last activity: early Aug 2025</span>
-            </div>
-            <div class="theme-action"><strong>Decision this informs:</strong> Whether the drop in tickets from these three accounts should be read as resolution or as a reason to check in before their renewal date.</div>
-          </div>
-          <div class="expand"></div>
-        </summary>
-        <div class="theme-body">
-          <div class="insight-detail-layout">
-            <div class="evidence-panel">
-             <div class="panel-kicker">Evidence trail</div>
-             <h4>Why this theme emerged</h4>
-             <div class="evidence-list">
-               <div class="evidence-item">
-                 <span class="evidence-number">01</span>
-                 <p><strong>Solace Software</strong>: six tickets a month through July, then none since early August. Renews in eight weeks.</p>
-               </div>
-               <div class="evidence-item">
-                 <span class="evidence-number">02</span>
-                 <p><strong>Ashford Digital</strong>: dropped from four tickets a month to zero over the same window, despite being one of the more vocal accounts on invoicing.</p>
-               </div>
-               <div class="evidence-item">
-                 <span class="evidence-number">03</span>
-                 <p><strong>Brightline Technologies</strong>: mentioned "reviewing other options" on a check-in call. No follow-up was logged (RC-4102-AUG, 14 Aug 2025).</p>
-               </div>
-               <div class="evidence-item">
-                 <span class="evidence-number">04</span>
-                 <p>All three: no open ticket, survey response, or call in six weeks, despite renewing this quarter.</p>
-               </div>
-             </div>
-            </div>
-            <aside class="insight-side">
-              <div class="suggestion-panel">
-             <div class="panel-kicker">Interpretation</div>
-             <h4>What this suggests</h4>
-             <p>Ticket volume dropping to zero usually gets read as good news. Here it lines up with renewal dates and, in one case, a comment about reviewing alternatives. That combination is worth a direct conversation, not a tally mark in the resolved column.</p>
-           </div>
-              <div class="monitor-panel">
-             <div class="panel-kicker">Signals to monitor</div>
-             <div class="metric-list">
-               <div class="metric-item"><span class="metric-dot"></span><span>Ticket and call volume per account in the eight weeks before their renewal date</span></div>
-               <div class="metric-item"><span class="metric-dot"></span><span>Any account whose volume drops to zero without a corresponding fix being shipped</span></div>
-               <div class="metric-item"><span class="metric-dot"></span><span>Whether a check-in call happens with each of these three accounts before their renewal date</span></div>
-             </div>
-           </div>
-            </aside>
-          </div>
-        </div>
-      </details>
-
-      </div>
-    </section>
-
-    <div class="report-cta">
-      <h3>Want this for your own data?</h3>
-      <p>Every finding links back to the evidence behind it, so you can see the reasoning instead of just trusting the answer. You stay the one deciding what happens next.</p>
-      <a class="btn" href="https://intuifi.io/#early-access">Try Intuifi</a>
+<header class="site-header">
+  <div class="wrap">
+    <div class="brand">
+      <a href="https://intuifi.io/" aria-label="Intuifi home"><span class="logo" role="img" aria-label="Intuifi"></span></a>
+      <a class="back" href="https://intuifi.io/">← Back to Intuifi</a>
     </div>
+    <a class="pill-btn pill-btn--white" href="https://intuifi.io/#early-access" data-gc="header-cta">Request a free report</a>
+  </div>
+</header>
 
-  </main>
+<main class="wrap">
+  <a class="back-m" href="https://intuifi.io/">← Back to Intuifi</a>
 
-  <style>
-    @media print {
-      #previewPdf { display: none; }
-      details.theme:not([open]) > *:not(summary) { display: block !important; }
-      body { background: #fff; }
-    }
-  </style>
+  <!-- Report header -->
+  <section class="sr-panel" style="gap:22px">
+    <div class="rep-top">
+      <div>
+        <h1>Sample Strategic Insights Report</h1>
+        <p class="sr-body">A sample report built from 61 pieces of evidence across ten accounts on a platform used to schedule and bill customer onboarding and implementation work for B2B software companies.</p>
+      </div>
+      <button type="button" class="pdf-btn" onclick="window.print()">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>Save as PDF</button>
+    </div>
+    <div class="sr-grid3">
+      <div class="sr-card stat"><strong>61</strong><span class="sr-body">pieces of evidence analysed</span></div>
+      <div class="sr-card stat"><strong>5</strong><span class="sr-body">themes identified</span></div>
+      <div class="sr-card stat"><strong>3</strong><span class="sr-body">pieces with no theme assigned</span></div>
+    </div>
+    <div class="sources">
+      <span class="sr-note" style="font-weight:600;color:var(--ink-mid)">Where the evidence came from:</span>
+      <span class="sr-chip sr-grey">Support tickets · 34</span>
+      <span class="sr-chip sr-grey">Sales call notes · 12</span>
+      <span class="sr-chip sr-grey">Survey responses · 9</span>
+      <span class="sr-chip sr-teal">Product backlog · 6</span>
+    </div>
+  </section>
+
+  <!-- Executive summary -->
+  <section class="sr-panel">
+    <h2 class="sr-h2">Executive summary</h2>
+    <div class="sr-flow">
+      <div class="sr-card" style="border-top:4px solid #2bb3a3;background:#f2faf8">
+        <span class="sr-eyebrow" style="color:#0f625c">1. Situation</span>
+        <h3 class="sr-ct">What's happening?</h3>
+        <p class="sr-body">Invoice mismatches only hit accounts on the Xero integration. Scheduling conflicts only hit accounts running two or more engagements at once. Three accounts have gone quiet in the six weeks before their renewal.</p>
+      </div>
+      <div class="sr-arrow" aria-hidden="true">→</div>
+      <div class="sr-card" style="border-top:4px solid #e08e1b;background:#fffaf1">
+        <span class="sr-eyebrow" style="color:#9a5b0b">2. Significance</span>
+        <h3 class="sr-ct">Why it matters</h3>
+        <p class="sr-body">The invoicing and scheduling issues are narrow and fixable. The real warning sign is the silence: it lines up with renewal dates, and one account mentioned reviewing other options.</p>
+      </div>
+      <div class="sr-arrow" aria-hidden="true">→</div>
+      <div class="sr-card" style="border-top:4px solid #d9463b;background:#fff5f4">
+        <span class="sr-eyebrow" style="color:#b3261e">3. Exposure</span>
+        <h3 class="sr-ct">Biggest risk</h3>
+        <p class="sr-body">Ticket volume alone hides the quiet accounts. Worth a direct call before their renewal, not after.</p>
+      </div>
+    </div>
+    <div class="decision">
+      <strong>Decision to be made</strong>
+      <p class="sr-body">Whether the drop-off in tickets from Solace Software, Ashford Digital and Brightline Technologies is a resolved issue or a warning sign worth a personal check-in before their renewal dates.</p>
+    </div>
+  </section>
+
+  <!-- Recommended actions -->
+  <section class="sr-panel">
+    <div class="sr-head"><h2 class="sr-h2">Recommended actions</h2><p class="sr-note">Listed in priority order, most urgent first.</p></div>
+    <div class="sr-grid3">
+      <div class="sr-card" style="border-left:4px solid #0f625c">
+        <h3 class="sr-ct">1. Call Brightline Technologies first, and treat it differently to the other two</h3>
+        <p class="sr-body">Brightline Technologies isn't just one of three quiet accounts, it's also one of five accounts your sales team uses as a reference, and it's already mentioned reviewing other options once. Call this week and ask directly about renewal. Solace Software and Ashford Digital's silence doesn't carry the same signal and can follow after.</p>
+        <span class="sr-chip sr-grey">Owner: Customer success lead</span>
+      </div>
+      <div class="sr-card" style="border-left:4px solid #0f625c">
+        <h3 class="sr-ct">2. Fix the Xero export before the scheduling conflict</h3>
+        <p class="sr-body">Both bugs are scoped, but Xero hits every account on that integration with certainty, including Ridgemont Technologies, who is also waiting on the team-level reporting feature. The fix is already in the backlog (ENG-388), so it needs moving up, not scoping. Clearing their invoicing issue first is also the fastest way to earn the right to ask them to wait on that feature.</p>
+        <span class="sr-chip sr-grey">Owner: Product lead</span>
+      </div>
+      <div class="sr-card" style="border-left:4px solid #0f625c">
+        <h3 class="sr-ct">3. Hold team-level reporting back for two accounts, not all five</h3>
+        <p class="sr-body">Vantage Systems, Meridian Cloud and Larkfield Data aren't blocked by anything else in this report, so ship it for them now. Ridgemont Technologies and Brightline Technologies each have a live, unresolved issue of their own, so give them a firm date once that's fixed rather than a yes today.</p>
+        <span class="sr-chip sr-grey">Owner: Product lead</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Risks -->
+  <section class="sr-panel">
+    <div class="sr-head"><h2 class="sr-h2">Risks if this remains unresolved</h2><p class="sr-note">Listed independently of the actions above, not in priority order, and not a one-to-one match to any single action.</p></div>
+    <div class="sr-grid3">
+      <div class="sr-card" style="border-left:4px solid #d9463b">
+        <span class="sr-eyebrow" style="color:#b3261e">Retention risk</span>
+        <h3 class="sr-ct">Your best reference account is also your quietest one</h3>
+        <p class="sr-body">Brightline Technologies is one of five accounts you point to in sales conversations, and it's also the account that's gone quiet and mentioned reviewing other options. If it leaves, you lose a renewal and a reference story on the same day.</p>
+      </div>
+      <div class="sr-card" style="border-left:4px solid #d9463b">
+        <span class="sr-eyebrow" style="color:#b3261e">Delivery risk</span>
+        <h3 class="sr-ct">Fixing the bigger bug first leaves one account carrying two open issues</h3>
+        <p class="sr-body">If scheduling gets fixed before Xero, Ridgemont Technologies keeps hitting invoice mismatches while it's also waiting on the reporting feature it asked for. That's two open asks stacking on one account instead of one closed.</p>
+      </div>
+      <div class="sr-card" style="border-left:4px solid #d9463b">
+        <span class="sr-eyebrow" style="color:#b3261e">Reference risk</span>
+        <h3 class="sr-ct">Your other reference accounts are watching how this one gets handled</h3>
+        <p class="sr-body">Vantage Systems, Meridian Cloud, Ridgemont Technologies and Larkfield Data don't know Brightline Technologies is at risk, but if it churns quietly after raising a concern, that's the story your remaining reference accounts learn about raising concerns at all.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- At a glance -->
+  <section class="sr-panel">
+    <div class="sr-head"><h2 class="sr-h2">At a glance</h2><p class="sr-note">More detail than the summary above, short of the full evidence below.</p></div>
+    <div class="implication">
+      <span class="sr-eyebrow" style="color:#0f625c">Strategic implication</span>
+      <p class="sr-body">The two biggest problems by volume are narrower than they look: one accounting integration, one scheduling workflow, both traceable to a specific cause. The real risk isn't in either of them, it's in three renewal-window accounts that have gone quiet, which ticket volume alone won't show you.</p>
+    </div>
+    <div class="glance">
+      <div class="sr-card">
+        <strong style="font-size:14px">Themes</strong>
+        <a class="glance-row" href="#theme-1" style="text-decoration:none"><span class="sr-num">1</span><div><div class="sr-ct">Resource scheduling conflicts in multi-team accounts</div><div class="sr-note">20 pieces of evidence · 6 of 10 accounts</div></div></a>
+        <a class="glance-row" href="#theme-2" style="text-decoration:none"><span class="sr-num">2</span><div><div class="sr-ct">Invoice mismatches on the Xero integration</div><div class="sr-note">14 pieces of evidence · 4 of 10 accounts</div></div></a>
+        <a class="glance-row" href="#theme-3" style="text-decoration:none"><span class="sr-num">3</span><div><div class="sr-ct">Requests for time and cost breakdown on invoices</div><div class="sr-note">11 pieces of evidence · 8 of 10 accounts</div></div></a>
+        <a class="glance-row" href="#theme-4" style="text-decoration:none"><span class="sr-num">4</span><div><div class="sr-ct">Multi-team reporting requests from reference accounts</div><div class="sr-note">9 pieces of evidence · 5 of 10 accounts</div></div></a>
+        <a class="glance-row" href="#theme-5" style="text-decoration:none"><span class="sr-num">5</span><div><div class="sr-ct">Renewal-window accounts going quiet</div><div class="sr-note">4 pieces of evidence · 3 accounts flagged · renewals due within 90 days</div></div></a>
+      </div>
+      <div class="sr-card tensions">
+        <strong style="font-size:14px">Tensions to be aware of</strong>
+        <div class="glance-row"><span class="bang" aria-hidden="true">!</span><div style="display:flex;flex-direction:column;gap:4px"><div class="sr-ct">Your best accounts are the ones asking for more</div><p class="sr-body sm">The five accounts requesting team-level reporting are also the ones your sales team uses as references. Building for them competes with fixing the scoped bugs still affecting other accounts.</p></div></div>
+        <div class="glance-row"><span class="bang" aria-hidden="true">!</span><div style="display:flex;flex-direction:column;gap:4px"><div class="sr-ct">Ticket volume says nothing, silence says something</div><p class="sr-body sm">Three renewal-window accounts have gone quiet after previously being among the most vocal. A volume-based view of the data would read this as good news.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How the themes connect -->
+  <section class="sr-panel">
+    <div class="sr-head" style="gap:6px"><h2 class="sr-h2">How the themes connect</h2><p class="sr-body">The two most common issues are narrower than they look: one integration, one scheduling condition. That narrowness is useful, it means faster fixes. The real complexity is downstream, in which accounts are asking for more and which have gone quiet.</p></div>
+    <div class="sr-legend">
+      <span class="sr-chip sr-grey">Named theme with evidence below</span>
+      <span class="sr-chip sr-inferred">Inferred pattern across themes</span>
+    </div>
+    <div class="sr-flow sr-flow--tight">
+      <div class="sr-card" style="background:#fff5f4;border-color:#f6d4d0">
+        <span class="sr-eyebrow" style="color:#b3261e">1. What's actually broken</span>
+        <h3 class="sr-ct">Two specific, fixable gaps, not a general reliability problem</h3>
+        <p class="sr-body sm">Scheduling conflicts and invoice mismatches both trace back to a single condition each: running two engagements at once, and using the Xero integration, rather than affecting the platform broadly.</p>
+        <span class="sr-chip sr-grey wrap-ok">Resource scheduling conflicts in multi-team accounts</span>
+        <span class="sr-chip sr-grey wrap-ok">Invoice mismatches on the Xero integration</span>
+        <span class="sr-chip sr-inferred wrap-ok">Concentrated in specific workflows and integrations, not platform-wide</span>
+      </div>
+      <div class="sr-arrow" aria-hidden="true">→</div>
+      <div class="sr-card" style="background:#fffaf1;border-color:#f4e4c4">
+        <span class="sr-eyebrow" style="color:#9a5b0b">2. What clients ask for instead</span>
+        <h3 class="sr-ct">Your most visible accounts are asking for more</h3>
+        <p class="sr-body sm">Requests for clearer invoicing and team-level reporting are concentrated among the accounts you already use as references and case studies.</p>
+        <span class="sr-chip sr-grey wrap-ok">Requests for time and cost breakdown on invoices</span>
+        <span class="sr-chip sr-grey wrap-ok">Multi-team reporting requests from reference accounts</span>
+        <span class="sr-chip sr-inferred wrap-ok">Feature demand concentrated in your most visible accounts</span>
+      </div>
+      <div class="sr-arrow" aria-hidden="true">→</div>
+      <div class="sr-card" style="background:#f5f7f7">
+        <span class="sr-eyebrow" style="color:#3c4b49">3. Where it shows up commercially</span>
+        <h3 class="sr-ct">Silence is doing more damage than complaints</h3>
+        <p class="sr-body sm">The accounts putting your renewal at risk aren't the ones filing tickets, they're the ones who've stopped, right as their renewal window opens.</p>
+        <span class="sr-chip sr-grey wrap-ok">Renewal-window accounts going quiet</span>
+        <span class="sr-chip sr-inferred wrap-ok">Silence lining up with renewal timing rather than resolution</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed themes -->
+  <section class="sr-panel" id="themes">
+    <h2 class="sr-h2">Detailed themes and evidence</h2>
+
+    <details class="theme" id="theme-1" open>
+      <summary>
+        <div class="theme-title"><h3 class="sr-ct">Resource scheduling conflicts in multi-team accounts</h3><span class="toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span></div>
+        <p class="sr-body">Implementation specialists are being double-booked when two active onboarding engagements at the same account overlap. It isn&#x27;t happening everywhere: only accounts running more than one engagement at a time are affected.</p>
+        <div class="sr-chips"><span class="sr-chip sr-red">Root cause</span><span class="sr-chip sr-grey">20 pieces of evidence across 6 of 10 accounts</span><span class="sr-chip sr-grey">33% of evidence</span><span class="sr-chip sr-grey">Jun to Sept 2025</span></div>
+        <div class="informs"><p class="sr-body"><strong>Decision this informs:</strong> Whether the fix belongs in how the calendar handles overlapping engagements specifically, rather than a general scheduling rebuild.</p></div>
+        <span class="theme-hint">Show the evidence</span>
+      </summary>
+      <div class="theme-body">
+        <div>
+          <span class="sr-eyebrow" style="color:#6b7a78">Evidence trail</span>
+          <h4>Why this theme emerged</h4>
+          <div class="sr-ev"><span class="sr-num">01</span><p class="sr-body"><strong>Northlane Analytics:</strong> two specialists double-booked into the same session, right after taking on a second engagement. Still open (RS-2210-JUN, 11 Jun 2025). <span class="sr-src">Support ticket</span></p></div>
+          <div class="sr-ev"><span class="sr-num">02</span><p class="sr-body"><strong>Fernbridge Software:</strong> same double-booking, starting only once they added a second engagement. No issues in the four months before that (RS-2299-JUL, 16 Jul 2025). <span class="sr-src">Support ticket</span></p></div>
+          <div class="sr-ev"><span class="sr-num">03</span><p class="sr-body"><strong>Halcyon Cloud:</strong> same conflict within weeks of starting a second engagement. Follow-up required (RS-2355-AUG, 2 Aug 2025). <span class="sr-src">Support ticket</span></p></div>
+          <div class="sr-ev"><span class="sr-num">04</span><p class="sr-body"><strong>Vantage Systems:</strong> heaviest single-engagement user on the platform, zero scheduling conflicts all period (RS-2401, 1 Sept 2025). <span class="sr-src">Support ticket</span></p></div>
+          <div class="sr-ev last"><span class="sr-num">05</span><p class="sr-body">20 pieces of evidence in total, all from accounts running two or more engagements at once. No single-engagement account reported it.</p></div>
+        </div>
+        <div class="side">
+          <div class="interp"><span class="sr-eyebrow" style="color:#0f625c">Interpretation</span><strong>What this suggests</strong><p class="sr-body sm">This reads like a general reliability problem if you only look at volume, but it&#x27;s actually a specific gap: the calendar doesn&#x27;t handle two active engagements at the same account well. That&#x27;s a smaller, more precise fix than “scheduling is broken”.</p></div>
+          <div class="monitor"><span class="sr-eyebrow" style="color:#a9e3da">Signals to monitor</span><ul><li>Scheduling conflicts, split by accounts running one engagement versus two or more</li><li>Time between an account starting a second concurrent engagement and their first scheduling conflict</li><li>Whether any single-engagement account reports this after the fix ships</li></ul></div>
+        </div>
+      </div>
+    </details>
+
+    <details class="theme" id="theme-2" open>
+      <summary>
+        <div class="theme-title"><h3 class="sr-ct">Invoice mismatches on the Xero integration</h3><span class="toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span></div>
+        <p class="sr-body">Exported invoices don&#x27;t match what lands in clients&#x27; accounting software, but only for the accounts using the Xero integration. None of your QuickBooks accounts have reported it.</p>
+        <div class="sr-chips"><span class="sr-chip sr-red">Root cause</span><span class="sr-chip sr-grey">14 pieces of evidence across 4 of 10 accounts</span><span class="sr-chip sr-grey">23% of evidence</span><span class="sr-chip sr-grey">Jun to Sept 2025</span></div>
+        <div class="informs"><p class="sr-body"><strong>Decision this informs:</strong> Whether this is worth a dedicated Xero export fix rather than a platform-wide invoicing review.</p></div>
+        <span class="theme-hint">Show the evidence</span>
+      </summary>
+      <div class="theme-body">
+        <div>
+          <span class="sr-eyebrow" style="color:#6b7a78">Evidence trail</span>
+          <h4>Why this theme emerged</h4>
+          <div class="sr-ev"><span class="sr-num">01</span><p class="sr-body"><strong>Fernbridge Software:</strong> exported invoices missing line items in Xero. Still open (IV-3102-JUN, 21 Jun 2025). <span class="sr-src">Support ticket</span></p></div>
+          <div class="sr-ev"><span class="sr-num">02</span><p class="sr-body"><strong>Halcyon Cloud:</strong> same missing-line-item issue two months later, also on Xero (IV-3340-AUG, 11 Aug 2025). <span class="sr-src">Support ticket</span></p></div>
+          <div class="sr-ev"><span class="sr-num">03</span><p class="sr-body"><strong>Ridgemont Technologies:</strong> needed a manual reconciliation after Xero totals didn&#x27;t match. Follow-up required (IV-3199-JUL, 27 Jul 2025). <span class="sr-src">Support ticket</span></p></div>
+          <div class="sr-ev"><span class="sr-num">04</span><p class="sr-body"><strong>Ashford Digital:</strong> hit the same bug immediately after switching from QuickBooks to Xero, having had no issues before (IV-3410-AUG, 19 Aug 2025). <span class="sr-src">Support ticket</span></p></div>
+          <div class="sr-ev backlog"><span class="sr-num">05</span><p class="sr-body"><strong>Product backlog:</strong> a fix for the Xero export is already logged (ENG-388, 3 Jul 2025) but is ranked below the general scheduling rebuild. Ashford Digital, one of the four affected accounts, renews this quarter. <span class="sr-src sr-src-p">Backlog item</span></p></div>
+          <div class="sr-ev last"><span class="sr-num">06</span><p class="sr-body">14 pieces of evidence in total, all from the four Xero accounts. None from the six on QuickBooks or manual export.</p></div>
+        </div>
+        <div class="side">
+          <div class="interp"><span class="sr-eyebrow" style="color:#0f625c">Interpretation</span><strong>What this suggests</strong><p class="sr-body sm">This isn&#x27;t a general invoicing reliability issue, it&#x27;s specific to one integration. Ashford Digital switching from QuickBooks to Xero and immediately hitting the same bug the other three already had is about as clear a signal as you&#x27;ll get. The fix already exists as a backlog item, so the decision is about order, not scope.</p></div>
+          <div class="monitor"><span class="sr-eyebrow" style="color:#a9e3da">Signals to monitor</span><ul><li>Invoice mismatch reports, split by accounting integration used</li><li>Whether any account stops reporting this after switching away from Xero</li><li>Time to resolve for the Xero-specific export path</li></ul></div>
+        </div>
+      </div>
+    </details>
+
+    <details class="theme" id="theme-3">
+      <summary>
+        <div class="theme-title"><h3 class="sr-ct">Requests for time and cost breakdown on invoices</h3><span class="toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span></div>
+        <p class="sr-body">Clients want to see time and cost broken down by task on their invoices, rather than a single total per engagement.</p>
+        <div class="sr-chips"><span class="sr-chip sr-amber">Symptom</span><span class="sr-chip sr-grey">11 pieces of evidence across 8 of 10 accounts</span><span class="sr-chip sr-grey">18% of evidence</span><span class="sr-chip sr-grey">Jun to Sept 2025</span></div>
+        <div class="informs"><p class="sr-body"><strong>Decision this informs:</strong> Whether a task-level cost breakdown should be prioritised as a feature, given how consistently it&#x27;s coming up across accounts otherwise unaffected by the two issues above.</p></div>
+        <span class="theme-hint">Show the evidence</span>
+      </summary>
+      <div class="theme-body">
+        <div>
+          <span class="sr-eyebrow" style="color:#6b7a78">Evidence trail</span>
+          <h4>Why this theme emerged</h4>
+          <div class="sr-ev"><span class="sr-num">01</span><p class="sr-body"><strong>Solace Software:</strong> wants invoices broken down by task hours, not one total (CB-3455-JUN, 18 Jun 2025). <span class="sr-src">Support ticket</span></p></div>
+          <div class="sr-ev"><span class="sr-num">02</span><p class="sr-body"><strong>Meridian Cloud:</strong> same ask in a survey response, named it their top improvement (CB-3502-JUL, 22 Jul 2025). <span class="sr-src">Survey response</span></p></div>
+          <div class="sr-ev"><span class="sr-num">03</span><p class="sr-body"><strong>Brightline Technologies:</strong> repeated the request three months later. Still unaddressed (CB-3690-SEP, 5 Sept 2025). <span class="sr-src">Support ticket</span></p></div>
+          <div class="sr-ev"><span class="sr-num">04</span><p class="sr-body"><strong>Larkfield Data:</strong> wants a downloadable breakdown their finance team can file directly (CB-3521-AUG, 14 Aug 2025). <span class="sr-src">Sales call notes</span></p></div>
+          <div class="sr-ev last"><span class="sr-num">05</span><p class="sr-body">11 pieces of evidence across eight accounts, spread evenly regardless of team size or accounting integration.</p></div>
+        </div>
+        <div class="side">
+          <div class="interp"><span class="sr-eyebrow" style="color:#0f625c">Interpretation</span><strong>What this suggests</strong><p class="sr-body sm">Unlike the two issues above, this one isn&#x27;t tied to any particular account setup. It&#x27;s a plain feature gap, not a bug, and it&#x27;s the one most accounts agree on regardless of size or integration.</p></div>
+          <div class="monitor"><span class="sr-eyebrow" style="color:#a9e3da">Signals to monitor</span><ul><li>Number of accounts requesting a task-level cost breakdown</li><li>How often the request repeats from the same account</li><li>Whether demand concentrates in accounts billing multiple task types per engagement</li></ul></div>
+        </div>
+      </div>
+    </details>
+
+    <details class="theme" id="theme-4">
+      <summary>
+        <div class="theme-title"><h3 class="sr-ct">Multi-team reporting requests from reference accounts</h3><span class="toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span></div>
+        <p class="sr-body">Clients running more than one team on the platform want performance reported by team rather than as one combined view. All five accounts asking for this are also ones you use as references in sales conversations.</p>
+        <div class="sr-chips"><span class="sr-chip sr-amber">Symptom</span><span class="sr-chip sr-grey">9 pieces of evidence across 5 of 10 accounts</span><span class="sr-chip sr-grey">15% of evidence</span><span class="sr-chip sr-grey">Jun to Sept 2025</span></div>
+        <div class="informs"><p class="sr-body"><strong>Decision this informs:</strong> Whether to prioritise team-level reporting given that the accounts asking are also the ones prospects hear from directly.</p></div>
+        <span class="theme-hint">Show the evidence</span>
+      </summary>
+      <div class="theme-body">
+        <div>
+          <span class="sr-eyebrow" style="color:#6b7a78">Evidence trail</span>
+          <h4>Why this theme emerged</h4>
+          <div class="sr-ev"><span class="sr-num">01</span><p class="sr-body"><strong>Vantage Systems:</strong> wants reports split by team, not combined (MT-3711-JUN, 25 Jun 2025). <span class="sr-src">Support ticket</span></p></div>
+          <div class="sr-ev"><span class="sr-num">02</span><p class="sr-body"><strong>Ridgemont Technologies:</strong> same team-split request on a call. Follow-up required (MT-3788-JUL, 30 Jul 2025). <span class="sr-src">Sales call notes</span></p></div>
+          <div class="sr-ev"><span class="sr-num">03</span><p class="sr-body"><strong>Meridian Cloud:</strong> named this their top improvement, and they&#x27;re quoted in your Q2 case study (MT-3820-AUG, 19 Aug 2025). <span class="sr-src">Survey response</span></p></div>
+          <div class="sr-ev"><span class="sr-num">04</span><p class="sr-body"><strong>Brightline Technologies and Larkfield Data:</strong> raised it independently, and both are used in reference calls this quarter (MT-3830-AUG, 25 Aug 2025). <span class="sr-src">Sales call notes</span></p></div>
+          <div class="sr-ev last"><span class="sr-num">05</span><p class="sr-body">9 pieces of evidence in total, from exactly the five accounts your sales team uses as references. No others.</p></div>
+        </div>
+        <div class="side">
+          <div class="interp"><span class="sr-eyebrow" style="color:#0f625c">Interpretation</span><strong>What this suggests</strong><p class="sr-body sm">This isn&#x27;t just a feature request, it&#x27;s coming from the accounts doing your selling for you. If their experience of the platform doesn&#x27;t keep up, the cost isn&#x27;t only their renewal, it&#x27;s what they say on the next reference call.</p></div>
+          <div class="monitor"><span class="sr-eyebrow" style="color:#a9e3da">Signals to monitor</span><ul><li>Overlap between accounts requesting this and accounts used as references or in case studies</li><li>Volume of requests per month from this specific group</li><li>Whether any reference account raises the request twice without a response</li></ul></div>
+        </div>
+      </div>
+    </details>
+
+    <details class="theme" id="theme-5">
+      <summary>
+        <div class="theme-title"><h3 class="sr-ct">Renewal-window accounts going quiet</h3><span class="toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span></div>
+        <p class="sr-body">Three accounts that used to raise several tickets a month have logged nothing in the last six weeks, and all three renew within the current quarter.</p>
+        <div class="sr-chips"><span class="sr-chip sr-red">Consequence</span><span class="sr-chip sr-grey">4 pieces of evidence · 3 accounts flagged</span><span class="sr-chip sr-grey">Renewal window: next 90 days</span><span class="sr-chip sr-grey">Last activity: early Aug 2025</span></div>
+        <div class="informs"><p class="sr-body"><strong>Decision this informs:</strong> Whether the drop in tickets from these three accounts should be read as resolution or as a reason to check in before their renewal date.</p></div>
+        <span class="theme-hint">Show the evidence</span>
+      </summary>
+      <div class="theme-body">
+        <div>
+          <span class="sr-eyebrow" style="color:#6b7a78">Evidence trail</span>
+          <h4>Why this theme emerged</h4>
+          <div class="sr-ev"><span class="sr-num">01</span><p class="sr-body"><strong>Solace Software:</strong> six tickets a month through July, then none since early August. Renews in eight weeks. <span class="sr-src">Support ticket</span></p></div>
+          <div class="sr-ev"><span class="sr-num">02</span><p class="sr-body"><strong>Ashford Digital:</strong> dropped from four tickets a month to zero over the same window, despite being one of the more vocal accounts on invoicing. <span class="sr-src">Support ticket</span></p></div>
+          <div class="sr-ev"><span class="sr-num">03</span><p class="sr-body"><strong>Brightline Technologies:</strong> mentioned “reviewing other options” on a check-in call. No follow-up was logged (RC-4102-AUG, 14 Aug 2025). <span class="sr-src">Sales call notes</span></p></div>
+          <div class="sr-ev last"><span class="sr-num">04</span><p class="sr-body">All three: no open ticket, survey response or call in six weeks, despite renewing this quarter.</p></div>
+        </div>
+        <div class="side">
+          <div class="interp"><span class="sr-eyebrow" style="color:#0f625c">Interpretation</span><strong>What this suggests</strong><p class="sr-body sm">Ticket volume dropping to zero usually gets read as good news. Here it lines up with renewal dates and, in one case, a comment about reviewing alternatives. That combination is worth a direct conversation, not a tally mark in the resolved column.</p></div>
+          <div class="monitor"><span class="sr-eyebrow" style="color:#a9e3da">Signals to monitor</span><ul><li>Ticket and call volume per account in the eight weeks before their renewal date</li><li>Any account whose volume drops to zero without a corresponding fix being shipped</li><li>Whether a check-in call happens with each of these three accounts before their renewal date</li></ul></div>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- Closing call to action -->
+  <section class="closing">
+    <div class="tex" aria-hidden="true"></div>
+    <h2>Want this for your own data?</h2>
+    <p>Every finding links back to the evidence behind it, so you can see the reasoning instead of just trusting the answer. You stay the one deciding what happens next.</p>
+    <a class="pill-btn pill-btn--teal" href="https://intuifi.io/#early-access" data-gc="closing-cta">Request a free report</a>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span class="logo" role="img" aria-label="Intuifi"></span>
+    <span>© 2026 Intuifi</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* Opening a theme from the "At a glance" list */
+  function openFromHash(){
+    var el = location.hash && document.querySelector(location.hash);
+    if (el && el.tagName === 'DETAILS') el.open = true;
+  }
+  window.addEventListener('hashchange', openFromHash);
+  openFromHash();
+
+  /* Print every theme, then restore what was open */
+  var was = [];
+  window.addEventListener('beforeprint', function(){
+    was = [];
+    document.querySelectorAll('details.theme').forEach(function(d){ was.push(d.open); d.open = true; });
+  });
+  window.addEventListener('afterprint', function(){
+    document.querySelectorAll('details.theme').forEach(function(d, i){ if (was.length) d.open = was[i]; });
+  });
+
+  /* GoatCounter events */
+  function count(path, title){ if (window.goatcounter && goatcounter.count) goatcounter.count({ path: location.pathname + path, title: title }); }
+  document.querySelectorAll('[data-gc]').forEach(function(a){
+    a.addEventListener('click', function(){ count('#' + a.getAttribute('data-gc'), 'Sample report: ' + a.getAttribute('data-gc')); });
+  });
+  var pdf = document.querySelector('.pdf-btn');
+  if (pdf) pdf.addEventListener('click', function(){ count('#save-pdf', 'Sample report: Save as PDF'); });
+})();
+</script>
+<script data-goatcounter="https://intuifi.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<noscript><img src="https://intuifi.goatcounter.com/count?p=/sample-report" alt="" referrerpolicy="no-referrer-when-downgrade"></noscript>
 </body>
 </html>
