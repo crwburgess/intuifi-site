@@ -512,6 +512,7 @@ html{scroll-padding-top:var(--hh)}
   .request-grid{grid-template-columns:1fr}
   .req-card,.ex-card{padding:28px 22px;border-radius:22px}
   .req-card h3,.ex-card h3{font-size:26px}
+  .req-title{display:none}
 }
 @media(max-width:600px){
   .req-form{flex-direction:column}
@@ -1143,11 +1144,11 @@ html{scroll-padding-top:var(--hh)}
 <div style="display: flex; flex-direction: column">
         <div class="hiw-s" style="height: 200px; display: flex; flex-direction: column; justify-content: center; gap: 12px">
           <div style="display: flex; align-items: center; gap: 16px"><span style="height: 40px; min-width: 52px; border-radius: 999px; background: #e1f3f0; color: #12635c; font-size: 17px; font-weight: 700; display: flex; align-items: center; justify-content: center">01</span><h3 style="margin: 0; font-size: 24px; font-weight: 700; line-height: 1.25; letter-spacing: -.01em; white-space: normal">Send a sample of your data</h3></div>
-          <p class="body" style="font-size: 18px; padding-left: 68px">A few months from the tools you already use. Nothing to set up.</p>
+          <p class="body" style="font-size: 18px; padding-left: 68px">Start with a few months from one tool you already use.</p>
         </div>
         <div class="hiw-s" style="height: 200px; display: flex; flex-direction: column; justify-content: center; gap: 12px">
-          <div style="display: flex; align-items: center; gap: 16px"><span style="height: 40px; min-width: 52px; border-radius: 999px; background: #e1f3f0; color: #12635c; font-size: 17px; font-weight: 700; display: flex; align-items: center; justify-content: center">02</span><h3 style="margin: 0; font-size: 24px; font-weight: 700; line-height: 1.25; letter-spacing: -.01em; white-space: normal">Every team's inputs in one place</h3></div>
-          <p class="body" style="font-size: 18px; padding-left: 68px">Tickets, sales notes and backlog, linked back to their source.</p>
+          <div style="display: flex; align-items: center; gap: 16px"><span style="height: 40px; min-width: 52px; border-radius: 999px; background: #e1f3f0; color: #12635c; font-size: 17px; font-weight: 700; display: flex; align-items: center; justify-content: center">02</span><h3 style="margin: 0; font-size: 24px; font-weight: 700; line-height: 1.25; letter-spacing: -.01em; white-space: normal">Add more sources over time</h3></div>
+          <p class="body" style="font-size: 18px; padding-left: 68px">Tickets, sales notes and backlog join the same picture, each linked back to its source.</p>
         </div>
         <div class="hiw-s" style="height: 200px; display: flex; flex-direction: column; justify-content: center; gap: 12px">
           <div style="display: flex; align-items: center; gap: 16px"><span style="height: 40px; min-width: 52px; border-radius: 999px; background: #e1f3f0; color: #12635c; font-size: 17px; font-weight: 700; display: flex; align-items: center; justify-content: center">03</span><h3 style="margin: 0; font-size: 24px; font-weight: 700; line-height: 1.25; letter-spacing: -.01em; white-space: normal">Everyone sees the same picture</h3></div>
@@ -1173,12 +1174,12 @@ html{scroll-padding-top:var(--hh)}
       <div style="display: flex; flex-direction: column">
       <div style="display: flex; gap: 12px">
         <div style="display: flex; flex-direction: column; align-items: center"><span style="height: 32px; min-width: 44px; border-radius: 999px; background: #e1f3f0; color: #12635c; font-size: 15px; font-weight: 700; display: flex; align-items: center; justify-content: center">01</span><span style="flex: 1; width: 1.5px; background: #c5d3d1; margin-top: 6px"></span></div>
-        <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px; padding: 3px 0 28px"><h3 style="margin: 0; font-size: 19px; font-weight: 700; line-height: 1.3">Send a sample of your data</h3><p class="body-s">A few months from the tools you already use. Nothing to set up.</p></div>
-        <div style="display: flex; align-items: center; padding-bottom: 28px"><div style="width: 52px; min-width: 52px; box-sizing: border-box; background: #ffffff; border: 1px solid #e3e9e8; border-radius: 12px; display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 10px 0"><span class="tool-logo" style="background: #ff7a59; width: 26px; height: 26px; font-size: 12px; border-radius: 7px">H</span><span class="tool-logo" style="background: #17494d; width: 26px; height: 26px; font-size: 12px; border-radius: 7px">Z</span><span class="tool-logo" style="background: #24292f; width: 26px; height: 26px; font-size: 12px; border-radius: 7px">G</span></div></div>
+        <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px; padding: 3px 0 28px"><h3 style="margin: 0; font-size: 19px; font-weight: 700; line-height: 1.3">Send a sample of your data</h3><p class="body-s">Start with a few months from one tool you already use.</p></div>
+        <div style="display: flex; align-items: center; padding-bottom: 28px"><span style="width: 52px; height: 52px; box-sizing: border-box; background: #ffffff; border: 1px solid #e3e9e8; border-radius: 12px; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#12635c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M8 13h2"></path><path d="M14 13h2"></path><path d="M8 17h2"></path><path d="M14 17h2"></path></svg></span></div>
       </div>
       <div style="display: flex; gap: 12px">
         <div style="display: flex; flex-direction: column; align-items: center"><span style="height: 32px; min-width: 44px; border-radius: 999px; background: #e1f3f0; color: #12635c; font-size: 15px; font-weight: 700; display: flex; align-items: center; justify-content: center">02</span><span style="flex: 1; width: 1.5px; background: #c5d3d1; margin-top: 6px"></span></div>
-        <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px; padding: 3px 0 28px"><h3 style="margin: 0; font-size: 19px; font-weight: 700; line-height: 1.3">Every team's inputs in one place</h3><p class="body-s">Tickets, sales notes and backlog, linked back to their source.</p></div>
+        <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px; padding: 3px 0 28px"><h3 style="margin: 0; font-size: 19px; font-weight: 700; line-height: 1.3">Add more sources over time</h3><p class="body-s">Tickets, sales notes and backlog join the same picture, each linked back to its source.</p></div>
         <div style="display: flex; align-items: center; padding-bottom: 28px"><span style="width: 52px; height: 52px; box-sizing: border-box; background: #ffffff; border: 1.5px solid #12635c; border-radius: 12px; display: flex; align-items: center; justify-content: center"><svg width="18" height="31" viewBox="0 0 60 104" fill="none" aria-label="Intuifi"><path d="M29 20 44 29M45 40 27 50" stroke="#8fb5b0" stroke-width="3" stroke-linecap="round"></path><circle cx="22" cy="14" r="9" stroke="#8fb5b0" stroke-width="3.5"></circle><circle cx="50" cy="34" r="7" stroke="#8fb5b0" stroke-width="3.5"></circle><circle cx="22" cy="54" r="5" stroke="#8fb5b0" stroke-width="3.5"></circle><rect x="18.5" y="64" width="7" height="36" rx="1" fill="#12635c"></rect></svg></span></div>
       </div>
       <div style="display: flex; gap: 12px">
@@ -1197,13 +1198,13 @@ html{scroll-padding-top:var(--hh)}
 <section class="request" id="request">
   <div class="tex tex-light"></div>
   <div class="wrap">
-    <h2 class="h2">Planning next quarter? Start with what your data says.</h2>
+    <h2 class="h2">Planning next quarter?<br>Start with what your data says.</h2>
     <div class="request-grid">
       <div class="req-card" id="cta-band">
         <div class="req-default">
           <div style="display:flex;flex-direction:column;gap:18px">
-            <h3>Get your own report</h3>
-            <p>A few months of data is enough to start. I'll send you a short note to forward to whoever does the export, and I check every report myself, so it usually comes back within a day or two.</p>
+            <h3 class="req-title">Get your own report</h3>
+            <p>Once I get your request, I'll send you a short note to forward to whoever does the export. A few months of data is enough to start. I run every report myself, so you'll have yours within a day or two.</p>
             <form id="early-access" class="req-form" onsubmit="return submitEmail(event)" novalidate>
               <label for="email" class="sr-only">Work email</label>
               <input id="email" type="email" name="email" inputmode="email" autocomplete="email" placeholder="Work email" required>
