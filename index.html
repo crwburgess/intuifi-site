@@ -1661,7 +1661,7 @@ if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitAll);
       if (!input.checkValidity() || !email) { input.reportValidity(); return; }
       nf.querySelector('button[type=submit]').disabled = true;
       try {
-        fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: email, assistant: assistant, ref: 'TEST from preview file, full-version' }) });
+        fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: email, assistant: assistant, ref: 'full-version ' + (document.referrer || '') }) });
         nf.hidden = true; nf.style.display = 'none'; el('notify-done').hidden = false;
         if (window.goatcounter && goatcounter.count) goatcounter.count({ path: '/#notify-submitted', title: 'Full version: tell me when ready', event: true });
       } catch (err) {
@@ -1715,7 +1715,6 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 </script>
 
-<script>window.goatcounter={allow_local:true,path:function(){return '/preview-test'}};</script>
 <script data-goatcounter="https://intuifi.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <noscript><img src="https://intuifi.goatcounter.com/count?p=/" alt="" referrerpolicy="no-referrer-when-downgrade"></noscript>
 
