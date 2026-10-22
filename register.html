@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Intuifi | Register interest</title>
+<meta name="description" content="Register interest in the next version of Intuifi, which shows what is changing from one report to the next.">
+<link rel="icon" type="image/png" href="https://intuifi.io/assets/intuifi-icon.png">
+<link rel="apple-touch-icon" href="https://intuifi.io/assets/intuifi-icon.png">
+<meta name="theme-color" content="#0b3b37">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0f2e2a;--ink-mid:#4b5b58;--brand:#12635c;--brand-dark:#0b3b37;--teal:#2bb3a3;--teal-light:#e1f3f0;--line:#e3e9e8;--bg-grey:#f6f8f7;--pad:clamp(20px,7.5vw,96px)}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--bg-grey);line-height:1.5;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--brand)}
+.wrap{max-width:1280px;margin:0 auto;padding-left:var(--pad);padding-right:var(--pad);width:100%}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.sr-only{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+.hp{position:absolute;left:-9999px;opacity:0}
+.site-header{background:var(--brand-dark)}
+.site-header .wrap{height:84px;display:flex;align-items:center}
+.site-header img{height:41px;width:auto;display:block}
+main{flex:1;padding:96px 0}
+.card{max-width:720px;background:#fff;border:1px solid var(--line);border-radius:24px;padding:48px;display:flex;flex-direction:column;gap:18px}
+.eyebrow{margin:0;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brand)}
+h1{margin:0;font-size:clamp(30px,4vw,42px);line-height:1.1;letter-spacing:-.02em}
+p{margin:0;font-size:17px;line-height:1.6;color:var(--ink-mid)}
+.small{font-size:14px}
+.pill-btn{display:inline-flex;align-items:center;justify-content:center;height:54px;padding:0 26px;border-radius:999px;font-size:16px;font-weight:700;text-decoration:none;border:0;font-family:inherit;cursor:pointer;background:var(--teal);color:#06221f;align-self:flex-start}
+.pill-btn[disabled]{opacity:.7;cursor:default}
+.form{display:flex;gap:10px;margin-top:6px}
+.form input[type=email]{flex:1;min-width:0;height:54px;border:1px solid var(--line);border-radius:999px;padding:0 22px;font-size:16px;font-family:inherit;color:var(--ink)}
+.done{display:none;flex-direction:column;gap:10px}
+.card.is-done .form,.card.is-done .before{display:none}
+.card.is-done .done{display:flex}
+.site-footer{background:var(--brand-dark)}
+.site-footer .wrap{padding-top:28px;padding-bottom:28px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;font-size:14px;color:#a9cfc9}
+@media(max-width:640px){main{padding:48px 0}.card{padding:28px 22px;border-radius:22px}.form{flex-direction:column}.form input[type=email],.form .pill-btn{width:100%;align-self:stretch}.site-header .wrap{height:64px}.site-header img{height:32px}}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap"><a href="/" aria-label="Intuifi home"><img src="/assets/logo.svg" alt="Intuifi"></a></div></header>
+<main><div class="wrap">
+<div class="card" id="card">
+  <p class="eyebrow">Coming next</p>
+  <h1>See what is changing, not just what is there</h1>
+  <p class="before">The free version of Intuifi gives you a snapshot. The next version will keep a history, so each report can show what is new, what is growing and what has gone quiet since the last one.</p>
+  <p class="before">If that would be useful, leave your email and I'll let you know when it is ready.</p>
+  <form class="form" id="register-form" novalidate>
+    <label for="email" class="sr-only">Work email</label>
+    <input id="email" type="email" name="email" inputmode="email" autocomplete="email" placeholder="Work email" required>
+    <button type="submit" class="pill-btn">Register interest</button>
+    <input type="text" name="company" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+  </form>
+  <p class="small before">I'll only use your email to tell you about this. Chris Burgess, founder of Intuifi.</p>
+  <div class="done" role="status">
+    <p><strong style="color:var(--ink)">Thanks, you're on the list.</strong> I'll be in touch when it is ready.</p>
+    <a class="pill-btn" href="/">Back to intuifi.io</a>
+  </div>
+</div>
+</div></main>
+<footer class="site-footer"><div class="wrap"><span>© 2026 Intuifi</span><span>Intuifi is independent and not affiliated with Anthropic, OpenAI or Microsoft.</span></div></footer>
+<script>
+(function(){
+  var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxnV5Hm28fhpJlWedXuU7JdXDsrI4wLOC1zkXOI3Tj0o3s-bkkKR1tgPuwbfGPPNF92ww/exec';
+  var form = document.getElementById('register-form');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var input = form.email, email = input.value.trim();
+    if (form.company.value) return;
+    if (!input.checkValidity() || !email) { input.reportValidity(); return; }
+    form.querySelector('button').disabled = true;
+    try {
+      fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: email, ref: 'register-interest ' + (location.search || '') + ' ' + (document.referrer || '') }) });
+      document.getElementById('card').classList.add('is-done');
+      if (window.goatcounter && goatcounter.count) goatcounter.count({ path: '/register#submitted', title: 'Register interest: submitted', event: true });
+    } catch (err) {
+      form.innerHTML = '<p>Something went wrong. Please email info@crwburgess.com.</p>';
+    }
+  });
+})();
+</script>
+<script data-goatcounter="https://intuifi.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<noscript><img src="https://intuifi.goatcounter.com/count?p=/register" alt="" referrerpolicy="no-referrer-when-downgrade"></noscript>
+</body>
+</html>
