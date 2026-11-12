@@ -493,9 +493,9 @@ html{scroll-padding-top:var(--hh)}
 .fsnap-top span:last-child{color:#8fbfb8;letter-spacing:.04em;text-transform:none;font-weight:500;font-size:12px}
 .fsnap-block{display:flex;flex-direction:column;gap:6px}
 .fsnap-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#8fbfb8}
-.fsnap-head{margin:0;font-size:17px;line-height:1.5;font-weight:500;color:#fff}
+.fsnap-head{margin:0;font-size:20px;font-weight:600;line-height:1.5;font-weight:500;color:#fff}
 .fsnap-table{background:#fff;border-radius:12px;overflow:hidden;color:var(--ink)}
-.fsnap-tr{display:grid;grid-template-columns:minmax(0,1fr) 84px 56px 56px;gap:12px;align-items:center;padding:11px 14px;border-top:1px solid var(--line);font-size:13px}
+.fsnap-tr{display:grid;grid-template-columns:minmax(0,1fr) 56px 72px;gap:12px;align-items:center;padding:11px 14px;border-top:1px solid var(--line);font-size:13px}
 .fsnap-tr span:not(:first-child){color:var(--ink-mid);text-align:right}
 .fsnap-tr span:first-child{display:flex;align-items:center;gap:8px;min-width:0}
 .fsnap-tr b{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -507,9 +507,10 @@ html{scroll-padding-top:var(--hh)}
 .fsnap-q em{font-size:14px;line-height:1.45;color:#fff}
 .fsnap-q span{font-size:11px;color:#8fbfb8}
 .fsnap-q b{color:var(--teal);font-weight:600}
+.fsnap-ev{color:var(--brand) !important;font-weight:600}
 .fsnap-check{margin:0;background:#fdf0dc;color:#5c3a08;border-radius:10px;padding:10px 14px;font-size:13px;line-height:1.5}
 .fsnap-check b{color:#9a5b0b}
-@media(max-width:600px){.fsnap-quotes{grid-template-columns:1fr}.fsnap-tr{grid-template-columns:minmax(0,1fr) 40px 44px;}.fsnap-tr span:nth-child(2){display:none}.fsnap-tr span:first-child{flex-wrap:wrap}}
+@media(max-width:600px){.fsnap-quotes{grid-template-columns:1fr}.fsnap-tr{grid-template-columns:minmax(0,1fr) 40px 52px;}.fsnap-tr span:first-child{flex-wrap:wrap}}
 .fit-then{margin:0;font-size:19px;line-height:1.5;font-weight:700;color:var(--brand-dark)}
 .fit-not{margin:0;font-size:14px;line-height:1.6;color:var(--muted)}
 @media(min-width:1060px){.fit-then{white-space:nowrap}}
@@ -860,22 +861,15 @@ html{scroll-padding-top:var(--hh)}
       </li>
     </ul>
     <div class="fit-foot">
-      <div class="fsnap" aria-label="Example Intuifi snapshot showing a headline, two themes with counts, quotes and one thing to check">
+      <div class="fsnap" aria-label="Example Intuifi snapshot: the two largest themes, both first seen in March, and one thing to check">
         <div class="fsnap-top"><span>Intuifi snapshot</span><span>Example</span></div>
-        <div class="fsnap-block">
-          <span class="fsnap-label">The headline</span>
-          <p class="fsnap-head">Slow setup (31 items) and price objections (23 items) are the two largest themes, and both were first seen in March. One appears in Support tickets, the other in Sales call notes.</p>
-        </div>
+        <p class="fsnap-head">The two largest themes, both first seen in March.</p>
         <div class="fsnap-table" role="table">
-          <div class="fsnap-tr fsnap-th" role="row"><span role="columnheader">Theme</span><span role="columnheader">Kind</span><span role="columnheader">Items</span><span role="columnheader">Share</span></div>
-          <div class="fsnap-tr" role="row"><span role="cell"><b>Setup taking too long</b><i class="fv-tag fsnap-dept">Support</i></span><span role="cell">Problem</span><span role="cell">31</span><span role="cell">21%</span></div>
-          <div class="fsnap-tr" role="row"><span role="cell"><b>Price objections</b><i class="fv-tag fsnap-dept">Sales</i></span><span role="cell">Problem</span><span role="cell">23</span><span role="cell">15%</span></div>
+          <div class="fsnap-tr fsnap-th" role="row"><span role="columnheader">Theme</span><span role="columnheader">Items</span><span role="columnheader">Evidence</span></div>
+          <div class="fsnap-tr" role="row"><span role="cell"><b>Setup taking too long</b><i class="fv-tag fsnap-dept">Support</i></span><span role="cell">31</span><span role="cell" class="fsnap-ev">View</span></div>
+          <div class="fsnap-tr" role="row"><span role="cell"><b>Price objections</b><i class="fv-tag fsnap-dept">Sales</i></span><span role="cell">23</span><span role="cell" class="fsnap-ev">View</span></div>
         </div>
-        <div class="fsnap-quotes">
-          <div class="fsnap-q"><em>"Still not live after three weeks."</em><span>Operations lead, mid-size customer · <b>Source</b></span></div>
-          <div class="fsnap-q"><em>"Lost on price, budget too tight."</em><span>Account executive, call note · <b>Source</b></span></div>
-        </div>
-        <p class="fsnap-check"><b>One thing to check:</b> the onboarding guide says setup takes a day, while Support tickets describe it taking weeks.</p>
+        <p class="fsnap-check"><b>One thing to check:</b> the onboarding guide says setup takes a day. Support tickets say weeks.</p>
       </div>
       <p class="fit-then">Intuifi shows what keeps coming up across all of it, how often, and the evidence behind it.</p>
       <p class="fit-not">Less useful if everyone already sees everything, or you have a dedicated product operations team.</p>
