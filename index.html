@@ -461,15 +461,32 @@ html{scroll-padding-top:var(--hh)}
 .hero-proof a{color:#cfe7e2}
 .hero-proof a:hover{color:#fff}
 .fit{background:#fff;padding:104px 0}
-.fit-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:64px;align-items:start}
-.fit-head{display:flex;flex-direction:column;gap:20px}
-.fit-head .body{font-size:18px}
-.fit-list{list-style:none;margin:0;padding:0;display:grid;gap:12px}
-.fit-list li{display:flex;gap:14px;align-items:flex-start;background:var(--bg-grey);border:1px solid var(--line);border-radius:14px;padding:18px 20px;font-size:17px;line-height:1.45;font-weight:500;color:var(--ink)}
-.fit-list li::before{content:"";flex:0 0 10px;height:10px;margin-top:8px;border-radius:50%;background:var(--teal)}
-.fit-then{margin:28px 0 0;font-size:18px;line-height:1.6;font-weight:700;color:var(--brand-dark)}
-.fit-not{margin:12px 0 0;font-size:15px;line-height:1.6;color:var(--muted)}
-@media(max-width:900px){.fit{padding:72px 0}.fit-grid{grid-template-columns:1fr;gap:32px}}
+.fit-head{display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px;max-width:760px;margin:0 auto}
+.fit-head .body{font-size:18px;max-width:600px}
+.fit-cards{list-style:none;margin:56px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.fit-card{display:flex;flex-direction:column;background:var(--bg-grey);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.fit-viz{height:168px;padding:20px;display:flex;flex-direction:column;justify-content:center;gap:8px;font-size:12px;line-height:1.35;color:var(--ink)}
+.fit-cap{margin:0;padding:18px 20px 22px;border-top:1px solid var(--line);background:#fff;font-size:16px;line-height:1.45;font-weight:600;color:var(--ink);flex:1}
+.fv-row{display:flex;align-items:center;gap:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;background:#fff;border:1px solid var(--line);border-radius:10px;padding:7px 10px}
+.fv-tag{flex:0 0 auto;font-size:10px;font-weight:700;letter-spacing:.04em;border-radius:999px;padding:3px 8px;background:var(--teal-light);color:var(--brand)}
+.fv-tag--warn{background:#fdf0dc;color:#9a5b0b}
+.fv-tag--risk{background:#fbe4e1;color:#a8322a}
+.fv-bar{height:6px;border-radius:3px;background:#dfe7e5;flex:1}
+.fv-dim{opacity:.55}
+.fv-big{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 8px;white-space:nowrap}
+.fv-big strong{font-size:34px;line-height:1;font-weight:700;letter-spacing:-.02em;color:var(--brand-dark)}
+.fv-time{position:relative;display:flex;flex-direction:column;gap:14px;padding-left:22px}
+.fv-time::before{content:"";position:absolute;left:5px;top:6px;bottom:6px;width:2px;background:repeating-linear-gradient(to bottom,#b9c7c4 0 4px,transparent 4px 8px)}
+.fv-time div{position:relative;display:flex;flex-direction:column;gap:2px}
+.fv-time div::before{content:"";position:absolute;left:-22px;top:3px;width:12px;height:12px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 3px var(--bg-grey)}
+.fv-time div.late::before{background:#d9463b}
+.fv-time span{color:var(--muted);font-size:11px}
+.fit-foot{margin:44px auto 0;max-width:680px;text-align:center;display:flex;flex-direction:column;gap:10px}
+.fit-then{margin:0;font-size:19px;line-height:1.5;font-weight:700;color:var(--brand-dark)}
+.fit-not{margin:0;font-size:14px;line-height:1.6;color:var(--muted)}
+@media(max-width:1100px){.fit-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:900px){.fit{padding:72px 0}.fit-cards{margin-top:40px}}
+@media(max-width:560px){.fit-cards{grid-template-columns:1fr}}
 .request{position:relative;isolation:isolate;overflow:hidden;background:var(--bg-grey);padding:112px 0}
 .request .tex{-webkit-mask-image:linear-gradient(to bottom,#000 45%,transparent 100%);mask-image:linear-gradient(to bottom,#000 45%,transparent 100%)}
 .try{display:flex;flex-direction:column;gap:40px}
@@ -769,21 +786,52 @@ html{scroll-padding-top:var(--hh)}
 
 <!-- ============ FIT ============ -->
 <section class="fit" id="fit" aria-labelledby="fit-title">
-  <div class="wrap fit-grid">
+  <div class="wrap">
     <div class="fit-head">
       <p class="eyebrow">Who it's for</p>
       <h2 class="h2" id="fit-title">For businesses that have outgrown working as one team.</h2>
-      <p class="body">Most are growing companies where Sales, Support, Product and Engineering have recently become separate teams, each with its own tools. Nobody is doing anything wrong. When a business splits into teams, no one sees the whole picture any more, and decisions start to rest on whatever reaches the room.</p>
+      <p class="body">Splitting into teams is a normal stage of growth. Seeing the whole picture gets harder, and it tends to show up like this.</p>
     </div>
-    <div>
-      <ul class="fit-list">
-        <li>Sales, Support and Product each tell you something different about customers.</li>
-        <li>The backlog has grown faster than anyone can read it.</li>
-        <li>Priorities follow whoever asked last, or loudest.</li>
-        <li>Leadership hears about problems later than it used to.</li>
-      </ul>
-      <p class="fit-then">Intuifi shows what keeps coming up across all of it, how often, and the evidence behind each theme.</p>
-      <p class="fit-not">Less useful if you're small enough that everyone already sees everything, or you already have a dedicated product operations team.</p>
+    <ul class="fit-cards">
+      <li class="fit-card">
+        <div class="fit-viz" aria-hidden="true">
+          <div class="fv-row"><span class="fv-tag">Sales</span>Losing on price</div>
+          <div class="fv-row"><span class="fv-tag">Product</span>Wants integrations</div>
+          <div class="fv-row"><span class="fv-tag">Support</span>Onboarding too slow</div>
+        </div>
+        <p class="fit-cap">Sales, Support and Product each have a different story about customers.</p>
+      </li>
+      <li class="fit-card">
+        <div class="fit-viz" aria-hidden="true">
+          <div class="fv-big"><strong>412</strong><span>open tickets</span><span class="fv-tag fv-tag--warn" style="margin-left:auto">+38 this month</span></div>
+          <div class="fv-row"><span class="fv-bar"></span></div>
+          <div class="fv-row fv-dim"><span class="fv-bar" style="max-width:70%"></span></div>
+          <div class="fv-row fv-dim" style="opacity:.3"><span class="fv-bar" style="max-width:85%"></span></div>
+        </div>
+        <p class="fit-cap">The backlog has grown faster than anyone can read it.</p>
+      </li>
+      <li class="fit-card">
+        <div class="fit-viz" aria-hidden="true">
+          <div class="fv-row"><span class="fv-tag fv-tag--warn">Urgent · Sales</span>Custom export</div>
+          <div class="fv-row fv-dim"><span class="fv-bar" style="max-width:60%"></span></div>
+          <div class="fv-row fv-dim"><span class="fv-bar" style="max-width:45%"></span></div>
+          <div class="fv-row"><span class="fv-tag">46 customers</span>Onboarding</div>
+        </div>
+        <p class="fit-cap">Priorities follow whoever asked last, or loudest.</p>
+      </li>
+      <li class="fit-card">
+        <div class="fit-viz" aria-hidden="true">
+          <div class="fv-time">
+            <div><strong>Customer first raises it</strong><span>March</span></div>
+            <div class="late"><strong>Leadership hears about it</strong><span>June</span></div>
+          </div>
+        </div>
+        <p class="fit-cap">Problems reach leadership later than they used to.</p>
+      </li>
+    </ul>
+    <div class="fit-foot">
+      <p class="fit-then">Intuifi shows what keeps coming up across all of it, how often, and the evidence behind it.</p>
+      <p class="fit-not">Less useful if everyone already sees everything, or you have a dedicated product operations team.</p>
     </div>
   </div>
 </section>
