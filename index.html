@@ -481,7 +481,22 @@ html{scroll-padding-top:var(--hh)}
 .fv-time div::before{content:"";position:absolute;left:-22px;top:3px;width:12px;height:12px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 3px var(--bg-grey)}
 .fv-time div.late::before{background:#d9463b}
 .fv-time span{color:var(--muted);font-size:11px}
-.fit-foot{margin:44px auto 0;max-width:none;text-align:center;display:flex;flex-direction:column;gap:10px}
+.fit-foot{margin:64px auto 0;max-width:none;text-align:center;display:flex;flex-direction:column;align-items:center;gap:24px}
+.fit-then{position:relative;padding-top:40px}
+.fit-then::before{content:"";position:absolute;left:50%;top:0;width:2px;height:24px;margin-left:-1px;background:linear-gradient(var(--line),var(--teal))}
+.snap{width:100%;max-width:640px;text-align:left;background:#fff;border:1px solid var(--line);border-top:3px solid var(--teal);border-radius:16px;box-shadow:0 20px 44px rgba(3,24,21,.10);padding:20px 22px;display:flex;flex-direction:column;gap:14px;font-size:13px;color:var(--ink)}
+.snap-top{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brand)}
+.snap-top span:last-child{color:var(--muted);letter-spacing:.04em;text-transform:none;font-weight:500;font-size:12px}
+.snap-theme{display:flex;align-items:flex-start;gap:12px}
+.snap-rank{flex:0 0 28px;height:28px;border-radius:8px;background:var(--teal-light);color:var(--brand);font-weight:700;display:flex;align-items:center;justify-content:center}
+.snap-theme h3{margin:0 0 6px;font-size:18px;line-height:1.3;letter-spacing:-.01em}
+.snap-meta{display:flex;flex-wrap:wrap;gap:6px}
+.snap-src{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-size:10px;font-weight:700;letter-spacing:.06em;color:var(--muted)}
+.snap-q{background:var(--bg-grey);border-radius:10px;padding:10px 12px;display:flex;flex-direction:column;gap:4px}
+.snap-q em{font-size:14px;line-height:1.45;color:#1f3532}
+.snap-q span{font-size:11px;color:var(--muted)}
+.snap-q b{color:var(--brand);font-weight:600}
+@media(max-width:560px){.snap-top span:last-child{display:none}}
 .fit-then{margin:0;font-size:19px;line-height:1.5;font-weight:700;color:var(--brand-dark)}
 .fit-not{margin:0;font-size:14px;line-height:1.6;color:var(--muted)}
 @media(min-width:1060px){.fit-then{white-space:nowrap}}
@@ -832,6 +847,18 @@ html{scroll-padding-top:var(--hh)}
     </ul>
     <div class="fit-foot">
       <p class="fit-then">Intuifi shows what keeps coming up across all of it, how often, and the evidence behind it.</p>
+      <div class="snap" aria-label="Example of a theme in an Intuifi snapshot">
+        <div class="snap-top"><span>Intuifi snapshot</span><span>Example · 412 items read across 3 tools</span></div>
+        <div class="snap-theme">
+          <span class="snap-rank">1</span>
+          <div>
+            <h3>Onboarding delays across new accounts</h3>
+            <div class="snap-meta"><span class="fv-tag">46 items · 21%</span><span class="fv-tag fv-tag--warn">First seen in March</span></div>
+          </div>
+        </div>
+        <div class="snap-src">EVIDENCE FROM <span class="fv-tag">Sales</span><span class="fv-tag">Support</span><span class="fv-tag">Product</span></div>
+        <div class="snap-q"><em>"We're three weeks in and still not live."</em><span>Support ticket · a customer · <b>Opens the original</b></span></div>
+      </div>
       <p class="fit-not">Less useful if everyone already sees everything, or you have a dedicated product operations team.</p>
     </div>
   </div>
