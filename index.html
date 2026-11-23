@@ -58,7 +58,7 @@
       "name": "What does this cost?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The prompt is free. It runs inside the AI assistant you already use, so there is nothing to sign up for and nothing extra to pay. The next version, with memory, will be a paid product. Pricing isn't set yet. If you register interest, you'll hear about it before anything changes."
+        "text": "The prompt is free. The free snapshot runs in Claude today, so there is nothing to sign up for and nothing extra to pay. ChatGPT and Microsoft 365 Copilot versions will follow once they've passed testing. The next version, with memory, will be a paid product. Pricing isn't set yet. If you register interest, you'll hear about it before anything changes."
       }
     },
     {
@@ -487,7 +487,7 @@ html{scroll-padding-top:var(--hh)}
 .fv-time div::before{content:"";position:absolute;left:-22px;top:3px;width:12px;height:12px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 3px var(--bg-grey)}
 .fv-time div.late::before{background:#d9463b}
 .fv-time span{color:var(--muted);font-size:11px}
-.fit-foot{margin:88px auto 0;max-width:none;text-align:center;display:flex;flex-direction:column;align-items:center;gap:24px}
+.fit-foot{margin:56px auto 0;max-width:none;text-align:center;display:flex;flex-direction:column;align-items:center;gap:24px}
 .fsnap{width:100%;max-width:560px;text-align:left;background:var(--brand-dark);border-radius:18px;box-shadow:0 24px 48px rgba(3,24,21,.28);padding:22px 24px 24px;display:flex;flex-direction:column;gap:16px;font-size:13px;color:#fff}
 .fsnap-top{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal)}
 .fsnap-top span:last-child{color:#8fbfb8;letter-spacing:.04em;text-transform:none;font-weight:500;font-size:12px}
@@ -512,6 +512,8 @@ html{scroll-padding-top:var(--hh)}
 .fsnap-check b{color:#9a5b0b}
 @media(max-width:600px){.fsnap-quotes{grid-template-columns:1fr}.fsnap-tr{grid-template-columns:minmax(0,1fr) 40px 52px;}.fsnap-tr span:first-child{flex-wrap:wrap}}
 .fit-then{margin:0;font-size:19px;line-height:1.5;font-weight:700;color:var(--brand-dark)}
+.fit-more{margin:0;font-size:16px;font-weight:700}
+.fit-more a{color:var(--brand)}
 .fit-not{margin:0;font-size:14px;line-height:1.6;color:var(--muted)}
 @media(min-width:1060px){.fit-then{white-space:nowrap}}
 @media(max-width:1100px){.fit-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -562,10 +564,10 @@ html{scroll-padding-top:var(--hh)}
 .lockline{margin:0;display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.55;color:var(--ink-mid)}
 .lockline svg{flex:none;margin-top:3px;color:var(--brand)}
 .mem-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:40px 44px;display:flex;flex-direction:column;gap:28px}
-.mem-top{display:grid;grid-template-columns:minmax(0,.72fr) minmax(0,1.28fr);gap:40px;align-items:start}
+.mem-top{display:block;max-width:680px}
 .mem-copy{display:flex;flex-direction:column;gap:14px}
 .mem-copy h3{margin:0;font-size:32px;font-weight:700;line-height:1.2;letter-spacing:-.01em;color:var(--ink)}
-.mem-copy p{margin:0;font-size:15px;line-height:1.65;color:var(--ink-mid)}
+.mem-copy p{margin:0;font-size:16px;line-height:1.65;color:var(--ink-mid)}
 .mem-table{border:1px solid var(--line);border-radius:16px;overflow:hidden}
 .mt-row{display:grid;grid-template-columns:172px minmax(0,1fr) minmax(0,1.25fr)}
 .mt-row > span{padding:18px 20px;font-size:16px;line-height:1.5;color:var(--ink);display:flex;align-items:center}
@@ -716,7 +718,78 @@ html{scroll-padding-top:var(--hh)}
 .site-footer .foot-meta{display:flex;flex-direction:column;gap:4px;text-align:right}
 .site-footer .logo{height:34px}
 .site-footer span{font-size:14px;color:#a9cfc9}
+.site-footer .foot-link{color:#fff}
 @media(max-width:640px){.site-footer .wrap{min-height:96px}.site-footer .logo{height:28px}.site-footer .foot-meta{text-align:left}}
+/* ============ DESIGN PARTNER, SECOND DOOR, SHORT FAQ ============ */
+.try-talk{margin:4px 0 0;padding-top:20px;border-top:1px solid var(--line);font-size:15px;line-height:1.55;color:var(--ink-mid)}
+.try-talk a{white-space:nowrap;color:var(--brand);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.dp-opt{display:flex;align-items:flex-start;gap:12px;cursor:pointer;max-width:620px}
+.dp-opt input{flex:none;width:20px;height:20px;margin:2px 0 0;accent-color:var(--brand)}
+.dp-opt span{display:flex;flex-direction:column;gap:3px}
+.dp-opt strong{font-size:16px;color:var(--ink)}
+.dp-opt small{font-size:14px;line-height:1.5;color:var(--ink-mid)}
+.faq-more-lede{margin:0;font-size:16px;line-height:1.6;color:var(--ink-mid)}
+.hiw-more{margin:20px 0 0;font-size:16px;font-weight:700}
+.hiw-more a{color:var(--brand)}
+.faq-side .faq-more{margin-top:8px;height:50px;font-size:16px}
+.nav{gap:22px}
+.nav-link{font-size:15px;font-weight:700;color:#fff;text-decoration:none}
+.nav-link:hover{color:#cfe7e2}
+@media(max-width:640px){.nav{gap:14px}.nav-link{display:inline;font-size:13px}}
+/* ============ DESKTOP: tighter join, compact profile ============ */
+#request{padding-bottom:56px}
+.request.request--mem{padding-top:0}
+.fit-foot{gap:14px}
+@media(min-width:641px){
+  .about{padding:88px 0}
+  .about .wrap{display:grid;grid-template-columns:128px minmax(0,1fr);gap:0 40px;align-items:start;max-width:1040px}
+  .about-photo{width:128px;height:128px;max-width:none;border-radius:50%;object-fit:cover;box-shadow:0 10px 24px -10px rgba(0,0,0,.25)}
+  .about-copy p{max-width:720px}
+}
+/* ============ HERO: quote under the example ============ */
+@media(min-width:901px){.hero-grid{align-items:end}.hero-visual .hero-proof{margin-bottom:0}}
+.hero h1{font-size:clamp(40px,4.5vw,56px);line-height:1.06;text-wrap:balance}
+.hero-copy{gap:22px}
+.hero-sub{max-width:520px}
+@media(min-width:901px){.hero-ctas{margin-top:8px}}
+.hero-visual .hero-proof{margin:36px 0 0 26px;max-width:520px}
+@media(max-width:900px){.hero-visual .hero-proof{margin:24px 0 0}}
+/* ============ DESIGN PARTNER BAND ============ */
+.dp-band{display:flex;align-items:center;justify-content:space-between;gap:24px 40px;padding:28px 36px;background:#e6f2f0;border-radius:20px}
+.dp-band h3{margin:0 0 6px;font-size:20px;font-weight:700;color:var(--ink)}
+.dp-band p{margin:0;max-width:640px;font-size:16px;line-height:1.6;color:var(--ink-mid)}
+.dp-band .pill-btn{flex:none}
+@media(max-width:780px){.dp-band{flex-direction:column;align-items:flex-start;padding:24px 22px}.dp-band .pill-btn{width:100%}}
+/* ============ PHONES: lighter layout ============ */
+@media(max-width:640px){
+  .hero-art{width:auto !important;height:auto !important;transform:none !important;margin:0 !important}
+  .hero-report{display:none}
+  .hero-finding{position:static !important;width:100% !important}
+  .pv:not(.is-open){display:none}
+  .mem-card{background:var(--brand-dark);border-color:var(--brand-dark)}
+  .mem-copy h3{color:#fff}
+  .mem-copy p{color:#d4e8e4}
+  .mem-card .asst{display:none}
+  .mem-row input[type=email]{border-color:transparent}
+  .mem-row .pill-btn--dark{background:var(--teal);color:#06221f}
+  .dp-opt strong{color:#fff}
+  .dp-opt small{color:#a9cfc9}
+  .mem-card .notify-done{color:#fff}
+  .about .wrap{grid-template-columns:64px minmax(0,1fr);column-gap:16px;row-gap:16px;align-items:center}
+  .about-copy{display:contents}
+  .about-photo{grid-column:1;grid-row:1/3;width:64px;height:64px;max-width:none;border-radius:50%;object-fit:cover;box-shadow:none}
+  .about-copy .eyebrow{grid-column:2;grid-row:1;align-self:end;margin:0}
+  .about-copy h2{grid-column:2;grid-row:2;align-self:start;margin:0}
+  .about-copy > p:not(.eyebrow),.about-links{grid-column:1/-1}
+  .about-more{display:none}
+  .hero-built{display:none}
+  .hero{padding-bottom:40px}
+  .fit{display:none}
+  .request{padding:48px 0}
+  .request.request--mem{padding:0 0 48px}
+  #request{padding-bottom:40px}
+  .about,.faq{padding:48px 0}
+}
 </style>
 </head>
 <body>
@@ -724,6 +797,7 @@ html{scroll-padding-top:var(--hh)}
   <div class="wrap">
     <a href="https://intuifi.io" aria-label="Intuifi home"><span class="logo" role="img" aria-label="Intuifi"></span></a>
     <nav class="nav" aria-label="Main">
+      <a class="nav-link" href="/details" data-goatcounter-click="details-from-nav" data-goatcounter-title="How it works (header)">How it works</a>
       <a class="pill-btn pill-btn--white" href="#early-access" data-open-try data-goatcounter-click="try-it-free-nav" data-goatcounter-title="Try it free (header)">Try it free</a>
     </nav>
   </div>
@@ -737,18 +811,17 @@ html{scroll-padding-top:var(--hh)}
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <span class="works-with works-with--hero">Works with Claude</span>
-      <h1>Make sure you're building the right things.</h1>
-      <p class="hero-sub">Intuifi turns your support tickets, sales notes and product backlog into one view Leadership and Engineering both work from: what's happening, and why it matters.</p>
+      <h1>The wrong feature costs months. Checking takes five minutes.</h1>
+      <p class="hero-sub">Start with Intuifi's free snapshot in Claude. It reads your support tickets, sales notes and backlog, and gives your team one shared report of what keeps coming up, how often, and the evidence behind it.</p>
       <div class="hero-ctas">
         <a href="#early-access" class="pill-btn pill-btn--teal" data-open-try data-goatcounter-click="try-it-free-hero" data-goatcounter-title="Try it free (hero)">Try it free</a>
       </div>
-      <p class="hero-proof"><q>Work that had taken almost six weeks was done in five minutes.</q><span>Katy Parkhill, Head of Engineering, Kobai · Built by <a href="#about">Chris Burgess</a>, product leader for 15 years</span></p>
     </div>
     <div class="hero-visual">
 <div class="hero-art" data-fit="690" data-fit-w="720" data-fit-max="0.82" aria-hidden="true" style="position: relative; width: 720px; height: 460px; font-family: Roboto, 'Helvetica Neue', Arial, sans-serif; color: #0f2e2a">
 
   <!-- Simplified report window -->
-  <div style="position: absolute; left: 330px; top: 70px; width: 380px; height: 330px; box-sizing: border-box; background: #ffffff; border-radius: 14px; overflow: hidden; box-shadow: 0 24px 48px rgba(3,24,21,.30)">
+  <div class="hero-report" style="position: absolute; left: 330px; top: 70px; width: 380px; height: 330px; box-sizing: border-box; background: #ffffff; border-radius: 14px; overflow: hidden; box-shadow: 0 24px 48px rgba(3,24,21,.30)">
     <div style="height: 30px; background: #f4f7f6; border-bottom: 1px solid #e8eeec; display: flex; align-items: center; gap: 6px; padding: 0 12px">
       <span class="hi-dot" style="width: 8px; height: 8px; background: #d6dedc"></span><span class="hi-dot" style="width: 8px; height: 8px; background: #d6dedc"></span><span class="hi-dot" style="width: 8px; height: 8px; background: #d6dedc"></span>
       <span style="margin-left: 10px; height: 14px; flex: 1; border-radius: 7px; background: #e8eeec"></span>
@@ -779,7 +852,7 @@ html{scroll-padding-top:var(--hh)}
 
 
   <!-- The finding -->
-  <div style="position: absolute; left: 30px; top: 40px; width: 322px; box-sizing: border-box; background: #ffffff; border-radius: 16px; padding: 18px 20px; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 28px 56px rgba(3,24,21,.38), 0 0 0 1px rgba(43,179,163,.35)">
+  <div class="hero-finding" style="position: absolute; left: 30px; top: 40px; width: 322px; box-sizing: border-box; background: #ffffff; border-radius: 16px; padding: 18px 20px; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 28px 56px rgba(3,24,21,.38), 0 0 0 1px rgba(43,179,163,.35)">
     <div style="display: flex; align-items: center; gap: 7px">
       <span style="width: 20px; height: 20px; border-radius: 6px; background: #e1f3f0; display: flex; align-items: center; justify-content: center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg></span>
       <span style="font-size: 10px; font-weight: 700; letter-spacing: .1em; color: #0f625c">FINDING</span>
@@ -810,6 +883,7 @@ html{scroll-padding-top:var(--hh)}
   </div>
 
 </div>
+    <p class="hero-proof"><q>Work that had taken almost six weeks was done in five minutes.</q><span>Katy Parkhill, Head of Engineering, Kobai</span></p>
     </div>
   </div>
 </section>
@@ -817,7 +891,6 @@ html{scroll-padding-top:var(--hh)}
 <!-- ============ FIT ============ -->
 <section class="fit" id="fit" aria-labelledby="fit-title">
   <div class="wrap fit-wrap">
-    <svg class="fit-lines" aria-hidden="true"></svg>
     <div class="fit-head">
       <p class="eyebrow">Who it's for</p>
       <h2 class="h2" id="fit-title">For businesses that have outgrown working as one team.</h2>
@@ -860,20 +933,6 @@ html{scroll-padding-top:var(--hh)}
         <p class="fit-cap">Problems reach leadership later than they used to.</p>
       </li>
     </ul>
-    <div class="fit-foot">
-      <div class="fsnap" aria-label="Example Intuifi snapshot: the two largest themes, both first seen in March, and one thing to check">
-        <div class="fsnap-top"><span>Intuifi snapshot</span><span>Example</span></div>
-        <p class="fsnap-head">The two largest themes, both first seen in March.</p>
-        <div class="fsnap-table" role="table">
-          <div class="fsnap-tr fsnap-th" role="row"><span role="columnheader">Theme</span><span role="columnheader">Items</span><span role="columnheader">Evidence</span></div>
-          <div class="fsnap-tr" role="row"><span role="cell"><b>Setup taking too long</b><i class="fv-tag fsnap-dept">Support</i></span><span role="cell">31</span><span role="cell" class="fsnap-ev">View</span></div>
-          <div class="fsnap-tr" role="row"><span role="cell"><b>Price objections</b><i class="fv-tag fsnap-dept">Sales</i></span><span role="cell">23</span><span role="cell" class="fsnap-ev">View</span></div>
-        </div>
-        <p class="fsnap-check"><b>One thing to check:</b> the onboarding guide says setup takes a day. Support tickets say weeks.</p>
-      </div>
-      <p class="fit-then">Intuifi shows what keeps coming up across all of it, how often, and the evidence behind it.</p>
-      <p class="fit-not">Less useful if everyone already sees everything, or you have a dedicated product operations team.</p>
-    </div>
   </div>
 </section>
 
@@ -883,7 +942,7 @@ html{scroll-padding-top:var(--hh)}
   <div class="wrap try">
     <div class="try-head" id="early-access">
       <div class="try-titlerow"><h2 class="h2">Try Intuifi free</h2><span class="ww-badge">Works with Claude</span></div>
-      <p class="try-intro">Your AI assistant reads what your team has already written and shows you what keeps coming up, how often, and where the evidence is. No exports, and nothing leaves your account.</p>
+      <p class="try-intro">Paste the prompt into a new Claude chat. It reads your support tickets, sales notes and backlog, from the tools you've connected or files you attach, and shows you what keeps coming up, how often, and where the evidence is.</p>
     </div>
 
     <div class="try-card">
@@ -904,586 +963,25 @@ html{scroll-padding-top:var(--hh)}
           <div class="tstep-b tstep-b--paste">
             <a class="pill-btn pill-btn--outline" href="https://claude.ai/new" target="_blank" rel="noopener" data-goatcounter-click="open-claude" data-goatcounter-title="Open Claude">Open Claude<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"></path></svg></a>
             <p class="lockline lock-plain"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg><span>Runs inside your own Claude account, using only what you've connected. <strong>Nothing is sent to Intuifi.</strong></span></p>
+            <p class="try-talk">Rather talk it through first? <a href="https://calendly.com/crwburgess/30min" target="_blank" rel="noopener" data-goatcounter-click="book-call-try" data-goatcounter-title="Book a call (Try it free)">Book a 30-minute call</a></p>
           </div>
         </div>
       </div>
 
     </div>
 
+    <div class="dp-band">
+      <div class="dp-band-copy">
+        <h3>Want the full report?</h3>
+        <p>I'm looking for a few design partners. I'll run the full Intuifi report on a few months of your tickets, notes or backlog, at no charge, in return for your feedback.</p>
+      </div>
+      <a class="pill-btn pill-btn--dark" href="/register" data-goatcounter-click="design-partner-home" data-goatcounter-title="Become a design partner (home)">Become a design partner</a>
+    </div>
     <p class="try-legal">Intuifi is independent and not affiliated with Anthropic, OpenAI or Microsoft.</p>
   </div>
 </section>
 
-<!-- ============ WHO IT'S FOR ============ -->
-<section class="wif wifc" id="who-its-for" data-aud="prod" aria-labelledby="wif-title">
-  <div class="wif-track">
-    <div class="wif-sticky">
-      <div class="tex tex-light wif-tex"></div>
-      <div class="wrap wif-inner">
-        <div class="wif-bar">
-        <div class="wif-head">
-          <p class="eyebrow">By role</p>
-          <h2 class="h2" id="wif-title">What changes day to day</h2>
-        </div>
-        <div class="wif-nav">
-          <div class="wif-tabs" role="tablist" aria-label="Choose an audience">
-            <button type="button" role="tab" data-tab="prod" aria-selected="true"><span class="wt-long">For </span>Product</button>
-            <button type="button" role="tab" data-tab="found" aria-selected="false"><span class="wt-long">For </span>Founders</button>
-            <button type="button" role="tab" data-tab="deliv" aria-selected="false"><span class="wt-long">For </span>Delivery</button>
-            <button type="button" role="tab" data-tab="lead" aria-selected="false"><span class="wt-long">For </span>Leadership</button>
-          </div>
-          <div class="wif-bars" aria-label="Progress">
-            <button type="button" data-bar="0"><span></span></button>
-            <button type="button" data-bar="1"><span></span></button>
-            <button type="button" data-bar="2"><span></span></button>
-            <button type="button" data-bar="3"><span></span></button>
-          </div>
-          <span class="wif-count" aria-live="polite">1 of 4</span>
-          <div class="wif-arrows">
-            <button type="button" data-dir="-1" aria-label="Previous example"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
-            <button type="button" data-dir="1" aria-label="Next example"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
-          </div>
-        </div>
-        </div>
-        <div class="wif-stage">
-<div class="wif-step" data-aud="prod" data-i="0">
-<div class="wif-toggle" role="group" aria-label="Show before or after"><button type="button" data-side="before" aria-pressed="true">Before</button><button type="button" data-side="after" aria-pressed="false">After</button></div>
-<div class="wif-pair">
-<div class="side side-before"><div class="colhead" style="color: #6b7a78">Where you are now</div><h3 class="sh" style="margin: 0; font-size: 26px; line-height: 1.25; font-weight: 700; letter-spacing: -.01em; color: #0f2e2a; min-height: 65px; text-wrap: balance">Priorities shift with whoever asks loudest.</h3><div class="en-card" style="position: relative; box-shadow: 0 6px 16px rgba(15,46,42,.08)"><span class="warn" style="top: -11px; right: 18px; font-size: 11px; padding: 5px 11px">Ranked by who asked</span>
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><div class="en-chead"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"></path></svg>Backlog</div></div>
-          <div class="en-pane en-before" style="padding: 14px"><div class="en-body"><div class="en-item"><div class="en-itop"><span class="en-id">ENG-318</span></div><span class="en-it">Custom export format</span><div class="en-tags"><span class="en-tag" style="background: #fde7e5; color: #b3261e">Urgent, from Sales</span></div></div><div class="en-item"><div class="en-itop"><span class="en-id">ENG-296</span></div><span class="en-it">Bulk user import</span></div><div class="en-item"><div class="en-itop"><span class="en-id">ENG-274</span></div><span class="en-it">Dark mode for dashboards</span></div><div class="en-item"><div class="en-itop"><span class="en-id">ENG-231</span></div><span class="en-it">Onboarding delays across new accounts</span></div></div></div>
-        </div></div>
-<div class="side side-after"><div class="colhead" style="color: #0f625c">What changes</div><h3 class="sh" style="margin: 0; font-size: 26px; line-height: 1.25; font-weight: 700; letter-spacing: -.01em; color: #0f2e2a; min-height: 65px; text-wrap: balance">Priorities ranked by how often customers raise them.</h3><div class="en-card" style="position: relative; "><div class="stamp" style="top: -16px; right: 16px; font-size: 13px; padding: 8px 15px 8px 12px"><svg width="11" height="19" viewBox="0 0 60 104" fill="none" aria-hidden="true"><path d="M29 20 44 29M45 40 27 50" stroke="#7fd3c7" stroke-width="4" stroke-linecap="round"></path><circle cx="22" cy="14" r="9" stroke="#7fd3c7" stroke-width="5"></circle><circle cx="50" cy="34" r="7" stroke="#7fd3c7" stroke-width="5"></circle><circle cx="22" cy="54" r="5" stroke="#7fd3c7" stroke-width="5"></circle><rect x="18" y="64" width="8" height="36" rx="1" fill="#2bb3a3"></rect></svg>Ranked by how often it comes up</div>
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><div class="en-chead"><svg width="11" height="19" viewBox="0 0 60 104" fill="none" aria-hidden="true"><path d="M29 20 44 29M45 40 27 50" stroke="#8fb5b0" stroke-width="4" stroke-linecap="round"></path><circle cx="22" cy="14" r="9" stroke="#8fb5b0" stroke-width="5"></circle><circle cx="50" cy="34" r="7" stroke="#8fb5b0" stroke-width="5"></circle><circle cx="22" cy="54" r="5" stroke="#8fb5b0" stroke-width="5"></circle><rect x="18" y="64" width="8" height="36" rx="1" fill="#12635c"></rect></svg>Intuifi snapshot</div></div>
-          <div class="en-pane en-after" style="padding: 14px"><div class="en-body"><div class="rp-card"><div style="display: flex; align-items: center; gap: 7px"><span style="width: 20px; height: 20px; border-radius: 6px; background: #e1f3f0; display: flex; align-items: center; justify-content: center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg></span><span class="rp-eb">THEMES AT A GLANCE</span></div>
-<div class="rp-row" style="background: #f2fbf9; border-color: #bfe4dd"><div style="display: flex; align-items: baseline; gap: 10px"><span class="rp-n">1</span><span class="rp-t">Onboarding delays across new accounts</span></div><div class="rp-pills"><span class="rp-pill" style="background: #f2f5f4; color: #3c4b49">46 items</span><span class="rp-pill" style="background: #e1f3f0; color: #0f625c">21%</span></div></div>
-<div class="rp-row"><div style="display: flex; align-items: baseline; gap: 10px"><span class="rp-n">2</span><span class="rp-t">New customers stuck importing their data</span></div><div class="rp-pills"><span class="rp-pill" style="background: #f2f5f4; color: #3c4b49">31 items</span><span class="rp-pill" style="background: #e1f3f0; color: #0f625c">14%</span></div></div>
-<div class="rp-row"><div style="display: flex; align-items: baseline; gap: 10px"><span class="rp-n">3</span><span class="rp-t">Custom export format</span></div><div class="rp-pills"><span class="rp-pill" style="background: #f2f5f4; color: #3c4b49">2 items</span><span class="rp-pill" style="background: #e1f3f0; color: #0f625c">1%</span><span class="rp-pill" style="background: #fdf0dc; color: #9a5b0b">Raised by Sales</span></div></div>
-</div></div></div>
-        </div></div>
-</div>
-</div>
-<div class="wif-step" data-aud="prod" data-i="1">
-<div class="wif-toggle" role="group" aria-label="Show before or after"><button type="button" data-side="before" aria-pressed="true">Before</button><button type="button" data-side="after" aria-pressed="false">After</button></div>
-<div class="wif-pair">
-<div class="side side-before"><div class="colhead" style="color: #6b7a78">Where you are now</div><h3 class="sh" style="margin: 0; font-size: 26px; line-height: 1.25; font-weight: 700; letter-spacing: -.01em; color: #0f2e2a; min-height: 65px; text-wrap: balance">Tickets arrive without the why.</h3><div class="en-card" style="position: relative; box-shadow: 0 6px 16px rgba(15,46,42,.08)"><span class="warn" style="top: -11px; right: 18px; font-size: 11px; padding: 5px 11px">No customer context</span>
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><div class="en-chead"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"></path><path d="M13 5v2M13 17v2M13 11v2"></path></svg>Ticket</div></div>
-          <div class="en-pane en-before" style="padding: 14px"><div class="en-body"><div class="en-sub"><div class="en-itop"><span class="en-id">ENG-412</span><span class="en-status">To do</span></div><span class="en-tt">Fix CSV import dropping columns</span><span class="en-desc">Some imports drop columns. Needs looking into.</span><div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: #4b5b58"><span style="width: 22px; height: 22px; border-radius: 50%; background: #6fa8a0; color: #ffffff; font-size: 9px; font-weight: 700; display: flex; align-items: center; justify-content: center">JM</span><span style="white-space: nowrap">J. Murphy</span><span style="margin-left: auto; white-space: nowrap" class="en-status">Medium priority</span></div></div></div></div>
-        </div></div>
-<div class="side side-after"><div class="colhead" style="color: #0f625c">What changes</div><h3 class="sh" style="margin: 0; font-size: 26px; line-height: 1.25; font-weight: 700; letter-spacing: -.01em; color: #0f2e2a; min-height: 65px; text-wrap: balance">See the customer problem behind the work, in their words.</h3><div class="en-card" style="position: relative; "><div class="stamp" style="top: -16px; right: 16px; font-size: 13px; padding: 8px 15px 8px 12px"><svg width="11" height="19" viewBox="0 0 60 104" fill="none" aria-hidden="true"><path d="M29 20 44 29M45 40 27 50" stroke="#7fd3c7" stroke-width="4" stroke-linecap="round"></path><circle cx="22" cy="14" r="9" stroke="#7fd3c7" stroke-width="5"></circle><circle cx="50" cy="34" r="7" stroke="#7fd3c7" stroke-width="5"></circle><circle cx="22" cy="54" r="5" stroke="#7fd3c7" stroke-width="5"></circle><rect x="18" y="64" width="8" height="36" rx="1" fill="#2bb3a3"></rect></svg>The why, in their words</div>
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><div class="en-chead"><svg width="11" height="19" viewBox="0 0 60 104" fill="none" aria-hidden="true"><path d="M29 20 44 29M45 40 27 50" stroke="#8fb5b0" stroke-width="4" stroke-linecap="round"></path><circle cx="22" cy="14" r="9" stroke="#8fb5b0" stroke-width="5"></circle><circle cx="50" cy="34" r="7" stroke="#8fb5b0" stroke-width="5"></circle><circle cx="22" cy="54" r="5" stroke="#8fb5b0" stroke-width="5"></circle><rect x="18" y="64" width="8" height="36" rx="1" fill="#12635c"></rect></svg>Intuifi snapshot</div></div>
-          <div class="en-pane en-after" style="padding: 14px"><div class="en-body"><div class="rp-card"><div style="display: flex; align-items: center; gap: 7px"><span style="width: 20px; height: 20px; border-radius: 6px; background: #e1f3f0; display: flex; align-items: center; justify-content: center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg></span><span class="rp-eb">THEME</span></div>
-<div class="rp-title">New customers stuck importing their data</div>
-<div class="rp-pills"><span class="rp-pill" style="background: #e1f3f0; color: #0f625c">31 items</span><span class="rp-pill" style="background: #f2f5f4; color: #3c4b49">14% of everything read</span></div>
-<div class="rp-q"><span class="rp-qt">"Half my columns disappeared after the upload."</span><span class="rp-src"><span style="width: 6px; height: 6px; border-radius: 50%; background: #2bb3a3"></span>Support ticket · a customer</span></div>
-<div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: #4b5b58"><span class="rp-lab" style="margin: 0">SOURCE</span>Opens the original ticket <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"></path></svg></div>
-</div></div></div>
-        </div></div>
-</div>
-</div>
-<div class="wif-step" data-aud="prod" data-i="2">
-<div class="wif-toggle" role="group" aria-label="Show before or after"><button type="button" data-side="before" aria-pressed="true">Before</button><button type="button" data-side="after" aria-pressed="false">After</button></div>
-<div class="wif-pair">
-<div class="side side-before"><div class="colhead" style="color: #6b7a78">Where you are now</div><h3 class="sh" style="margin: 0; font-size: 26px; line-height: 1.25; font-weight: 700; letter-spacing: -.01em; color: #0f2e2a; min-height: 65px; text-wrap: balance">You ship it. Nobody connects it to results.</h3><div class="en-card" style="position: relative; box-shadow: 0 6px 16px rgba(15,46,42,.08)">
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><div class="en-chead"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="18" r="3"></circle><circle cx="6" cy="6" r="3"></circle><path d="M13 6h3a2 2 0 0 1 2 2v7M6 9v12"></path></svg>Sprint update</div></div>
-          <div class="en-pane en-before" style="padding: 14px"><div class="en-body"><div class="en-sub" style="gap: 10px"><div class="en-itop"><span style="font-size: 11px; font-weight: 700; letter-spacing: .06em; color: #8a9795">ENGINEERING</span><span class="warn-s">Impact unknown</span></div><span style="font-size: 11px; color: #8a9795; margin-top: -4px">Sprint 14 update</span><div class="en-sl"><div style="display: flex; align-items: center; gap: 8px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8a9795" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Rebuilt the CSV import</span></div></div><div class="en-sl"><div style="display: flex; align-items: center; gap: 8px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8a9795" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Cut webhook retry latency</span></div></div><div class="en-sl"><div style="display: flex; align-items: center; gap: 8px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8a9795" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Refactored auth token refresh</span></div></div></div></div></div>
-        </div></div>
-<div class="side side-after"><div class="colhead" style="color: #9a5b0b">Coming soon</div><h3 class="sh" style="margin: 0; font-size: 26px; line-height: 1.25; font-weight: 700; letter-spacing: -.01em; color: #0f2e2a; min-height: 65px; text-wrap: balance">See which problems shrink after you ship.</h3><div class="en-card" style="position: relative; "><div class="stamp" style="top: -16px; right: 16px; font-size: 13px; padding: 8px 15px 8px 12px"><svg width="11" height="19" viewBox="0 0 60 104" fill="none" aria-hidden="true"><path d="M29 20 44 29M45 40 27 50" stroke="#7fd3c7" stroke-width="4" stroke-linecap="round"></path><circle cx="22" cy="14" r="9" stroke="#7fd3c7" stroke-width="5"></circle><circle cx="50" cy="34" r="7" stroke="#7fd3c7" stroke-width="5"></circle><circle cx="22" cy="54" r="5" stroke="#7fd3c7" stroke-width="5"></circle><rect x="18" y="64" width="8" height="36" rx="1" fill="#2bb3a3"></rect></svg>Evidence down, 14 to 3</div>
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><div class="en-chead"><svg width="11" height="19" viewBox="0 0 60 104" fill="none" aria-hidden="true"><path d="M29 20 44 29M45 40 27 50" stroke="#8fb5b0" stroke-width="4" stroke-linecap="round"></path><circle cx="22" cy="14" r="9" stroke="#8fb5b0" stroke-width="5"></circle><circle cx="50" cy="34" r="7" stroke="#8fb5b0" stroke-width="5"></circle><circle cx="22" cy="54" r="5" stroke="#8fb5b0" stroke-width="5"></circle><rect x="18" y="64" width="8" height="36" rx="1" fill="#12635c"></rect></svg>Intuifi snapshot</div></div>
-          <div class="en-pane en-after" style="padding: 14px"><div class="en-body"><div class="rp-card"><div style="display: flex; align-items: center; gap: 7px"><span style="width: 20px; height: 20px; border-radius: 6px; background: #e1f3f0; display: flex; align-items: center; justify-content: center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg></span><span class="rp-eb">WHAT'S CHANGING · SINCE LAST SNAPSHOT</span></div>
-<div class="rp-title">New customers stuck importing their data</div>
-<div style="display: flex; align-items: center; gap: 14px; background: #f5f8f7; border-radius: 10px; padding: 10px 12px"><div style="display: flex; flex-direction: column; gap: 2px"><span class="rp-lab">LAST SNAPSHOT</span><span style="font-size: 20px; font-weight: 700; color: #8a9795">14</span></div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2bb3a3" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg><div style="display: flex; flex-direction: column; gap: 2px"><span class="rp-lab">THIS SNAPSHOT</span><span style="font-size: 20px; font-weight: 700; color: #0f625c">3</span></div><span style="margin-left: 4px; font-size: 12px; line-height: 1.35; color: #4b5b58">items on this theme</span></div>
-<div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: #4b5b58"><span class="rp-lab" style="margin: 0">SHIPPED</span>Rebuilt the CSV import</div>
-</div></div></div>
-        </div></div>
-</div>
-</div>
-<div class="wif-step wif-step--quote" data-aud="prod" data-i="3">
-<div class="wif-quote">    <div class="qh">
-      <span style="font-size: 60px; font-weight: 700; line-height: 1.05; letter-spacing: -.03em; color: #0f625c">Six weeks of work.</span>
-      <span style="font-size: 60px; font-weight: 700; line-height: 1.05; letter-spacing: -.03em; color: #0f2e2a">Done in five minutes.</span>
-    </div>
-    <figure style="margin: 0; display: flex; flex-direction: column; gap: 24px; background: #ffffff; border-radius: 24px; padding: 36px 40px; box-shadow: 0 18px 40px rgba(15,46,42,.14)">
-      <blockquote style="margin: 0; font-size: 19px; line-height: 1.65; font-style: italic; color: #0f2e2a">"When I first joined the company, I needed to go through the entire backlog of over 400 tickets to decide what mattered and what didn't. The themes Intuifi found matched very closely with my own analysis, work that had taken almost six weeks was done in five minutes."</blockquote>
-      <figcaption style="display: flex; align-items: center; gap: 14px">
-        <span style="width: 48px; height: 48px; border-radius: 50%; background: #0f625c; border: 2px solid #ffffff; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 700; color: #ffffff">KP</span>
-        <span style="display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 16px; color: #0f2e2a">Katy Parkhill</strong><span style="font-size: 14px; color: #24403c">Head of Engineering, Kobai</span></span>
-      </figcaption>
-    </figure></div>
-<button type="button" class="wif-next" data-next="4">Next: <span class="wn-long">what changes for </span>Founders<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-</div>
-<div class="wif-step" data-aud="found" data-i="4">
-<div class="wif-toggle" role="group" aria-label="Show before or after"><button type="button" data-side="before" aria-pressed="true">Before</button><button type="button" data-side="after" aria-pressed="false">After</button></div>
-<div class="wif-pair">
-<div class="side side-before"><div class="colhead" style="color: #6b7a78">Where you are now</div>
-        <h3 class="hl before sh">Sales, product and support <br>each tell you a different story.</h3>
-        <div class="v-d"><div data-fit="480" class="vig before">
-          <span class="warn" style="top: 16px; right: 20px; font-size: 11px; padding: 4px 10px">3 different answers</span>
-          <div class="snip" style="left: 28px; top: 26px; transform: rotate(-3deg)">
-            <span class="who">Sales</span>
-            <span class="quote">We're losing deals on price.</span>
-          </div>
-          <div class="snip" style="left: 262px; top: 58px; transform: rotate(2.5deg)">
-            <span class="who">Product</span>
-            <span class="quote">Customers want more integrations.</span>
-          </div>
-          <div class="snip" style="left: 92px; top: 130px; transform: rotate(-1deg)">
-            <span class="who">Support</span>
-            <span class="quote">Onboarding takes far too long.</span>
-          </div>
-        </div></div><div class="v-m"><div data-fit="350" class="vig before">
-          <span class="warn" style="top: 12px; right: 12px; font-size: 11px; padding: 4px 10px">3 different answers</span>
-        <div class="snip" style="left: 14px; top: 18px; transform: rotate(-3deg)">
-          <span class="who">Sales</span>
-          <span class="quote">We're losing deals on price.</span>
-        </div>
-        <div class="snip" style="left: 138px; top: 72px; transform: rotate(2.5deg)">
-          <span class="who">Product</span>
-          <span class="quote">Customers want more integrations.</span>
-        </div>
-        <div class="snip" style="left: 30px; top: 136px; transform: rotate(-1deg)">
-          <span class="who">Support</span>
-          <span class="quote">Onboarding takes far too long.</span>
-        </div>
-      </div></div>
-      </div>
-<div class="side side-after"><div class="colhead" style="color: #0f625c">What changes</div>
-        <h3 class="hl sh">See what customers actually <br>keep raising, and how often.</h3>
-        <div class="v-d"><div data-fit="480" class="vig after">
-          <div class="card" style="left: 36px; right: 36px; top: 50%; transform: translateY(-50%); padding: 20px 22px">
-            <div class="ctitle">Onboarding delays across new accounts</div>
-            <div class="pills">
-              <span class="pill p-teal">46 items</span>
-              <span class="pill p-amber">High impact</span>
-            </div>
-            <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin-top: 2px"><span style="font-size: 10px; font-weight: 700; letter-spacing: .06em; color: #8a9795; margin-right: 4px">EVIDENCE FROM</span><span style="display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 600; color: #3c4b49; background: #f2f5f4; border-radius: 6px; padding: 4px 8px"><span style="width: 6px; height: 6px; border-radius: 50%; background: #e08e1b"></span>Sales</span><span style="display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 600; color: #3c4b49; background: #f2f5f4; border-radius: 6px; padding: 4px 8px"><span style="width: 6px; height: 6px; border-radius: 50%; background: #2bb3a3"></span>Support</span><span style="display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 600; color: #3c4b49; background: #f2f5f4; border-radius: 6px; padding: 4px 8px"><span style="width: 6px; height: 6px; border-radius: 50%; background: #0f625c"></span>Product</span></div>
-          </div>
-          <div class="stamp" style="top: 16px; right: 20px; font-size: 14px; padding: 9px 16px 9px 13px"><svg width="13" height="22" viewBox="0 0 60 104" fill="none" aria-hidden="true"><path d="M29 20 44 29M45 40 27 50" stroke="#7fd3c7" stroke-width="4" stroke-linecap="round"></path><circle cx="22" cy="14" r="9" stroke="#7fd3c7" stroke-width="5"></circle><circle cx="50" cy="34" r="7" stroke="#7fd3c7" stroke-width="5"></circle><circle cx="22" cy="54" r="5" stroke="#7fd3c7" stroke-width="5"></circle><rect x="18" y="64" width="8" height="36" rx="1" fill="#2bb3a3"></rect></svg>One shared view</div>
-        </div></div><div class="v-m"><div data-fit="350" class="vig after">
-        <div class="card" style="left: 16px; right: 16px; top: 50%; transform: translateY(-50%)">
-          <div class="ctitle">Onboarding delays across new accounts</div>
-          <div class="pills">
-            <span class="pill p-teal">46 items</span>
-            <span class="pill p-amber">High impact</span>
-          </div>
-            <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin-top: 2px"><span style="font-size: 10px; font-weight: 700; letter-spacing: .06em; color: #8a9795; margin-right: 4px">EVIDENCE FROM</span><span style="display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 600; color: #3c4b49; background: #f2f5f4; border-radius: 6px; padding: 4px 8px"><span style="width: 6px; height: 6px; border-radius: 50%; background: #e08e1b"></span>Sales</span><span style="display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 600; color: #3c4b49; background: #f2f5f4; border-radius: 6px; padding: 4px 8px"><span style="width: 6px; height: 6px; border-radius: 50%; background: #2bb3a3"></span>Support</span><span style="display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 600; color: #3c4b49; background: #f2f5f4; border-radius: 6px; padding: 4px 8px"><span style="width: 6px; height: 6px; border-radius: 50%; background: #0f625c"></span>Product</span></div>
-        </div>
-          <div class="stamp" style="top: 12px; right: 12px; font-size: 12px; padding: 7px 13px 7px 11px"><svg width="10" height="18" viewBox="0 0 60 104" fill="none" aria-hidden="true"><path d="M29 20 44 29M45 40 27 50" stroke="#7fd3c7" stroke-width="4" stroke-linecap="round"></path><circle cx="22" cy="14" r="9" stroke="#7fd3c7" stroke-width="5"></circle><circle cx="50" cy="34" r="7" stroke="#7fd3c7" stroke-width="5"></circle><circle cx="22" cy="54" r="5" stroke="#7fd3c7" stroke-width="5"></circle><rect x="18" y="64" width="8" height="36" rx="1" fill="#2bb3a3"></rect></svg>One shared view</div>
-      </div></div>
-      </div>
-</div>
-</div>
-<div class="wif-step" data-aud="found" data-i="5">
-<div class="wif-toggle" role="group" aria-label="Show before or after"><button type="button" data-side="before" aria-pressed="true">Before</button><button type="button" data-side="after" aria-pressed="false">After</button></div>
-<div class="wif-pair">
-<div class="side side-before"><div class="colhead" style="color: #6b7a78">Where you are now</div><h3 class="sh" style="margin: 0; font-size: 26px; line-height: 1.25; font-weight: 700; letter-spacing: -.01em; color: #0f2e2a; min-height: 65px; text-wrap: balance">Board updates rest on whatever reached you.</h3><div class="en-card" style="position: relative; box-shadow: 0 6px 16px rgba(15,46,42,.08)"><span class="warn" style="top: -11px; right: 18px; font-size: 11px; padding: 5px 11px">No evidence</span>
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><div class="en-chead"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M8 13h8M8 17h5"></path></svg>Board update</div></div>
-          <div class="en-pane en-before" style="padding: 14px"><div class="en-body"><div class="en-sub" style="gap: 10px"><div class="en-itop"><span style="font-size: 11px; font-weight: 700; letter-spacing: .06em; color: #8a9795">DRAFT</span><span class="en-status">Due Friday</span></div><div class="en-sl"><div style="display: flex; align-items: center; gap: 8px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8a9795" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.5V14M12 17h.01"></path></svg><span>Customers love the new onboarding</span></div></div><div class="en-sl"><div style="display: flex; align-items: center; gap: 8px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8a9795" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.5V14M12 17h.01"></path></svg><span>Churn is mostly about price</span></div></div><div class="en-sl"><div style="display: flex; align-items: center; gap: 8px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8a9795" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.5V14M12 17h.01"></path></svg><span>Enterprise accounts want SSO</span></div></div></div></div></div>
-        </div></div>
-<div class="side side-after"><div class="colhead" style="color: #0f625c">What changes</div><h3 class="sh" style="margin: 0; font-size: 26px; line-height: 1.25; font-weight: 700; letter-spacing: -.01em; color: #0f2e2a; min-height: 65px; text-wrap: balance">Walk in with the evidence behind every claim.</h3><div class="en-card" style="position: relative; "><div class="stamp" style="top: -16px; right: 16px; font-size: 13px; padding: 8px 15px 8px 12px"><svg width="11" height="19" viewBox="0 0 60 104" fill="none" aria-hidden="true"><path d="M29 20 44 29M45 40 27 50" stroke="#7fd3c7" stroke-width="4" stroke-linecap="round"></path><circle cx="22" cy="14" r="9" stroke="#7fd3c7" stroke-width="5"></circle><circle cx="50" cy="34" r="7" stroke="#7fd3c7" stroke-width="5"></circle><circle cx="22" cy="54" r="5" stroke="#7fd3c7" stroke-width="5"></circle><rect x="18" y="64" width="8" height="36" rx="1" fill="#2bb3a3"></rect></svg>Evidence behind every claim</div>
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><div class="en-chead"><svg width="11" height="19" viewBox="0 0 60 104" fill="none" aria-hidden="true"><path d="M29 20 44 29M45 40 27 50" stroke="#8fb5b0" stroke-width="4" stroke-linecap="round"></path><circle cx="22" cy="14" r="9" stroke="#8fb5b0" stroke-width="5"></circle><circle cx="50" cy="34" r="7" stroke="#8fb5b0" stroke-width="5"></circle><circle cx="22" cy="54" r="5" stroke="#8fb5b0" stroke-width="5"></circle><rect x="18" y="64" width="8" height="36" rx="1" fill="#12635c"></rect></svg>Intuifi snapshot</div></div>
-          <div class="en-pane en-after" style="padding: 14px"><div class="en-body"><div class="rp-card"><div style="display: flex; align-items: center; gap: 7px"><span style="width: 20px; height: 20px; border-radius: 6px; background: #e1f3f0; display: flex; align-items: center; justify-content: center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg></span><span class="rp-eb">HEADLINE</span></div>
-<div class="rp-title">Onboarding is where new customers struggle most</div>
-<div style="font-size: 13px; line-height: 1.5; color: #3c4b49">Raised in 46 items across support, sales and product, more than any other theme.</div>
-<div class="rp-row" style="background: #f2fbf9; border-color: #bfe4dd"><div style="display: flex; align-items: baseline; gap: 10px"><span class="rp-n">1</span><span class="rp-t">Onboarding delays across new accounts</span></div><div class="rp-pills"><span class="rp-pill" style="background: #f2f5f4; color: #3c4b49">46 items</span></div></div>
-<div class="rp-row"><div style="display: flex; align-items: baseline; gap: 10px"><span class="rp-n">2</span><span class="rp-t">Pricing questions at renewal</span></div><div class="rp-pills"><span class="rp-pill" style="background: #f2f5f4; color: #3c4b49">17 items</span></div></div>
-<div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: #4b5b58"><span class="rp-lab" style="margin: 0">SOURCES</span>Every claim links to the original item</div>
-</div></div></div>
-        </div></div>
-</div>
-</div>
-<div class="wif-step wif-step--quote" data-aud="found" data-i="6">
-<div class="wif-quote">    <div class="qh">
-      <span style="font-size: 60px; font-weight: 700; line-height: 1.05; letter-spacing: -.03em; color: #0f625c">Business insights,</span>
-      <span style="font-size: 60px; font-weight: 700; line-height: 1.05; letter-spacing: -.03em; color: #0f2e2a">with all the detail needed.</span>
-    </div>
-    <figure style="margin: 0; display: flex; flex-direction: column; gap: 24px; background: #ffffff; border-radius: 24px; padding: 36px 40px; box-shadow: 0 18px 40px rgba(15,46,42,.14)">
-      <blockquote style="margin: 0; font-size: 19px; line-height: 1.65; font-style: italic; color: #0f2e2a">"Intuifi gives me the summary first, then lets me drill into the detail behind it. I can understand what it's surfacing quickly and still go as deep as I need to check that it is supported by the evidence."</blockquote>
-      <figcaption style="display: flex; align-items: center; gap: 14px">
-        <span style="width: 48px; height: 48px; border-radius: 50%; background: #0f625c; border: 2px solid #ffffff; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 700; color: #ffffff">LT</span>
-        <span style="display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 16px; color: #0f2e2a">Lee Tedstone</strong><span style="font-size: 14px; color: #24403c">CEO, Kobai</span></span>
-      </figcaption>
-    </figure></div>
-<button type="button" class="wif-next" data-next="7">Next: <span class="wn-long">what changes for </span>Delivery<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-</div>
-<div class="wif-step" data-aud="deliv" data-i="7">
-<div class="wif-toggle" role="group" aria-label="Show before or after"><button type="button" data-side="before" aria-pressed="true">Before</button><button type="button" data-side="after" aria-pressed="false">After</button></div>
-<div class="wif-pair">
-<div class="side side-before"><div class="colhead" style="color: #6b7a78">Where you are now</div><h3 class="sh" style="margin: 0; font-size: 26px; line-height: 1.25; font-weight: 700; letter-spacing: -.01em; color: #0f2e2a; min-height: 65px; text-wrap: balance">The same problems come up in every retro.</h3><div class="en-card" style="position: relative; box-shadow: 0 6px 16px rgba(15,46,42,.08)"><span class="warn" style="top: -11px; right: 18px; font-size: 11px; padding: 5px 11px">Nobody is counting</span>
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><div class="en-chead"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"></path></svg>Retro notes</div></div>
-          <div class="en-pane en-before" style="padding: 14px"><div class="en-body"><div class="en-item"><div class="en-itop"><span class="en-id">SPRINT 12</span></div><span class="en-it">Handover from sales was unclear</span></div><div class="en-item"><div class="en-itop"><span class="en-id">SPRINT 13</span></div><span class="en-it">Client sign-off took two weeks</span></div><div class="en-item"><div class="en-itop"><span class="en-id">SPRINT 14</span></div><span class="en-it">Handover from sales unclear again</span><div class="en-tags"><span class="en-tag" style="background: #fdf0dc; color: #9a5b0b">Again</span></div></div></div></div>
-        </div></div>
-<div class="side side-after"><div class="colhead" style="color: #0f625c">What changes</div><h3 class="sh" style="margin: 0; font-size: 26px; line-height: 1.25; font-weight: 700; letter-spacing: -.01em; color: #0f2e2a; min-height: 65px; text-wrap: balance">See what keeps going wrong across projects, counted.</h3><div class="en-card" style="position: relative; "><div class="stamp" style="top: -16px; right: 16px; font-size: 13px; padding: 8px 15px 8px 12px"><svg width="11" height="19" viewBox="0 0 60 104" fill="none" aria-hidden="true"><path d="M29 20 44 29M45 40 27 50" stroke="#7fd3c7" stroke-width="4" stroke-linecap="round"></path><circle cx="22" cy="14" r="9" stroke="#7fd3c7" stroke-width="5"></circle><circle cx="50" cy="34" r="7" stroke="#7fd3c7" stroke-width="5"></circle><circle cx="22" cy="54" r="5" stroke="#7fd3c7" stroke-width="5"></circle><rect x="18" y="64" width="8" height="36" rx="1" fill="#2bb3a3"></rect></svg>Counted, not guessed</div>
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><div class="en-chead"><svg width="11" height="19" viewBox="0 0 60 104" fill="none" aria-hidden="true"><path d="M29 20 44 29M45 40 27 50" stroke="#8fb5b0" stroke-width="4" stroke-linecap="round"></path><circle cx="22" cy="14" r="9" stroke="#8fb5b0" stroke-width="5"></circle><circle cx="50" cy="34" r="7" stroke="#8fb5b0" stroke-width="5"></circle><circle cx="22" cy="54" r="5" stroke="#8fb5b0" stroke-width="5"></circle><rect x="18" y="64" width="8" height="36" rx="1" fill="#12635c"></rect></svg>Intuifi snapshot</div></div>
-          <div class="en-pane en-after" style="padding: 14px"><div class="en-body"><div class="rp-card"><div style="display: flex; align-items: center; gap: 7px"><span style="width: 20px; height: 20px; border-radius: 6px; background: #e1f3f0; display: flex; align-items: center; justify-content: center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg></span><span class="rp-eb">THEMES ACROSS PROJECTS</span></div>
-<div class="rp-row" style="background: #f2fbf9; border-color: #bfe4dd"><div style="display: flex; align-items: baseline; gap: 10px"><span class="rp-n">1</span><span class="rp-t">Unclear handover from sales</span></div><div class="rp-pills"><span class="rp-pill" style="background: #f2f5f4; color: #3c4b49">9 items</span><span class="rp-pill" style="background: #e1f3f0; color: #0f625c">since March</span></div></div>
-<div class="rp-row"><div style="display: flex; align-items: baseline; gap: 10px"><span class="rp-n">2</span><span class="rp-t">Late client sign-off</span></div><div class="rp-pills"><span class="rp-pill" style="background: #f2f5f4; color: #3c4b49">7 items</span><span class="rp-pill" style="background: #e1f3f0; color: #0f625c">since May</span></div></div>
-<div class="rp-row"><div style="display: flex; align-items: baseline; gap: 10px"><span class="rp-n">3</span><span class="rp-t">Scope changes after kick-off</span></div><div class="rp-pills"><span class="rp-pill" style="background: #f2f5f4; color: #3c4b49">5 items</span><span class="rp-pill" style="background: #e1f3f0; color: #0f625c">since June</span></div></div>
-</div></div></div>
-        </div></div>
-</div>
-</div>
-<div class="wif-step" data-aud="deliv" data-i="8">
-<div class="wif-toggle" role="group" aria-label="Show before or after"><button type="button" data-side="before" aria-pressed="true">Before</button><button type="button" data-side="after" aria-pressed="false">After</button></div>
-<div class="wif-pair">
-<div class="side side-before"><div class="colhead" style="color: #6b7a78">Where you are now</div><h3 class="sh" style="margin: 0; font-size: 26px; line-height: 1.25; font-weight: 700; letter-spacing: -.01em; color: #0f2e2a; min-height: 65px; text-wrap: balance">Status reports say what happened, not what keeps happening.</h3><div class="en-card" style="position: relative; box-shadow: 0 6px 16px rgba(15,46,42,.08)"><span class="warn" style="top: -11px; right: 18px; font-size: 11px; padding: 5px 11px">No pattern</span>
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><div class="en-chead"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M8 13h8M8 17h5"></path></svg>Status report</div></div>
-          <div class="en-pane en-before" style="padding: 14px"><div class="en-body"><div class="en-sub" style="gap: 10px"><div class="en-itop"><span style="font-size: 11px; font-weight: 700; letter-spacing: .06em; color: #8a9795">WEEK 42</span><span class="en-status">On track</span></div><div class="en-sl"><div style="display: flex; align-items: center; gap: 8px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8a9795" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Milestone 3 delivered</span></div></div><div class="en-sl"><div style="display: flex; align-items: center; gap: 8px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8a9795" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Two change requests raised</span></div></div><div class="en-sl"><div style="display: flex; align-items: center; gap: 8px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8a9795" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Client feedback positive</span></div></div></div></div></div>
-        </div></div>
-<div class="side side-after"><div class="colhead" style="color: #0f625c">What changes</div><h3 class="sh" style="margin: 0; font-size: 26px; line-height: 1.25; font-weight: 700; letter-spacing: -.01em; color: #0f2e2a; min-height: 65px; text-wrap: balance">A write-up for leadership, with every claim linked.</h3><div class="en-card" style="position: relative; "><div class="stamp" style="top: -16px; right: 16px; font-size: 13px; padding: 8px 15px 8px 12px"><svg width="11" height="19" viewBox="0 0 60 104" fill="none" aria-hidden="true"><path d="M29 20 44 29M45 40 27 50" stroke="#7fd3c7" stroke-width="4" stroke-linecap="round"></path><circle cx="22" cy="14" r="9" stroke="#7fd3c7" stroke-width="5"></circle><circle cx="50" cy="34" r="7" stroke="#7fd3c7" stroke-width="5"></circle><circle cx="22" cy="54" r="5" stroke="#7fd3c7" stroke-width="5"></circle><rect x="18" y="64" width="8" height="36" rx="1" fill="#2bb3a3"></rect></svg>Every claim linked</div>
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><div class="en-chead"><svg width="11" height="19" viewBox="0 0 60 104" fill="none" aria-hidden="true"><path d="M29 20 44 29M45 40 27 50" stroke="#8fb5b0" stroke-width="4" stroke-linecap="round"></path><circle cx="22" cy="14" r="9" stroke="#8fb5b0" stroke-width="5"></circle><circle cx="50" cy="34" r="7" stroke="#8fb5b0" stroke-width="5"></circle><circle cx="22" cy="54" r="5" stroke="#8fb5b0" stroke-width="5"></circle><rect x="18" y="64" width="8" height="36" rx="1" fill="#12635c"></rect></svg>Intuifi snapshot</div></div>
-          <div class="en-pane en-after" style="padding: 14px"><div class="en-body"><div class="rp-card"><div style="display: flex; align-items: center; gap: 7px"><span style="width: 20px; height: 20px; border-radius: 6px; background: #e1f3f0; display: flex; align-items: center; justify-content: center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg></span><span class="rp-eb">LEADERSHIP WRITE-UP</span></div>
-<div class="rp-title">What keeps slowing delivery</div>
-<div class="rp-row"><div style="display: flex; align-items: baseline; gap: 10px"><span class="rp-n">1</span><span class="rp-t">Unclear handover from sales</span></div><div class="rp-pills"><span class="rp-pill" style="background: #f2f5f4; color: #3c4b49">9 items</span></div><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"></path></svg></div>
-<div class="rp-row"><div style="display: flex; align-items: baseline; gap: 10px"><span class="rp-n">2</span><span class="rp-t">Late client sign-off</span></div><div class="rp-pills"><span class="rp-pill" style="background: #f2f5f4; color: #3c4b49">7 items</span></div><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"></path></svg></div>
-<div class="rp-row"><div style="display: flex; align-items: baseline; gap: 10px"><span class="rp-n">3</span><span class="rp-t">Scope changes after kick-off</span></div><div class="rp-pills"><span class="rp-pill" style="background: #f2f5f4; color: #3c4b49">5 items</span></div><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"></path></svg></div>
-</div></div></div>
-        </div></div>
-</div>
-</div>
-<div class="wif-step" data-aud="lead" data-i="9">
-<div class="wif-toggle" role="group" aria-label="Show before or after"><button type="button" data-side="before" aria-pressed="true">Before</button><button type="button" data-side="after" aria-pressed="false">After</button></div>
-<div class="wif-pair">
-<div class="side side-before"><div class="colhead" style="color: #6b7a78">Where you are now</div>
-        <h3 class="hl before sh">The hard questions <br>still end up with you.</h3>
-        <div class="v-d"><div data-fit="480" class="vig before" style="padding: 20px 28px; display: flex; flex-direction: column; gap: 9px">
-          <div style="display: flex; justify-content: flex-end"><span class="badge">3 waiting on you</span></div>
-          <div class="msg"><span class="av" style="background: #9aa6a4">RL</span><span class="msgtext">Can you make the call on pricing?</span></div>
-          <div class="msg"><span class="av" style="background: #9aa6a4">PL</span><span class="msgtext">Need you to settle the roadmap debate.</span></div>
-          <div class="msg"><span class="av" style="background: #9aa6a4">CS</span><span class="msgtext">Which accounts do we prioritise?</span></div>
-        </div></div><div class="v-m"><div data-fit="350" class="vig before" style="padding: 16px; display: flex; flex-direction: column; gap: 8px">
-        <div style="display: flex; justify-content: flex-end"><span class="badge">3 waiting on you</span></div>
-        <div class="msg"><span class="av" style="background: #9aa6a4">RL</span><span class="msgtext">Can you make the call on pricing?</span></div>
-        <div class="msg"><span class="av" style="background: #9aa6a4">PL</span><span class="msgtext">Need you to settle the roadmap.</span></div>
-        <div class="msg"><span class="av" style="background: #9aa6a4">CS</span><span class="msgtext">Which accounts do we prioritise?</span></div>
-      </div></div>
-      </div>
-<div class="side side-after"><div class="colhead" style="color: #0f625c">What changes</div>
-        <h3 class="hl sh">Your team brings you <br>evidence, not opinions.</h3>
-        <div class="v-d"><div data-fit="480" class="vig after">
-          <div class="card" style="left: 28px; right: 28px; top: 50%; transform: translateY(-50%); gap: 14px">
-            <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
-              <div class="ctitle">Intuifi snapshot</div>
-            </div>
-            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px">
-              <div class="mini" style="border-top: 3px solid #2bb3a3"><span class="minilabel">What's happening?</span><div class="bar"></div><div class="bar" style="width: 60%"></div></div>
-              <div class="mini" style="border-top: 3px solid #e08e1b"><span class="minilabel">Why it matters</span><div class="bar"></div><div class="bar" style="width: 60%"></div></div>
-              <div class="mini" style="border-top: 3px solid #d9463b"><span class="minilabel">Biggest risk</span><div class="bar"></div><div class="bar" style="width: 60%"></div></div>
-            </div>
-          </div>
-          <div class="stamp" style="top: 16px; right: 20px; font-size: 14px; padding: 9px 16px 9px 13px"><svg width="13" height="22" viewBox="0 0 60 104" fill="none" aria-hidden="true"><path d="M29 20 44 29M45 40 27 50" stroke="#7fd3c7" stroke-width="4" stroke-linecap="round"></path><circle cx="22" cy="14" r="9" stroke="#7fd3c7" stroke-width="5"></circle><circle cx="50" cy="34" r="7" stroke="#7fd3c7" stroke-width="5"></circle><circle cx="22" cy="54" r="5" stroke="#7fd3c7" stroke-width="5"></circle><rect x="18" y="64" width="8" height="36" rx="1" fill="#2bb3a3"></rect></svg>0 waiting on you</div>
-        </div></div><div class="v-m"><div data-fit="350" class="vig after">
-        <div class="card" style="left: 16px; right: 16px; top: 50%; transform: translateY(-50%); gap: 12px">
-          <div class="ctitle">Intuifi snapshot</div>
-          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px">
-            <div class="mini" style="border-top: 3px solid #2bb3a3"><span class="minilabel">What's happening?</span><div class="bar"></div></div>
-            <div class="mini" style="border-top: 3px solid #e08e1b"><span class="minilabel">Why it matters</span><div class="bar"></div></div>
-            <div class="mini" style="border-top: 3px solid #d9463b"><span class="minilabel">Biggest risk</span><div class="bar"></div></div>
-          </div>
-        </div>
-          <div class="stamp" style="top: 12px; right: 12px; font-size: 12px; padding: 7px 13px 7px 11px"><svg width="10" height="18" viewBox="0 0 60 104" fill="none" aria-hidden="true"><path d="M29 20 44 29M45 40 27 50" stroke="#7fd3c7" stroke-width="4" stroke-linecap="round"></path><circle cx="22" cy="14" r="9" stroke="#7fd3c7" stroke-width="5"></circle><circle cx="50" cy="34" r="7" stroke="#7fd3c7" stroke-width="5"></circle><circle cx="22" cy="54" r="5" stroke="#7fd3c7" stroke-width="5"></circle><rect x="18" y="64" width="8" height="36" rx="1" fill="#2bb3a3"></rect></svg>0 waiting on you</div>
-      </div></div>
-      </div>
-</div>
-</div>
-<div class="wif-step" data-aud="lead" data-i="10">
-<div class="wif-toggle" role="group" aria-label="Show before or after"><button type="button" data-side="before" aria-pressed="true">Before</button><button type="button" data-side="after" aria-pressed="false">After</button></div>
-<div class="wif-pair">
-<div class="side side-before"><div class="colhead" style="color: #6b7a78">Where you are now</div><h3 class="sh" style="margin: 0; font-size: 26px; line-height: 1.25; font-weight: 700; letter-spacing: -.01em; color: #0f2e2a; min-height: 65px; text-wrap: balance">Every report is a one-off.</h3><div class="en-card" style="position: relative; box-shadow: 0 6px 16px rgba(15,46,42,.08)"><span class="warn" style="top: -11px; right: 18px; font-size: 11px; padding: 5px 11px">One-off</span>
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><div class="en-chead"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M8 13h8M8 17h5"></path></svg>Last snapshot</div></div>
-          <div class="en-pane en-before" style="padding: 14px"><div class="en-body"><div class="en-sub" style="gap: 10px"><div class="en-itop"><span style="font-size: 11px; font-weight: 700; letter-spacing: .06em; color: #8a9795">MARCH</span><span class="en-status">Snapshot</span></div><div class="en-sl"><div style="display: flex; align-items: center; gap: 8px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8a9795" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M8 13h8M8 17h5"></path></svg><span>Onboarding delays: 31 items</span></div></div><div class="en-sl"><div style="display: flex; align-items: center; gap: 8px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8a9795" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M8 13h8M8 17h5"></path></svg><span>Import failures: 14 items</span></div></div><div class="en-sl"><div style="display: flex; align-items: center; gap: 8px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8a9795" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M8 13h8M8 17h5"></path></svg><span>Pricing questions: 6 items</span></div></div><span style="font-size: 12px; color: #8a9795; font-style: italic">Has anything changed since?</span></div></div></div>
-        </div></div>
-<div class="side side-after"><div class="colhead" style="color: #9a5b0b">Coming soon</div><h3 class="sh" style="margin: 0; font-size: 26px; line-height: 1.25; font-weight: 700; letter-spacing: -.01em; color: #0f2e2a; min-height: 65px; text-wrap: balance">See what's changing from one report to the next.</h3><div class="en-card" style="position: relative; "><div class="stamp" style="top: -16px; right: 16px; font-size: 13px; padding: 8px 15px 8px 12px"><svg width="11" height="19" viewBox="0 0 60 104" fill="none" aria-hidden="true"><path d="M29 20 44 29M45 40 27 50" stroke="#7fd3c7" stroke-width="4" stroke-linecap="round"></path><circle cx="22" cy="14" r="9" stroke="#7fd3c7" stroke-width="5"></circle><circle cx="50" cy="34" r="7" stroke="#7fd3c7" stroke-width="5"></circle><circle cx="22" cy="54" r="5" stroke="#7fd3c7" stroke-width="5"></circle><rect x="18" y="64" width="8" height="36" rx="1" fill="#2bb3a3"></rect></svg>What's changed</div>
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><div class="en-chead"><svg width="11" height="19" viewBox="0 0 60 104" fill="none" aria-hidden="true"><path d="M29 20 44 29M45 40 27 50" stroke="#8fb5b0" stroke-width="4" stroke-linecap="round"></path><circle cx="22" cy="14" r="9" stroke="#8fb5b0" stroke-width="5"></circle><circle cx="50" cy="34" r="7" stroke="#8fb5b0" stroke-width="5"></circle><circle cx="22" cy="54" r="5" stroke="#8fb5b0" stroke-width="5"></circle><rect x="18" y="64" width="8" height="36" rx="1" fill="#12635c"></rect></svg>Intuifi snapshot</div></div>
-          <div class="en-pane en-after" style="padding: 14px"><div class="en-body"><div class="rp-card"><div style="display: flex; align-items: center; gap: 7px"><span style="width: 20px; height: 20px; border-radius: 6px; background: #e1f3f0; display: flex; align-items: center; justify-content: center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg></span><span class="rp-eb">WHAT'S CHANGING · SINCE MARCH</span></div>
-<div class="rp-row" style="background: #f2fbf9; border-color: #bfe4dd"><div style="display: flex; align-items: baseline; gap: 10px"><span class="rp-t">Onboarding delays</span></div><div class="rp-pills"><span class="rp-pill" style="background: #f2f5f4; color: #3c4b49">31 → 46</span><span class="rp-pill" style="background: #fdf0dc; color: #9a5b0b">Growing</span></div></div>
-<div class="rp-row"><div style="display: flex; align-items: baseline; gap: 10px"><span class="rp-t">Import failures</span></div><div class="rp-pills"><span class="rp-pill" style="background: #f2f5f4; color: #3c4b49">14 → 3</span><span class="rp-pill" style="background: #e1f3f0; color: #0f625c">Shrinking</span></div></div>
-<div class="rp-row"><div style="display: flex; align-items: baseline; gap: 10px"><span class="rp-t">Pricing questions at renewal</span></div><div class="rp-pills"><span class="rp-pill" style="background: #fdf0dc; color: #9a5b0b">New</span></div></div>
-</div></div></div>
-        </div></div>
-</div>
-</div>
-        </div>
-<div class="wd">
-<div class="wd-left">
-<div class="wd-item" data-i="0" data-aud="prod"><div class="side side-before"><div class="colhead" style="color: #6b7a78">Where you are now</div><p style="margin: 0; font-size: 26px; line-height: 1.25; font-weight: 700; letter-spacing: -.01em; color: #0f2e2a; min-height: 65px; text-wrap: balance">Priorities shift with whoever asks loudest.</p><div class="en-card" style="position: relative; box-shadow: 0 6px 16px rgba(15,46,42,.08)"><span class="warn" style="top: -11px; right: 18px; font-size: 11px; padding: 5px 11px">Ranked by who asked</span>
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><div class="en-chead"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"></path></svg>Backlog</div></div>
-          <div class="en-pane en-before" style="padding: 14px"><div class="en-body"><div class="en-item"><div class="en-itop"><span class="en-id">ENG-318</span></div><span class="en-it">Custom export format</span><div class="en-tags"><span class="en-tag" style="background: #fde7e5; color: #b3261e">Urgent, from Sales</span></div></div><div class="en-item"><div class="en-itop"><span class="en-id">ENG-296</span></div><span class="en-it">Bulk user import</span></div><div class="en-item"><div class="en-itop"><span class="en-id">ENG-274</span></div><span class="en-it">Dark mode for dashboards</span></div><div class="en-item"><div class="en-itop"><span class="en-id">ENG-231</span></div><span class="en-it">Onboarding delays across new accounts</span></div></div></div>
-        </div></div></div>
-<div class="wd-item" data-i="1" data-aud="prod"><div class="side side-before"><div class="colhead" style="color: #6b7a78">Where you are now</div><p style="margin: 0; font-size: 26px; line-height: 1.25; font-weight: 700; letter-spacing: -.01em; color: #0f2e2a; min-height: 65px; text-wrap: balance">Tickets arrive without the why.</p><div class="en-card" style="position: relative; box-shadow: 0 6px 16px rgba(15,46,42,.08)"><span class="warn" style="top: -11px; right: 18px; font-size: 11px; padding: 5px 11px">No customer context</span>
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><div class="en-chead"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"></path><path d="M13 5v2M13 17v2M13 11v2"></path></svg>Ticket</div></div>
-          <div class="en-pane en-before" style="padding: 14px"><div class="en-body"><div class="en-sub"><div class="en-itop"><span class="en-id">ENG-412</span><span class="en-status">To do</span></div><span class="en-tt">Fix CSV import dropping columns</span><span class="en-desc">Some imports drop columns. Needs looking into.</span><div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: #4b5b58"><span style="width: 22px; height: 22px; border-radius: 50%; background: #6fa8a0; color: #ffffff; font-size: 9px; font-weight: 700; display: flex; align-items: center; justify-content: center">JM</span><span style="white-space: nowrap">J. Murphy</span><span style="margin-left: auto; white-space: nowrap" class="en-status">Medium priority</span></div></div></div></div>
-        </div></div></div>
-<div class="wd-item" data-i="2" data-aud="prod"><div class="side side-before"><div class="colhead" style="color: #6b7a78">Where you are now</div><p style="margin: 0; font-size: 26px; line-height: 1.25; font-weight: 700; letter-spacing: -.01em; color: #0f2e2a; min-height: 65px; text-wrap: balance">You ship it. Nobody connects it to results.</p><div class="en-card" style="position: relative; box-shadow: 0 6px 16px rgba(15,46,42,.08)">
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><div class="en-chead"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="18" r="3"></circle><circle cx="6" cy="6" r="3"></circle><path d="M13 6h3a2 2 0 0 1 2 2v7M6 9v12"></path></svg>Sprint update</div></div>
-          <div class="en-pane en-before" style="padding: 14px"><div class="en-body"><div class="en-sub" style="gap: 10px"><div class="en-itop"><span style="font-size: 11px; font-weight: 700; letter-spacing: .06em; color: #8a9795">ENGINEERING</span><span class="warn-s">Impact unknown</span></div><span style="font-size: 11px; color: #8a9795; margin-top: -4px">Sprint 14 update</span><div class="en-sl"><div style="display: flex; align-items: center; gap: 8px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8a9795" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Rebuilt the CSV import</span></div></div><div class="en-sl"><div style="display: flex; align-items: center; gap: 8px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8a9795" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Cut webhook retry latency</span></div></div><div class="en-sl"><div style="display: flex; align-items: center; gap: 8px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8a9795" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Refactored auth token refresh</span></div></div></div></div></div>
-        </div></div></div>
-<div class="wd-item wd-item--quote" data-i="3" data-aud="prod"><div class="qh">
-      <span style="font-size: 60px; font-weight: 700; line-height: 1.05; letter-spacing: -.03em; color: #0f625c">Six weeks of work.</span>
-      <span style="font-size: 60px; font-weight: 700; line-height: 1.05; letter-spacing: -.03em; color: #0f2e2a">Done in five minutes.</span>
-    </div><button type="button" class="wif-next" data-next="4">Next: <span class="wn-long">what changes for </span>Founders<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
-<div class="wd-item" data-i="4" data-aud="found"><div class="side side-before"><div class="colhead" style="color: #6b7a78">Where you are now</div>
-        <h3 class="hl before">Sales, product and support <br>each tell you a different story.</h3>
-        <div data-fit="480" class="vig before">
-          <span class="warn" style="top: 16px; right: 20px; font-size: 11px; padding: 4px 10px">3 different answers</span>
-          <div class="snip" style="left: 28px; top: 26px; transform: rotate(-3deg)">
-            <span class="who">Sales</span>
-            <span class="quote">We're losing deals on price.</span>
-          </div>
-          <div class="snip" style="left: 262px; top: 58px; transform: rotate(2.5deg)">
-            <span class="who">Product</span>
-            <span class="quote">Customers want more integrations.</span>
-          </div>
-          <div class="snip" style="left: 92px; top: 130px; transform: rotate(-1deg)">
-            <span class="who">Support</span>
-            <span class="quote">Onboarding takes far too long.</span>
-          </div>
-        </div>
-      </div></div>
-<div class="wd-item" data-i="5" data-aud="found"><div class="side side-before"><div class="colhead" style="color: #6b7a78">Where you are now</div><p style="margin: 0; font-size: 26px; line-height: 1.25; font-weight: 700; letter-spacing: -.01em; color: #0f2e2a; min-height: 65px; text-wrap: balance">Board updates rest on whatever reached you.</p><div class="en-card" style="position: relative; box-shadow: 0 6px 16px rgba(15,46,42,.08)"><span class="warn" style="top: -11px; right: 18px; font-size: 11px; padding: 5px 11px">No evidence</span>
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><div class="en-chead"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M8 13h8M8 17h5"></path></svg>Board update</div></div>
-          <div class="en-pane en-before" style="padding: 14px"><div class="en-body"><div class="en-sub" style="gap: 10px"><div class="en-itop"><span style="font-size: 11px; font-weight: 700; letter-spacing: .06em; color: #8a9795">DRAFT</span><span class="en-status">Due Friday</span></div><div class="en-sl"><div style="display: flex; align-items: center; gap: 8px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8a9795" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.5V14M12 17h.01"></path></svg><span>Customers love the new onboarding</span></div></div><div class="en-sl"><div style="display: flex; align-items: center; gap: 8px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8a9795" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.5V14M12 17h.01"></path></svg><span>Churn is mostly about price</span></div></div><div class="en-sl"><div style="display: flex; align-items: center; gap: 8px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8a9795" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.5V14M12 17h.01"></path></svg><span>Enterprise accounts want SSO</span></div></div></div></div></div>
-        </div></div></div>
-<div class="wd-item wd-item--quote" data-i="6" data-aud="found"><div class="qh">
-      <span style="font-size: 60px; font-weight: 700; line-height: 1.05; letter-spacing: -.03em; color: #0f625c">Business insights,</span>
-      <span style="font-size: 60px; font-weight: 700; line-height: 1.05; letter-spacing: -.03em; color: #0f2e2a">with all the detail needed.</span>
-    </div><button type="button" class="wif-next" data-next="7">Next: <span class="wn-long">what changes for </span>Delivery<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
-<div class="wd-item" data-i="7" data-aud="deliv"><div class="side side-before"><div class="colhead" style="color: #6b7a78">Where you are now</div><p style="margin: 0; font-size: 26px; line-height: 1.25; font-weight: 700; letter-spacing: -.01em; color: #0f2e2a; min-height: 65px; text-wrap: balance">The same problems come up in every retro.</p><div class="en-card" style="position: relative; box-shadow: 0 6px 16px rgba(15,46,42,.08)"><span class="warn" style="top: -11px; right: 18px; font-size: 11px; padding: 5px 11px">Nobody is counting</span>
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><div class="en-chead"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"></path></svg>Retro notes</div></div>
-          <div class="en-pane en-before" style="padding: 14px"><div class="en-body"><div class="en-item"><div class="en-itop"><span class="en-id">SPRINT 12</span></div><span class="en-it">Handover from sales was unclear</span></div><div class="en-item"><div class="en-itop"><span class="en-id">SPRINT 13</span></div><span class="en-it">Client sign-off took two weeks</span></div><div class="en-item"><div class="en-itop"><span class="en-id">SPRINT 14</span></div><span class="en-it">Handover from sales unclear again</span><div class="en-tags"><span class="en-tag" style="background: #fdf0dc; color: #9a5b0b">Again</span></div></div></div></div>
-        </div></div></div>
-<div class="wd-item" data-i="8" data-aud="deliv"><div class="side side-before"><div class="colhead" style="color: #6b7a78">Where you are now</div><p style="margin: 0; font-size: 26px; line-height: 1.25; font-weight: 700; letter-spacing: -.01em; color: #0f2e2a; min-height: 65px; text-wrap: balance">Status reports say what happened, not what keeps happening.</p><div class="en-card" style="position: relative; box-shadow: 0 6px 16px rgba(15,46,42,.08)"><span class="warn" style="top: -11px; right: 18px; font-size: 11px; padding: 5px 11px">No pattern</span>
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><div class="en-chead"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M8 13h8M8 17h5"></path></svg>Status report</div></div>
-          <div class="en-pane en-before" style="padding: 14px"><div class="en-body"><div class="en-sub" style="gap: 10px"><div class="en-itop"><span style="font-size: 11px; font-weight: 700; letter-spacing: .06em; color: #8a9795">WEEK 42</span><span class="en-status">On track</span></div><div class="en-sl"><div style="display: flex; align-items: center; gap: 8px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8a9795" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Milestone 3 delivered</span></div></div><div class="en-sl"><div style="display: flex; align-items: center; gap: 8px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8a9795" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Two change requests raised</span></div></div><div class="en-sl"><div style="display: flex; align-items: center; gap: 8px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8a9795" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Client feedback positive</span></div></div></div></div></div>
-        </div></div></div>
-<div class="wd-item" data-i="9" data-aud="lead"><div class="side side-before"><div class="colhead" style="color: #6b7a78">Where you are now</div>
-        <h3 class="hl before">The hard questions<br>still end up with you.</h3>
-        <div data-fit="480" class="vig before" style="padding: 20px 28px; display: flex; flex-direction: column; gap: 9px">
-          <div style="display: flex; justify-content: flex-end"><span class="badge">3 waiting on you</span></div>
-          <div class="msg"><span class="av" style="background: #9aa6a4">RL</span><span class="msgtext">Can you make the call on pricing?</span></div>
-          <div class="msg"><span class="av" style="background: #9aa6a4">PL</span><span class="msgtext">Need you to settle the roadmap debate.</span></div>
-          <div class="msg"><span class="av" style="background: #9aa6a4">CS</span><span class="msgtext">Which accounts do we prioritise?</span></div>
-        </div>
-      </div></div>
-<div class="wd-item" data-i="10" data-aud="lead"><div class="side side-before"><div class="colhead" style="color: #6b7a78">Where you are now</div><p style="margin: 0; font-size: 26px; line-height: 1.25; font-weight: 700; letter-spacing: -.01em; color: #0f2e2a; min-height: 65px; text-wrap: balance">Every report is a one-off.</p><div class="en-card" style="position: relative; box-shadow: 0 6px 16px rgba(15,46,42,.08)"><span class="warn" style="top: -11px; right: 18px; font-size: 11px; padding: 5px 11px">One-off</span>
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><div class="en-chead"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M8 13h8M8 17h5"></path></svg>Last snapshot</div></div>
-          <div class="en-pane en-before" style="padding: 14px"><div class="en-body"><div class="en-sub" style="gap: 10px"><div class="en-itop"><span style="font-size: 11px; font-weight: 700; letter-spacing: .06em; color: #8a9795">MARCH</span><span class="en-status">Snapshot</span></div><div class="en-sl"><div style="display: flex; align-items: center; gap: 8px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8a9795" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M8 13h8M8 17h5"></path></svg><span>Onboarding delays: 31 items</span></div></div><div class="en-sl"><div style="display: flex; align-items: center; gap: 8px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8a9795" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M8 13h8M8 17h5"></path></svg><span>Import failures: 14 items</span></div></div><div class="en-sl"><div style="display: flex; align-items: center; gap: 8px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8a9795" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M8 13h8M8 17h5"></path></svg><span>Pricing questions: 6 items</span></div></div><span style="font-size: 12px; color: #8a9795; font-style: italic">Has anything changed since?</span></div></div></div>
-        </div></div></div>
-</div>
-<div class="wd-right"><div class="wd-sticky">
-<div class="wd-card" data-i="0"><div class="side side-after"><div class="colhead" style="color: #0f625c">What changes</div><h4 style="margin: 0; font-size: 26px; line-height: 1.25; font-weight: 700; letter-spacing: -.01em; color: #0f2e2a; min-height: 65px; text-wrap: balance">Priorities ranked by how often customers raise them.</h4><div class="en-card" style="position: relative; "><div class="stamp" style="top: -16px; right: 16px; font-size: 13px; padding: 8px 15px 8px 12px"><svg width="11" height="19" viewBox="0 0 60 104" fill="none" aria-hidden="true"><path d="M29 20 44 29M45 40 27 50" stroke="#7fd3c7" stroke-width="4" stroke-linecap="round"></path><circle cx="22" cy="14" r="9" stroke="#7fd3c7" stroke-width="5"></circle><circle cx="50" cy="34" r="7" stroke="#7fd3c7" stroke-width="5"></circle><circle cx="22" cy="54" r="5" stroke="#7fd3c7" stroke-width="5"></circle><rect x="18" y="64" width="8" height="36" rx="1" fill="#2bb3a3"></rect></svg>Ranked by how often it comes up</div>
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><div class="en-chead"><svg width="11" height="19" viewBox="0 0 60 104" fill="none" aria-hidden="true"><path d="M29 20 44 29M45 40 27 50" stroke="#8fb5b0" stroke-width="4" stroke-linecap="round"></path><circle cx="22" cy="14" r="9" stroke="#8fb5b0" stroke-width="5"></circle><circle cx="50" cy="34" r="7" stroke="#8fb5b0" stroke-width="5"></circle><circle cx="22" cy="54" r="5" stroke="#8fb5b0" stroke-width="5"></circle><rect x="18" y="64" width="8" height="36" rx="1" fill="#12635c"></rect></svg>Intuifi snapshot</div></div>
-          <div class="en-pane en-after" style="padding: 14px"><div class="en-body"><div class="rp-card"><div style="display: flex; align-items: center; gap: 7px"><span style="width: 20px; height: 20px; border-radius: 6px; background: #e1f3f0; display: flex; align-items: center; justify-content: center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg></span><span class="rp-eb">THEMES AT A GLANCE</span></div>
-<div class="rp-row" style="background: #f2fbf9; border-color: #bfe4dd"><div style="display: flex; align-items: baseline; gap: 10px"><span class="rp-n">1</span><span class="rp-t">Onboarding delays across new accounts</span></div><div class="rp-pills"><span class="rp-pill" style="background: #f2f5f4; color: #3c4b49">46 items</span><span class="rp-pill" style="background: #e1f3f0; color: #0f625c">21%</span></div></div>
-<div class="rp-row"><div style="display: flex; align-items: baseline; gap: 10px"><span class="rp-n">2</span><span class="rp-t">New customers stuck importing their data</span></div><div class="rp-pills"><span class="rp-pill" style="background: #f2f5f4; color: #3c4b49">31 items</span><span class="rp-pill" style="background: #e1f3f0; color: #0f625c">14%</span></div></div>
-<div class="rp-row"><div style="display: flex; align-items: baseline; gap: 10px"><span class="rp-n">3</span><span class="rp-t">Custom export format</span></div><div class="rp-pills"><span class="rp-pill" style="background: #f2f5f4; color: #3c4b49">2 items</span><span class="rp-pill" style="background: #e1f3f0; color: #0f625c">1%</span><span class="rp-pill" style="background: #fdf0dc; color: #9a5b0b">Raised by Sales</span></div></div>
-</div></div></div>
-        </div></div></div>
-<div class="wd-card" data-i="1"><div class="side side-after"><div class="colhead" style="color: #0f625c">What changes</div><h4 style="margin: 0; font-size: 26px; line-height: 1.25; font-weight: 700; letter-spacing: -.01em; color: #0f2e2a; min-height: 65px; text-wrap: balance">See the customer problem behind the work, in their words.</h4><div class="en-card" style="position: relative; "><div class="stamp" style="top: -16px; right: 16px; font-size: 13px; padding: 8px 15px 8px 12px"><svg width="11" height="19" viewBox="0 0 60 104" fill="none" aria-hidden="true"><path d="M29 20 44 29M45 40 27 50" stroke="#7fd3c7" stroke-width="4" stroke-linecap="round"></path><circle cx="22" cy="14" r="9" stroke="#7fd3c7" stroke-width="5"></circle><circle cx="50" cy="34" r="7" stroke="#7fd3c7" stroke-width="5"></circle><circle cx="22" cy="54" r="5" stroke="#7fd3c7" stroke-width="5"></circle><rect x="18" y="64" width="8" height="36" rx="1" fill="#2bb3a3"></rect></svg>The why, in their words</div>
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><div class="en-chead"><svg width="11" height="19" viewBox="0 0 60 104" fill="none" aria-hidden="true"><path d="M29 20 44 29M45 40 27 50" stroke="#8fb5b0" stroke-width="4" stroke-linecap="round"></path><circle cx="22" cy="14" r="9" stroke="#8fb5b0" stroke-width="5"></circle><circle cx="50" cy="34" r="7" stroke="#8fb5b0" stroke-width="5"></circle><circle cx="22" cy="54" r="5" stroke="#8fb5b0" stroke-width="5"></circle><rect x="18" y="64" width="8" height="36" rx="1" fill="#12635c"></rect></svg>Intuifi snapshot</div></div>
-          <div class="en-pane en-after" style="padding: 14px"><div class="en-body"><div class="rp-card"><div style="display: flex; align-items: center; gap: 7px"><span style="width: 20px; height: 20px; border-radius: 6px; background: #e1f3f0; display: flex; align-items: center; justify-content: center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg></span><span class="rp-eb">THEME</span></div>
-<div class="rp-title">New customers stuck importing their data</div>
-<div class="rp-pills"><span class="rp-pill" style="background: #e1f3f0; color: #0f625c">31 items</span><span class="rp-pill" style="background: #f2f5f4; color: #3c4b49">14% of everything read</span></div>
-<div class="rp-q"><span class="rp-qt">"Half my columns disappeared after the upload."</span><span class="rp-src"><span style="width: 6px; height: 6px; border-radius: 50%; background: #2bb3a3"></span>Support ticket · a customer</span></div>
-<div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: #4b5b58"><span class="rp-lab" style="margin: 0">SOURCE</span>Opens the original ticket <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"></path></svg></div>
-</div></div></div>
-        </div></div></div>
-<div class="wd-card" data-i="2"><div class="side side-after"><div class="colhead" style="color: #9a5b0b">Coming soon</div><h4 style="margin: 0; font-size: 26px; line-height: 1.25; font-weight: 700; letter-spacing: -.01em; color: #0f2e2a; min-height: 65px; text-wrap: balance">See which problems shrink after you ship.</h4><div class="en-card" style="position: relative; "><div class="stamp" style="top: -16px; right: 16px; font-size: 13px; padding: 8px 15px 8px 12px"><svg width="11" height="19" viewBox="0 0 60 104" fill="none" aria-hidden="true"><path d="M29 20 44 29M45 40 27 50" stroke="#7fd3c7" stroke-width="4" stroke-linecap="round"></path><circle cx="22" cy="14" r="9" stroke="#7fd3c7" stroke-width="5"></circle><circle cx="50" cy="34" r="7" stroke="#7fd3c7" stroke-width="5"></circle><circle cx="22" cy="54" r="5" stroke="#7fd3c7" stroke-width="5"></circle><rect x="18" y="64" width="8" height="36" rx="1" fill="#2bb3a3"></rect></svg>Evidence down, 14 to 3</div>
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><div class="en-chead"><svg width="11" height="19" viewBox="0 0 60 104" fill="none" aria-hidden="true"><path d="M29 20 44 29M45 40 27 50" stroke="#8fb5b0" stroke-width="4" stroke-linecap="round"></path><circle cx="22" cy="14" r="9" stroke="#8fb5b0" stroke-width="5"></circle><circle cx="50" cy="34" r="7" stroke="#8fb5b0" stroke-width="5"></circle><circle cx="22" cy="54" r="5" stroke="#8fb5b0" stroke-width="5"></circle><rect x="18" y="64" width="8" height="36" rx="1" fill="#12635c"></rect></svg>Intuifi snapshot</div></div>
-          <div class="en-pane en-after" style="padding: 14px"><div class="en-body"><div class="rp-card"><div style="display: flex; align-items: center; gap: 7px"><span style="width: 20px; height: 20px; border-radius: 6px; background: #e1f3f0; display: flex; align-items: center; justify-content: center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg></span><span class="rp-eb">WHAT'S CHANGING · SINCE LAST SNAPSHOT</span></div>
-<div class="rp-title">New customers stuck importing their data</div>
-<div style="display: flex; align-items: center; gap: 14px; background: #f5f8f7; border-radius: 10px; padding: 10px 12px"><div style="display: flex; flex-direction: column; gap: 2px"><span class="rp-lab">LAST SNAPSHOT</span><span style="font-size: 20px; font-weight: 700; color: #8a9795">14</span></div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2bb3a3" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg><div style="display: flex; flex-direction: column; gap: 2px"><span class="rp-lab">THIS SNAPSHOT</span><span style="font-size: 20px; font-weight: 700; color: #0f625c">3</span></div><span style="margin-left: 4px; font-size: 12px; line-height: 1.35; color: #4b5b58">items on this theme</span></div>
-<div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: #4b5b58"><span class="rp-lab" style="margin: 0">SHIPPED</span>Rebuilt the CSV import</div>
-</div></div></div>
-        </div></div></div>
-<div class="wd-card" data-i="3"><figure style="margin: 0; display: flex; flex-direction: column; gap: 24px; background: #ffffff; border-radius: 24px; padding: 36px 40px; box-shadow: 0 18px 40px rgba(15,46,42,.14)">
-      <blockquote style="margin: 0; font-size: 19px; line-height: 1.65; font-style: italic; color: #0f2e2a">"When I first joined the company, I needed to go through the entire backlog of over 400 tickets to decide what mattered and what didn't. The themes Intuifi found matched very closely with my own analysis, work that had taken almost six weeks was done in five minutes."</blockquote>
-      <figcaption style="display: flex; align-items: center; gap: 14px">
-        <span style="width: 48px; height: 48px; border-radius: 50%; background: #0f625c; border: 2px solid #ffffff; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 700; color: #ffffff">KP</span>
-        <span style="display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 16px; color: #0f2e2a">Katy Parkhill</strong><span style="font-size: 14px; color: #24403c">Head of Engineering, Kobai</span></span>
-      </figcaption>
-    </figure></div>
-<div class="wd-card" data-i="4"><div class="side side-after"><div class="colhead" style="color: #0f625c">What changes</div>
-        <h3 class="hl">See what customers actually <br>keep raising, and how often.</h3>
-        <div data-fit="480" class="vig after">
-          <div class="card" style="left: 36px; right: 36px; top: 50%; transform: translateY(-50%); padding: 20px 22px">
-            <div class="ctitle">Onboarding delays across new accounts</div>
-            <div class="pills">
-              <span class="pill p-teal">46 items</span>
-              <span class="pill p-amber">High impact</span>
-            </div>
-            <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin-top: 2px"><span style="font-size: 10px; font-weight: 700; letter-spacing: .06em; color: #8a9795; margin-right: 4px">EVIDENCE FROM</span><span style="display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 600; color: #3c4b49; background: #f2f5f4; border-radius: 6px; padding: 4px 8px"><span style="width: 6px; height: 6px; border-radius: 50%; background: #e08e1b"></span>Sales</span><span style="display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 600; color: #3c4b49; background: #f2f5f4; border-radius: 6px; padding: 4px 8px"><span style="width: 6px; height: 6px; border-radius: 50%; background: #2bb3a3"></span>Support</span><span style="display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 600; color: #3c4b49; background: #f2f5f4; border-radius: 6px; padding: 4px 8px"><span style="width: 6px; height: 6px; border-radius: 50%; background: #0f625c"></span>Product</span></div>
-          </div>
-          <div class="stamp" style="top: 16px; right: 20px; font-size: 14px; padding: 9px 16px 9px 13px"><svg width="13" height="22" viewBox="0 0 60 104" fill="none" aria-hidden="true"><path d="M29 20 44 29M45 40 27 50" stroke="#7fd3c7" stroke-width="4" stroke-linecap="round"></path><circle cx="22" cy="14" r="9" stroke="#7fd3c7" stroke-width="5"></circle><circle cx="50" cy="34" r="7" stroke="#7fd3c7" stroke-width="5"></circle><circle cx="22" cy="54" r="5" stroke="#7fd3c7" stroke-width="5"></circle><rect x="18" y="64" width="8" height="36" rx="1" fill="#2bb3a3"></rect></svg>One shared view</div>
-        </div>
-      </div></div>
-<div class="wd-card" data-i="5"><div class="side side-after"><div class="colhead" style="color: #0f625c">What changes</div><h4 style="margin: 0; font-size: 26px; line-height: 1.25; font-weight: 700; letter-spacing: -.01em; color: #0f2e2a; min-height: 65px; text-wrap: balance">Walk in with the evidence behind every claim.</h4><div class="en-card" style="position: relative; "><div class="stamp" style="top: -16px; right: 16px; font-size: 13px; padding: 8px 15px 8px 12px"><svg width="11" height="19" viewBox="0 0 60 104" fill="none" aria-hidden="true"><path d="M29 20 44 29M45 40 27 50" stroke="#7fd3c7" stroke-width="4" stroke-linecap="round"></path><circle cx="22" cy="14" r="9" stroke="#7fd3c7" stroke-width="5"></circle><circle cx="50" cy="34" r="7" stroke="#7fd3c7" stroke-width="5"></circle><circle cx="22" cy="54" r="5" stroke="#7fd3c7" stroke-width="5"></circle><rect x="18" y="64" width="8" height="36" rx="1" fill="#2bb3a3"></rect></svg>Evidence behind every claim</div>
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><div class="en-chead"><svg width="11" height="19" viewBox="0 0 60 104" fill="none" aria-hidden="true"><path d="M29 20 44 29M45 40 27 50" stroke="#8fb5b0" stroke-width="4" stroke-linecap="round"></path><circle cx="22" cy="14" r="9" stroke="#8fb5b0" stroke-width="5"></circle><circle cx="50" cy="34" r="7" stroke="#8fb5b0" stroke-width="5"></circle><circle cx="22" cy="54" r="5" stroke="#8fb5b0" stroke-width="5"></circle><rect x="18" y="64" width="8" height="36" rx="1" fill="#12635c"></rect></svg>Intuifi snapshot</div></div>
-          <div class="en-pane en-after" style="padding: 14px"><div class="en-body"><div class="rp-card"><div style="display: flex; align-items: center; gap: 7px"><span style="width: 20px; height: 20px; border-radius: 6px; background: #e1f3f0; display: flex; align-items: center; justify-content: center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg></span><span class="rp-eb">HEADLINE</span></div>
-<div class="rp-title">Onboarding is where new customers struggle most</div>
-<div style="font-size: 13px; line-height: 1.5; color: #3c4b49">Raised in 46 items across support, sales and product, more than any other theme.</div>
-<div class="rp-row" style="background: #f2fbf9; border-color: #bfe4dd"><div style="display: flex; align-items: baseline; gap: 10px"><span class="rp-n">1</span><span class="rp-t">Onboarding delays across new accounts</span></div><div class="rp-pills"><span class="rp-pill" style="background: #f2f5f4; color: #3c4b49">46 items</span></div></div>
-<div class="rp-row"><div style="display: flex; align-items: baseline; gap: 10px"><span class="rp-n">2</span><span class="rp-t">Pricing questions at renewal</span></div><div class="rp-pills"><span class="rp-pill" style="background: #f2f5f4; color: #3c4b49">17 items</span></div></div>
-<div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: #4b5b58"><span class="rp-lab" style="margin: 0">SOURCES</span>Every claim links to the original item</div>
-</div></div></div>
-        </div></div></div>
-<div class="wd-card" data-i="6"><figure style="margin: 0; display: flex; flex-direction: column; gap: 24px; background: #ffffff; border-radius: 24px; padding: 36px 40px; box-shadow: 0 18px 40px rgba(15,46,42,.14)">
-      <blockquote style="margin: 0; font-size: 19px; line-height: 1.65; font-style: italic; color: #0f2e2a">"Intuifi gives me the summary first, then lets me drill into the detail behind it. I can understand what it's surfacing quickly and still go as deep as I need to check that it is supported by the evidence."</blockquote>
-      <figcaption style="display: flex; align-items: center; gap: 14px">
-        <span style="width: 48px; height: 48px; border-radius: 50%; background: #0f625c; border: 2px solid #ffffff; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 700; color: #ffffff">LT</span>
-        <span style="display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 16px; color: #0f2e2a">Lee Tedstone</strong><span style="font-size: 14px; color: #24403c">CEO, Kobai</span></span>
-      </figcaption>
-    </figure></div>
-<div class="wd-card" data-i="7"><div class="side side-after"><div class="colhead" style="color: #0f625c">What changes</div><h4 style="margin: 0; font-size: 26px; line-height: 1.25; font-weight: 700; letter-spacing: -.01em; color: #0f2e2a; min-height: 65px; text-wrap: balance">See what keeps going wrong across projects, counted.</h4><div class="en-card" style="position: relative; "><div class="stamp" style="top: -16px; right: 16px; font-size: 13px; padding: 8px 15px 8px 12px"><svg width="11" height="19" viewBox="0 0 60 104" fill="none" aria-hidden="true"><path d="M29 20 44 29M45 40 27 50" stroke="#7fd3c7" stroke-width="4" stroke-linecap="round"></path><circle cx="22" cy="14" r="9" stroke="#7fd3c7" stroke-width="5"></circle><circle cx="50" cy="34" r="7" stroke="#7fd3c7" stroke-width="5"></circle><circle cx="22" cy="54" r="5" stroke="#7fd3c7" stroke-width="5"></circle><rect x="18" y="64" width="8" height="36" rx="1" fill="#2bb3a3"></rect></svg>Counted, not guessed</div>
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><div class="en-chead"><svg width="11" height="19" viewBox="0 0 60 104" fill="none" aria-hidden="true"><path d="M29 20 44 29M45 40 27 50" stroke="#8fb5b0" stroke-width="4" stroke-linecap="round"></path><circle cx="22" cy="14" r="9" stroke="#8fb5b0" stroke-width="5"></circle><circle cx="50" cy="34" r="7" stroke="#8fb5b0" stroke-width="5"></circle><circle cx="22" cy="54" r="5" stroke="#8fb5b0" stroke-width="5"></circle><rect x="18" y="64" width="8" height="36" rx="1" fill="#12635c"></rect></svg>Intuifi snapshot</div></div>
-          <div class="en-pane en-after" style="padding: 14px"><div class="en-body"><div class="rp-card"><div style="display: flex; align-items: center; gap: 7px"><span style="width: 20px; height: 20px; border-radius: 6px; background: #e1f3f0; display: flex; align-items: center; justify-content: center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg></span><span class="rp-eb">THEMES ACROSS PROJECTS</span></div>
-<div class="rp-row" style="background: #f2fbf9; border-color: #bfe4dd"><div style="display: flex; align-items: baseline; gap: 10px"><span class="rp-n">1</span><span class="rp-t">Unclear handover from sales</span></div><div class="rp-pills"><span class="rp-pill" style="background: #f2f5f4; color: #3c4b49">9 items</span><span class="rp-pill" style="background: #e1f3f0; color: #0f625c">since March</span></div></div>
-<div class="rp-row"><div style="display: flex; align-items: baseline; gap: 10px"><span class="rp-n">2</span><span class="rp-t">Late client sign-off</span></div><div class="rp-pills"><span class="rp-pill" style="background: #f2f5f4; color: #3c4b49">7 items</span><span class="rp-pill" style="background: #e1f3f0; color: #0f625c">since May</span></div></div>
-<div class="rp-row"><div style="display: flex; align-items: baseline; gap: 10px"><span class="rp-n">3</span><span class="rp-t">Scope changes after kick-off</span></div><div class="rp-pills"><span class="rp-pill" style="background: #f2f5f4; color: #3c4b49">5 items</span><span class="rp-pill" style="background: #e1f3f0; color: #0f625c">since June</span></div></div>
-</div></div></div>
-        </div></div></div>
-<div class="wd-card" data-i="8"><div class="side side-after"><div class="colhead" style="color: #0f625c">What changes</div><h4 style="margin: 0; font-size: 26px; line-height: 1.25; font-weight: 700; letter-spacing: -.01em; color: #0f2e2a; min-height: 65px; text-wrap: balance">A write-up for leadership, with every claim linked.</h4><div class="en-card" style="position: relative; "><div class="stamp" style="top: -16px; right: 16px; font-size: 13px; padding: 8px 15px 8px 12px"><svg width="11" height="19" viewBox="0 0 60 104" fill="none" aria-hidden="true"><path d="M29 20 44 29M45 40 27 50" stroke="#7fd3c7" stroke-width="4" stroke-linecap="round"></path><circle cx="22" cy="14" r="9" stroke="#7fd3c7" stroke-width="5"></circle><circle cx="50" cy="34" r="7" stroke="#7fd3c7" stroke-width="5"></circle><circle cx="22" cy="54" r="5" stroke="#7fd3c7" stroke-width="5"></circle><rect x="18" y="64" width="8" height="36" rx="1" fill="#2bb3a3"></rect></svg>Every claim linked</div>
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><div class="en-chead"><svg width="11" height="19" viewBox="0 0 60 104" fill="none" aria-hidden="true"><path d="M29 20 44 29M45 40 27 50" stroke="#8fb5b0" stroke-width="4" stroke-linecap="round"></path><circle cx="22" cy="14" r="9" stroke="#8fb5b0" stroke-width="5"></circle><circle cx="50" cy="34" r="7" stroke="#8fb5b0" stroke-width="5"></circle><circle cx="22" cy="54" r="5" stroke="#8fb5b0" stroke-width="5"></circle><rect x="18" y="64" width="8" height="36" rx="1" fill="#12635c"></rect></svg>Intuifi snapshot</div></div>
-          <div class="en-pane en-after" style="padding: 14px"><div class="en-body"><div class="rp-card"><div style="display: flex; align-items: center; gap: 7px"><span style="width: 20px; height: 20px; border-radius: 6px; background: #e1f3f0; display: flex; align-items: center; justify-content: center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg></span><span class="rp-eb">LEADERSHIP WRITE-UP</span></div>
-<div class="rp-title">What keeps slowing delivery</div>
-<div class="rp-row"><div style="display: flex; align-items: baseline; gap: 10px"><span class="rp-n">1</span><span class="rp-t">Unclear handover from sales</span></div><div class="rp-pills"><span class="rp-pill" style="background: #f2f5f4; color: #3c4b49">9 items</span></div><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"></path></svg></div>
-<div class="rp-row"><div style="display: flex; align-items: baseline; gap: 10px"><span class="rp-n">2</span><span class="rp-t">Late client sign-off</span></div><div class="rp-pills"><span class="rp-pill" style="background: #f2f5f4; color: #3c4b49">7 items</span></div><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"></path></svg></div>
-<div class="rp-row"><div style="display: flex; align-items: baseline; gap: 10px"><span class="rp-n">3</span><span class="rp-t">Scope changes after kick-off</span></div><div class="rp-pills"><span class="rp-pill" style="background: #f2f5f4; color: #3c4b49">5 items</span></div><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"></path></svg></div>
-</div></div></div>
-        </div></div></div>
-<div class="wd-card" data-i="9"><div class="side side-after"><div class="colhead" style="color: #0f625c">What changes</div>
-        <h3 class="hl">Your team brings you <br>evidence, not opinions.</h3>
-        <div data-fit="480" class="vig after">
-          <div class="card" style="left: 28px; right: 28px; top: 50%; transform: translateY(-50%); gap: 14px">
-            <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
-              <div class="ctitle">Intuifi snapshot</div>
-            </div>
-            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px">
-              <div class="mini" style="border-top: 3px solid #2bb3a3"><span class="minilabel">What's happening?</span><div class="bar"></div><div class="bar" style="width: 60%"></div></div>
-              <div class="mini" style="border-top: 3px solid #e08e1b"><span class="minilabel">Why it matters</span><div class="bar"></div><div class="bar" style="width: 60%"></div></div>
-              <div class="mini" style="border-top: 3px solid #d9463b"><span class="minilabel">Biggest risk</span><div class="bar"></div><div class="bar" style="width: 60%"></div></div>
-            </div>
-          </div>
-          <div class="stamp" style="top: 16px; right: 20px; font-size: 14px; padding: 9px 16px 9px 13px"><svg width="13" height="22" viewBox="0 0 60 104" fill="none" aria-hidden="true"><path d="M29 20 44 29M45 40 27 50" stroke="#7fd3c7" stroke-width="4" stroke-linecap="round"></path><circle cx="22" cy="14" r="9" stroke="#7fd3c7" stroke-width="5"></circle><circle cx="50" cy="34" r="7" stroke="#7fd3c7" stroke-width="5"></circle><circle cx="22" cy="54" r="5" stroke="#7fd3c7" stroke-width="5"></circle><rect x="18" y="64" width="8" height="36" rx="1" fill="#2bb3a3"></rect></svg>0 waiting on you</div>
-        </div>
-      </div></div>
-<div class="wd-card" data-i="10"><div class="side side-after"><div class="colhead" style="color: #9a5b0b">Coming soon</div><h4 style="margin: 0; font-size: 26px; line-height: 1.25; font-weight: 700; letter-spacing: -.01em; color: #0f2e2a; min-height: 65px; text-wrap: balance">See what's changing from one report to the next.</h4><div class="en-card" style="position: relative; "><div class="stamp" style="top: -16px; right: 16px; font-size: 13px; padding: 8px 15px 8px 12px"><svg width="11" height="19" viewBox="0 0 60 104" fill="none" aria-hidden="true"><path d="M29 20 44 29M45 40 27 50" stroke="#7fd3c7" stroke-width="4" stroke-linecap="round"></path><circle cx="22" cy="14" r="9" stroke="#7fd3c7" stroke-width="5"></circle><circle cx="50" cy="34" r="7" stroke="#7fd3c7" stroke-width="5"></circle><circle cx="22" cy="54" r="5" stroke="#7fd3c7" stroke-width="5"></circle><rect x="18" y="64" width="8" height="36" rx="1" fill="#2bb3a3"></rect></svg>What's changed</div>
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><div class="en-chead"><svg width="11" height="19" viewBox="0 0 60 104" fill="none" aria-hidden="true"><path d="M29 20 44 29M45 40 27 50" stroke="#8fb5b0" stroke-width="4" stroke-linecap="round"></path><circle cx="22" cy="14" r="9" stroke="#8fb5b0" stroke-width="5"></circle><circle cx="50" cy="34" r="7" stroke="#8fb5b0" stroke-width="5"></circle><circle cx="22" cy="54" r="5" stroke="#8fb5b0" stroke-width="5"></circle><rect x="18" y="64" width="8" height="36" rx="1" fill="#12635c"></rect></svg>Intuifi snapshot</div></div>
-          <div class="en-pane en-after" style="padding: 14px"><div class="en-body"><div class="rp-card"><div style="display: flex; align-items: center; gap: 7px"><span style="width: 20px; height: 20px; border-radius: 6px; background: #e1f3f0; display: flex; align-items: center; justify-content: center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg></span><span class="rp-eb">WHAT'S CHANGING · SINCE MARCH</span></div>
-<div class="rp-row" style="background: #f2fbf9; border-color: #bfe4dd"><div style="display: flex; align-items: baseline; gap: 10px"><span class="rp-t">Onboarding delays</span></div><div class="rp-pills"><span class="rp-pill" style="background: #f2f5f4; color: #3c4b49">31 → 46</span><span class="rp-pill" style="background: #fdf0dc; color: #9a5b0b">Growing</span></div></div>
-<div class="rp-row"><div style="display: flex; align-items: baseline; gap: 10px"><span class="rp-t">Import failures</span></div><div class="rp-pills"><span class="rp-pill" style="background: #f2f5f4; color: #3c4b49">14 → 3</span><span class="rp-pill" style="background: #e1f3f0; color: #0f625c">Shrinking</span></div></div>
-<div class="rp-row"><div style="display: flex; align-items: baseline; gap: 10px"><span class="rp-t">Pricing questions at renewal</span></div><div class="rp-pills"><span class="rp-pill" style="background: #fdf0dc; color: #9a5b0b">New</span></div></div>
-</div></div></div>
-        </div></div></div>
-</div></div>
-</div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- ============ MEMORY (coming soon) ============ -->
-<section class="request request--mem" id="memory">
-  <div class="wrap try">
-    <div class="mem-card">
-      <div class="mem-top">
-        <div class="mem-copy">
-          <h3>See what's changing, not just what's there</h3>
-          <div class="trend" aria-label="Example of what Intuifi with memory will show"><p class="tr-eb"><span class="tr-tag"><i></i>Example</span>Since last snapshot</p><div class="tr-row"><span class="tr-name">Onboarding delays</span><svg class="tr-spark" width="72" height="30" viewBox="0 0 120 36" aria-hidden="true"><path d="M2 33 C 30 31, 45 26, 60 18 S 100 6, 118 2" fill="none" stroke="#c98a2e" stroke-width="2.6" stroke-linecap="round"></path></svg><span class="tr-chip tr-up">Growing</span></div><div class="tr-row"><span class="tr-name">Import failures</span><svg class="tr-spark" width="72" height="30" viewBox="0 0 120 36" aria-hidden="true"><path d="M2 4 C 40 10, 70 16, 118 34" fill="none" stroke="#6fbcb0" stroke-width="2.6" stroke-linecap="round"></path></svg><span class="tr-chip tr-down">Fading</span></div><div class="tr-row"><span class="tr-name">Pricing at renewal</span><svg class="tr-spark" width="72" height="30" viewBox="0 0 120 36" aria-hidden="true"><path d="M2 34 L 70 34 C 82 34, 92 20, 118 4" fill="none" stroke="#1f5c56" stroke-width="2.6" stroke-linecap="round"></path></svg><span class="tr-chip tr-new">New</span></div></div>
-        </div>
-        <div class="mem-table" role="table" aria-label="What is available now compared with what is coming soon">
-          <div class="mt-row mt-head" role="row"><span role="columnheader"></span><span role="columnheader" class="mt-h"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m8.5 12.5 2.5 2.5 4.5-5"></path></svg>Available now</span><span role="columnheader" class="mt-mem mt-h"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Coming soon</span></div>
-          <div class="mt-row" role="row"><span role="rowheader" class="mt-lab"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5 9-5Z"></path><path d="m3 13 9 5 9-5"></path></svg>What you get</span><span role="cell">Free snapshot</span><span role="cell" class="mt-mem">Built-in memory</span></div>
-          <div class="mt-row" role="row"><span role="rowheader" class="mt-lab"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m10 8.5 5 3.5-5 3.5Z"></path></svg>How it runs</span><span role="cell">You paste it in and hit go</span><span role="cell" class="mt-mem">Runs automatically in the background, with customisable alerts</span></div>
-          <div class="mt-row" role="row"><span role="rowheader" class="mt-lab"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>Your data</span><span role="cell">Stays in your account</span><span role="cell" class="mt-mem">Intuifi keeps only theme names and counts</span></div>
-        </div>
-      </div>
-      <form class="mem-form" id="notify-form" novalidate>
-        <div class="asst"><span id="asst-label">Which assistant do you use?</span>
-          <div class="asst-chips" role="radiogroup" aria-labelledby="asst-label">
-            <button type="button" role="radio" aria-checked="false" data-v="Claude">Claude</button>
-            <button type="button" role="radio" aria-checked="false" data-v="ChatGPT">ChatGPT</button>
-            <button type="button" role="radio" aria-checked="false" data-v="Microsoft 365 Copilot">Microsoft 365 Copilot</button>
-            <button type="button" role="radio" aria-checked="false" data-v="Something else">Something else</button>
-          </div>
-        </div>
-        <div class="mem-row">
-          <label for="notify-email" class="sr-only">Work email</label>
-          <input id="notify-email" type="email" name="email" inputmode="email" autocomplete="email" placeholder="Work email" required>
-          <button type="submit" class="pill-btn pill-btn--dark">Tell me when it's ready</button>
-          <input type="text" name="company" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-        </div>
-      </form>
-      <p class="notify-done" id="notify-done" role="status" hidden>Thanks, I'll let you know when it's ready.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ HOW IT WORKS ============ -->
-<section class="hiw">
-  <div class="wrap">
-    <div class="hiw-head">
-      <h2 class="h2">How it works</h2>
-    </div>
-    <div class="hiw-card">
-<div style="display: flex; flex-direction: column">
-        <div class="hiw-s" style="height: 200px; display: flex; flex-direction: column; justify-content: center; gap: 12px">
-          <p class="eyebrow" style="padding-left: 68px; margin-bottom: -4px">How it connects</p>
-          <div style="display: flex; align-items: center; gap: 16px"><span style="height: 40px; min-width: 52px; border-radius: 999px; background: #e1f3f0; color: #12635c; font-size: 17px; font-weight: 700; display: flex; align-items: center; justify-content: center">01</span><h3 style="margin: 0; font-size: 24px; font-weight: 700; line-height: 1.25; letter-spacing: -.01em; white-space: normal">Use your assistant</h3></div>
-          <p class="body" style="font-size: 18px; padding-left: 68px">Intuifi runs inside the AI assistant you already use. No new app, no new login.</p>
-        </div>
-        <div class="hiw-s" style="height: 200px; display: flex; flex-direction: column; justify-content: center; gap: 12px">
-          <p class="eyebrow" style="padding-left: 68px; margin-bottom: -4px">How it happens</p>
-          <div style="display: flex; align-items: center; gap: 16px"><span style="height: 40px; min-width: 52px; border-radius: 999px; background: #e1f3f0; color: #12635c; font-size: 17px; font-weight: 700; display: flex; align-items: center; justify-content: center">02</span><h3 style="margin: 0; font-size: 24px; font-weight: 700; line-height: 1.25; letter-spacing: -.01em; white-space: normal">Built from your team's own work</h3></div>
-          <p class="body" style="font-size: 18px; padding-left: 68px">Intuifi reads the tools connected to your assistant. Your data stays in your own account and nothing is sent to Intuifi.</p>
-        </div>
-        <div class="hiw-s" style="height: 200px; display: flex; flex-direction: column; justify-content: center; gap: 12px">
-          <p class="eyebrow" style="padding-left: 68px; margin-bottom: -4px">What you get</p>
-          <div style="display: flex; align-items: center; gap: 16px"><span style="height: 40px; min-width: 52px; border-radius: 999px; background: #e1f3f0; color: #12635c; font-size: 17px; font-weight: 700; display: flex; align-items: center; justify-content: center">03</span><h3 style="margin: 0; font-size: 24px; font-weight: 700; line-height: 1.25; letter-spacing: -.01em; white-space: normal">Everyone sees the same picture</h3></div>
-          <p class="body" style="font-size: 18px; padding-left: 68px">What keeps coming up, how often, and the evidence behind it.</p>
-        </div>
-      </div>
-      <div class="hiw-diagram" aria-hidden="true">
-<div data-fit="520" style="position: relative; width: 520px; height: 600px">
-        <div class="hiw-frame" style="position: absolute; left: 8px; top: 100px; width: 504px; height: 492px; box-sizing: border-box; border: 2px solid #12635c; border-radius: 28px; background: rgba(225,243,240,.5)"></div>
-        <svg width="520" height="600" viewBox="0 0 520 600" fill="none" style="position: absolute; left: 0; top: 0" aria-hidden="true"><path class="hiw-l1" pathLength="1" d="M120 364 260 500M260 364V500M400 364 260 500" stroke="#c5d3d1" stroke-width="1.5"></path><path class="hiw-l2" pathLength="1" d="M260 148V236" stroke="#c5d3d1" stroke-width="1.5"></path></svg>
-        <div class="tile" style="position: absolute; left: 58px; top: 236px; width: 124px; height: 128px; box-sizing: border-box; justify-content: center; padding: 0; box-shadow: 0 4px 14px rgba(15,46,42,.05)"><span class="tool-logo" style="background: #ff7a59">H</span><span style="font-size: 14px; font-weight: 700">HubSpot</span><span style="font-size: 12px; color: #8a9795">CRM</span></div>
-        <div class="tile" style="position: absolute; left: 198px; top: 236px; width: 124px; height: 128px; box-sizing: border-box; justify-content: center; padding: 0; box-shadow: 0 4px 14px rgba(15,46,42,.05)"><span class="tool-logo" style="background: #17494d">Z</span><span style="font-size: 14px; font-weight: 700">Zendesk</span><span style="font-size: 12px; color: #8a9795">Support</span></div>
-        <div class="tile" style="position: absolute; left: 338px; top: 236px; width: 124px; height: 128px; box-sizing: border-box; justify-content: center; padding: 0; box-shadow: 0 4px 14px rgba(15,46,42,.05)"><span class="tool-logo" style="background: #24292f">G</span><span style="font-size: 14px; font-weight: 700">GitHub*</span><span style="font-size: 12px; color: #8a9795">Backlog</span></div>
-        <div class="hiw-hub" style="position: absolute; left: 212px; top: 52px; width: 96px; height: 96px; box-sizing: border-box; background: #ffffff; border: 2px solid #12635c; border-radius: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; box-shadow: 0 8px 24px rgba(15,46,42,.08)"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#12635c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-label="Your AI assistant"><path d="M21 14.5a2 2 0 0 1-2 2H8.5L4 20.5V5.5a2 2 0 0 1 2-2h13a2 2 0 0 1 2 2z"></path><path d="M12.5 6.6l.85 2.15 2.15.85-2.15.85-.85 2.15-.85-2.15-2.15-.85 2.15-.85z" fill="#2bb3a3" stroke="#2bb3a3" stroke-width="1"></path></svg></div>
-        <div class="hiw-side hiw-dots" style="position: absolute; left: 312px; top: 79px; width: 66px; border-top: 2px dashed #9fc3be"></div>
-        <div class="hiw-side" style="position: absolute; left: 380px; top: 42px; width: 76px; display: flex; flex-direction: column; align-items: center; gap: 8px"><div style="width: 76px; height: 76px; box-sizing: border-box; background: #ffffff; border: 1.5px dashed #12635c; border-radius: 16px; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 18px rgba(15,46,42,.07)"><svg width="24" height="42" viewBox="0 0 60 104" fill="none" aria-label="Intuifi"><path d="M29 20 44 29M45 40 27 50" stroke="#8fb5b0" stroke-width="3" stroke-linecap="round"></path><circle cx="22" cy="14" r="9" stroke="#8fb5b0" stroke-width="3.5"></circle><circle cx="50" cy="34" r="7" stroke="#8fb5b0" stroke-width="3.5"></circle><circle cx="22" cy="54" r="5" stroke="#8fb5b0" stroke-width="3.5"></circle><rect x="18.5" y="64" width="7" height="36" rx="1" fill="#12635c"></rect></svg></div></div>
-        <div class="hiw-rep" style="position: absolute; left: 36px; top: 432px; width: 448px; height: 136px; justify-content: center; box-sizing: border-box; background: #ffffff; border: 1px solid #e3e9e8; border-top: 6px solid #12635c; border-radius: 18px; padding: 0 22px; display: flex; flex-direction: column; gap: 18px; box-shadow: 0 8px 24px rgba(15,46,42,.07)">
-          <div style="display: flex; align-items: center; justify-content: center; gap: 10px"><span style="font-size: 12px; font-weight: 700; letter-spacing: .08em; color: #4b5b58">YOUR SNAPSHOT</span></div>
-          <div style="display: flex; gap: 14px"><div style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 10px; "><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#12635c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" x2="18" y1="20" y2="10"></line><line x1="12" x2="12" y1="20" y2="4"></line><line x1="6" x2="6" y1="20" y2="14"></line></svg><span style="font-size: 15px; font-weight: 700; line-height: 1.25">What's<br>happening</span></div><div style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 10px; border-left: 1px solid #e3e9e8; padding-left: 14px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#12635c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg><span style="font-size: 15px; font-weight: 700; line-height: 1.25">Why it<br>matters</span></div><div style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 10px; border-left: 1px solid #e3e9e8; padding-left: 14px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#12635c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="m9 15 2 2 4-4"></path></svg><span style="font-size: 15px; font-weight: 700; line-height: 1.25">Evidence<br>behind it</span></div></div>
-        </div>
-      </div>
-      </div>
-    </div>
-    <div class="hiw-mobile">
-<div style="background: #f6f8f7; border: 1px solid #e3e9e8; border-radius: 24px; padding: 20px 18px 24px; display: flex; flex-direction: column; gap: 24px">
-      <div style="display: flex; flex-direction: column">
-      <div style="display: flex; gap: 12px">
-        <div style="display: flex; flex-direction: column; align-items: center"><span style="height: 32px; min-width: 44px; border-radius: 999px; background: #e1f3f0; color: #12635c; font-size: 15px; font-weight: 700; display: flex; align-items: center; justify-content: center">01</span><span style="flex: 1; width: 1.5px; background: #c5d3d1; margin-top: 6px"></span></div>
-        <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px; padding: 3px 0 28px"><p class="eyebrow" style="font-size: 11px">How it connects</p><h3 style="margin: 0; font-size: 19px; font-weight: 700; line-height: 1.3">Use your assistant</h3><p class="body-s">Intuifi runs inside the AI assistant you already use. No new app, no new login.</p></div>
-        <div style="display: flex; align-items: center; padding-bottom: 28px"><span style="width: 52px; height: 52px; box-sizing: border-box; background: #ffffff; border: 1.5px solid #12635c; border-radius: 12px; display: flex; align-items: center; justify-content: center; position: relative"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#12635c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-label="Your AI assistant"><path d="M21 14.5a2 2 0 0 1-2 2H8.5L4 20.5V5.5a2 2 0 0 1 2-2h13a2 2 0 0 1 2 2z"></path><path d="M12.5 6.6l.85 2.15 2.15.85-2.15.85-.85 2.15-.85-2.15-2.15-.85 2.15-.85z" fill="#2bb3a3" stroke="#2bb3a3" stroke-width="1"></path></svg><span style="position: absolute; right: -9px; bottom: -9px; width: 24px; height: 24px; box-sizing: border-box; background: #ffffff; border: 1.5px dashed #12635c; border-radius: 7px; display: flex; align-items: center; justify-content: center"><svg width="8" height="14" viewBox="0 0 60 104" fill="none" aria-label="Intuifi"><path d="M29 20 44 29M45 40 27 50" stroke="#8fb5b0" stroke-width="3" stroke-linecap="round"></path><circle cx="22" cy="14" r="9" stroke="#8fb5b0" stroke-width="3.5"></circle><circle cx="50" cy="34" r="7" stroke="#8fb5b0" stroke-width="3.5"></circle><circle cx="22" cy="54" r="5" stroke="#8fb5b0" stroke-width="3.5"></circle><rect x="18.5" y="64" width="7" height="36" rx="1" fill="#12635c"></rect></svg></span></span></div>
-      </div>
-      <div style="display: flex; gap: 12px">
-        <div style="display: flex; flex-direction: column; align-items: center"><span style="height: 32px; min-width: 44px; border-radius: 999px; background: #e1f3f0; color: #12635c; font-size: 15px; font-weight: 700; display: flex; align-items: center; justify-content: center">02</span><span style="flex: 1; width: 1.5px; background: #c5d3d1; margin-top: 6px"></span></div>
-        <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px; padding: 3px 0 28px"><p class="eyebrow" style="font-size: 11px">How it happens</p><h3 style="margin: 0; font-size: 19px; font-weight: 700; line-height: 1.3">Built from your team's own work</h3><p class="body-s">Intuifi reads the tools connected to your assistant. Your data stays in your own account and nothing is sent to Intuifi.</p></div>
-        <div style="display: flex; align-items: center; padding-bottom: 28px"><span style="width: 52px; height: 52px; box-sizing: border-box; background: #ffffff; border: 1px solid #e3e9e8; border-radius: 12px; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#12635c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M8 13h2"></path><path d="M14 13h2"></path><path d="M8 17h2"></path><path d="M14 17h2"></path></svg></span></div>
-      </div>
-      <div style="display: flex; gap: 12px">
-        <div style="display: flex; flex-direction: column; align-items: center"><span style="height: 32px; min-width: 44px; border-radius: 999px; background: #e1f3f0; color: #12635c; font-size: 15px; font-weight: 700; display: flex; align-items: center; justify-content: center">03</span></div>
-        <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px; padding: 3px 0 0px"><p class="eyebrow" style="font-size: 11px">What you get</p><h3 style="margin: 0; font-size: 19px; font-weight: 700; line-height: 1.3">Everyone sees the same picture</h3><p class="body-s">What keeps coming up, how often, and the evidence behind it.</p></div>
-        <div style="display: flex; align-items: center; padding-bottom: 0px"><div style="width: 52px; min-width: 52px; box-sizing: border-box; background: #ffffff; border: 1px solid #e3e9e8; border-radius: 12px; display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 10px 0; border-top: 3px solid #12635c; gap: 8px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#12635c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" x2="18" y1="20" y2="10"></line><line x1="12" x2="12" y1="20" y2="4"></line><line x1="6" x2="6" y1="20" y2="14"></line></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#12635c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#12635c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="m9 15 2 2 4-4"></path></svg></div></div>
-      </div>
-      </div>
-    </div>
-    </div>
-    <p class="hiw-note">*Examples. Intuifi works with whatever your AI assistant can reach, or files you attach.</p>
-  </div>
-</section>
 
 <!-- ============ ABOUT ============ -->
 <section class="about" id="about">
@@ -1492,8 +990,7 @@ html{scroll-padding-top:var(--hh)}
     <div class="about-copy">
       <p class="eyebrow">The person behind this</p>
       <h2 class="h2">Chris Burgess</h2>
-      <p>I'm a product leader with 15 years of experience across startups, scale-ups and a Fortune 100 company. I built Intuifi because, as each business grew, it was my job to pull together the context and evidence Engineering needed, and then turn it into something Leadership could use too. I felt the pain of chasing teams and customers for feedback, then capturing and sharing it, knowing that a lack of real evidence led to decisions without a shared understanding of why. I'm fixing that.</p>
-      <p>As a fractional product leader, I use it to get up to speed on a new team in days rather than weeks, then keep running it to see whether the issues we're working on are actually going away. Everything it does has been tried on real teams first.</p>
+      <p>I'm a product leader with 15 years across startups, scale-ups and a Fortune 100 company. As each business grew, it was my job to pull together the evidence Engineering needed and turn it into something Leadership could use. Intuifi is how I do that now, and I use it myself whenever I join a new team.</p>
       <div class="about-links">
         <a class="lnk" href="https://crwburgess.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>Learn more about me</a>
         <a class="lnk" href="https://linkedin.com/in/crwburgess" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8.25h5V23H0V8.25zM8 8.25h4.8v2.01h.07c.67-1.27 2.3-2.61 4.74-2.61 5.07 0 6 3.34 6 7.68V23h-5v-6.49c0-1.55-.03-3.55-2.17-3.55-2.17 0-2.5 1.69-2.5 3.44V23H8V8.25z"/></svg>Connect on LinkedIn</a>
@@ -1508,44 +1005,25 @@ html{scroll-padding-top:var(--hh)}
   <div class="wrap">
     <div class="faq-side">
       <h2 class="h2">Frequently asked questions</h2>
-      <label class="faq-search" for="faq-search-input">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
-        <input type="text" id="faq-search-input" placeholder="Looking for something?" aria-label="Search questions">
-      </label>
-      <div class="faq-tabs" role="tablist">
-        <button class="faq-tab active" role="tab" aria-selected="true" aria-controls="tab-getting-started" id="btn-getting-started">Getting started</button>
-        <button class="faq-tab" role="tab" aria-selected="false" aria-controls="tab-trust" id="btn-trust">Trusting the output</button>
-      </div>
+      <p class="faq-more-lede">More questions, and what changes for each team, are on the detail page.</p>
+      <a class="pill-btn pill-btn--outline faq-more" href="/details" data-goatcounter-click="details-from-faq" data-goatcounter-title="See it in more detail (FAQ)">See how it works in detail</a>
     </div>
     <div>
-      <div class="faq-no-results" id="faq-no-results">No questions found. Try a different search term.</div>
-      <div id="tab-getting-started" class="faq-panel active" role="tabpanel" aria-labelledby="btn-getting-started">
-        <details open><summary>What results can I expect?</summary><div class="panel"><p>A snapshot of what keeps coming up in your team's own material. It starts with what was read and a short headline, then a table of themes ranked by how often each one appears, with its share and when it was first and last seen.</p><p>Under each theme are two or three real examples, with names replaced by roles, each linked to the original item so you can check it. From there you can ask for a leadership write-up, the full evidence file, or everything behind any one theme.</p></div></details>
-        <details><summary>How much data do I need?</summary><div class="panel"><p>A few months of support tickets, or a CRM export covering your active accounts, is usually enough to see real patterns. You don't need your whole history from every system. More sources and more time just make the picture fuller.</p></div></details>
-        <details><summary>What does this cost?</summary><div class="panel"><p>The prompt is free. It runs inside the AI assistant you already use, so there is nothing to sign up for and nothing extra to pay.</p><p>The next version, with memory, will be a paid product. Pricing isn't set yet. If you register interest, you'll hear about it before anything changes.</p></div></details>
-        <details><summary>What's coming next?</summary><div class="panel"><p>Today Intuifi gives you a snapshot: a clear picture of what keeps coming up right now. The next step is memory, so you can see what is new, growing or fading from one snapshot to the next.</p>
-<div class="faq-roadmap">
-  <div class="faq-roadmap-stage faq-roadmap-stage--now"><p class="faq-roadmap-label">Now</p><div class="faq-roadmap-item">Free snapshot prompt<p>Paste it into Claude and get a snapshot of what keeps coming up, with the evidence behind it.</p></div></div>
-  <div class="faq-roadmap-stage"><p class="faq-roadmap-label faq-roadmap-label--future">Next</p><div class="faq-roadmap-item">More assistants<p>Versions for ChatGPT and Microsoft 365 Copilot, once they pass testing.</p></div><div class="faq-roadmap-item">Built-in memory<p>See what is new, growing and fading since your last snapshot.</p></div><div class="faq-roadmap-item">Runs in the background<p>Updates on a schedule, with alerts you choose when something changes.</p></div></div>
-</div></div></details>
-      </div>
-      <div id="tab-trust" class="faq-panel" role="tabpanel" aria-labelledby="btn-trust">
-        <details open><summary>How is my data handled?</summary><div class="panel"><p>The prompt runs entirely inside your own AI assistant account. It reads only the tools you have connected and any files you attach, and nothing is sent to Intuifi or to me. Your data is handled under the same terms as everything else in that account.</p><p>Before showing any excerpt, the prompt removes email addresses and phone numbers and replaces names of people and organisations with their role or type, so the snapshot is safer to share.</p><p>When the memory version arrives, your raw data will still stay in your account. Intuifi will keep only theme names and counts.</p></div></details>
+      <div class="faq-panel active">
+        <details open><summary>What does this cost?</summary><div class="panel"><p>The prompt is free. The free snapshot runs in Claude today, so there is nothing to sign up for and nothing extra to pay. ChatGPT and Microsoft 365 Copilot versions will follow once they've passed testing.</p><p>The next version, with memory, will be a paid product. Pricing isn't set yet. If you <a href="/register">register interest</a>, you'll hear about it before anything changes.</p></div></details>
+        <details><summary>How is my data handled?</summary><div class="panel"><p>The prompt runs entirely inside your own AI assistant account. It reads only the tools you have connected and any files you attach, and nothing is sent to Intuifi or to me. Your data is handled under the same terms as everything else in that account.</p><p>Before showing any excerpt, the prompt removes email addresses and phone numbers and replaces names of people and organisations with their role or type, so the snapshot is safer to share.</p><p>When the memory version arrives, your raw data will still stay in your account. Intuifi will keep only theme names and counts.</p></div></details>
         <details><summary>How accurate is the output?</summary><div class="panel"><p>That depends on the quality of the data you upload. Intuifi analyses what is there and surfaces the patterns it finds across it. It will not always get every theme right, and some findings may reflect noise rather than signal. That is why every finding links back to the source data, so you can check what looks right, discard what does not, and act with confidence on what remains. The analysis is a starting point, not a verdict.</p></div></details>
-        <details><summary>Why not just get my team to build this?</summary><div class="panel"><p>You could, and the prompt is a fair place to start, since you can read every line of it. Getting a first answer is easy. Getting a reliable one every time is the hard part: counts that are calculated rather than estimated, every claim linked to its source, names kept out, and all of it holding up as your tools and data change.</p><p>That takes ongoing tuning, and it will rarely be the priority for a team building your core product. Intuifi does that work so your team doesn't have to.</p></div></details>
-        <details><summary>Won't this become obsolete as AI improves?</summary><div class="panel"><p>Better AI makes Intuifi better, not unnecessary. It runs inside the assistant you already use, so every time that assistant improves, so does your snapshot.</p><p>What Intuifi adds is the method around it: what to read, how to count, how to keep evidence linked and names out, and next, a memory of how things change over time. A smarter assistant doesn't keep that record for you on its own.</p></div></details>
       </div>
     </div>
   </div>
 </section>
-
 </main>
 
 <footer class="site-footer">
   <div class="wrap">
     <span class="logo" role="img" aria-label="Intuifi"></span>
     <div class="foot-meta">
-      <span>© 2026 Intuifi</span>
+      <span>© 2026 Intuifi · <a class="foot-link" href="/details">More detail</a> · <a class="foot-link" href="/blogs">Blog</a></span>
       <span>Intuifi is independent and not affiliated with Anthropic, OpenAI or Microsoft.</span>
     </div>
   </div>
@@ -1585,11 +1063,11 @@ function fitAll(){
   /* One entry per tab: where its steps start, how many there are, and whether the last one is a quote. */
   var groups = [
     { aud: 'prod', name: 'Product', start: 0, n: 4, quote: 'what Katy says' },
-    { aud: 'found', name: 'Founders', start: 4, n: 3, quote: 'what Lee says' },
-    { aud: 'deliv', name: 'Delivery', start: 7, n: 2 },
-    { aud: 'lead', name: 'Leadership', start: 9, n: 2 }
+    { aud: 'found', name: 'Founders', start: 4, n: 2 },
+    { aud: 'deliv', name: 'Delivery', start: 6, n: 2 },
+    { aud: 'lead', name: 'Leadership', start: 8, n: 2 }
   ];
-  var total = 11, current = 0;
+  var total = 10, current = 0;
 
   function groupOf(step){ for (var g = groups.length - 1; g >= 0; g--) if (step >= groups[g].start) return groups[g]; return groups[0]; }
   function label(g, k){ return g.name + ', ' + (g.quote && k === g.n - 1 ? g.quote : 'step ' + (k + 1)); }
@@ -1783,16 +1261,17 @@ if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitAll);
     });
 
     var nf = el('notify-form');
-    nf.addEventListener('submit', function(e){
+    if (nf) nf.addEventListener('submit', function(e){
       e.preventDefault();
-      var input = nf.email, email = input.value.trim();
+      var input = nf.email, email = input.value.trim(), partner = nf.partner.checked;
       if (nf.company.value) return;
       if (!input.checkValidity() || !email) { input.reportValidity(); return; }
       nf.querySelector('button[type=submit]').disabled = true;
       try {
-        fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: email, assistant: assistant, ref: 'full-version ' + (document.referrer || '') }) });
+        fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: email, assistant: assistant, design_partner: partner, ref: (partner ? 'design-partner ' : '') + 'full-version ' + (document.referrer || '') }) });
+        if (partner) el('notify-done').textContent = 'Thanks. I\'ll be in touch soon to hear what you\'d want it to track.';
         nf.hidden = true; nf.style.display = 'none'; el('notify-done').hidden = false;
-        if (window.goatcounter && goatcounter.count) goatcounter.count({ path: '/#notify-submitted', title: 'Full version: tell me when ready', event: true });
+        if (window.goatcounter && goatcounter.count) goatcounter.count({ path: partner ? '/#design-partner-submitted' : '/#notify-submitted', title: partner ? 'Design partner: signed up' : 'Full version: tell me when ready', event: true });
       } catch (err) {
         el('notify-done').textContent = 'Something went wrong. Please email info@crwburgess.com.'; el('notify-done').hidden = false;
       }
@@ -1847,26 +1326,5 @@ document.addEventListener('DOMContentLoaded', function(){
 <script data-goatcounter="https://intuifi.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <noscript><img src="https://intuifi.goatcounter.com/count?p=/" alt="" referrerpolicy="no-referrer-when-downgrade"></noscript>
 
-<script>
-(function(){
-  var wrap=document.querySelector('.fit-wrap'); if(!wrap) return;
-  var svg=wrap.querySelector('.fit-lines'), snap=wrap.querySelector('.fsnap'), cards=wrap.querySelectorAll('.fit-card');
-  function draw(){
-    var w=wrap.getBoundingClientRect(), sr=snap.getBoundingClientRect();
-    var first=cards[0].getBoundingClientRect(), last=cards[cards.length-1].getBoundingClientRect();
-    if(Math.abs(first.top-last.top)>4){svg.style.display='none';return;}
-    svg.style.display='block';
-    var tx=sr.left+sr.width/2-w.left, ty=sr.top+sr.height/2-w.top, d='';
-    cards.forEach(function(c){
-      var r=c.getBoundingClientRect(), x=r.left+r.width/2-w.left, y=r.top+r.height/2-w.top, m=(r.bottom-w.top+sr.top-w.top)/2;
-      d+='<path d="M'+x+' '+y+' C'+x+' '+m+' '+tx+' '+m+' '+tx+' '+ty+'"/>';
-    });
-    svg.innerHTML=d;
-  }
-  draw(); window.addEventListener('resize',draw);
-  if(window.ResizeObserver) new ResizeObserver(draw).observe(wrap);
-  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(draw);
-})();
-</script>
 </body>
 </html>

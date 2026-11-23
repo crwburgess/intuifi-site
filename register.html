@@ -80,7 +80,10 @@ a{color:var(--brand)}
 .su-note svg{flex:none;color:var(--brand)}
 .su-done{display:none;flex-direction:column;gap:12px;align-items:flex-start}
 .su-done p{margin:0;font-size:17px;line-height:1.6;color:var(--ink-mid)}
-.su-card.is-done .su-form,.su-card.is-done .su-note,.su-card.is-done h2{display:none}
+.su-card.is-done .su-form,.su-card.is-done .su-note,.su-card.is-done h2,.su-card.is-done .su-intro{display:none}
+.su-intro{margin:-6px 0 0;font-size:16px;line-height:1.6;color:var(--ink-mid)}
+.su-alt{align-self:flex-start;border:0;background:none;padding:0;font-family:inherit;font-size:15px;color:var(--brand);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.su-alt[disabled]{opacity:.7;cursor:default}
 .su-card.is-done .su-done{display:flex}
 
 /* ============ TODAY AND NEXT ============ */
@@ -103,6 +106,7 @@ a{color:var(--brand)}
 .site-footer .wrap{padding-top:32px;padding-bottom:32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px 24px}
 .site-footer img{height:30px;width:auto;display:block}
 .site-footer span{font-size:14px;color:#a9cfc9}
+.site-footer .foot-link{color:#fff}
 
 @media(max-width:900px){
   .reg-hero{padding:44px 0 120px}
@@ -146,9 +150,9 @@ a{color:var(--brand)}
   <div class="tex"></div>
   <div class="wrap">
     <div>
-      <p class="eyebrow">Coming next</p>
-      <h1>See what is changing, not just what is there</h1>
-      <p class="lede">The free version of Intuifi gives you a snapshot. The next version keeps a history, so each report shows what is new, what is growing and what has gone quiet since the last one.</p>
+      <p class="eyebrow">Design partners</p>
+      <h1>Get more than the snapshot</h1>
+      <p class="lede">The free snapshot shows what keeps coming up today. Design partners get the full report now, and help shape the next version, which keeps a history so each report shows what is new, what is growing and what has gone quiet since the last one.</p>
     </div>
     <div class="trend" aria-label="Example of what the next version will show">
       <p class="tr-eb"><span class="tr-tag"><i></i>Example</span>Since your last report</p>
@@ -163,7 +167,8 @@ a{color:var(--brand)}
 <section class="signup">
   <div class="wrap">
     <div class="su-card" id="card">
-      <h2>Get told when it's ready</h2>
+      <h2>I'm looking for design partners</h2>
+      <p class="su-intro">I'll run the full Intuifi report on your data at no charge. It goes deeper than the snapshot, with every finding linked to its evidence. Send me a few months of tickets, notes or backlog as an export, and I'll send the report back within a couple of days. In return, I'd like your feedback.</p>
       <form class="su-form" id="register-form" novalidate style="display:flex;flex-direction:column;gap:16px">
         <div class="asst"><span id="asst-label">Which assistant do you use?</span>
           <div class="asst-chips" role="radiogroup" aria-labelledby="asst-label">
@@ -176,14 +181,15 @@ a{color:var(--brand)}
         <div class="su-row">
           <label for="email" class="sr-only">Work email</label>
           <input id="email" type="email" name="email" inputmode="email" autocomplete="email" placeholder="Work email" required>
-          <button type="submit" class="btn">Tell me when it's ready</button>
+          <button type="submit" class="btn" value="partner">Become a design partner</button>
           <input type="text" name="company" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
         </div>
+        <button type="submit" class="su-alt" value="notify">Or just tell me when it's ready</button>
       </form>
-      <p class="su-note"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>I'll only use your email to tell you about this. Chris Burgess, founder of Intuifi.</p>
+      <p class="su-note"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>I'll only use your email for this. Chris Burgess, founder of Intuifi.</p>
       <div class="su-done" role="status">
-        <h2 style="margin:0;font-size:26px">Thanks, you're on the list.</h2>
-        <p>I'll be in touch when it's ready. In the meantime, the free snapshot is on the homepage.</p>
+        <h2 style="margin:0;font-size:26px" id="done-title">Thanks, you're on the list.</h2>
+        <p id="done-text">I'll be in touch when it's ready. In the meantime, the free snapshot is on the homepage.</p>
         <a class="btn" href="/?ref=register-done#early-access">Try Intuifi free</a>
       </div>
     </div>
@@ -208,7 +214,7 @@ a{color:var(--brand)}
 <footer class="site-footer">
   <div class="wrap">
     <img src="/assets/logo.svg" alt="Intuifi">
-    <span>© 2026 Intuifi · Intuifi is independent and not affiliated with Anthropic, OpenAI or Microsoft.</span>
+    <span>© 2026 Intuifi · <a class="foot-link" href="/details">More detail</a> · Intuifi is independent and not affiliated with Anthropic, OpenAI or Microsoft.</span>
   </div>
 </footer>
 
@@ -229,14 +235,15 @@ a{color:var(--brand)}
   });
   form.addEventListener('submit', function(e){
     e.preventDefault();
-    var input = form.email, email = input.value.trim();
+    var input = form.email, email = input.value.trim(), partner = !(e.submitter && e.submitter.value === 'notify');
     if (form.company.value) return;
     if (!input.checkValidity() || !email) { input.reportValidity(); return; }
-    form.querySelector('button[type=submit]').disabled = true;
+    form.querySelectorAll('button[type=submit]').forEach(function(b){ b.disabled = true; });
     try {
-      fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: email, assistant: assistant, ref: 'register-interest ' + (location.search || '') + ' ' + (document.referrer || '') }) });
+      fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: email, assistant: assistant, design_partner: partner, ref: (partner ? 'design-partner ' : '') + 'register-interest ' + (location.search || '') + ' ' + (document.referrer || '') }) });
+      if (partner) { document.getElementById('done-title').textContent = 'Thanks for putting your hand up.'; document.getElementById('done-text').textContent = 'I\'ll be in touch soon to set up your full report.'; }
       document.getElementById('card').classList.add('is-done');
-      if (window.goatcounter && goatcounter.count) goatcounter.count({ path: '/register#submitted', title: 'Register interest: submitted', event: true });
+      if (window.goatcounter && goatcounter.count) goatcounter.count({ path: partner ? '/register#design-partner' : '/register#submitted', title: partner ? 'Register: design partner' : 'Register interest: submitted', event: true });
     } catch (err) {
       form.innerHTML = '<p>Something went wrong. Please email info@crwburgess.com.</p>';
     }
