@@ -730,7 +730,8 @@ html{scroll-padding-top:var(--hh)}
 #memory .mem-copy p{font-size:16px}
 @media(max-width:640px){#memory{padding:48px 0}}
 
-.more-intro{background:var(--brand-dark);padding:72px 0 64px}
+.more-intro{position:relative;isolation:isolate;overflow:hidden;background:var(--brand-dark);padding:72px 0 64px}
+.more-intro .tex{-webkit-mask-image:linear-gradient(to bottom,#000 55%,transparent 100%);mask-image:linear-gradient(to bottom,#000 55%,transparent 100%)}
 .more-intro .eyebrow{color:#a9cfc9}
 .more-intro h1{margin:8px 0 18px;font-size:clamp(42px,5.2vw,62px);line-height:1.06;font-weight:700;letter-spacing:-.02em;color:#fff;max-width:760px}
 .more-intro p.lede{margin:0;font-size:18px;line-height:1.6;color:#d4e8e4;max-width:640px}
@@ -757,10 +758,11 @@ html{scroll-padding-top:var(--hh)}
 
 <!-- ============ DETAILS INTRO ============ -->
 <section class="more-intro">
+  <div class="tex tex-dark"></div>
   <div class="wrap">
     <p class="eyebrow">In more detail</p>
     <h1>How Intuifi works, and what it changes for each team.</h1>
-    <p class="lede">The snapshot step by step, what changes for Product, Founders, Delivery and Leadership, and answers to the questions people ask before they try it. Easy to forward if you need to make the case to a colleague.</p>
+    <p class="lede">How the free snapshot works, what the full report adds, what changes for Product, Founders, Delivery and Leadership, and answers to the questions people ask. Easy to forward if you need to make the case to a colleague.</p>
   </div>
 </section>
 <!-- ============ HOW IT WORKS ============ -->
@@ -1350,7 +1352,7 @@ html{scroll-padding-top:var(--hh)}
     <p>It runs inside your own Claude account, and nothing is sent to Intuifi.</p>
     <div class="more-links">
       <a class="pill-btn pill-btn--teal" href="/#early-access" data-goatcounter-click="try-it-free-details" data-goatcounter-title="Try it free (details page)">Try it free</a>
-      <a class="txt" href="https://calendly.com/crwburgess/30min" target="_blank" rel="noopener" data-goatcounter-click="book-call-details" data-goatcounter-title="Book a call (details page)">Or book a 30-minute call to talk it through first</a>
+      <a class="txt" href="https://calendly.com/crwburgess/intuifi" target="_blank" rel="noopener" data-calendly data-goatcounter-click="book-call-details" data-goatcounter-title="Book a call (details page)">Or book a 30-minute call to talk it through first</a>
     </div>
   </div>
 </section>
@@ -1715,6 +1717,29 @@ document.addEventListener('DOMContentLoaded', function(){
   draw(); window.addEventListener('resize',draw);
   if(window.ResizeObserver) new ResizeObserver(draw).observe(wrap);
   if(document.fonts&&document.fonts.ready) document.fonts.ready.then(draw);
+})();
+</script>
+<script>
+/* Calendly pop-up: loads Calendly only when someone clicks a booking link, and falls back to opening the page if it can't load. */
+(function(){
+  var loading = null;
+  function load(){
+    if (window.Calendly) return Promise.resolve();
+    if (loading) return loading;
+    loading = new Promise(function(res, rej){
+      var l = document.createElement('link'); l.rel = 'stylesheet'; l.href = 'https://assets.calendly.com/assets/external/widget.css'; document.head.appendChild(l);
+      var s = document.createElement('script'); s.src = 'https://assets.calendly.com/assets/external/widget.js'; s.async = true;
+      s.onload = function(){ window.Calendly ? res() : rej(); }; s.onerror = rej; document.head.appendChild(s);
+    });
+    return loading;
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a[data-calendly]');
+    if (!a || e.metaKey || e.ctrlKey || e.shiftKey) return;
+    e.preventDefault();
+    var url = a.href + (a.href.indexOf('?') < 0 ? '?' : '&') + 'hide_gdpr_banner=1&primary_color=0f625c';
+    load().then(function(){ Calendly.initPopupWidget({ url: url }); }).catch(function(){ window.open(a.href, '_blank', 'noopener'); });
+  });
 })();
 </script>
 </body>
