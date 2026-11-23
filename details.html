@@ -719,6 +719,16 @@ html{scroll-padding-top:var(--hh)}
 .site-footer .foot-link{color:#fff}
 @media(max-width:640px){.site-footer .wrap{min-height:96px}.site-footer .logo{height:28px}.site-footer .foot-meta{text-align:left}}
 /* ============ DETAILS PAGE ============ */
+.dp-opt{display:flex;align-items:flex-start;gap:12px;cursor:pointer;max-width:620px}
+.dp-opt input{flex:none;width:20px;height:20px;margin:2px 0 0;accent-color:var(--brand)}
+.dp-opt span{display:flex;flex-direction:column;gap:3px}
+.dp-opt strong{font-size:16px;color:var(--ink)}
+.dp-opt small{font-size:14px;line-height:1.5;color:var(--ink-mid)}
+#memory{padding:88px 0}
+#memory .mem-top{display:block;max-width:720px}
+#memory .mem-copy p{font-size:16px}
+@media(max-width:640px){#memory{padding:48px 0}}
+
 .more-intro{background:var(--brand-dark);padding:72px 0 64px}
 .more-intro .eyebrow{color:#a9cfc9}
 .more-intro h1{margin:8px 0 18px;font-size:clamp(42px,5.2vw,62px);line-height:1.06;font-weight:700;letter-spacing:-.02em;color:#fff;max-width:760px}
@@ -1277,9 +1287,10 @@ html{scroll-padding-top:var(--hh)}
     <div>
       <div class="faq-no-results" id="faq-no-results">No questions found. Try a different search term.</div>
       <div id="tab-getting-started" class="faq-panel active" role="tabpanel" aria-labelledby="btn-getting-started">
+        <details><summary>Who is this not for?</summary><div class="panel"><p>It's less useful if everyone in your company already sees everything, or if you have a dedicated product operations team doing this work.</p></div></details>
         <details open><summary>What results can I expect?</summary><div class="panel"><p>A snapshot of what keeps coming up in your team's own material. It starts with what was read and a short headline, then a table of themes ranked by how often each one appears, with its share and when it was first and last seen.</p><p>Under each theme are two or three real examples, with names replaced by roles, each linked to the original item so you can check it. From there you can ask for a leadership write-up, the full evidence file, or everything behind any one theme.</p></div></details>
         <details><summary>How much data do I need?</summary><div class="panel"><p>A few months of support tickets, or a CRM export covering your active accounts, is usually enough to see real patterns. You don't need your whole history from every system. More sources and more time just make the picture fuller.</p></div></details>
-        <details><summary>What does this cost?</summary><div class="panel"><p>The prompt is free. The free snapshot runs in Claude today, so there is nothing to sign up for and nothing extra to pay. ChatGPT and Microsoft 365 Copilot versions will follow once they've passed testing.</p><p>The next version, with memory, will be a paid product. Pricing isn't set yet. If you register interest, you'll hear about it before anything changes.</p></div></details>
+        <details><summary>What does this cost?</summary><div class="panel"><p>The prompt is free. The free snapshot runs in Claude today, so there is nothing to sign up for and nothing extra to pay. ChatGPT and Microsoft 365 Copilot versions will follow once they've passed testing.</p><p>The next version, with memory, will be a paid product. Pricing isn't set yet. If you <a href="/register">register interest</a>, you'll hear about it before anything changes.</p></div></details>
         <details><summary>What's coming next?</summary><div class="panel"><p>Today Intuifi gives you a snapshot: a clear picture of what keeps coming up right now. The next step is memory, so you can see what is new, growing or fading from one snapshot to the next.</p>
 <div class="faq-roadmap">
   <div class="faq-roadmap-stage faq-roadmap-stage--now"><p class="faq-roadmap-label">Now</p><div class="faq-roadmap-item">Free snapshot prompt<p>Paste it into Claude and get a snapshot of what keeps coming up, with the evidence behind it.</p></div></div>
@@ -1296,6 +1307,40 @@ html{scroll-padding-top:var(--hh)}
   </div>
 </section>
 
+<!-- ============ MEMORY (coming soon) ============ -->
+<section class="request request--mem" id="memory">
+  <div class="wrap try">
+    <div class="mem-card">
+      <div class="mem-top">
+        <div class="mem-copy">
+          <h3>Coming next: see what's changed since your last snapshot</h3>
+          <p>Today's snapshot shows what keeps coming up right now. The next version will remember each one, so you can see what's new, what's rising and what's fading. I'm looking for a few design partners to help shape it.</p>
+        </div>
+      </div>
+      <form class="mem-form" id="notify-form" novalidate>
+        <div class="asst"><span id="asst-label">Which assistant do you use?</span>
+          <div class="asst-chips" role="radiogroup" aria-labelledby="asst-label">
+            <button type="button" role="radio" aria-checked="false" data-v="Claude">Claude</button>
+            <button type="button" role="radio" aria-checked="false" data-v="ChatGPT">ChatGPT</button>
+            <button type="button" role="radio" aria-checked="false" data-v="Microsoft 365 Copilot">Microsoft 365 Copilot</button>
+            <button type="button" role="radio" aria-checked="false" data-v="Something else">Something else</button>
+          </div>
+        </div>
+        <div class="mem-row">
+          <label for="notify-email" class="sr-only">Work email</label>
+          <input id="notify-email" type="email" name="email" inputmode="email" autocomplete="email" placeholder="Work email" required>
+          <button type="submit" class="pill-btn pill-btn--dark">Tell me when it's ready</button>
+          <input type="text" name="company" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        </div>
+        <label class="dp-opt" for="notify-partner">
+          <input type="checkbox" id="notify-partner" name="partner">
+          <span><strong>I'd like to be a design partner</strong><small>Start with one short call, or a few written answers if you'd rather. No company data needed.</small></span>
+        </label>
+      </form>
+      <p class="notify-done" id="notify-done" role="status" hidden>Thanks, I'll let you know when it's ready.</p>
+    </div>
+  </div>
+</section>
 <!-- ============ DETAILS CTA ============ -->
 <section class="more-cta">
   <div class="wrap">
@@ -1551,7 +1596,7 @@ if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitAll);
     });
 
     var nf = el('notify-form');
-    nf.addEventListener('submit', function(e){
+    if (nf && el('early-access')) nf.addEventListener('submit', function(e){
       e.preventDefault();
       var input = nf.email, email = input.value.trim();
       if (nf.company.value) return;
@@ -1612,6 +1657,40 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 </script>
 
+<script>
+/* Design-partner and "tell me when it's ready" signups: same Google Apps Script as the homepage, tagged detail-page. */
+(function(){
+  var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxnV5Hm28fhpJlWedXuU7JdXDsrI4wLOC1zkXOI3Tj0o3s-bkkKR1tgPuwbfGPPNF92ww/exec';
+  function el(id){ return document.getElementById(id); }
+  document.addEventListener('DOMContentLoaded', function(){
+    var nf = el('notify-form'); if (!nf) return;
+    var chips = document.querySelectorAll('.asst-chips button'), assistant = '';
+    chips.forEach(function(c){
+      c.addEventListener('click', function(){
+        var on = c.getAttribute('aria-checked') !== 'true';
+        chips.forEach(function(x){ x.setAttribute('aria-checked', 'false'); });
+        c.setAttribute('aria-checked', on ? 'true' : 'false');
+        assistant = on ? c.getAttribute('data-v') : '';
+      });
+    });
+    nf.addEventListener('submit', function(e){
+      e.preventDefault();
+      var input = nf.email, email = input.value.trim(), partner = nf.partner.checked;
+      if (nf.company.value) return;
+      if (!input.checkValidity() || !email) { input.reportValidity(); return; }
+      nf.querySelector('button[type=submit]').disabled = true;
+      try {
+        fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: email, assistant: assistant, design_partner: partner, ref: (partner ? 'design-partner ' : '') + 'full-version details ' + (document.referrer || '') }) });
+        if (partner) el('notify-done').textContent = 'Thanks. I\'ll be in touch soon to hear what you\'d want it to track.';
+        nf.hidden = true; nf.style.display = 'none'; el('notify-done').hidden = false;
+        if (window.goatcounter && goatcounter.count) goatcounter.count({ path: partner ? '/details#design-partner-submitted' : '/details#notify-submitted', title: partner ? 'Design partner: signed up (details)' : 'Full version: tell me when ready (details)', event: true });
+      } catch (err) {
+        el('notify-done').textContent = 'Something went wrong. Please email info@crwburgess.com.'; el('notify-done').hidden = false;
+      }
+    });
+  });
+})();
+</script>
 <script data-goatcounter="https://intuifi.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <noscript><img src="https://intuifi.goatcounter.com/count?p=/details" alt="" referrerpolicy="no-referrer-when-downgrade"></noscript>
 

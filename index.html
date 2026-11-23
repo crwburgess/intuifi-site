@@ -914,10 +914,6 @@ html{scroll-padding-top:var(--hh)}
         <p class="fit-cap">Problems reach leadership later than they used to.</p>
       </li>
     </ul>
-    <div class="fit-foot">
-      <p class="fit-not">Less useful if everyone already sees everything, or you have a dedicated product operations team.</p>
-      <p class="fit-more"><a href="/details" data-goatcounter-click="details-from-fit" data-goatcounter-title="See what changes for each team (Who it's for)">See what changes for each team</a></p>
-    </div>
   </div>
 </section>
 
@@ -959,40 +955,6 @@ html{scroll-padding-top:var(--hh)}
   </div>
 </section>
 
-<!-- ============ MEMORY (coming soon) ============ -->
-<section class="request request--mem" id="memory">
-  <div class="wrap try">
-    <div class="mem-card">
-      <div class="mem-top">
-        <div class="mem-copy">
-          <h3>See what's changing, not just what's there</h3>
-          <p>The next version remembers each snapshot, so you can see what's new, what's rising and what's fading. I'm building it now, and I'm looking for a few design partners to help shape it.</p>
-        </div>
-      </div>
-      <form class="mem-form" id="notify-form" novalidate>
-        <div class="asst"><span id="asst-label">Which assistant do you use?</span>
-          <div class="asst-chips" role="radiogroup" aria-labelledby="asst-label">
-            <button type="button" role="radio" aria-checked="false" data-v="Claude">Claude</button>
-            <button type="button" role="radio" aria-checked="false" data-v="ChatGPT">ChatGPT</button>
-            <button type="button" role="radio" aria-checked="false" data-v="Microsoft 365 Copilot">Microsoft 365 Copilot</button>
-            <button type="button" role="radio" aria-checked="false" data-v="Something else">Something else</button>
-          </div>
-        </div>
-        <div class="mem-row">
-          <label for="notify-email" class="sr-only">Work email</label>
-          <input id="notify-email" type="email" name="email" inputmode="email" autocomplete="email" placeholder="Work email" required>
-          <button type="submit" class="pill-btn pill-btn--dark">Tell me when it's ready</button>
-          <input type="text" name="company" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-        </div>
-        <label class="dp-opt" for="notify-partner">
-          <input type="checkbox" id="notify-partner" name="partner">
-          <span><strong>I'd like to be a design partner</strong><small>Start with one short call, or a few written answers if you'd rather. No company data needed.</small></span>
-        </label>
-      </form>
-      <p class="notify-done" id="notify-done" role="status" hidden>Thanks, I'll let you know when it's ready.</p>
-    </div>
-  </div>
-</section>
 
 
 <!-- ============ ABOUT ============ -->
@@ -1002,8 +964,7 @@ html{scroll-padding-top:var(--hh)}
     <div class="about-copy">
       <p class="eyebrow">The person behind this</p>
       <h2 class="h2">Chris Burgess</h2>
-      <p>I'm a product leader with 15 years of experience across startups, scale-ups and a Fortune 100 company. I built Intuifi because, as each business grew, it was my job to pull together the context and evidence Engineering needed, and then turn it into something Leadership could use too. I felt the pain of chasing teams and customers for feedback, then capturing and sharing it, knowing that a lack of real evidence led to decisions without a shared understanding of why. I'm fixing that.</p>
-      <p class="about-more">As a fractional product leader, I use it to get up to speed on a new team in days rather than weeks, then keep running it to see whether the issues we're working on are actually going away. Everything it does has been tried on real teams first.</p>
+      <p>I'm a product leader with 15 years across startups, scale-ups and a Fortune 100 company. As each business grew, it was my job to pull together the evidence Engineering needed and turn it into something Leadership could use. Intuifi is how I do that now, and I use it myself whenever I join a new team.</p>
       <div class="about-links">
         <a class="lnk" href="https://crwburgess.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>Learn more about me</a>
         <a class="lnk" href="https://linkedin.com/in/crwburgess" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8.25h5V23H0V8.25zM8 8.25h4.8v2.01h.07c.67-1.27 2.3-2.61 4.74-2.61 5.07 0 6 3.34 6 7.68V23h-5v-6.49c0-1.55-.03-3.55-2.17-3.55-2.17 0-2.5 1.69-2.5 3.44V23H8V8.25z"/></svg>Connect on LinkedIn</a>
@@ -1023,7 +984,7 @@ html{scroll-padding-top:var(--hh)}
     </div>
     <div>
       <div class="faq-panel active">
-        <details open><summary>What does this cost?</summary><div class="panel"><p>The prompt is free. The free snapshot runs in Claude today, so there is nothing to sign up for and nothing extra to pay. ChatGPT and Microsoft 365 Copilot versions will follow once they've passed testing.</p><p>The next version, with memory, will be a paid product. Pricing isn't set yet. If you register interest, you'll hear about it before anything changes.</p></div></details>
+        <details open><summary>What does this cost?</summary><div class="panel"><p>The prompt is free. The free snapshot runs in Claude today, so there is nothing to sign up for and nothing extra to pay. ChatGPT and Microsoft 365 Copilot versions will follow once they've passed testing.</p><p>The next version, with memory, will be a paid product. Pricing isn't set yet. If you <a href="/register">register interest</a>, you'll hear about it before anything changes.</p></div></details>
         <details><summary>How is my data handled?</summary><div class="panel"><p>The prompt runs entirely inside your own AI assistant account. It reads only the tools you have connected and any files you attach, and nothing is sent to Intuifi or to me. Your data is handled under the same terms as everything else in that account.</p><p>Before showing any excerpt, the prompt removes email addresses and phone numbers and replaces names of people and organisations with their role or type, so the snapshot is safer to share.</p><p>When the memory version arrives, your raw data will still stay in your account. Intuifi will keep only theme names and counts.</p></div></details>
         <details><summary>How accurate is the output?</summary><div class="panel"><p>That depends on the quality of the data you upload. Intuifi analyses what is there and surfaces the patterns it finds across it. It will not always get every theme right, and some findings may reflect noise rather than signal. That is why every finding links back to the source data, so you can check what looks right, discard what does not, and act with confidence on what remains. The analysis is a starting point, not a verdict.</p></div></details>
       </div>
@@ -1274,7 +1235,7 @@ if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitAll);
     });
 
     var nf = el('notify-form');
-    nf.addEventListener('submit', function(e){
+    if (nf) nf.addEventListener('submit', function(e){
       e.preventDefault();
       var input = nf.email, email = input.value.trim(), partner = nf.partner.checked;
       if (nf.company.value) return;
