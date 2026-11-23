@@ -731,7 +731,11 @@ html{scroll-padding-top:var(--hh)}
 .faq-more-lede{margin:0;font-size:16px;line-height:1.6;color:var(--ink-mid)}
 .hiw-more{margin:20px 0 0;font-size:16px;font-weight:700}
 .hiw-more a{color:var(--brand)}
-.faq-more{font-size:16px;font-weight:700;color:var(--brand)}
+.faq-side .faq-more{margin-top:8px;height:50px;font-size:16px}
+.nav{gap:22px}
+.nav-link{font-size:15px;font-weight:700;color:#fff;text-decoration:none}
+.nav-link:hover{color:#cfe7e2}
+@media(max-width:640px){.nav{gap:14px}.nav-link{display:inline;font-size:13px}}
 /* ============ DESKTOP: tighter join, compact profile ============ */
 #request{padding-bottom:56px}
 .request.request--mem{padding-top:0}
@@ -779,6 +783,7 @@ html{scroll-padding-top:var(--hh)}
   <div class="wrap">
     <a href="https://intuifi.io" aria-label="Intuifi home"><span class="logo" role="img" aria-label="Intuifi"></span></a>
     <nav class="nav" aria-label="Main">
+      <a class="nav-link" href="/details" data-goatcounter-click="details-from-nav" data-goatcounter-title="How it works (header)">How it works</a>
       <a class="pill-btn pill-btn--white" href="#early-access" data-open-try data-goatcounter-click="try-it-free-nav" data-goatcounter-title="Try it free (header)">Try it free</a>
     </nav>
   </div>
@@ -980,7 +985,7 @@ html{scroll-padding-top:var(--hh)}
     <div class="faq-side">
       <h2 class="h2">Frequently asked questions</h2>
       <p class="faq-more-lede">More questions, and what changes for each team, are on the detail page.</p>
-      <a class="faq-more" href="/details" data-goatcounter-click="details-from-faq" data-goatcounter-title="See it in more detail (FAQ)">See it in more detail</a>
+      <a class="pill-btn pill-btn--outline faq-more" href="/details" data-goatcounter-click="details-from-faq" data-goatcounter-title="See it in more detail (FAQ)">See how it works in detail</a>
     </div>
     <div>
       <div class="faq-panel active">
