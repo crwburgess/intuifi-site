@@ -966,7 +966,7 @@ html{scroll-padding-top:var(--hh)}
           <div class="tstep-b tstep-b--paste">
             <a class="pill-btn pill-btn--outline" href="https://claude.ai/new" target="_blank" rel="noopener" data-goatcounter-click="open-claude" data-goatcounter-title="Open Claude">Open Claude<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"></path></svg></a>
             <p class="lockline lock-plain"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg><span>Runs inside your own Claude account, using only what you've connected. <strong>Nothing is sent to Intuifi.</strong></span></p>
-            <p class="try-talk">Rather talk it through first? <a href="https://calendly.com/crwburgess/30min" target="_blank" rel="noopener" data-goatcounter-click="book-call-try" data-goatcounter-title="Book a call (Try it free)">Book a 30-minute call</a></p>
+            <p class="try-talk">Rather talk it through first? <a href="https://calendly.com/crwburgess/intuifi" target="_blank" rel="noopener" data-calendly data-goatcounter-click="book-call-try" data-goatcounter-title="Book a call (Try it free)">Book a 30-minute call</a></p>
           </div>
         </div>
       </div>
@@ -1331,5 +1331,28 @@ document.addEventListener('DOMContentLoaded', function(){
 <script data-goatcounter="https://intuifi.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <noscript><img src="https://intuifi.goatcounter.com/count?p=/" alt="" referrerpolicy="no-referrer-when-downgrade"></noscript>
 
+<script>
+/* Calendly pop-up: loads Calendly only when someone clicks a booking link, and falls back to opening the page if it can't load. */
+(function(){
+  var loading = null;
+  function load(){
+    if (window.Calendly) return Promise.resolve();
+    if (loading) return loading;
+    loading = new Promise(function(res, rej){
+      var l = document.createElement('link'); l.rel = 'stylesheet'; l.href = 'https://assets.calendly.com/assets/external/widget.css'; document.head.appendChild(l);
+      var s = document.createElement('script'); s.src = 'https://assets.calendly.com/assets/external/widget.js'; s.async = true;
+      s.onload = function(){ window.Calendly ? res() : rej(); }; s.onerror = rej; document.head.appendChild(s);
+    });
+    return loading;
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a[data-calendly]');
+    if (!a || e.metaKey || e.ctrlKey || e.shiftKey) return;
+    e.preventDefault();
+    var url = a.href + (a.href.indexOf('?') < 0 ? '?' : '&') + 'hide_gdpr_banner=1&primary_color=0f625c';
+    load().then(function(){ Calendly.initPopupWidget({ url: url }); }).catch(function(){ window.open(a.href, '_blank', 'noopener'); });
+  });
+})();
+</script>
 </body>
 </html>
