@@ -721,7 +721,7 @@ html{scroll-padding-top:var(--hh)}
 .site-footer .foot-link{color:#fff}
 @media(max-width:640px){.site-footer .wrap{min-height:96px}.site-footer .logo{height:28px}.site-footer .foot-meta{text-align:left}}
 /* ============ DESIGN PARTNER, SECOND DOOR, SHORT FAQ ============ */
-.try-talk{margin:-12px 0 0;text-align:center;font-size:16px;color:var(--ink-mid)}
+.try-talk{margin:4px 0 0;padding-top:20px;border-top:1px solid var(--line);font-size:15px;line-height:1.55;color:var(--ink-mid)}
 .try-talk a{white-space:nowrap;color:var(--brand);font-weight:700;text-decoration:underline;text-underline-offset:3px}
 .dp-opt{display:flex;align-items:flex-start;gap:12px;cursor:pointer;max-width:620px}
 .dp-opt input{flex:none;width:20px;height:20px;margin:2px 0 0;accent-color:var(--brand)}
@@ -732,6 +732,16 @@ html{scroll-padding-top:var(--hh)}
 .hiw-more{margin:20px 0 0;font-size:16px;font-weight:700}
 .hiw-more a{color:var(--brand)}
 .faq-more{font-size:16px;font-weight:700;color:var(--brand)}
+/* ============ DESKTOP: tighter join, compact profile ============ */
+#request{padding-bottom:56px}
+.request.request--mem{padding-top:0}
+.fit-foot{gap:14px}
+@media(min-width:641px){
+  .about{padding:88px 0}
+  .about .wrap{display:grid;grid-template-columns:128px minmax(0,1fr);gap:0 40px;align-items:start;max-width:1040px}
+  .about-photo{width:128px;height:128px;max-width:none;border-radius:50%;object-fit:cover;box-shadow:0 10px 24px -10px rgba(0,0,0,.25)}
+  .about-copy p{max-width:720px}
+}
 /* ============ PHONES: lighter layout ============ */
 @media(max-width:640px){
   .hero-art{width:auto !important;height:auto !important;transform:none !important;margin:0 !important}
@@ -759,6 +769,7 @@ html{scroll-padding-top:var(--hh)}
   .fit{display:none}
   .request{padding:48px 0}
   .request.request--mem{padding:0 0 48px}
+  #request{padding-bottom:40px}
   .about,.faq{padding:48px 0}
 }
 </style>
@@ -904,7 +915,6 @@ html{scroll-padding-top:var(--hh)}
       </li>
     </ul>
     <div class="fit-foot">
-      <p class="fit-then">Intuifi shows what keeps coming up across all of it, how often, and the evidence behind it.</p>
       <p class="fit-not">Less useful if everyone already sees everything, or you have a dedicated product operations team.</p>
       <p class="fit-more"><a href="/details" data-goatcounter-click="details-from-fit" data-goatcounter-title="See what changes for each team (Who it's for)">See what changes for each team</a></p>
     </div>
@@ -938,13 +948,13 @@ html{scroll-padding-top:var(--hh)}
           <div class="tstep-b tstep-b--paste">
             <a class="pill-btn pill-btn--outline" href="https://claude.ai/new" target="_blank" rel="noopener" data-goatcounter-click="open-claude" data-goatcounter-title="Open Claude">Open Claude<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"></path></svg></a>
             <p class="lockline lock-plain"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg><span>Runs inside your own Claude account, using only what you've connected. <strong>Nothing is sent to Intuifi.</strong></span></p>
+            <p class="try-talk">Rather talk it through first? <a href="https://calendly.com/crwburgess/30min" target="_blank" rel="noopener" data-goatcounter-click="book-call-try" data-goatcounter-title="Book a call (Try it free)">Book a 30-minute call</a></p>
           </div>
         </div>
       </div>
 
     </div>
 
-    <p class="try-talk">Rather talk it through first? <a href="https://calendly.com/crwburgess/30min" target="_blank" rel="noopener" data-goatcounter-click="book-call-try" data-goatcounter-title="Book a call (Try it free)">Book a 30-minute call</a></p>
     <p class="try-legal">Intuifi is independent and not affiliated with Anthropic, OpenAI or Microsoft.</p>
   </div>
 </section>
