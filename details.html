@@ -730,7 +730,8 @@ html{scroll-padding-top:var(--hh)}
 #memory .mem-copy p{font-size:16px}
 @media(max-width:640px){#memory{padding:48px 0}}
 
-.more-intro{background:var(--brand-dark);padding:72px 0 64px}
+.more-intro{position:relative;isolation:isolate;overflow:hidden;background:var(--brand-dark);padding:72px 0 64px}
+.more-intro .tex{-webkit-mask-image:linear-gradient(to bottom,#000 55%,transparent 100%);mask-image:linear-gradient(to bottom,#000 55%,transparent 100%)}
 .more-intro .eyebrow{color:#a9cfc9}
 .more-intro h1{margin:8px 0 18px;font-size:clamp(42px,5.2vw,62px);line-height:1.06;font-weight:700;letter-spacing:-.02em;color:#fff;max-width:760px}
 .more-intro p.lede{margin:0;font-size:18px;line-height:1.6;color:#d4e8e4;max-width:640px}
@@ -757,10 +758,11 @@ html{scroll-padding-top:var(--hh)}
 
 <!-- ============ DETAILS INTRO ============ -->
 <section class="more-intro">
+  <div class="tex tex-dark"></div>
   <div class="wrap">
     <p class="eyebrow">In more detail</p>
     <h1>How Intuifi works, and what it changes for each team.</h1>
-    <p class="lede">The snapshot step by step, what changes for Product, Founders, Delivery and Leadership, and answers to the questions people ask before they try it. Easy to forward if you need to make the case to a colleague.</p>
+    <p class="lede">How the free snapshot works, what the full report adds, what changes for Product, Founders, Delivery and Leadership, and answers to the questions people ask. Easy to forward if you need to make the case to a colleague.</p>
   </div>
 </section>
 <!-- ============ HOW IT WORKS ============ -->
