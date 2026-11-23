@@ -606,7 +606,6 @@ html{scroll-padding-top:var(--hh)}
 .try-card{display:block}
 .try-steps{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);padding:48px 56px 56px}
 .try-steps .tstep + .tstep{margin:0 0 0 48px;padding:0 0 0 48px;border-top:0;border-left:1px solid var(--line)}
-.tstep{min-height:100%}
 .tstep-b{flex:1}
 .lock-plain{gap:16px;font-size:19px;line-height:1.6;color:var(--ink)}
 .lock-plain svg{width:24px;height:24px;margin-top:4px}
@@ -1232,6 +1231,8 @@ if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitAll);
       pv.classList.toggle('is-open', open);
       this.setAttribute('aria-expanded', open ? 'true' : 'false');
       this.textContent = open ? 'Show less' : 'See the full prompt';
+      var card = pv.closest('.try-steps'); if (card) { card.style.display = 'none'; void card.offsetHeight; card.style.display = ''; }
+      if (!open) this.scrollIntoView({ block: 'nearest' });
     });
 
     el('copy-btn').addEventListener('click', function(){
