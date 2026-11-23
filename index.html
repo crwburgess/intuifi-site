@@ -754,6 +754,12 @@ html{scroll-padding-top:var(--hh)}
 @media(min-width:901px){.hero-ctas{margin-top:8px}}
 .hero-visual .hero-proof{margin:36px 0 0 26px;max-width:520px}
 @media(max-width:900px){.hero-visual .hero-proof{margin:24px 0 0}}
+/* ============ DESIGN PARTNER BAND ============ */
+.dp-band{display:flex;align-items:center;justify-content:space-between;gap:24px 40px;padding:28px 36px;background:#e6f2f0;border-radius:20px}
+.dp-band h3{margin:0 0 6px;font-size:20px;font-weight:700;color:var(--ink)}
+.dp-band p{margin:0;max-width:640px;font-size:16px;line-height:1.6;color:var(--ink-mid)}
+.dp-band .pill-btn{flex:none}
+@media(max-width:780px){.dp-band{flex-direction:column;align-items:flex-start;padding:24px 22px}.dp-band .pill-btn{width:100%}}
 /* ============ PHONES: lighter layout ============ */
 @media(max-width:640px){
   .hero-art{width:auto !important;height:auto !important;transform:none !important;margin:0 !important}
@@ -964,6 +970,13 @@ html{scroll-padding-top:var(--hh)}
 
     </div>
 
+    <div class="dp-band">
+      <div class="dp-band-copy">
+        <h3>Want the full report?</h3>
+        <p>I'm looking for a few design partners. I'll run the full Intuifi report on a few months of your tickets, notes or backlog, at no charge, in return for your feedback.</p>
+      </div>
+      <a class="pill-btn pill-btn--dark" href="/register" data-goatcounter-click="design-partner-home" data-goatcounter-title="Become a design partner (home)">Become a design partner</a>
+    </div>
     <p class="try-legal">Intuifi is independent and not affiliated with Anthropic, OpenAI or Microsoft.</p>
   </div>
 </section>

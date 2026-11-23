@@ -719,6 +719,7 @@ html{scroll-padding-top:var(--hh)}
 .site-footer .foot-link{color:#fff}
 @media(max-width:640px){.site-footer .wrap{min-height:96px}.site-footer .logo{height:28px}.site-footer .foot-meta{text-align:left}}
 /* ============ DETAILS PAGE ============ */
+.hiw-intro{margin:0;max-width:760px;font-size:18px;line-height:1.6;color:var(--ink-mid)}
 .dp-opt{display:flex;align-items:flex-start;gap:12px;cursor:pointer;max-width:620px}
 .dp-opt input{flex:none;width:20px;height:20px;margin:2px 0 0;accent-color:var(--brand)}
 .dp-opt span{display:flex;flex-direction:column;gap:3px}
@@ -766,7 +767,8 @@ html{scroll-padding-top:var(--hh)}
 <section class="hiw">
   <div class="wrap">
     <div class="hiw-head">
-      <h2 class="h2">How it works</h2>
+      <h2 class="h2">How the free snapshot works</h2>
+      <p class="hiw-intro">The free snapshot runs in Claude and is the quickest way to start. Design partners also get the full report, which I run on an export of their data and which goes into more detail. Next comes memory, so each report shows what's changed since the last.</p>
     </div>
     <div class="hiw-card">
 <div style="display: flex; flex-direction: column">
@@ -825,6 +827,40 @@ html{scroll-padding-top:var(--hh)}
     </div>
     </div>
     <p class="hiw-note">*Examples. Intuifi works with whatever your AI assistant can reach, or files you attach.</p>
+  </div>
+</section>
+<!-- ============ MEMORY (coming soon) ============ -->
+<section class="request request--mem" id="memory">
+  <div class="wrap try">
+    <div class="mem-card">
+      <div class="mem-top">
+        <div class="mem-copy">
+          <h3>Want more than the snapshot?</h3>
+          <p>I'm looking for a few design partners. I'll run the full Intuifi report on a few months of your tickets, notes or backlog, at no charge, in return for your feedback. It goes deeper than the snapshot, and you'll help shape the next version, which remembers each report so you can see what's new, what's rising and what's fading.</p>
+        </div>
+      </div>
+      <form class="mem-form" id="notify-form" novalidate>
+        <div class="asst"><span id="asst-label">Which assistant do you use?</span>
+          <div class="asst-chips" role="radiogroup" aria-labelledby="asst-label">
+            <button type="button" role="radio" aria-checked="false" data-v="Claude">Claude</button>
+            <button type="button" role="radio" aria-checked="false" data-v="ChatGPT">ChatGPT</button>
+            <button type="button" role="radio" aria-checked="false" data-v="Microsoft 365 Copilot">Microsoft 365 Copilot</button>
+            <button type="button" role="radio" aria-checked="false" data-v="Something else">Something else</button>
+          </div>
+        </div>
+        <div class="mem-row">
+          <label for="notify-email" class="sr-only">Work email</label>
+          <input id="notify-email" type="email" name="email" inputmode="email" autocomplete="email" placeholder="Work email" required>
+          <button type="submit" class="pill-btn pill-btn--dark">Keep me posted</button>
+          <input type="text" name="company" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        </div>
+        <label class="dp-opt" for="notify-partner">
+          <input type="checkbox" id="notify-partner" name="partner">
+          <span><strong>I'd like to be a design partner</strong><small>Get the full report on your own data at no charge. I'll be in touch to set it up.</small></span>
+        </label>
+      </form>
+      <p class="notify-done" id="notify-done" role="status" hidden>Thanks, I'll let you know when it's ready.</p>
+    </div>
   </div>
 </section>
 <!-- ============ WHO IT'S FOR ============ -->
@@ -1307,40 +1343,6 @@ html{scroll-padding-top:var(--hh)}
   </div>
 </section>
 
-<!-- ============ MEMORY (coming soon) ============ -->
-<section class="request request--mem" id="memory">
-  <div class="wrap try">
-    <div class="mem-card">
-      <div class="mem-top">
-        <div class="mem-copy">
-          <h3>Coming next: see what's changed since your last snapshot</h3>
-          <p>Today's snapshot shows what keeps coming up right now. The next version will remember each one, so you can see what's new, what's rising and what's fading. I'm looking for a few design partners to help shape it.</p>
-        </div>
-      </div>
-      <form class="mem-form" id="notify-form" novalidate>
-        <div class="asst"><span id="asst-label">Which assistant do you use?</span>
-          <div class="asst-chips" role="radiogroup" aria-labelledby="asst-label">
-            <button type="button" role="radio" aria-checked="false" data-v="Claude">Claude</button>
-            <button type="button" role="radio" aria-checked="false" data-v="ChatGPT">ChatGPT</button>
-            <button type="button" role="radio" aria-checked="false" data-v="Microsoft 365 Copilot">Microsoft 365 Copilot</button>
-            <button type="button" role="radio" aria-checked="false" data-v="Something else">Something else</button>
-          </div>
-        </div>
-        <div class="mem-row">
-          <label for="notify-email" class="sr-only">Work email</label>
-          <input id="notify-email" type="email" name="email" inputmode="email" autocomplete="email" placeholder="Work email" required>
-          <button type="submit" class="pill-btn pill-btn--dark">Tell me when it's ready</button>
-          <input type="text" name="company" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-        </div>
-        <label class="dp-opt" for="notify-partner">
-          <input type="checkbox" id="notify-partner" name="partner">
-          <span><strong>I'd like to be a design partner</strong><small>Start with one short call, or a few written answers if you'd rather. No company data needed.</small></span>
-        </label>
-      </form>
-      <p class="notify-done" id="notify-done" role="status" hidden>Thanks, I'll let you know when it's ready.</p>
-    </div>
-  </div>
-</section>
 <!-- ============ DETAILS CTA ============ -->
 <section class="more-cta">
   <div class="wrap">
@@ -1681,7 +1683,7 @@ document.addEventListener('DOMContentLoaded', function(){
       nf.querySelector('button[type=submit]').disabled = true;
       try {
         fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: email, assistant: assistant, design_partner: partner, ref: (partner ? 'design-partner ' : '') + 'full-version details ' + (document.referrer || '') }) });
-        if (partner) el('notify-done').textContent = 'Thanks. I\'ll be in touch soon to hear what you\'d want it to track.';
+        if (partner) el('notify-done').textContent = 'Thanks. I\'ll be in touch soon to set up your full report.';
         nf.hidden = true; nf.style.display = 'none'; el('notify-done').hidden = false;
         if (window.goatcounter && goatcounter.count) goatcounter.count({ path: partner ? '/details#design-partner-submitted' : '/details#notify-submitted', title: partner ? 'Design partner: signed up (details)' : 'Full version: tell me when ready (details)', event: true });
       } catch (err) {
