@@ -734,6 +734,29 @@ html{scroll-padding-top:var(--hh)}
 .hiw-more{margin:20px 0 0;font-size:16px;font-weight:700}
 .hiw-more a{color:var(--brand)}
 .faq-more{font-size:16px;font-weight:700;color:var(--brand)}
+/* ============ PHONES: lighter layout ============ */
+@media(max-width:640px){
+  .hero-art{width:auto !important;height:auto !important;transform:none !important;margin:0 !important}
+  .hero-report{display:none}
+  .hero-finding{position:static !important;width:100% !important}
+  .pv:not(.is-open){display:none}
+  .mem-card{background:var(--brand-dark);border-color:var(--brand-dark)}
+  .mem-copy h3{color:#fff}
+  .mem-copy p{color:#d4e8e4}
+  .mem-card .asst{display:none}
+  .mem-row input[type=email]{border-color:transparent}
+  .mem-row .pill-btn--dark{background:var(--teal);color:#06221f}
+  .dp-opt strong{color:#fff}
+  .dp-opt small{color:#a9cfc9}
+  .mem-card .notify-done{color:#fff}
+  .about .wrap{grid-template-columns:64px minmax(0,1fr);column-gap:16px;row-gap:16px;align-items:center}
+  .about-copy{display:contents}
+  .about-photo{grid-column:1;grid-row:1/3;width:64px;height:64px;max-width:none;border-radius:50%;object-fit:cover;box-shadow:none}
+  .about-copy .eyebrow{grid-column:2;grid-row:1;align-self:end;margin:0}
+  .about-copy h2{grid-column:2;grid-row:2;align-self:start;margin:0}
+  .about-copy > p:not(.eyebrow),.about-links{grid-column:1/-1}
+  .about-more{display:none}
+}
 </style>
 </head>
 <body>
@@ -766,7 +789,7 @@ html{scroll-padding-top:var(--hh)}
 <div class="hero-art" data-fit="690" data-fit-w="720" data-fit-max="0.82" aria-hidden="true" style="position: relative; width: 720px; height: 460px; font-family: Roboto, 'Helvetica Neue', Arial, sans-serif; color: #0f2e2a">
 
   <!-- Simplified report window -->
-  <div style="position: absolute; left: 330px; top: 70px; width: 380px; height: 330px; box-sizing: border-box; background: #ffffff; border-radius: 14px; overflow: hidden; box-shadow: 0 24px 48px rgba(3,24,21,.30)">
+  <div class="hero-report" style="position: absolute; left: 330px; top: 70px; width: 380px; height: 330px; box-sizing: border-box; background: #ffffff; border-radius: 14px; overflow: hidden; box-shadow: 0 24px 48px rgba(3,24,21,.30)">
     <div style="height: 30px; background: #f4f7f6; border-bottom: 1px solid #e8eeec; display: flex; align-items: center; gap: 6px; padding: 0 12px">
       <span class="hi-dot" style="width: 8px; height: 8px; background: #d6dedc"></span><span class="hi-dot" style="width: 8px; height: 8px; background: #d6dedc"></span><span class="hi-dot" style="width: 8px; height: 8px; background: #d6dedc"></span>
       <span style="margin-left: 10px; height: 14px; flex: 1; border-radius: 7px; background: #e8eeec"></span>
@@ -797,7 +820,7 @@ html{scroll-padding-top:var(--hh)}
 
 
   <!-- The finding -->
-  <div style="position: absolute; left: 30px; top: 40px; width: 322px; box-sizing: border-box; background: #ffffff; border-radius: 16px; padding: 18px 20px; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 28px 56px rgba(3,24,21,.38), 0 0 0 1px rgba(43,179,163,.35)">
+  <div class="hero-finding" style="position: absolute; left: 30px; top: 40px; width: 322px; box-sizing: border-box; background: #ffffff; border-radius: 16px; padding: 18px 20px; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 28px 56px rgba(3,24,21,.38), 0 0 0 1px rgba(43,179,163,.35)">
     <div style="display: flex; align-items: center; gap: 7px">
       <span style="width: 20px; height: 20px; border-radius: 6px; background: #e1f3f0; display: flex; align-items: center; justify-content: center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0f625c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg></span>
       <span style="font-size: 10px; font-weight: 700; letter-spacing: .1em; color: #0f625c">FINDING</span>
@@ -891,7 +914,7 @@ html{scroll-padding-top:var(--hh)}
   <div class="wrap try">
     <div class="try-head" id="early-access">
       <div class="try-titlerow"><h2 class="h2">Try Intuifi free</h2><span class="ww-badge">Works with Claude</span></div>
-      <p class="try-intro">Paste the prompt into a new Claude chat. It reads your support tickets, sales notes and backlog, from the tools you've connected or files you attach, and shows you what keeps coming up, how often, and where the evidence is. Nothing leaves your account.</p>
+      <p class="try-intro">Paste the prompt into a new Claude chat. It reads your support tickets, sales notes and backlog, from the tools you've connected or files you attach, and shows you what keeps coming up, how often, and where the evidence is.</p>
     </div>
 
     <div class="try-card">
@@ -949,7 +972,7 @@ html{scroll-padding-top:var(--hh)}
         </div>
         <label class="dp-opt" for="notify-partner">
           <input type="checkbox" id="notify-partner" name="partner">
-          <span><strong>I'd like to be a design partner</strong><small>A short call now and then to help shape what it tracks. No company data needed.</small></span>
+          <span><strong>I'd like to be a design partner</strong><small>Start with one short call, or a few written answers if you'd rather. No company data needed.</small></span>
         </label>
       </form>
       <p class="notify-done" id="notify-done" role="status" hidden>Thanks, I'll let you know when it's ready.</p>
@@ -966,7 +989,7 @@ html{scroll-padding-top:var(--hh)}
       <p class="eyebrow">The person behind this</p>
       <h2 class="h2">Chris Burgess</h2>
       <p>I'm a product leader with 15 years of experience across startups, scale-ups and a Fortune 100 company. I built Intuifi because, as each business grew, it was my job to pull together the context and evidence Engineering needed, and then turn it into something Leadership could use too. I felt the pain of chasing teams and customers for feedback, then capturing and sharing it, knowing that a lack of real evidence led to decisions without a shared understanding of why. I'm fixing that.</p>
-      <p>As a fractional product leader, I use it to get up to speed on a new team in days rather than weeks, then keep running it to see whether the issues we're working on are actually going away. Everything it does has been tried on real teams first.</p>
+      <p class="about-more">As a fractional product leader, I use it to get up to speed on a new team in days rather than weeks, then keep running it to see whether the issues we're working on are actually going away. Everything it does has been tried on real teams first.</p>
       <div class="about-links">
         <a class="lnk" href="https://crwburgess.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>Learn more about me</a>
         <a class="lnk" href="https://linkedin.com/in/crwburgess" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8.25h5V23H0V8.25zM8 8.25h4.8v2.01h.07c.67-1.27 2.3-2.61 4.74-2.61 5.07 0 6 3.34 6 7.68V23h-5v-6.49c0-1.55-.03-3.55-2.17-3.55-2.17 0-2.5 1.69-2.5 3.44V23H8V8.25z"/></svg>Connect on LinkedIn</a>
